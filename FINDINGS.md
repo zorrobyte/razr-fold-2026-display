@@ -270,3 +270,26 @@ for these modes, so we get the raw-bandwidth ceiling.
 ### Summary of the bottleneck stack
 SoC DPU (4K120/8K30) → ❌ DP 1.4 not 2.1 → ❌ 2-lane not 4-lane → ❌ no DSC → **~3.3 Mpix@60 link budget**.
 The framework software cap (now removed) sat ABOVE all of this and was never the binding limit for real panels.
+
+---
+
+## 13. "Blur Busters shows 60 Hz at 120 Hz mode" — it's Chrome, not Moto/the display
+
+Tested at 2560×1080@**120** mode. TestUFO/Blur Busters reports 60. Investigated whether Moto/Android caps
+the draw rate:
+- `dumpsys display`: external display (id 13) `renderFrameRate = 120.00001`; DisplayModeDirector render
+  range `(24–120)`; **no frameRateOverride** (`mFrameRateOverrides=[]`).
+- `dumpsys SurfaceFlinger`: external display render↔mode table goes to 120 Hz; Chrome's layer
+  `requestedFrameRate: {HighHint}` — Chrome is *asking* for high fps and the system grants it (no downclock).
+
+→ The system, SurfaceFlinger, the DP link, and Moto are all serving **120 Hz**. The 60 Hz is **Chrome's
+web-content frame rate**: Blink caps `requestAnimationFrame` to 60 fps on Android (especially on
+secondary/external displays). TestUFO measures rAF, so it shows 60 even though composition is 120.
+
+### How to confirm / get true 120
+- Non-browser test: scroll/animate in a native app on the external display — UI composites at 120.
+- Chrome `chrome://flags` high-frame-rate experiments may lift the rAF cap; otherwise it's a known
+  Chrome-on-Android limitation, not the device.
+- The desktop UI itself (window moves, scrolling) already runs 120 on the external display.
+
+Net: nothing on the device is limiting draw to 60. The cap is inside the browser.
