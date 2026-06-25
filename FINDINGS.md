@@ -6,24 +6,24 @@ Serial: `ZP2223437N`. Bootloader: **UNLOCKED**. Root: **Magisk v30.7 — CONFIRM
 
 ---
 
-## ✅ WHAT YOU NEED TO DO (action items)
+## ✅ TL;DR — FINAL RESULT (project complete)
 
-**Goal:** lift the external-display resolution cap (stuck at 3440×1440@60) toward 4K@120 / 5K2K@60
-by rooting and stubbing Android's `enable_mode_limit_for_external_display` governor.
+**Goal:** drive an LG 45GX950A (5K2K ultrawide) from the Razr Fold's desktop mode at the highest res/refresh.
 
-1. **Finish first-boot setup** on the freshly-wiped phone (skip Google/WiFi to go fast).
-2. **Re-enable developer access:** Settings → About → tap **Build number ×7**, then Developer
-   Options → **USB debugging** ON. Reconnect WiFi if you want wireless ADB back.
-   - (OEM unlocking is already done — no need to redo.)
-3. **Source the stock `init_boot.img` matching the exact build** — the one real blocker:
-   - Best: **Lenovo Rescue & Smart Assistant (LMSA)** → it downloads full firmware for the
-     connected device. ⚠️ **Windows-only** — needs a **Windows PC or VM** (you're on a Mac).
-   - Alt: firmware mirror (lolinet) — **not posted yet** for `blanc` (too new); check back later.
-   - Once you have firmware, extract `init_boot.img` from it.
-4. **Tell me when ADB is back + you have `init_boot.img`** — I'll grab the exact build fingerprint,
-   drive the Magisk patch + `fastboot flash init_boot`, then install LSPosed and the display hook.
+**Achieved:** **5120×2160@60 / 4K@60 / 3440×1440@100** over a direct USB-C→DP cable — resolutions the phone
+ships *hard-coded to refuse*. Required: bootloader unlock → root (Magisk) → a hand-patched `services.jar`
+that kills Android's `enable_mode_limit_for_external_display` governor.
 
-> Decision needed: **do you have a Windows machine/VM for LMSA?** That's the cleanest firmware route.
+**The two walls (both hardware/firmware, unreachable by software):**
+1. **Bandwidth:** phone USB-C = 4-lane DP-alt direct (5K2K@60) vs 2-lane through a dock (3440×1440@60).
+2. **DP version:** phone's USB-C controller advertises **DP 1.2 / HBR2** at the Alt-Mode layer (proven: a Mac
+   does 5K2K@**165** on the *same cable+monitor*). So **no HBR3, no DSC, no >60Hz at high res** — firmware-locked
+   in the Type-C silicon, beneath the DP driver / devicetree / even kernel source.
+
+**Root-vs-OEM:** the `services.jar` patch (root) is the ONLY change that buys 4K/5K2K. Un-root → governor
+returns → back to ~3440×1440@100. dtbo mods reverted to stock (they bought nothing). See §21.
+
+(Full chronological investigation below, §1–22.)
 
 ---
 
