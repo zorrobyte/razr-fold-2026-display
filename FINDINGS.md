@@ -412,3 +412,19 @@ Question: are we using DSC, and can we force it? Mounted real debugfs (`mount -t
 **5120×2160@60 / 3840×2160@60 / 3440×1440@100** — the max for this phone+monitor. Set by the kernel DP
 driver declining DSC over USB-C DP-alt. Everything the uncompressed 4-lane link + framework patch allow is
 achieved; higher refresh at high res (DSC territory) is kernel-locked.
+
+---
+
+## 19. 🔓 THE REAL UNLOCK PATH: devicetree caps (no kernel source needed)
+Background agent confirmed DSC is DT-gated and a dtbo edit needs no kernel source (blanc source unpublished,
+GPL req #836 open). On-device inspection of `/sys/firmware/devicetree/base/soc/qcom,dp_display@9ad2000`:
+- DSC is **already enabled** (`qcom,dsc-feature-enable`, `qcom,dsc-continuous-pps`).
+- **Artificial caps found:**
+  - `qcom,max-pclk-frequency-khz = 675000` (675 MHz) — pixel-clock cap = exactly 5K2K@60; **drops 5K2K@120 / 4K@120**.
+  - `qcom,dp-hbr3-disable` (present) — forces HBR2 over HBR3.
+  - `qcom,dp-downgrade` (present).
+- These live in the **dtbo overlay** (confirmed: dtbo magic 0xd7b7ab1e, contains hbr3-disable ×3). DTBs
+  inside are **compressed** (raw value search failed; must extract via mkdtboimg.py).
+
+PLAN: extract dtbo DTBs → raise `max-pclk` (→ ~1.6 GHz) + drop `hbr3-disable` → repack → `fastboot flash dtbo_b`.
+Recovery: `dtbo-mod/dtbo.stock.img` (this backup) + the 15 GB firmware zip.
