@@ -2,7 +2,7 @@
 
 Device: `motorola razr_fold_2026` (codename **blanc**), Android 16, Verizon (`ro.carrier=retus`).
 SoC: **Qualcomm SM8845 = Snapdragon 8 Gen 5** (platform `canoe`, Adreno 840).
-Serial: `ZP2223437N`. Bootloader: **UNLOCKED**. Root: **Magisk v30.7 flashed** (init_boot patched).
+Serial: `ZP2223437N`. Bootloader: **UNLOCKED**. Root: **Magisk v30.7 — CONFIRMED** (`su` → `uid=0`, ctx `u:r:magisk:s0`).
 
 ---
 
@@ -132,10 +132,20 @@ Steps that worked:
 > ⚠️ Key gotcha for next time: Moto rejects Magisk-patched images in bootloader mode
 > ("Preflash validation failed") — **flash in fastbootd** (`fastboot reboot fastboot`) instead.
 
-### Then the goal
-7. Install **LSPosed** via Magisk → hook the `DisplayModeDirector` external-mode-limit vote to return
-   "no limit" (can't flip the read-only aconfig flag, so stub the code that reads it).
-8. After bypass: `cmd display set-user-preferred-display-mode 3840 2160 120 13` should apply.
+### Then the goal — bypass the mode limit (IN PROGRESS)
+**Confirmed with root:** the flag is **read-only** — `aflags disable
+com.android.server.display.feature.flags.enable_mode_limit_for_external_display` →
+*"it is read-only for the current release configuration."* So **no aconfig/`aflags` override** is possible.
+
+Remaining route = **LSPosed hook** forcing `DisplayManagerFlags.isModeLimitForExternalDisplayEnabled()`
+(or the generated `FeatureFlagsImpl.enableModeLimitForExternalDisplay()`) → **false** in system_server.
+- Build env present: Android Studio + SDK platforms 36/36.1 + JDK 17 (gradle via wrapper).
+- Steps: enable Zygisk → install LSPosed → build + install the 1-method hook module → scope to
+  `system_server` → reboot.
+- After bypass: `cmd display set-user-preferred-display-mode 3840 2160 120 13` should finally apply,
+  and 4K/5K2K modes should appear in the external display's `supportedModes`.
+
+Realistic ceiling unchanged (link-limited): **4K@120 / 5K2K@60**, not native 5K2K@165 (DP-alt vs DP2.1).
 
 ### Realistic ceiling (link-limited, not software)
 Phone USB-C = **DP Alt-Mode (DP 1.4 / HBR3)**, not DP 2.1 UHBR — even through the TB5 dock.
