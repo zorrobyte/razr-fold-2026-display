@@ -293,3 +293,24 @@ secondary/external displays). TestUFO measures rAF, so it shows 60 even though c
 - The desktop UI itself (window moves, scrolling) already runs 120 on the external display.
 
 Net: nothing on the device is limiting draw to 60. The cap is inside the browser.
+
+---
+
+## 14. "Whole desktop feels 60 Hz (DeX too)" — AOSP frame-rate-category render cap
+Panel scans 120 (HWC `vsyncRate=120`), but the **framework caps the external display's RENDER rate to 60**:
+- `dumpsys display` → display 13 `mDesiredDisplayModeSpecs ... render: (0.0 60.0)` (render ceiling 60).
+- `frameRateCategoryRate {normal=60.0, high=90.0}` — content voting "NoPreference/normal" renders at 60,
+  "high" only 90. Most desktop UI votes normal → **60 Hz render** on a 120 Hz scanout.
+- `settings put system min_refresh_rate/peak_refresh_rate 120` did NOT lift it (those steer the *internal*
+  default display only).
+- This is **AOSP frame-rate-category power-saving**, display-agnostic → **Samsung DeX behaves identically**.
+  Not Moto, not the link, not the browser.
+
+Enabled the live overlay to watch it: `service call SurfaceFlinger 1034 i32 1` (shows per-display Hz +
+render rate on all screens incl. the monitor; disable with `... i32 0`).
+
+### To actually force 120 render on external (untested)
+Would need to defeat the category downclock — e.g., raise the external `frameRateCategory` rates or force
+the render floor to 120 in the framework (another services.jar-class patch), or an SF frame-rate-override
+property. Diminishing returns; the panel/link/patch already deliver 120 to anything that explicitly votes
+for a high frame rate.
