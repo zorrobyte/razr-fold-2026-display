@@ -493,10 +493,33 @@ just a DP 1.2-class USB-C output vs a DP 2.1 source like the Mac. **End of the r
 ---
 
 ## FINAL PROJECT STATE
-- Bootloader **unlocked** (Verizon Moto), **rooted** (Magisk 30.7).
-- **Framework patch active** (`services.jar` Magisk overlay) — removes `enable_mode_limit_for_external_display`
-  governor → THIS unlocks 4K/5K2K (root-required; reverting to OEM loses it, drops to ~3440×1440).
+- Bootloader **unlocked** (Moto, unlocked unit), **rooted** (Magisk 30.7).
+- **Cap removed via LSPosed module** (`com.dispunlock`) — hooks `isExternalDisplayLimitModeEnabled() → false`
+  in system_server → unlocks 4K/5K2K (root-required; reverting to OEM loses it, drops to ~3440×1440).
+  The `services.jar` Magisk overlay (`framework-patch/`) does the same thing and is kept as a backup, but
+  is **no longer installed** (removed in favour of the module — survives OTAs without re-patching).
 - **dtbo: stock** (all mods reverted — proven to buy nothing; the wall is USB-C Alt-Mode DP 1.2).
 - **Direct USB-C→DP cable → 5K2K@60 / 4K@60 / 3440×1440@100.** Dock → 3440×1440@60 (2-lane).
 - Desktop renders 120Hz on interaction (adaptive). Browser web content 60Hz (interaction-gated, AOSP).
 - Walls (all hardware/firmware, not software): USB-C Alt-Mode **DP 1.2** (no HBR3/DSC/UHBR).
+
+---
+
+## 23. LSPosed SOLVED — Vector canary v2.0-3043 (supersedes §10/§11 "abandoned")
+The §10 blocker (`lspd` couldn't read the module APK — `Failed to open APK … I/O error`) was a bug in
+the Vector **release 3021**, not a fundamental incompatibility. The **JingMatrix Vector canary
+`v2.0-3043`** fixes the mount-namespace handling.
+
+Verified this session (services.jar overlay DISABLED, then deleted — module is the only thing removing
+the cap):
+- `I/VectorNative  Injected Vector framework into system_server.` — **0 open-APK errors** (the exact step
+  that failed before).
+- New scriptable daemon CLI at `/data/adb/lspd/cli` (`modules enable|ls`, `scope set <pkg> android/0`,
+  `status`). Enabled `com.dispunlock`, scoped to `android/0` (System Framework) without the hidden UI.
+- External display still enumerates `5120×2160@60` (id13), `3840×2160@60` (id14), `3440×1440@100` (id12)
+  with the services.jar overlay removed → **the LSPosed hook removes the cap on its own.**
+
+Switched the device to the module (`services_dispcap` Magisk module deleted; `framework-patch/` kept as
+backup). Packaged the module + how-to as a standalone **public** repo:
+**https://github.com/zorrobyte/external-display-unlock** (`lsposed-module/` here holds the same APK +
+`vector-v2.0-3043-canary.zip` + README). Requirements: Magisk + Zygisk + Vector canary ≥3043.
