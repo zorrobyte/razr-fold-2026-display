@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Med Ready For kan du ansluta till en TV, skärm eller dator för att spela, titta på underhållning, använda fjärrstyrning och mycket mer.</item>
+        <item>Du kan växla till en annan upplevelse genom att trycka på den flytande bubblan på telefonen.</item>
+        <item>Anslut ett tangentbord och en mus för en bättre upplevelse. Om du inte har en mus förvandlas telefonskärmen till en trackpad.</item>
+        <item>Vissa appar fungerar inte i skrivbordsläge och vissa kan inte spela upp innehåll på en sekundär skärm. Du kan även behöva justera din skärm eller TV för att få den bästa tittarupplevelsen.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Välkommen till Ready For</item>
+        <item>Växla visningslägen</item>
+        <item>Tillbehör</item>
+        <item>Kom ihåg</item>
+    </array>
+</resources>

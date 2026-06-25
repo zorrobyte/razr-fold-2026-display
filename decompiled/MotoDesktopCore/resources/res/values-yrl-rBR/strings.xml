@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mekanismu Smart Connect yara</string>
+    <string name="call_device_name_phone">Tiapusawa-rupiara asuí nhẽẽgaxika telefuniwara</string>
+    <string name="call_output_route_fragment_sub_title">Sinimuka disúsitiwo uikesawa/sẽmasawa yara</string>
+    <string name="call_output_route_fragment_title">Worumi asuí nhẽẽgaxika senũisawa supé</string>
+    <string name="dialog_allow">Xiari</string>
+    <string name="dialog_cancel">Remukanhẽmu</string>
+    <string name="get_start">Reyupirũ </string>
+    <string name="got_it">Kuiri akuawana</string>
+    <string name="hdmi_description">Reyumũdi ne telefuni yepé tela upé yepé kabu HDMI irũ</string>
+    <string name="hdmi_media_device_name">HDMI</string>
+    <string name="hdmi_title">Emuĩ ne telefuni yepé tela yumũdiana irũ</string>
+    <string name="main_core_bluetooth_connect_permission_grant">Ũba umeẽ Xiarisawa Bluetooth suí kua %1$s supé. Remuyaté aé, upuderi arã Smart Connect umaã dispusitiwu-ita Bluetooth uyukunekitári ana kuá dispusitiwu irũ</string>
+    <string name="main_core_location_permission_grant">Ũba umeẽ ana xiarisawa umaã arã pitasawarẽdá kuá %1$s supé. Umuyaté aé, upuderi arã Smart Connect uyukunekitári dispusitiwu-ita irũ uikúwa-ita i ruakí.</string>
+    <string name="media_output_route_fragment_done">Ipawana</string>
+    <string name="media_output_route_fragment_sub_title">Remurekunhá sẽma</string>
+    <string name="media_output_route_fragment_title">Mídia semusawa</string>
+    <string name="media_output_route_pair_new_device">Repariari dispusitiwu pisasú</string>
+    <string name="menu_about">Resewara</string>
+    <string name="menu_audio_routing">Midia murekuyarasawa</string>
+    <string name="menu_help">Pitimũsawa</string>
+    <string name="phone_media_device_name">Nhẽẽnhẽẽgara (kuruka-rikuwé)</string>
+    <string name="record_audio_permission_required_message">Ureprudusíri arã tiapusá dispusitiwu upé, Smart Connect upurãi xiarisawa ugrawári arã tiapusá.</string>
+    <string name="record_audio_permission_required_title">Xiarisawa puraĩga</string>
+    <string name="rf_audio_type_bluetooth">(Bluetooth)</string>
+    <string name="rf_audio_type_usb">(USB)</string>
+    <string name="rf_audio_type_wifi">(Wi-Fi)</string>
+    <string name="rpd_media_device_name">Dispusitiwu pukuarewa</string>
+    <string name="see_how_it_works">Remaã yumunhã yawé</string>
+    <string name="settings_summary">Rekunekitai telefuni yepé tela upé ou dispusitiwu upé</string>
+    <string name="settings_title">Smart Connect</string>
+    <string name="switch_to_phone_mic">Usai nhẽẽgaxika telefuniwara</string>
+    <string name="tile_hdmi_title">Desktop nimũ irũ </string>
+    <string name="tile_label_lite">Kunekisãu Smart Connect</string>
+    <string name="wifi_quality_taskbar_content_poor_miracast">Yumũdisawa nimũ ĩma i kuĩna. E-imũdiú asuí e-amũyumũdi telefuni tela pusá upé</string>
+    <string name="wired_usb_media_device_name"> apisápura ixama irũwa</string>
+    <string name="wireless_display_media_device_name">Displey nimũĩma</string>
+</resources>

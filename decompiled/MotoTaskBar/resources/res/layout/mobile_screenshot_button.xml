@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/tablet_taskbar_appitem_width"
+    android:layout_height="@dimen/tablet_taskbar_appitem_width">
+    <com.android.systemui.statusbar.policy.KeyButtonView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/screenshot"
+        app:tooltipText="@string/tooltips_screenshot_tools"
+        style="@style/MobileTaskTaskBarKeyButton"/>
+</merge>

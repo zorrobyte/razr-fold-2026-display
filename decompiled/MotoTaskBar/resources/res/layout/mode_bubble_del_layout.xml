@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/delete_wrapper"
+        android:layout_width="@dimen/mode_bubble_delete_bar_active_size"
+        android:layout_height="@dimen/mode_bubble_delete_bar_active_size">
+        <View
+            android:layout_gravity="center"
+            android:id="@+id/delete"
+            android:background="@drawable/ic_delete_bubble_background"
+            android:layout_width="@dimen/mode_bubble_delete_bar_icon_size"
+            android:layout_height="@dimen/mode_bubble_delete_bar_icon_size"
+            android:foreground="@drawable/ic_delete_bubble_foreground"
+            android:elevation="2dp"/>
+    </FrameLayout>
+</FrameLayout>

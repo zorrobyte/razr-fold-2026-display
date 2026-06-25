@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For ile bir TV\'ye, monitöre veya bilgisayara bağlanarak oyun oynayabilir, eğlenebilir, telefonunuzu uzaktan kontrol edebilir ve daha birçok şeyi yapabilirsiniz.</item>
+        <item>Telefonunuzdaki hareketli baloncuğa dokunarak farklı bir deneyime geçiş yapabilirsiniz.</item>
+        <item>En iyi deneyim için bir klavye ve fare bağlayın. Fareniz yoksa telefon ekranınız dokunmatik alana dönüşür.</item>
+        <item>Bazı uygulamalar masaüstü modunda düzgün çalışmayabilir ve bazıları ikincil ekranda içerik oynatmanıza izin vermeyebilir. Ayrıca en iyi izleme deneyimi için monitörünüzü veya TV\'nizi ayarlamanız gerekebilir.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Ready For\'a Hoş Geldiniz</item>
+        <item>Ekran modlarını değiştirme</item>
+        <item>Aksesuarlar</item>
+        <item>Unutmayın</item>
+    </array>
+</resources>

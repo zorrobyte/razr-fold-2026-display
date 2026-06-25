@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>Käytä järjestelmän valintaa (oletus)</item>
+        <item>16 bittiä/näyte</item>
+        <item>24 bittiä/näyte</item>
+        <item>32 bittiä/näyte</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>Käytä järjestelmän valintaa (oletus)</item>
+        <item>16 bittiä/näyte</item>
+        <item>24 bittiä/näyte</item>
+        <item>32 bittiä/näyte</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>Käytä järjestelmän valintaa (oletus)</item>
+        <item>Mono</item>
+        <item>Stereo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>Käytä järjestelmän valintaa (oletus)</item>
+        <item>Mono</item>
+        <item>Stereo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>Optimoi äänenlaatu</item>
+        <item>Tasapainoinen yhteyden ja äänenlaadun optimointi</item>
+        <item>Optimoi yhteyden laatu</item>
+        <item>Paras mahdollinen (mukautuva siirtonopeus)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>Optimoi äänenlaatu (990 kb/s / 909 kb/s)</item>
+        <item>Tasapainoinen yhteyden ja äänenlaadun optimointi (660 kb/s / 606 kb/s)</item>
+        <item>Optimoi yhteyden laatu (330 kb/s / 303 kb/s)</item>
+        <item>Paras mahdollinen (mukautuva siirtonopeus)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>Käytä järjestelmän valintaa (oletus)</item>
+        <item>44,1 kHz</item>
+        <item>48,0 kHz</item>
+        <item>88,2 kHz</item>
+        <item>96,0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>Käytä järjestelmän valintaa (oletus)</item>
+        <item>44,1 kHz</item>
+        <item>48,0 kHz</item>
+        <item>88,2 kHz</item>
+        <item>96,0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>Käytä järjestelmän valintaa (oletus)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ ‑ääni</item>
+        <item>Qualcomm® aptX™ HD ‑ääni</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>Käytä järjestelmän valintaa (oletus)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ ‑ääni</item>
+        <item>Qualcomm® aptX™ HD ‑ääni</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>, aktiivinen</item>
+        <item>, aktiivinen (media)</item>
+        <item>, aktiivinen (puhelin)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp14</item>
+        <item>avrcp13</item>
+        <item>avrcp15</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.4 (oletus)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.5</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (oletus)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>Pois käytöstä</item>
+        <item>Suodatus käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="display_size_descriptions">
+        <item>Pieni</item>
+        <item>Oletus</item>
+        <item>Suuri</item>
+        <item>Suurempi</item>
+    </array>
+    <array name="font_size_descriptions">
+        <item>Pieni</item>
+        <item>Oletus</item>
+        <item>Suuri</item>
+    </array>
+    <array name="open_app_option_array">
+        <item>Käynnistä sovellus uudelleen</item>
+        <item>Avaa sovellus käynnistämättä uudelleen</item>
+        <item>Kysy aina</item>
+    </array>
+    <array name="power_save_array">
+        <item>10 min</item>
+        <item>15 min</item>
+        <item>20 min</item>
+        <item>30 min</item>
+        <item>60 min</item>
+        <item>Älä katkaise koskaan</item>
+    </array>
+    <array name="preload_wallpapers_array">
+        <item>preload_wallpaper_geometry_1</item>
+        <item>preload_wallpaper_geometry_2</item>
+        <item>preload_wallpaper_geometry_3</item>
+        <item>preload_wallpaper_geometry_4</item>
+        <item>preload_wallpaper_geometry_5</item>
+        <item>preload_wallpaper_geometry_6</item>
+        <item>preload_wallpaper_geometry_7</item>
+        <item>preload_wallpaper_geometry_8</item>
+        <item>preload_wallpaper_geometry_9</item>
+        <item>preload_wallpaper_geometry_10</item>
+        <item>preload_wallpaper_nature_1</item>
+        <item>preload_wallpaper_nature_2</item>
+        <item>preload_wallpaper_nature_3</item>
+        <item>preload_wallpaper_nature_4</item>
+        <item>preload_wallpaper_nature_5</item>
+        <item>preload_wallpaper_nature_6</item>
+        <item>preload_wallpaper_nature_7</item>
+        <item>preload_wallpaper_nature_8</item>
+        <item>preload_wallpaper_nature_9</item>
+    </array>
+    <array name="tile_states_airplane">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_alarm">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_battery">
+        <item>Ei saatavilla</item>
+        <item>Pois käytöstä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_bt">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_cameratoggle">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_cast">
+        <item>Ei saatavilla</item>
+        <item>Pois päältä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_cell">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_color_correction">
+        <item>Ei saatavilla</item>
+        <item>Pois päältä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_controls">
+        <item>Ei saatavilla</item>
+        <item>Pois päältä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_dark">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_dnd">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_dream">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_flashlight">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_font_scaling">
+        <item>Ei saatavilla</item>
+        <item>Pois päältä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_hearing_devices">
+        <item>Ei saatavilla</item>
+        <item>Pois käytöstä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_hotspot">
+        <item>Ei saatavilla</item>
+        <item>Pois käytöstä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_internet">
+        <item>Ei saatavilla</item>
+        <item>Pois käytöstä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_inversion">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_location">
+        <item>Ei saatavilla</item>
+        <item>Pois käytöstä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_mictoggle">
+        <item>Ei saatavilla</item>
+        <item>Pois käytöstä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_night">
+        <item>Ei saatavilla</item>
+        <item>Pois päältä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_onehanded">
+        <item>Ei saatavilla</item>
+        <item>Pois päältä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_qr_code_scanner">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_record_issue">
+        <item>Ei saatavilla</item>
+        <item>Pois käytöstä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_reduce_brightness">
+        <item>Ei saatavilla</item>
+        <item>Pois päältä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_reverse">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_rotation">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_saver">
+        <item>Ei saatavilla</item>
+        <item>Pois käytöstä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_screenrecord">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_wallet">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_wifi">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="tile_states_work">
+        <item>Ei saatavilla</item>
+        <item>Ei käytössä</item>
+        <item>Käytössä</item>
+    </array>
+    <array name="timeout_array">
+        <item>1 min</item>
+        <item>2 min</item>
+        <item>5 min</item>
+        <item>10 min</item>
+        <item>20 min</item>
+        <item>30 min</item>
+        <item>60 min</item>
+    </array>
+</resources>

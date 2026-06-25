@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pūkaha Smart Connect</string>
+    <string name="call_device_name_phone">Tukuoro waea me te hopureo</string>
+    <string name="call_output_route_fragment_sub_title">Whakawhiti pūrere tāuru-puta</string>
+    <string name="call_output_route_fragment_title">Waea rōrahi me te hopuoro</string>
+    <string name="dialog_allow">Whakaae</string>
+    <string name="dialog_cancel">Whakakore</string>
+    <string name="get_start">Tīmata</string>
+    <string name="got_it">Kua mau</string>
+    <string name="hdmi_description">Tūhonoa tō waea ki tētahi whakaatu mā tētahi taura HDMI</string>
+    <string name="hdmi_media_device_name">HDMI</string>
+    <string name="hdmi_title">Tiria tō waea ki tētahi whakaaturanga tūhono</string>
+    <string name="main_core_bluetooth_connect_permission_grant">Kāore e tukuna te whakaaetanga Nihokikorangi mō %1$s. Hei whakarite kia Smart Connect te taki i te pūrere nihokikorangi tūhono o tēnei waea, whakakāngia.</string>
+    <string name="main_core_location_permission_grant">Kāore e tukuna te whakaaetanga tauwāhi mō %1$s. Kia tino mōhio ai kua Smart Connect te tūhono i te pūrere pātata, whakakāngia.</string>
+    <string name="media_output_route_fragment_done">Kua oti</string>
+    <string name="media_output_route_fragment_sub_title">Whakawhiti huaputa</string>
+    <string name="media_output_route_fragment_title">Huaputa pāpāho</string>
+    <string name="media_output_route_pair_new_device">Takirua pūrere hōu</string>
+    <string name="menu_about">Mō</string>
+    <string name="menu_audio_routing">Whakawhiti Pāpāho</string>
+    <string name="menu_help">Āwhina</string>
+    <string name="phone_media_device_name">Tukuoro waea</string>
+    <string name="record_audio_permission_required_message">Hei Tākaro ororongo i tō pūrere, Smart Connect te whakaaetanga hei hopu ororongo</string>
+    <string name="record_audio_permission_required_title">E hiahiatia ana te whakaaetanga</string>
+    <string name="rf_audio_type_bluetooth">(BT)</string>
+    <string name="rf_audio_type_usb">(USB)</string>
+    <string name="rf_audio_type_wifi">(WIFI)</string>
+    <string name="rpd_media_device_name">Pūrere Tūhonotia</string>
+    <string name="see_how_it_works">Tirohia he pēhea te mahi</string>
+    <string name="settings_summary">Tūhonoa tō waea ki tētahi whakaaturanga, pūrere rānei</string>
+    <string name="settings_title">Smart Connect</string>
+    <string name="switch_to_phone_mic">Whakamahia te hopureo waea</string>
+    <string name="tile_hdmi_title">Papamahi waea</string>
+    <string name="tile_label_lite">Tūhono Smart Connect</string>
+    <string name="wifi_quality_taskbar_content_poor_miracast">Tūhononga ahokore tē taea. Momotu me te tūhono anō i tō waea ki te whatunga o te whakaatu.</string>
+    <string name="wired_usb_media_device_name">Kawerongo waea</string>
+    <string name="wireless_display_media_device_name">Whakaaturanga ahokore</string>
+</resources>

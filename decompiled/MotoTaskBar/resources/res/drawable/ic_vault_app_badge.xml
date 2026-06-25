@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tint="@color/badge_tint_vault"
+    android:height="@dimen/profile_badge_size"
+    android:width="@dimen/profile_badge_size"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group
+        android:pivotX="12"
+        android:pivotY="12"
+        android:scaleX="0.6"
+        android:scaleY="0.6">
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M9,4H16C18.209,4 20,5.791 20,8V16C20,18.209 18.209,20 16,20H9C6.791,20 5,18.209 5,16V8C5,5.791 6.791,4 9,4ZM3,8C3,4.686 5.686,2 9,2H16C19.314,2 22,4.686 22,8V16C22,19.314 19.314,22 16,22H9C5.686,22 3,19.314 3,16V8ZM13.425,11.775L14,15H11L11.575,11.775C11.242,11.608 10.979,11.367 10.788,11.05C10.596,10.733 10.5,10.383 10.5,10C10.5,9.45 10.696,8.979 11.087,8.587C11.479,8.196 11.95,8 12.5,8C13.05,8 13.521,8.196 13.913,8.587C14.304,8.979 14.5,9.45 14.5,10C14.5,10.383 14.404,10.733 14.212,11.05C14.021,11.367 13.758,11.608 13.425,11.775Z"
+            android:fillType="evenOdd"/>
+    </group>
+</vector>

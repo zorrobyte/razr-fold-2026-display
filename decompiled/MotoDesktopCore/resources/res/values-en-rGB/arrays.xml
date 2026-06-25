@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For lets you connect to a TV, monitor or PC for gaming, entertainment, remote phone control and more.</item>
+        <item>You can switch to a different experience by tapping on the floating bubble on your phone.</item>
+        <item>Connect a keyboard and mouse for the best experience. If you don\'t have a mouse, your phone screen will turn into a trackpad.</item>
+        <item>Some apps may not work well in desktop mode and some may not let you play content on a second display. You may also need to adjust your monitor or TV for the best viewing experience.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Welcome to Ready For</item>
+        <item>Switching display modes</item>
+        <item>Accessories</item>
+        <item>Bear in mind</item>
+    </array>
+</resources>

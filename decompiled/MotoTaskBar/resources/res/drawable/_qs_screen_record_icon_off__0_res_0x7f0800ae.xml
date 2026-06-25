@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:ordering="together">
+    <objectAnimator
+        android:interpolator="@drawable/__qs_screen_record_icon_off__0__0_res_0x7f08002c"
+        android:duration="417"
+        android:startOffset="0"
+        android:valueFrom="#000000"
+        android:valueTo="#edf2eb"
+        android:valueType="colorType"
+        android:propertyName="fillColor"/>
+</set>

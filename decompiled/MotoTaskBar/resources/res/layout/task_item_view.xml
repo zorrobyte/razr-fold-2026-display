@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.motorola.taskbar.recent.TaskItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:clipChildren="false"
+    android:layout_width="@dimen/taskbar_appitem_width"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/hover_top_tag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/task_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"/>
+        <View
+            android:id="@+id/running_tag"
+            android:background="@color/task_running_color"
+            android:visibility="gone"
+            android:layout_width="48dp"
+            android:layout_height="4dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</com.motorola.taskbar.recent.TaskItemView>

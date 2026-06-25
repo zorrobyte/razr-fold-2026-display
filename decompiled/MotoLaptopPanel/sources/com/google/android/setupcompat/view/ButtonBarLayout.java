@@ -1,0 +1,172 @@
+package com.google.android.setupcompat.view;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.LinearLayout;
+import com.google.android.setupcompat.R$bool;
+import com.google.android.setupcompat.R$id;
+import com.google.android.setupcompat.partnerconfig.PartnerConfigHelper;
+import com.google.android.setupcompat.template.FooterActionButton;
+import com.google.android.setupcompat.util.Logger;
+import java.util.ArrayList;
+import java.util.Collections;
+
+/* JADX INFO: loaded from: classes.dex */
+public class ButtonBarLayout extends LinearLayout {
+    private static final Logger LOG = new Logger(ButtonBarLayout.class);
+    private int originalPaddingLeft;
+    private int originalPaddingRight;
+    private boolean stacked;
+    private boolean stackedButtonForExpressiveStyle;
+
+    public ButtonBarLayout(Context context) {
+        super(context);
+        this.stacked = false;
+    }
+
+    public ButtonBarLayout(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        this.stacked = false;
+    }
+
+    private ArrayList getChildViewsInContainerInOrder(int i, boolean z) {
+        ArrayList arrayList = new ArrayList();
+        if (z) {
+            arrayList.addAll(Collections.nCopies(3, null));
+        }
+        for (int i2 = 0; i2 < i; i2++) {
+            View childAt = getChildAt(i2);
+            if (z) {
+                if (isPrimaryButtonStyle(childAt)) {
+                    arrayList.set(2, childAt);
+                } else if (childAt instanceof FooterActionButton) {
+                    arrayList.set(0, childAt);
+                } else {
+                    arrayList.set(1, childAt);
+                }
+            } else if (childAt instanceof FooterActionButton) {
+                arrayList.add(getChildAt(i2));
+            } else {
+                arrayList.add(1, childAt);
+            }
+        }
+        return arrayList;
+    }
+
+    private boolean isFooterButtonsEvenlyWeighted(Context context) {
+        int childCount = getChildCount();
+        int i = 0;
+        for (int i2 = 0; i2 < childCount; i2++) {
+            View childAt = getChildAt(i2);
+            if ((childAt instanceof FooterActionButton) && ((FooterActionButton) childAt).isPrimaryButtonStyle()) {
+                i++;
+            }
+        }
+        return i == 2 && context.getResources().getConfiguration().smallestScreenWidthDp >= 600 && PartnerConfigHelper.shouldApplyExtendedPartnerConfig(context);
+    }
+
+    private boolean isPrimaryButtonStyle(View view) {
+        return (view instanceof FooterActionButton) && ((FooterActionButton) view).isPrimaryButtonStyle();
+    }
+
+    private void setStacked(boolean z) {
+        if (this.stacked == z) {
+            return;
+        }
+        this.stacked = z;
+        int childCount = getChildCount();
+        int i = 0;
+        boolean z2 = false;
+        int i2 = 0;
+        while (true) {
+            if (i >= childCount) {
+                break;
+            }
+            View childAt = getChildAt(i);
+            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) childAt.getLayoutParams();
+            if (z) {
+                childAt.setTag(R$id.suc_customization_original_weight, Float.valueOf(layoutParams.weight));
+                layoutParams.weight = 0.0f;
+                layoutParams.leftMargin = 0;
+            } else {
+                Float f = (Float) childAt.getTag(R$id.suc_customization_original_weight);
+                if (f != null) {
+                    layoutParams.weight = f.floatValue();
+                    z2 = z2;
+                } else {
+                    z2 = true;
+                }
+                if (isPrimaryButtonStyle(childAt)) {
+                    i2++;
+                }
+            }
+            childAt.setLayoutParams(layoutParams);
+            i++;
+            z2 = z2;
+        }
+        setOrientation(z ? 1 : 0);
+        if (z2) {
+            LOG.w("Reorder the FooterActionButtons in the container");
+            ArrayList childViewsInContainerInOrder = getChildViewsInContainerInOrder(childCount, i2 <= 1);
+            for (int i3 = 0; i3 < childCount; i3++) {
+                View view = (View) childViewsInContainerInOrder.get(i3);
+                if (view != null) {
+                    bringChildToFront(view);
+                }
+            }
+        } else {
+            for (int i4 = childCount - 1; i4 >= 0; i4--) {
+                bringChildToFront(getChildAt(i4));
+            }
+        }
+        if (!z) {
+            setPadding(this.originalPaddingLeft, getPaddingTop(), this.originalPaddingRight, getPaddingBottom());
+            return;
+        }
+        if (getContext().getResources().getBoolean(R$bool.sucTwoPaneLayoutStyle) && PartnerConfigHelper.isGlifExpressiveEnabled(getContext())) {
+            setHorizontalGravity(8388613);
+        } else {
+            setHorizontalGravity(17);
+        }
+        this.originalPaddingLeft = getPaddingLeft();
+        int paddingRight = getPaddingRight();
+        this.originalPaddingRight = paddingRight;
+        int iMax = Math.max(this.originalPaddingLeft, paddingRight);
+        setPadding(iMax, getPaddingTop(), iMax, getPaddingBottom());
+    }
+
+    @Override // android.widget.LinearLayout, android.view.View
+    protected void onMeasure(int i, int i2) {
+        int iMakeMeasureSpec;
+        boolean z;
+        int size = View.MeasureSpec.getSize(i);
+        setStacked(false);
+        boolean z2 = true;
+        if (View.MeasureSpec.getMode(i) == 1073741824) {
+            iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, 0);
+            z = true;
+        } else {
+            iMakeMeasureSpec = i;
+            z = false;
+        }
+        super.onMeasure(iMakeMeasureSpec, i2);
+        boolean z3 = (size > 0 && getMeasuredWidth() > size) || this.stackedButtonForExpressiveStyle;
+        if (isFooterButtonsEvenlyWeighted(getContext()) || !z3) {
+            z2 = z;
+        } else {
+            setStacked(true);
+        }
+        if (z2) {
+            super.onMeasure(i, i2);
+        }
+    }
+
+    public void setStackedButtonForExpressiveStyle(boolean z) {
+        if (PartnerConfigHelper.isGlifExpressiveEnabled(getContext())) {
+            this.stackedButtonForExpressiveStyle = z;
+        } else {
+            this.stackedButtonForExpressiveStyle = false;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.setupcompat.view.StatusBarBackgroundLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/suc_layout_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:filterTouchesWhenObscured="true">
+    <include layout="@layout/sud_glif_expressive_template_content_layout"/>
+</com.google.android.setupcompat.view.StatusBarBackgroundLayout>

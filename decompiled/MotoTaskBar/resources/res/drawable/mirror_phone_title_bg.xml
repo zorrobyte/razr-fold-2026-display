@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/mirror_phone_titlebar_bg"/>
+    <corners
+        android:topLeftRadius="@dimen/mirror_phone_panel_title_bar_corners_radius"
+        android:topRightRadius="@dimen/mirror_phone_panel_title_bar_corners_radius"/>
+</shape>

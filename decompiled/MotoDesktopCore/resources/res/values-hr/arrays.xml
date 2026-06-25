@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For omogućava povezivanje s televizorom, monitorom ili računalom za igranje, zabavu, daljinsko upravljanje telefonom i još mnogo toga.</item>
+        <item>Možete prijeći na drugo iskustvo dodirom plivajućeg gumba na svom telefonu.</item>
+        <item>Za najbolje iskustvo priključite tipkovnicu i miš. Ako nemate miš, zaslon telefona pretvorit će se u dodirnu površinu.</item>
+        <item>Neke aplikacije možda neće dobro raditi u načinu rada radne površine, a neke vam možda neće dopustiti reproduciranje sadržaja na sekundarnom zaslonu. Osim toga, možda ćete morati podesiti monitor ili televizor za najbolje iskustvo gledanja.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Dobro došli u Ready For</item>
+        <item>Prebacivanje načina rada zaslona</item>
+        <item>Dodatna oprema</item>
+        <item>Imajte na umu</item>
+    </array>
+</resources>

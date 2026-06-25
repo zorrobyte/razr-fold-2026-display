@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+        <item>16 ប៊ីត​/​គំរូ</item>
+        <item>24 ប៊ីត​/​គំរូ</item>
+        <item>32 ប៊ីត​/​គំរូ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+        <item>16 ប៊ីត​/​គំរូ</item>
+        <item>24 ប៊ីត​/​គំរូ</item>
+        <item>32 ប៊ីត​/​គំរូ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+        <item>ម៉ូ​ណូ</item>
+        <item>ស្តេរ៉េអូ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+        <item>ម៉ូ​ណូ</item>
+        <item>ស្តេរ៉េអូ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>បាន​បង្កើន​ប្រសិទ្ធភាពសម្រាប់​​គុណភាព​សំឡេង</item>
+        <item>សំឡេង​ដែល​មាន​តុល្យភាព និង​គុណភាព​នៃ​ការ​តភ្ជាប់</item>
+        <item>បាន​បង្កើន​ប្រសិទ្ធភាព​​សម្រាប់គុណភាព​នៃ​ការ​ត​ភ្ជាប់</item>
+        <item>កម្រិតល្អបំផុត (កម្រិតប៊ីតដែលអាចប្រែប្រួល)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>បាន​បង្កើន​ប្រសិទ្ធភាព​​សម្រាប់​គុណភាព​សំឡេង (990kbps/909kbps)</item>
+        <item>សំឡេង​ដែល​មាន​តុល្យភាព និង​គុណភាព​នៃ​ការ​ត​ភ្ជាប់ (660kbps/606kbps)</item>
+        <item>បាន​បង្កើន​ប្រសិទ្ធភាព​សម្រាប់​គុណភាព​​នៃ​ការ​ត​ភ្ជាប់ (330kbps/303kbps)</item>
+        <item>កម្រិតល្អបំផុត (កម្រិតប៊ីតដែលអាចប្រែប្រួល)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm®សំឡេង aptX™</item>
+        <item>Qualcomm®សំឡេង aptX™ HD</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>ប្រើ​ការ​ជ្រើសរើស​ប្រព័ន្ធ (លំនាំ​ដើម)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm®សំឡេង aptX™</item>
+        <item>Qualcomm®សំឡេង aptX™ HD</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>សកម្ម</item>
+        <item>សកម្ម (មេឌៀ)</item>
+        <item>សកម្ម (ទូរសព្ទ)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp14</item>
+        <item>avrcp13</item>
+        <item>avrcp15</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.4 (លំនាំដើម)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.5</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (លំនាំដើម)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>បានបិទ</item>
+        <item>បានបើក​ការត្រង</item>
+        <item>បានបើក</item>
+    </array>
+    <array name="display_size_descriptions">
+        <item>តូច</item>
+        <item>លំនាំដើម</item>
+        <item>ធំ</item>
+        <item>ធំជាង</item>
+    </array>
+    <array name="font_size_descriptions">
+        <item>តូច</item>
+        <item>លំនាំដើម</item>
+        <item>ធំ</item>
+    </array>
+    <array name="open_app_option_array">
+        <item>ចាប់ផ្តើមកម្មវិធីឡើងវិញ</item>
+        <item>បើកកម្មវិធីដោយមិនចាំបាច់ចាប់ផ្តើមឡើងវិញ</item>
+        <item>សួរខ្ញុំគ្រប់ពេល</item>
+    </array>
+    <array name="power_save_array">
+        <item>10 ន.ទ</item>
+        <item>15 នាទី</item>
+        <item>20 ន.ទ</item>
+        <item>30 ន.ទ</item>
+        <item>60 ន.ទ</item>
+        <item>កុំផ្ដាច់</item>
+    </array>
+    <array name="preload_wallpapers_array">
+        <item>preload_wallpaper_geometry_1</item>
+        <item>preload_wallpaper_geometry_2</item>
+        <item>preload_wallpaper_geometry_3</item>
+        <item>preload_wallpaper_geometry_4</item>
+        <item>preload_wallpaper_geometry_5</item>
+        <item>preload_wallpaper_geometry_6</item>
+        <item>preload_wallpaper_geometry_7</item>
+        <item>preload_wallpaper_geometry_8</item>
+        <item>preload_wallpaper_geometry_9</item>
+        <item>preload_wallpaper_geometry_10</item>
+        <item>preload_wallpaper_nature_1</item>
+        <item>preload_wallpaper_nature_2</item>
+        <item>preload_wallpaper_nature_3</item>
+        <item>preload_wallpaper_nature_4</item>
+        <item>preload_wallpaper_nature_5</item>
+        <item>preload_wallpaper_nature_6</item>
+        <item>preload_wallpaper_nature_7</item>
+        <item>preload_wallpaper_nature_8</item>
+        <item>preload_wallpaper_nature_9</item>
+    </array>
+    <array name="timeout_array">
+        <item>1 នាទី</item>
+        <item>2 នាទី</item>
+        <item>5 នាទី</item>
+        <item>10 ន.ទ</item>
+        <item>20 ន.ទ</item>
+        <item>30 ន.ទ</item>
+        <item>60 ន.ទ</item>
+    </array>
+</resources>

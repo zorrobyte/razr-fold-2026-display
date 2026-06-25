@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.motorola.taskbar.bar.Clock xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:textSize="@dimen/more_panel_item_text_size"
+    android:gravity="center"
+    android:id="@+id/clock"
+    android:layout_marginEnd="@dimen/desktop_taskbar_clock_margin_end"
+    android:paddingHorizontal="0dp"
+    app:needHover="false"
+    style="@style/TaskBarRightItemView"/>

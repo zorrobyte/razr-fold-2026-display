@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="animator_duration_scale_entries">
+        <item>ᎠᏓᏅᏏᏙᎯ ᎠᏍᏚᎭ</item>
+        <item>ᎤᏃᏴᎬ .5x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 1x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 2x 1.5x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 2x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 5x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 2x 10x</item>
+    </array>
+    <array name="app_process_limit_entries">
+        <item>ᎢᎬᏩᏍᏗᎭ ᎠᏎᎸᎯ</item>
+        <item>ᎭᏗ ᎣᏂᏗᏣ ᏄᏍᏗᏓᏅ ᏗᏱᎸᏍᏗ</item>
+        <item>ᎥᎿᎢ ᎤᎪᏗᏗ 1 ᎠᏱᎸᏍᏗ</item>
+        <item>ᎥᎿᎢ ᎤᎪᏗᏗ 2 ᏗᏱᎸᏍᏗ</item>
+        <item>ᎥᎿᎢ ᎤᎪᏗᏗ 3 ᏗᏱᎸᏍᏗ</item>
+        <item>ᎥᎿᎢ ᎤᎪᏗᏗ 4 ᏗᏱᎸᏍᏗ</item>
+    </array>
+    <array name="battery_labels">
+        <item>0%</item>
+        <item>50%</item>
+        <item>100%</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>ᎬᏔᏂᏓᏍᏗ ᏄᏍᏗᏓᏅᎢ ᎠᏑᏰᏍᏗ (ᎤᏓᏄᎸᏅᎩ)</item>
+        <item>16 ᏍᏗᎩᏓ/ᏱᏓᏟᎶᏍᏔᏂ</item>
+        <item>24 ᏍᏗᎩᏓ/ᏱᏓᏟᎶᏍᏔᏂ</item>
+        <item>32 ᏍᏗᎩᏓ/ᏱᏓᏟᎶᏍᏔᏂ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>ᎬᏔᏂᏓᏍᏗ ᏄᏍᏗᏓᏅᎢ ᎠᏑᏰᏍᏗ (ᎤᏓᏄᎸᏅᎩ)</item>
+        <item>16 ᏍᏗᎩᏓ/ᏱᏓᏟᎶᏍᏔᏂ</item>
+        <item>24 ᏍᏗᎩᏓ/ᏱᏓᏟᎶᏍᏔᏂ</item>
+        <item>32 ᏍᏗᎩᏓ/ᏱᏓᏟᎶᏍᏔᏂ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>ᎬᏔᏂᏓᏍᏗ ᏄᏍᏗᏓᏅᎢ ᎠᏑᏰᏍᏗ (ᎤᏓᏄᎸᏅᎩ)</item>
+        <item>Mono</item>
+        <item>ᏍᏔᏯ ᎤᏃᏴᎦ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>ᎬᏔᏂᏓᏍᏗ ᏄᏍᏗᏓᏅᎢ ᎠᏑᏰᏍᏗ (ᎤᏓᏄᎸᏅᎩ)</item>
+        <item>Mono</item>
+        <item>ᏍᏔᏯ ᎤᏃᏴᎦ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>ᏩᎧᎵᏏᏌᏅ ᎤᎬᏩᏟ ᎤᏃᏴᎬ ᎢᏲᏍᏓ</item>
+        <item>ᏬᏘᏴᎭ ᎤᏃᏴᎬ ᎠᎴ ᎫᏓᎸᎢ ᎢᏲᏍᏓ</item>
+        <item>ᏩᎧᎵᏏᏌᏅ ᎤᎬᏩᏟ ᎫᏓᎸᎢ ᎢᏲᏍᏓ</item>
+        <item>ᏫᏓᏤᏢ ᎠᎵᏂᎬᏁᏗ (ᏗᏙᎳᎩ ᏂᎦᎵᏍᏗᏍᎬ ᏍᏗᎩᏓ ᎠᎦᏈᏴᎡᎲᎢ)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>ᎪᏢᎯᏌᏅ ᎾᏍᎩᎾ ᎤᏃᏴᎬ ᎢᏲᏍᏓ (990kbps/909kbps) ᎤᏃᏴᎬ</item>
+        <item>ᏬᏘᏴᎭ ᎤᏃᏴᎬ ᎠᎴ ᎫᏓᎸᎢ ᎢᏲᏍᏓ (660kbps/606kbps)</item>
+        <item>ᏩᎧᎵᏏᏌᏅ ᎤᎬᏩᏟ ᎫᏓᎸᎢ ᎢᏲᏍᏓ (330kbps/303kbps)</item>
+        <item>ᏫᏓᏤᏢ ᎠᎵᏂᎬᏁᏗ (ᏗᏙᎳᎩ ᏂᎦᎵᏍᏗᏍᎬ ᏍᏗᎩᏓ ᎠᎦᏈᏴᎡᎲᎢ)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>ᎬᏔᏂᏓᏍᏗ ᏄᏍᏗᏓᏅᎢ ᎠᏑᏰᏍᏗ (ᎤᏓᏄᎸᏅᎩ)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+        <item>176.4 kHz</item>
+        <item>192.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>ᎬᏔᏂᏓᏍᏗ ᏄᏍᏗᏓᏅᎢ ᎠᏑᏰᏍᏗ (ᎤᏓᏄᎸᏅᎩ)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+        <item>176.4 kHz</item>
+        <item>192.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>ᎬᏔᏂᏓᏍᏗ ᏄᏍᏗᏓᏅᎢ ᎠᏑᏰᏍᏗ (ᎤᏓᏄᎸᏅᎩ)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ ᎤᏃᏴᎬ</item>
+        <item>Qualcomm® aptX™ HD ᎤᏃᏴᎬ</item>
+        <item>LDAC</item>
+        <item>LC3</item>
+        <item>Opus</item>
+        <item>Qualcomm® aptX™ ᏗᏙᎳᎩ ᏂᎦᎵᏍᏗᏍᎬ ᎤᏃᏴᎬ</item>
+        <item>Qualcomm® aptX™ TWS+ ᎤᏃᏴᎬ</item>
+        <item>LHDC V2</item>
+        <item>LHDC VᏦᎢ/VᏅᎩ</item>
+        <item>LHDC V5</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>ᎬᏔᏂᏓᏍᏗ ᏄᏍᏗᏓᏅᎢ ᎠᏑᏰᏍᏗ (ᎤᏓᏄᎸᏅᎩ)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ ᎤᏃᏴᎬ</item>
+        <item>Qualcomm® aptX™ HD ᎤᏃᏴᎬ</item>
+        <item>LDAC</item>
+        <item>LC3</item>
+        <item>Opus</item>
+        <item>Qualcomm® aptX™ ᏗᏙᎳᎩ ᏂᎦᎵᏍᏗᏍᎬ ᎤᏃᏴᎬ</item>
+        <item>Qualcomm® aptX™ TWS+ ᎤᏃᏴᎬ</item>
+        <item>LHDC V2</item>
+        <item>LHDC VᏦᎢ/VᏅᎩ</item>
+        <item>LHDC V5</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>, ᎬᏂᎦᎵᏍᏗ</item>
+        <item>, ᎬᏂᎦᎵᏍᏗ (ᎧᏃᎮᏓ ᎠᏗᎦᎴᏯᏍᏗ)</item>
+        <item>, ᎬᏂᎦᎵᏍᏗ (ᏗᏟᏃᎮᏗ)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp15</item>
+        <item>avrcp13</item>
+        <item>avrcp14</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.5 (ᎤᏓᏅᎸᏅᎩ)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.4</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (ᎠᏓᏁᏟᏴᏍᏗᏍᎩ)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>ᎦᎬᏙᏗ ᏂᎨᏒᎾ </item>
+        <item>ᎡᎵᏊ ᏂᏚᏩᏂᎸᎢ ᎬᎫᏍᏗ</item>
+        <item>ᎡᎵᏊ ᏂᏚᏩᏂᎸᎢ</item>
+    </array>
+    <array name="bt_hci_snoop_log_filters_entries">
+        <item>ᎠᏓᏅᏍᏗ ᎤᏩᏌ ACL ᎦᎸᎳᏗ ᎪᏪᎵ</item>
+        <item>ᎬᎫᏍᏙᏗ A2DP ᎦᎶᏙᏗ ᎦᏇᏅᎯ</item>
+        <item>ᎬᎫᏍᏙᏗ RFCOMM ᎦᎳᏅᏛ</item>
+    </array>
+    <array name="bt_hci_snoop_log_profile_filter_entries">
+        <item>ᎠᎴᏫᏍᏙᏓ</item>
+        <item>ᎯᎧᎵᏣ ᎬᏗ ᎪᏪᎸ ᎠᏍᏘ</item>
+        <item>ᎠᏓᏅᏍᏗ ᎤᏩᏌ ᎦᎸᎳᏗ ᎪᏪᎵ</item>
+        <item>ᎠᏂᎧᎵ ᎦᎧᎲᏓ</item>
+    </array>
+    <array name="cached_apps_freezer_values">
+        <item>ᏥᏂᎬᏅᏗᏓᎾ_ᎤᏓᏄᎸᏅᎩ</item>
+        <item>ᎡᎵᏊ ᏂᏚᏩᏂᎸᎢ</item>
+        <item>ᎦᎬᏙᏗ ᏂᎨᏒᎾ </item>
+    </array>
+    <array name="color_mode_descriptions">
+        <item>ᏓᏤᏢᎢ ᏗᏑᏫᏓ</item>
+        <item>ᏂᎬᏩᏍᏛ ᏗᏑᏫᏓ ᎤᎪᎲᎩ ᎬᏗ ᎾᏍᎩ ᎠᎦᏙᎵ</item>
+        <item>ᏗᏑᏫᏓ ᎪᏢᎯᏌᏅ ᎾᏍᎩᎾ ᎠᎾᎦᎵᏍᎩ ᎦᎸᏛᎢ</item>
+    </array>
+    <array name="color_mode_names">
+        <item>ᎬᎾᎦᎳᏍᏗ (ᎤᏓᏄᎸᏅᎩ)</item>
+        <item>ᏂᎬᏩᏍᏛ</item>
+        <item>ᎢᎬᏩᏍᏗᎭ</item>
+    </array>
+    <array name="debug_hw_overdraw_entries">
+        <item>ᎠᏍᏚᎭ</item>
+        <item>ᏍᎩᎪᏩᏛᏓ ᎤᎪᏗ ᎪᏑᎳᏗ ᎠᏕᎳᏗᏎᏍᏗ ᎢᏗᎬᎾᏕᎾ</item>
+        <item>ᏍᎩᎪᏩᏛᏓ ᎢᏗᎬᎾᏕᎾ ᎾᏍᎩᎾ ᎠᏑᏫᏓ ᎠᎪᏩᏘᏍᎩ ᏂᎨᏒᎾ </item>
+    </array>
+    <array name="enable_opengl_traces_entries">
+        <item>ᎧᏂᎩᏓ</item>
+        <item>ᎧᏃᎮᏍᎩ ᏪᏌ</item>
+        <item>ᏏᏍᏓᏩᏕᎩ (ᏓᏟᏩᏍᏗᏓᏅ)</item>
+        <item>ᏫᏴᏓᏏ ᎦᏒᏛᎢ ᎤᎾᎢ glGetError</item>
+    </array>
+    <array name="hdcp_checking_summaries">
+        <item>Ꮭ ᎢᎸᎯᏳᎢ ᎬᏔᏂᏓᏍᏗ HDCP ᎤᎦᏛᎲᏍᎩ</item>
+        <item>ᎬᏔᏂᏓᏍᏗ HDCP ᎤᎦᏛᎲᏍᎩ ᎾᏍᎩᎾ DRM ᎦᎸᎡᎢ ᎤᏩᏌ</item>
+        <item>ᏂᎪᎯᎸᎢ ᎬᏔᏂᏓᏍᏗ HDCP ᎤᎦᏛᎲᏍᎩ</item>
+    </array>
+    <array name="hdcp_checking_titles">
+        <item>Ꮭ ᎢᎸᎯᏳᎢ ᎤᎦᏛᏅ ᏱᎩ</item>
+        <item>ᎤᎦᏛᏅ ᎾᏍᎩᎾ DRM ᎦᎸᎡᎢ ᎤᏩᏌ</item>
+        <item>ᏂᎪᎯᎸᎢ ᎠᎦᏛᏗ</item>
+    </array>
+    <array name="overlay_display_devices_entries">
+        <item>ᎧᏂᎩᏓ</item>
+        <item>480p</item>
+        <item>480p (ᏄᎾᏰᎯᏍᏛᎾᏉ)</item>
+        <item>720p</item>
+        <item>720p (ᏄᎾᏰᎯᏍᏛᎾᏉ)</item>
+        <item>1080p</item>
+        <item>1080p (ᏄᎾᏰᎯᏍᏛᎾᏉ)</item>
+        <item>4K</item>
+        <item>4K (ᏄᎾᏰᎯᏍᏛᎾᏉ)</item>
+        <item>4K (ᎪᏢᎯᏌᏅ)</item>
+        <item>4K (ᎪᏢᎯᏌᏅ, ᏄᎾᏰᎯᏍᏛᎾᏉ)</item>
+        <item>720p, 1080p (ᏧᏦᏟ ᎠᏴᏙᎳᏛᎢ)</item>
+    </array>
+    <array name="select_logd_size_lowram_titles">
+        <item>ᎠᏍᏚᎭ</item>
+        <item>64K</item>
+        <item>256K</item>
+        <item>1M</item>
+    </array>
+    <array name="select_logd_size_summaries">
+        <item>ᎠᏍᏚᎭ</item>
+        <item>64K ᎢᎦᏊ ᎧᏃᎮᏍᎩ ᎬᏑᏣᏃᏙᏗ</item>
+        <item>256K ᎢᎦᏊ ᎧᏃᎮᏍᎩ ᎬᏑᏣᏃᏙᏗ</item>
+        <item>1M ᎢᎦᏊ ᎧᏃᎮᏍᎩ ᎬᏑᏣᏃᏙᏗ</item>
+        <item>4M ᎢᎦᏊ ᎧᏃᎮᏍᎩ ᎬᏑᏣᏃᏙᏗ</item>
+        <item>8M ᎢᎦᏊ ᎧᏃᎮᏍᎩ ᎬᏑᏣᏃᏙᏗ</item>
+    </array>
+    <array name="select_logd_size_titles">
+        <item>ᎠᏍᏚᎭ</item>
+        <item>64K</item>
+        <item>256K</item>
+        <item>1M</item>
+        <item>4M</item>
+        <item>8M</item>
+    </array>
+    <array name="select_logpersist_summaries">
+        <item>ᎠᏍᏚᎭ</item>
+        <item>ᏂᎦᏓ ᎧᏃᎮᏍᎩ ᏗᎬᏑᏣᏃᏙᏗ</item>
+        <item>ᏂᎦᏓ ᎠᏎᏃ ᏗᎧᏃᎩᏍᏙᏗ ᎧᏃᎮᏍᎩ ᏗᎬᏑᏣᏃᏙᏗ</item>
+        <item>ᏚᎷᏍᏘ ᎧᏃᎮᏍᎩ ᎬᏑᏣᏃᏙᏗ ᎤᏩᏊ</item>
+    </array>
+    <array name="select_logpersist_titles">
+        <item>ᎠᏍᏚᎭ</item>
+        <item>ᏂᎦᏓ</item>
+        <item>ᏂᎦᏓ ᎠᏎᏃ ᏗᎧᏃᎩᏍᏙᏗ</item>
+        <item>ᏚᎷᏍᏘ ᎤᏩᏌ</item>
+    </array>
+    <array name="shade_display_awareness_entries">
+        <item>ᏥᏂᎬᏅᏗᏓᎾ ᎠᏓᏴᎳᏛᏍᎩ ᎤᏩᏌ (ᎠᏓᏁᏟᏴᏍᏗᏍᎩ)</item>
+        <item>ᏙᏯᏗᏢ ᎬᏂᎨᏒ ᏱᎬᏁᏗ</item>
+        <item>ᎢᏤᎯᎨᎢᏍᏗ ᏄᏛᎿᏕᎬ ᎦᎾᎸᎢ ᎠᏒᏂᏍᏗ</item>
+        <item>ᎠᎦᏎᏍᏛᎢ-ᎤᏙᏢᏒ</item>
+    </array>
+    <array name="shade_display_awareness_summaries">
+        <item>ᏍᎩᎪᏩᏛᏓ ᎤᏓᏩᏗᏍᎬ ᎤᎾᎢ ᏥᏂᎬᏅᏗᏓᎾ ᎠᏓᏴᎳᏛᏍᎩ ᎤᏩᏌ </item>
+        <item>ᏍᎩᎪᏩᏛᏓ ᎤᏓᏩᏗᏍᎬ ᎤᎾᎢ ᎦᎵᏦᏙᏗ ᏙᏱᏗᏢ ᎠᏓᏴᎳᏛᏍᎩ</item>
+        <item>ᏍᎩᎪᏩᏛᏓ ᎤᏓᏩᏗᏍᎬ ᎤᎾᎢ ᎠᏓᏴᎳᏛᏍᎩ ᎾᏍᎩᏃ ᎣᏂ ᎠᏰᎲ ᏄᏛᎿᏕᎬ ᎦᎾᎸᎢ ᎭᏖᎳᏗᏙᎲᎢ ᎬᏗ</item>
+        <item>ᏍᎩᎪᏩᏛᏓ ᎤᏓᏩᏗᏍᎬ ᎤᎾᎢ ᎣᏂ ᏕᎫᎪᏔᏅ ᎠᏓᏴᎳᏛᏍᎩ</item>
+    </array>
+    <array name="shade_display_awareness_values">
+        <item>ᎠᏓᏁᏟᏴᏍᏗᏍᎩ_ᎠᏓᏴᎳᏛᏍᎩ</item>
+        <item>ᏂᎦᎥ_ᏙᏱᏗᏢ_ᎠᏓᏴᎳᏛᏍᎩ</item>
+        <item>ᏄᏛᎿᏕᎬ_ᎦᎾᎸᎢ_ᎢᏤᎯᎨᎢᏍᏗ_ᎠᏒᏂᏍᏗ</item>
+        <item>ᏕᎫᎪᏔᏅ_ᎠᏓᏴᎳᏛᏍᎩ</item>
+    </array>
+    <array name="show_non_rect_clip_entries">
+        <item>ᎠᏍᏚᎭ</item>
+        <item>ᏔᎵᎶᏍᏓ ᎥᏝ-ᎦᏅᎯᏓ ᏅᎩ ᏧᏅᏏᏯ ᎠᏓᏴᎳᏛᏍᎩ ᎢᎬᎾᏕᎾ ᎾᎿᎢ ᏌᎪᏂᎨ</item>
+        <item>ᎤᏍᎪᏍᏗ ᎢᎬᏁᏗ ᎠᎪᎵᏰᏓ ᏓᎵᎶᏍᏗᏍᎬ ᏚᏁᏤᎸᎩ ᎾᎿᎢ ᎢᏤᏳᏍᏗ</item>
+    </array>
+    <array name="track_frame_time_entries">
+        <item>ᎠᏍᏚᎭ</item>
+        <item>ᎤᎾᎢ ᎠᏴᏙᎳᏛᎢ ᎾᏍᎩ ᏕᎦᎾᎸᎢ</item>
+        <item>ᎾᎿᎢ ᎠᏓᏈ ᎤᏯᏍᎦ ᎤᏲ ᏩᏗᏅᏗᏄᏍᏛ gfxinfo</item>
+    </array>
+    <array name="transition_animation_scale_entries">
+        <item>ᎠᏓᏅᏏᏙᎯ ᎠᏍᏚᎭ</item>
+        <item>ᎤᏃᏴᎬ .5x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 1x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 2x 1.5x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 2x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 5x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 2x 10x</item>
+    </array>
+    <array name="tts_rate_entries">
+        <item>60%</item>
+        <item>80%</item>
+        <item>100%</item>
+        <item>150%</item>
+        <item>200%</item>
+        <item>250%</item>
+        <item>300%</item>
+        <item>350%</item>
+        <item>400%</item>
+    </array>
+    <array name="usb_configuration_titles">
+        <item>ᏓᎬᏩᎶᏗᏍᎬ</item>
+        <item>MTP (ᎧᏃᎮᏓ ᎠᏗᎦᎴᏯᏍᏗ ᎠᎲᏍᏗ ᎢᏯᏛᏁᏗ)</item>
+        <item>PTP (ᏗᏟᎶᏍᏔᏅ ᎠᎲᏍᏗ ᎢᏯᏛᏁᏗ)</item>
+        <item>RNDIS (USB ᎠᏏᎳᏕᏫᏒᎢ)</item>
+        <item>ᎤᏃᏴᎬ ᏅᏓᏳᏓᎴᏅᎯ</item>
+        <item>MIDI</item>
+    </array>
+    <array name="wifi_status">
+        <item />
+        <item>ᏗᎦᎴᏴᏗᏍᎩ ᎢᏳᏍᏗ ᏗᏥᎶᏍᏙᏗ</item>
+        <item>ᏓᎾᎵᎪᏗᏍᎬ</item>
+        <item>ᎠᏓᏙᏟᏍᏔᏅ</item>
+        <item>ᎣᏤᎵ ᏅᎬᏁᎲ IP ᎪᏪᎵ ᏧᏁᏍᏗᎢ</item>
+        <item>ᎫᏓᎸᏅᎯ</item>
+        <item>ᎤᏂᎾᎠᏍᏙᏗ</item>
+        <item>ᎱᏓᎳᏍᎬᎢ</item>
+        <item>ᎱᏓᎳᎩ</item>
+        <item> ᎤᏓᏄᎸᏅᎢ</item>
+        <item>ᎦᏐᎭᎾᎳᏓ</item>
+        <item>ᏞᎦᏊ ᏗᏓᏅᏗᏍᏙᏗ ᎤᎴᏌᏓᎢ ᎫᏓᎸᎢ</item>
+    </array>
+    <array name="wifi_status_with_ssid">
+        <item />
+        <item>ᏗᎦᎴᏴᏗᏍᎩ ᎢᏳᏍᏗ ᏗᏥᎶᏍᏙᏗ</item>
+        <item>ᏓᎾᎵᎪᏗᏍᎬ ᎾᎿᎢ %1$s…</item>
+        <item>ᎠᏓᏙᏟᏍᏔᏅ ᎬᏗ %1$s…</item>
+        <item>ᎣᏤᎵ ᏅᎬᏁᎲ IP ᎪᏪᎵ ᏧᏁᏍᏗᎢ ᏅᏓᏳᏓᎴᏅᎯ %1$s…</item>
+        <item>ᎫᏓᎸᏅᎯ ᎾᎿᎢ %1$s.</item>
+        <item>ᎤᏂᎾᎠᏍᏙᏗ</item>
+        <item>ᎱᏓᎳᏍᎬᎢ ᏅᏓᏳᏓᎴᏅᎯ %1$s…</item>
+        <item>ᎱᏓᎳᎩ</item>
+        <item> ᎤᏓᏄᎸᏅᎢ</item>
+        <item>ᎦᏐᎭᎾᎳᏓ</item>
+        <item>ᏞᎦᏊ ᏗᏓᏅᏗᏍᏙᏗ ᎤᎴᏌᏓᎢ ᎫᏓᎸᎢ</item>
+    </array>
+    <array name="wifitrackerlib_wifi_status">
+        <item />
+        <item>ᏗᎦᎴᏴᏗᏍᎩ ᎢᏳᏍᏗ ᏗᏥᎶᏍᏙᏗ</item>
+        <item>ᏓᎾᎵᎪᏗᏍᎬ</item>
+        <item>ᎠᏓᏙᏟᏍᏔᏅ</item>
+        <item>ᎣᏤᎵ ᏅᎬᏁᎲ IP ᎪᏪᎵ ᏧᏁᏍᏗᎢ</item>
+        <item>ᎫᏓᎸᏅᎯ</item>
+        <item>ᎤᏂᎾᎠᏍᏙᏗ</item>
+        <item>ᎱᏓᎳᏍᎬᎢ</item>
+        <item>ᎱᏓᎳᎩ</item>
+        <item> ᎤᏓᏄᎸᏅᎢ</item>
+        <item>ᎦᏐᎭᎾᎳᏓ</item>
+        <item>ᏞᎦᏊ ᏗᏓᏅᏗᏍᏙᏗ ᎤᎴᏌᏓᎢ ᎫᏓᎸᎢ</item>
+    </array>
+    <array name="window_animation_scale_entries">
+        <item>ᎠᏓᏅᏏᏙᎯ ᎠᏍᏚᎭ</item>
+        <item>ᎤᏃᏴᎬ .5x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 1x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 2x 1.5x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 2x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 5x</item>
+        <item>ᎠᏓᏅᏏᏙᎯ ᎦᏛᏗ 2x 10x</item>
+    </array>
+</resources>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>सिस्टम निवड वापरा (डीफॉल्ट)</item>
+        <item>16 बिट/पॅटर्न</item>
+        <item>24 बिट/पॅटर्न</item>
+        <item>32 बिट/पॅटर्न</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>सिस्टम निवड वापरा (डीफॉल्ट)</item>
+        <item>१६ बिट/पॅटर्न</item>
+        <item>२४ बिट/पॅटर्न</item>
+        <item>३२ बिट/पॅटर्न</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>सिस्टम निवड वापरा (डीफॉल्ट)</item>
+        <item>मोनो</item>
+        <item>स्टिरिओ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>सिस्टम निवड वापरा (डीफॉल्ट)</item>
+        <item>मोनो</item>
+        <item>स्टिरिओ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>ऑडिओ गुणवत्तेसाठी ऑप्टिमाइझ केले</item>
+        <item>संतुलित ऑडिओ आणि कनेक्शन गुणवत्ता</item>
+        <item>कनेक्शन गुणवत्तेसाठी ऑप्टिमाइझ केले</item>
+        <item>सर्वोत्तम प्रयत्न (अनुकूल बिट रेट)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>ऑडिओ गुणवत्ता (९९०kbps/९०९kbps) साठी ऑप्टिमाइझ केली</item>
+        <item>संतुलित ऑडिओ आणि कनेक्शन गुणवत्ता (६६०kbps/६०६kbps)</item>
+        <item>कनेक्शन गुणवत्ता (३३०kbps/३०३kbps) साठी ऑप्टिमाइझ केली</item>
+        <item>सर्वोत्तम प्रयत्न (अनुकूल बिट रेट)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>सिस्टम निवड वापरा (डीफॉल्ट)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>सिस्टम निवड वापरा (डीफॉल्ट)</item>
+        <item>४४.१ kHz</item>
+        <item>४८.० kHz</item>
+        <item>८८.२ kHz</item>
+        <item>९६.० kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>सिस्टम निवड वापरा (डीफॉल्ट)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ ऑडिओ</item>
+        <item>Qualcomm® aptX™ HD ऑडिओ</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>सिस्टम निवड वापरा (डीफॉल्ट)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ ऑडिओ</item>
+        <item>Qualcomm® aptX™ HD ऑडिओ</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>, ॲक्टिव्ह</item>
+        <item>, ॲक्टिव्ह (मीडिया)</item>
+        <item>, ॲक्टिव्ह (फोन)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp14</item>
+        <item>avrcp13</item>
+        <item>avrcp15</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP १.४ (डीफॉल्ट)</item>
+        <item>AVRCP १.३</item>
+        <item>AVRCP १.५</item>
+        <item>AVRCP १.६</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (डीफॉल्ट)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>अक्षम केले</item>
+        <item>फिल्टर केलेले सुरू केले</item>
+        <item>सक्षम केले</item>
+    </array>
+    <array name="display_size_descriptions">
+        <item>लहान</item>
+        <item>डीफॉल्ट</item>
+        <item>मोठा</item>
+        <item>आणखी मोठा</item>
+    </array>
+    <array name="font_size_descriptions">
+        <item>लहान</item>
+        <item>डीफॉल्ट</item>
+        <item>मोठा</item>
+    </array>
+    <array name="open_app_option_array">
+        <item>अनुप्रयोगाचा पुनरारंभ करा</item>
+        <item>पुनरारंभ न करता अनुप्रयोग उघडा</item>
+        <item>प्रत्येक वेळी मला विचारा</item>
+    </array>
+    <array name="power_save_array">
+        <item>10 मि</item>
+        <item>15 मि</item>
+        <item>20 मि</item>
+        <item>30 मि</item>
+        <item>60 मि</item>
+        <item>कधीही डिस्कनेक्ट करू नका</item>
+    </array>
+    <array name="preload_wallpapers_array">
+        <item>preload_wallpaper_geometry_1</item>
+        <item>preload_wallpaper_geometry_2</item>
+        <item>preload_wallpaper_geometry_3</item>
+        <item>preload_wallpaper_geometry_4</item>
+        <item>preload_wallpaper_geometry_5</item>
+        <item>preload_wallpaper_geometry_6</item>
+        <item>preload_wallpaper_geometry_7</item>
+        <item>preload_wallpaper_geometry_8</item>
+        <item>preload_wallpaper_geometry_9</item>
+        <item>preload_wallpaper_geometry_10</item>
+        <item>preload_wallpaper_nature_1</item>
+        <item>preload_wallpaper_nature_2</item>
+        <item>preload_wallpaper_nature_3</item>
+        <item>preload_wallpaper_nature_4</item>
+        <item>preload_wallpaper_nature_5</item>
+        <item>preload_wallpaper_nature_6</item>
+        <item>preload_wallpaper_nature_7</item>
+        <item>preload_wallpaper_nature_8</item>
+        <item>preload_wallpaper_nature_9</item>
+    </array>
+    <array name="tile_states_airplane">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_alarm">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_battery">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_bt">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_cameratoggle">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_cast">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_cell">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_color_correction">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_controls">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_dark">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_dnd">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_dream">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_flashlight">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_font_scaling">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_hearing_devices">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_hotspot">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_internet">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_inversion">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_location">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_mictoggle">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_night">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_onehanded">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_qr_code_scanner">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_record_issue">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_reduce_brightness">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_reverse">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_rotation">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_saver">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_screenrecord">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_wallet">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_wifi">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="tile_states_work">
+        <item>उपलब्ध नाही</item>
+        <item>बंद</item>
+        <item>चालू</item>
+    </array>
+    <array name="timeout_array">
+        <item>1 मिनि</item>
+        <item>2 मि</item>
+        <item>5 मिनि</item>
+        <item>10 मि</item>
+        <item>20 मि</item>
+        <item>30 मि</item>
+        <item>60 मि</item>
+    </array>
+</resources>

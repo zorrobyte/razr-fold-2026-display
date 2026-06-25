@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.progressindicator.LinearProgressIndicator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progress_indicator"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="?attr/sudMarginStart"
+    android:layout_marginRight="?attr/sudMarginStart"
+    android:indeterminate="true"
+    android:filterTouchesWhenObscured="true"
+    style="@style/SudLinearProgressIndicatorWavy"/>

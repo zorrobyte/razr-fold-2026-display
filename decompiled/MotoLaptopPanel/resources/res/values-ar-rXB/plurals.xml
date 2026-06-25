@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">‏‮Fast‬‏ ‏‮forward‬‏ %d ‏‮second‬‏</item>
+        <item quantity="other">‏‮Fast‬‏ ‏‮forward‬‏ %d ‏‮seconds‬‏</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">‏‮Rewind‬‏ %d ‏‮second‬‏</item>
+        <item quantity="other">‏‮Rewind‬‏ %d ‏‮seconds‬‏</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d ‏‮new‬‏ ‏‮notification‬‏</item>
+        <item quantity="other">%d ‏‮new‬‏ ‏‮notifications‬‏</item>
+    </plurals>
+</resources>

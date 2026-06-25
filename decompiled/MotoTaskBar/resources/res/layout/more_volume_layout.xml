@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.motorola.taskbar.sysicons.VolumeSysIconView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:layout_gravity="center_vertical"
+    android:clickable="false"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:scaleType="fitCenter"
+    android:paddingHorizontal="14dp"
+    app:handleTouch="false"
+    app:needHover="false"/>

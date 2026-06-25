@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="animator_duration_scale_entries">
+        <item>پویانمایی خاموش</item>
+        <item>مقیاس پویانمایی 0.5 برابر</item>
+        <item>مقیاس پویانمایی 1 برابر</item>
+        <item>مقیاس پویانمایی 1.5 برابر</item>
+        <item>مقیاس پویانمایی 2 برابر</item>
+        <item>مقیاس پویانمایی 5 برابر</item>
+        <item>مقیاس پویانمایی 10 برابر</item>
+    </array>
+    <array name="app_process_limit_entries">
+        <item>حد استاندارد</item>
+        <item>بدون پردازش در پس‌زمینه</item>
+        <item>حداکثر 1 پردازش</item>
+        <item>حداکثر 2 پردازش</item>
+        <item>حداکثر 3 پردازش</item>
+        <item>حداکثر 4 پردازش</item>
+    </array>
+    <array name="battery_labels">
+        <item>٪۰</item>
+        <item>٪۵۰</item>
+        <item>٪۱۰۰</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>استفاده از انتخاب سیستم (پیش‌فرض)</item>
+        <item>۱۶ بیت در هر نمونه</item>
+        <item>۲۴ بیت در هر نمونه</item>
+        <item>۳۲ بیت در هر نمونه</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>استفاده از انتخاب سیستم (پیش‌فرض)</item>
+        <item>۱۶ بیت در هر نمونه</item>
+        <item>۲۴ بیت در هر نمونه</item>
+        <item>۳۲ بیت در هر نمونه</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>استفاده از انتخاب سیستم (پیش‌فرض)</item>
+        <item>مونو</item>
+        <item>استریو</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>استفاده از انتخاب سیستم (پیش‌فرض)</item>
+        <item>مونو</item>
+        <item>استریو</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>بهینه‌شده برای کیفیت صدا</item>
+        <item>کیفیت متعادل صوت و اتصال</item>
+        <item>بهینه‌شده برای کیفیت اتصال</item>
+        <item>بهترین حالت (نرخ بیت تطبیقی)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>بهینه‌شده برای کیفیت صوت (۹۹۰ کیلوبیت در ثانیه/۹۰۹ کیلوبیت در ثانیه)</item>
+        <item>کیفیت متعادل صوت و اتصال (۶۶۰ کیلوبیت در ثانیه/۶۰۶ کیلوبیت در ثانیه)</item>
+        <item>بهینه‌شده برای کیفیت اتصال (۳۳۰ کیلوبیت در ثانیه/۳۰۳ کیلوبیت در ثانیه)</item>
+        <item>بهترین حالت (نرخ بیت تطبیقی)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>استفاده از انتخاب سیستم (پیش‌فرض)</item>
+        <item>۴۴٫۱ کیلوهرتز</item>
+        <item>۴۸٫۰ کیلوهرتز</item>
+        <item>۸۸٫۲ کیلوهرتز</item>
+        <item>۹۶٫۰ کیلوهرتز</item>
+        <item>‏۱۷۶.۴ کیلوهرتز</item>
+        <item>‏۱۹۲.۰ کیلوهرتز</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>استفاده از انتخاب سیستم (پیش‌فرض)</item>
+        <item>۴۴٫۱ کیلوهرتز</item>
+        <item>۴۸٫۰ کیلوهرتز</item>
+        <item>۸۸٫۲ کیلوهرتز</item>
+        <item>۹۶٫۰ کیلوهرتز</item>
+        <item>‏۱۷۶.۴ کیلوهرتز</item>
+        <item>‏۱۹۲.۰ کیلوهرتز</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>استفاده از انتخاب سیستم (پیش‌فرض)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>صوت Qualcomm® aptX™</item>
+        <item>صوت Qualcomm® aptX™ HD</item>
+        <item>LDAC</item>
+        <item>‏LC3</item>
+        <item>Opus</item>
+        <item>صدای Qualcomm® aptX™ Adaptive</item>
+        <item>صدای Qualcomm® aptX™ TWS+‎</item>
+        <item>‏LHDC V2</item>
+        <item>‏LHDC V3/V4</item>
+        <item>‏LHDC V5</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>استفاده از انتخاب سیستم (پیش‌فرض)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>صوت Qualcomm® aptX™</item>
+        <item>صوت Qualcomm® aptX™ HD</item>
+        <item>LDAC</item>
+        <item>‏LC3</item>
+        <item>Opus</item>
+        <item>صدای Qualcomm® aptX™ Adaptive</item>
+        <item>صدای Qualcomm® aptX™ TWS+‎</item>
+        <item>‏LHDC V2</item>
+        <item>‏LHDC V3/V4</item>
+        <item>‏LHDC V5</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>، فعال</item>
+        <item>، فعال (رسانه)</item>
+        <item>، فعال (تلفن)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp15</item>
+        <item>avrcp13</item>
+        <item>‏avrcp نسخه ۱۴</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>‏AVRCP 1.5 (پیش‌فرض)</item>
+        <item>AVRCP 1.3</item>
+        <item>‏AVRCP 1.4</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>‏MAP نسخه ۱.۲ (پیش‌فرض)</item>
+        <item>‏MAP نسخه ۱.۳</item>
+        <item>‏MAP نسخه ۱.۴</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>غیرفعال</item>
+        <item>فیلترشده فعال شده است</item>
+        <item>فعال</item>
+    </array>
+    <array name="bt_hci_snoop_log_filters_entries">
+        <item>‏نگه داشتن فقط سرایند ACL</item>
+        <item>‏فیلتر کردن بسته‌های رسانه A2DP</item>
+        <item>‏فیلتر کردن کانال RFCOMM</item>
+    </array>
+    <array name="bt_hci_snoop_log_profile_filter_entries">
+        <item>غیرفعال کردن</item>
+        <item>پر کردن با رشته‌ای از نویسه‌ها</item>
+        <item>نگه داشتن فقط سرایند</item>
+        <item>برداشتن کامل</item>
+    </array>
+    <array name="cached_apps_freezer_values">
+        <item>دستگاه پیش‌فرض</item>
+        <item>فعال</item>
+        <item>غیرفعال</item>
+    </array>
+    <array name="color_mode_descriptions">
+        <item>رنگ‌های پیشرفته</item>
+        <item>رنگ‌های طبیعی به‌همان صورتی که با چشم دیده می‌شوند</item>
+        <item>رنگ‌های بهینه‌شده برای محتوای دیجیتالی</item>
+    </array>
+    <array name="color_mode_names">
+        <item>پرطروات (پیش‌فرض)</item>
+        <item>طبیعی</item>
+        <item>استاندارد</item>
+    </array>
+    <array name="debug_hw_overdraw_entries">
+        <item>غیرفعال</item>
+        <item>نمایش نواحی بازنویسی</item>
+        <item>نمایش مناطق برای مبتلایان به سبزدشواربینی</item>
+    </array>
+    <array name="enable_opengl_traces_entries">
+        <item>هیچ‌کدام</item>
+        <item>Logcat</item>
+        <item>‏Systrace (تصاویر گرافیکی)</item>
+        <item>‏فراخوانی پشته در glGetError</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>۰٫۲۵ برابر</item>
+        <item>۰٫۵ برابر</item>
+        <item>۰٫۷۵ برابر</item>
+        <item>عادی</item>
+        <item>۱٫۲۵ برابر</item>
+        <item>۱٫۵ برابر</item>
+        <item>۲ برابر</item>
+    </array>
+    <array name="hdcp_checking_summaries">
+        <item>‏هرگز از بررسی HDCP استفاده نشود</item>
+        <item>‏استفاده از بررسی HDCP فقط برای محتوای DRM</item>
+        <item>‏همیشه از بررسی HDCP استفاده شود</item>
+    </array>
+    <array name="hdcp_checking_titles">
+        <item>هرگز بررسی نشود</item>
+        <item>‏فقط بررسی محتوای DRM</item>
+        <item>همیشه بررسی شود</item>
+    </array>
+    <array name="overlay_display_devices_entries">
+        <item>هیچ‌کدام</item>
+        <item>480p</item>
+        <item>‏480p (ایمن)</item>
+        <item>720p</item>
+        <item>‏720p (ایمن)</item>
+        <item>1080p</item>
+        <item>‏1080p (ایمن)</item>
+        <item>4K</item>
+        <item>‏4K (ایمن)</item>
+        <item>‏4K (ارتقا یافته)</item>
+        <item>‏4K (ارتقا یافته، ایمن)</item>
+        <item>‏720p،‏ 1080p (صفحه‌نمایش دوتایی)</item>
+    </array>
+    <array name="select_logd_size_lowram_titles">
+        <item>خاموش</item>
+        <item>۶۴ کیلوبایت</item>
+        <item>۲۵۶ کیلوبایت</item>
+        <item>۱ مگابایت</item>
+    </array>
+    <array name="select_logd_size_summaries">
+        <item>خاموش</item>
+        <item>‏۶۴K در حافظه موقت ثبت</item>
+        <item>‏۲۵۶Kدر حافظه موقت ثبت</item>
+        <item>‏۱Mدر حافظه موقت ثبت</item>
+        <item>‏۴M در حافظه موقت ثبت</item>
+        <item>۸ مگابایت در هر میان‌گیری گزارش</item>
+    </array>
+    <array name="select_logd_size_titles">
+        <item>خاموش</item>
+        <item>۶۴ کیلوبایت</item>
+        <item>۲۵۶ کیلوبایت</item>
+        <item>۱ مگابایت</item>
+        <item>۴ مگابایت</item>
+        <item>۸ مگابایت</item>
+    </array>
+    <array name="select_logpersist_summaries">
+        <item>خاموش</item>
+        <item>همه بافرهای گزارش</item>
+        <item>بافرهای گزارش همه به جز رادیو</item>
+        <item>فقط بافر گزارش کرنل</item>
+    </array>
+    <array name="select_logpersist_titles">
+        <item>خاموش</item>
+        <item>همه</item>
+        <item>همه به جز رادیو</item>
+        <item>فقط کرنل</item>
+    </array>
+    <array name="shade_display_awareness_entries">
+        <item>فقط نمایشگر دستگاه (پیش‌فرض)</item>
+        <item>نمایشگر خارجی</item>
+        <item>آخرین لمس نوار وضعیت</item>
+        <item>کانونی‌محور</item>
+    </array>
+    <array name="shade_display_awareness_summaries">
+        <item>نمایش سایه فقط در نمایشگر دستگاه</item>
+        <item>نمایش سایه در یک نمایشگر خارجی</item>
+        <item>نمایش سایه در نمایشگری که کاربر آخرین بار با نوار وضعیت آن تعامل داشته است</item>
+        <item>نمایش سایه در آخرین نمایشگر کانونی‌شده</item>
+    </array>
+    <array name="shade_display_awareness_values">
+        <item>نمایشگر_پیش‌فرض</item>
+        <item>هر_نمایشگر_خارجی</item>
+        <item>آخرین_لمس_نوار_وضعیت</item>
+        <item>نمایشگر_کانونی‌شده</item>
+    </array>
+    <array name="show_non_rect_clip_entries">
+        <item>غیرفعال</item>
+        <item>کشیدن کلیپ قسمت غیر مربعی به آبی</item>
+        <item>هایلایت کردن دستورات کشیدن تست‌شده به رنگ سبز</item>
+    </array>
+    <array name="track_frame_time_entries">
+        <item>خاموش</item>
+        <item>روی صفحه نمایش به‌صورت میله‌ای</item>
+        <item>در adb shell dumpsys gfxinfo</item>
+    </array>
+    <array name="transition_animation_scale_entries">
+        <item>پویانمایی خاموش</item>
+        <item>‏مقیاس پویانمایی 0.5x</item>
+        <item>‏مقیاس پویانمایی 1x</item>
+        <item>‏مقیاس پویانمایی 1.5x</item>
+        <item>‏مقیاس پویانمایی 2x</item>
+        <item>‏مقیاس پویانمایی 5x</item>
+        <item>‏مقیاس پویانمایی 10X</item>
+    </array>
+    <array name="tts_rate_entries">
+        <item>٪۶۰</item>
+        <item>٪۸۰</item>
+        <item>٪۱۰۰</item>
+        <item>٪۱۵۰</item>
+        <item>٪۲۰۰</item>
+        <item>٪۲۵۰</item>
+        <item>٪۳۰۰</item>
+        <item>٪۳۵۰</item>
+        <item>٪۴۰۰</item>
+    </array>
+    <array name="usb_configuration_titles">
+        <item>در حال شارژ شدن</item>
+        <item>MTP (پروتکل انتقال رسانه)</item>
+        <item>PTP (پروتکل انتقال تصویر)</item>
+        <item>RNDIS (اترنت USB)</item>
+        <item>منبع صوتی</item>
+        <item>MIDI</item>
+    </array>
+    <array name="wifi_status">
+        <item />
+        <item>اسکن کردن...</item>
+        <item>در حال اتصال…</item>
+        <item>در حال تأیید اعتبار...</item>
+        <item>‏درحال دریافت نشانی IP…</item>
+        <item>متصل</item>
+        <item>معلق</item>
+        <item>در حال قطع اتصال...</item>
+        <item>اتصال قطع شد</item>
+        <item>ناموفق</item>
+        <item>مسدود شده</item>
+        <item>جلوگیری موقت از اتصال ضعیف</item>
+    </array>
+    <array name="wifi_status_with_ssid">
+        <item />
+        <item>اسکن کردن...</item>
+        <item>در حال اتصال به %1$s…</item>
+        <item>در حال تأیید اعتبار با %1$s...</item>
+        <item>‏درحال دریافت نشانی IP از %1$s…</item>
+        <item>متصل شد به %1$s</item>
+        <item>معلق</item>
+        <item>اتصال قطع شد از %1$s...</item>
+        <item>اتصال قطع شد</item>
+        <item>ناموفق</item>
+        <item>مسدود شده</item>
+        <item>جلوگیری موقت از اتصال ضعیف</item>
+    </array>
+    <array name="wifitrackerlib_wifi_status">
+        <item />
+        <item>درحال اسکن کردن…</item>
+        <item>درحال اتصال…</item>
+        <item>درحال راستی‌آزمایی…</item>
+        <item>‏درحال دریافت نشانی IP…</item>
+        <item>متصل</item>
+        <item>معلق</item>
+        <item>درحال قطع اتصال…</item>
+        <item>اتصال قطع شد</item>
+        <item>ناموفق</item>
+        <item>مسدود</item>
+        <item>اجتناب موقت از اتصال ضعیف</item>
+    </array>
+    <array name="window_animation_scale_entries">
+        <item>پویانمایی خاموش</item>
+        <item>‏مقیاس پویانمایی 0.5x</item>
+        <item>‏مقیاس پویانمایی 1x</item>
+        <item>‏مقیاس پویانمایی 1.5x</item>
+        <item>‏مقیاس پویانمایی 2x</item>
+        <item>‏مقیاس پویانمایی 5x</item>
+        <item>‏مقیاس پویانمایی 10X</item>
+    </array>
+</resources>

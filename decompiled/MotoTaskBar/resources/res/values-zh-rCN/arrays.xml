@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>使用系统选择（默认）</item>
+        <item>16 位/样本</item>
+        <item>24 位/样本</item>
+        <item>32 位/样本</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>使用系统选择（默认）</item>
+        <item>16 位/样本</item>
+        <item>24 位/样本</item>
+        <item>32 位/样本</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>使用系统选择（默认）</item>
+        <item>单声道</item>
+        <item>立体声</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>使用系统选择（默认）</item>
+        <item>单声道</item>
+        <item>立体声</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>偏重音频质量</item>
+        <item>兼顾音频和连接质量</item>
+        <item>偏重连接质量</item>
+        <item>尽可能提供更佳音质（自适应比特率）</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>偏重音频质量 (990kbps/909kbps)</item>
+        <item>兼顾音频和连接质量 (660kbps/606kbps)</item>
+        <item>偏重连接质量 (330kbps/303kbps)</item>
+        <item>尽可能提供更佳音质（自适应比特率）</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>使用系统选择（默认）</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>使用系统选择（默认）</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>使用系统选择（默认）</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ 音频</item>
+        <item>Qualcomm® aptX™ HD 音频</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>使用系统选择（默认）</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ 音频</item>
+        <item>Qualcomm® aptX™ HD 音频</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>，使用中</item>
+        <item>，使用中（媒体）</item>
+        <item>，使用中（手机）</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp14</item>
+        <item>avrcp13</item>
+        <item>avrcp15</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.4（默认）</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.5</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2（默认）</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>已停用</item>
+        <item>已启用“已过滤”</item>
+        <item>已启用</item>
+    </array>
+    <array name="display_size_descriptions">
+        <item>小</item>
+        <item>默认</item>
+        <item>大</item>
+        <item>更大</item>
+    </array>
+    <array name="font_size_descriptions">
+        <item>小</item>
+        <item>默认</item>
+        <item>大</item>
+    </array>
+    <array name="open_app_option_array">
+        <item>重新启动应用</item>
+        <item>打开应用，无需重新启动</item>
+        <item>每次都问我</item>
+    </array>
+    <array name="power_save_array">
+        <item>10 分钟</item>
+        <item>15 分钟</item>
+        <item>20 分钟</item>
+        <item>30 分钟</item>
+        <item>60 分钟</item>
+        <item>永不断开连接</item>
+    </array>
+    <array name="preload_wallpapers_array">
+        <item>preload_wallpaper_geometry_1</item>
+        <item>preload_wallpaper_geometry_2</item>
+        <item>preload_wallpaper_geometry_3</item>
+        <item>preload_wallpaper_geometry_4</item>
+        <item>preload_wallpaper_geometry_5</item>
+        <item>preload_wallpaper_geometry_6</item>
+        <item>preload_wallpaper_geometry_7</item>
+        <item>preload_wallpaper_geometry_8</item>
+        <item>preload_wallpaper_geometry_9</item>
+        <item>preload_wallpaper_geometry_10</item>
+        <item>preload_wallpaper_nature_1</item>
+        <item>preload_wallpaper_nature_2</item>
+        <item>preload_wallpaper_nature_3</item>
+        <item>preload_wallpaper_nature_4</item>
+        <item>preload_wallpaper_nature_5</item>
+        <item>preload_wallpaper_nature_6</item>
+        <item>preload_wallpaper_nature_7</item>
+        <item>preload_wallpaper_nature_8</item>
+        <item>preload_wallpaper_nature_9</item>
+    </array>
+    <array name="tile_states_airplane">
+        <item>不可用</item>
+        <item>关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_alarm">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_battery">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_bt">
+        <item>不可用</item>
+        <item>关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_cameratoggle">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_cast">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_cell">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_color_correction">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_controls">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_dark">
+        <item>不可用</item>
+        <item>关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_dnd">
+        <item>不可用</item>
+        <item>关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_dream">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_flashlight">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_font_scaling">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_hearing_devices">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_hotspot">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_internet">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_inversion">
+        <item>不可用</item>
+        <item>关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_location">
+        <item>不可用</item>
+        <item>关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_mictoggle">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_night">
+        <item>不可用</item>
+        <item>关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_onehanded">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_qr_code_scanner">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_record_issue">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_reduce_brightness">
+        <item>不可用</item>
+        <item>关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_reverse">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_rotation">
+        <item>不可用</item>
+        <item>关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_saver">
+        <item>不可用</item>
+        <item>关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_screenrecord">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_wallet">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="tile_states_wifi">
+        <item>不可用</item>
+        <item>关闭</item>
+        <item>开启</item>
+    </array>
+    <array name="tile_states_work">
+        <item>不可用</item>
+        <item>已关闭</item>
+        <item>已开启</item>
+    </array>
+    <array name="timeout_array">
+        <item>1 分钟</item>
+        <item>2 分钟</item>
+        <item>5 分钟</item>
+        <item>10 分钟</item>
+        <item>20 分钟</item>
+        <item>30 分钟</item>
+        <item>60 分钟</item>
+    </array>
+</resources>

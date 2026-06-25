@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.motorola.taskbar.bar.MobileUiTaskBarView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/TaskBarTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/taskbar_content"
+        android:background="@drawable/system_bar_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/mobile_taskbar_layout_horizontal_padding"/>
+</com.motorola.taskbar.bar.MobileUiTaskBarView>

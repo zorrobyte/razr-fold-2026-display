@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For irũ, , ĩdé repuderi reyumũdi ne telefuni yepé maãgawara upé, monitori ã kũputarawa musaraĩgawa supé, musaraisawa, apareyu mugaturasawa remutu asuí setá píri.</item>
+        <item>Pirí murekuyá sããgawa, e tukari ikoni bubuya telefuni upé.</item>
+        <item>Pirí yupuyaka píri, reyumũdi yepé wawirú\'rana asuí yepé tekisawa Si ĩdé rerikú yepé wawirú\'rana, repurú telefuni tela yepé trackpad yawé</item>
+        <item>Ĩpú amũamũ app ĩti uyũreu supirupé rupisawa desktop upé, asuí amũetá ti uxiari mukamẽsawa kũteudu tela wiripewara upé. Yarpe, ĩpú, i puraĩga mũgaturú monitori ã maãgawara pirí mukatureté sããgawa.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Purãga resika Ready For kití</item>
+        <item>Remutirika mukamẽsawa rupisawa miterupé</item>
+        <item>Mayetasawaetá</item>
+        <item>Mũgetasá</item>
+    </array>
+</resources>

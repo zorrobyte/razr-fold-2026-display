@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" xmlns:android="http://schemas.android.com/apk/res/android" android:color="?android:attr/colorControlHighlight">
+    <item>
+        <shape>
+            <solid android:color="@android:color/material_blue_grey_200"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/notification_state_color_default"/>
+        </shape>
+    </item>
+    <item android:id="@+id/notification_focus_overlay">
+        <shape>
+            <stroke
+                android:width="@dimen/notification_focus_stroke_width"
+                android:color="@color/notification_focus_overlay_color"/>
+        </shape>
+    </item>
+</layer-list>

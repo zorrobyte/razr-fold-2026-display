@@ -1,0 +1,226 @@
+package com.android.systemui.flags;
+
+import com.android.systemui.res.R$bool;
+
+/* JADX INFO: compiled from: Flags.kt */
+/* JADX INFO: loaded from: classes.dex */
+public final class Flags {
+    public static final ReleasedFlag ALWAYS_SHOW_HOME_CONTROLS_ON_DREAMS;
+    public static final ReleasedFlag AUTO_PIN_CONFIRMATION;
+    public static final UnreleasedFlag BIGPICTURE_NOTIFICATION_LAZY_LOADING;
+    public static final UnreleasedFlag BIOMETRICS_ANIMATION_REVAMP;
+    public static final ReleasedFlag BLUETOOTH_QS_TILE_DIALOG;
+    public static final SysPropBooleanFlag BUILDER_EXTRAS_OVERRIDE;
+    public static final UnreleasedFlag CLIPBOARD_IMAGE_TIMEOUT;
+    public static final ReleasedFlag CLIPBOARD_REMOTE_BEHAVIOR;
+    public static final UnreleasedFlag CLIPBOARD_SHARED_TRANSITIONS;
+    public static final UnreleasedFlag COLOR_FIDELITY;
+    public static final ResourceBooleanFlag COMMUNAL_SERVICE_ENABLED;
+    public static final ReleasedFlag COMPOSE_PEOPLE_SPACE;
+    public static final ReleasedFlag COMPOSE_QS_FOOTER_ACTIONS;
+    public static final UnreleasedFlag DECOUPLE_REMOTE_INPUT_DELEGATE_AND_CALLBACK_UPDATE;
+    public static final UnreleasedFlag DOZING_MIGRATION_1;
+    public static final UnreleasedFlag DREAM_MEDIA_COMPLICATION;
+    public static final UnreleasedFlag DREAM_MEDIA_TAP_TO_OPEN;
+    public static final ReleasedFlag ENABLE_CLOCK_KEYGUARD_PRESENTATION;
+    public static final UnreleasedFlag ENABLE_DARK_VIGNETTE_WHEN_FOLDING;
+    public static final ReleasedFlag ENABLE_NEW_PRIVACY_DIALOG;
+    public static final UnreleasedFlag ENABLE_NEW_QS_EDIT_MODE;
+    public static final UnreleasedFlag ENABLE_NOTIFICATIONS_SIMULATE_SLOW_MEASURE;
+    public static final ReleasedFlag ENABLE_STYLUS_CHARGING_UI;
+    public static final ReleasedFlag ENABLE_STYLUS_EDUCATION;
+    public static final UnreleasedFlag ENABLE_UNFOLD_STATUS_BAR_ANIMATIONS;
+    public static final ReleasedFlag ENABLE_USI_BATTERY_NOTIFICATIONS;
+    public static final ReleasedFlag ENABLE_WALLET_CONTEXTUAL_LOYALTY_CARDS;
+    private static final UnreleasedFlag EXPERIMENTAL_FLAG;
+    public static final ReleasedFlag FALSING_OFF_FOR_UNFOLDED;
+    private static final ReleasedFlag FILTER_PROVISIONING_NETWORK_SUBSCRIPTIONS;
+    public static final ResourceBooleanFlag FULL_SCREEN_USER_SWITCHER;
+    public static final ReleasedFlag HIDE_SMARTSPACE_ON_DREAM_OVERLAY;
+    public static final ReleasedFlag INCOMPATIBLE_CHARGING_BATTERY_ICON;
+    public static final Flags INSTANCE = new Flags();
+    private static final ReleasedFlag INSTANT_TETHER;
+    public static final ReleasedFlag KEYBOARD_BACKLIGHT_INDICATOR;
+    public static final UnreleasedFlag KEYGUARD_TALKBACK_FIX;
+    public static final ReleasedFlag LAZY_INFLATE_KEYGUARD;
+    public static final UnreleasedFlag LOCKSCREEN_ENABLE_LANDSCAPE;
+    public static final UnreleasedFlag LOCKSCREEN_WALLPAPER_DREAM_ENABLED;
+    public static final UnreleasedFlag LOCK_SCREEN_LONG_PRESS_DIRECT_TO_WPP;
+    public static final ReleasedFlag LOCK_SCREEN_LONG_PRESS_ENABLED;
+    private static final UnreleasedFlag MEDIA_REMOTE_RESUME;
+    private static final ReleasedFlag MEDIA_RESUME_PROGRESS;
+    private static final UnreleasedFlag MEDIA_RETAIN_RECOMMENDATIONS;
+    private static final UnreleasedFlag MEDIA_RETAIN_SESSIONS;
+    private static final UnreleasedFlag MEDIA_SESSION_ACTIONS;
+    private static final ReleasedFlag MEDIA_TAP_TO_TRANSFER;
+    public static final ResourceBooleanFlag MONET;
+    public static final ReleasedFlag MONOCHROMATIC_THEME;
+    public static final ReleasedFlag NEW_NETWORK_SLICE_UI;
+    private static final ReleasedFlag NEW_SHADE_CARRIER_GROUP_MOBILE_ICONS;
+    public static final ReleasedFlag NOTE_TASKS;
+    public static final ResourceBooleanFlag NOTIFICATION_DRAG_TO_CONTENTS;
+    private static final ReleasedFlag NOTIFICATION_MEMORY_LOGGING_ENABLED;
+    private static final UnreleasedFlag NOTIFICATION_PIPELINE_DEVELOPER_LOGGING;
+    public static final UnreleasedFlag NSSL_DEBUG_LINES;
+    public static final UnreleasedFlag NSSL_DEBUG_REMOVE_ANIMATION;
+    public static final UnreleasedFlag NULL_FLAG;
+    private static final ResourceBooleanFlag PEOPLE_TILE;
+    public static final ReleasedFlag POWER_MENU_LITE;
+    public static final ReleasedFlag QS_SECONDARY_DATA_SUB_INFO;
+    public static final ResourceBooleanFlag QS_USER_DETAIL_SHORTCUT;
+    private static final UnreleasedFlag QUICK_TAP_FLOW_FRAMEWORK;
+    private static final ReleasedFlag QUICK_TAP_IN_PCC;
+    public static final UnreleasedFlag REFACTOR_GETCURRENTUSER;
+    private static final UnreleasedFlag REGION_SAMPLING;
+    public static final UnreleasedFlag REMOVE_NPVC_BOTTOM_AREA_USAGE;
+    private static final ReleasedFlag ROAMING_INDICATOR_VIA_DISPLAY_INFO;
+    public static final ReleasedFlag SCREENSHOT_APP_CLIPS;
+    private static final UnreleasedFlag SCREEN_CONTENTS_TRANSLATION;
+    public static final ReleasedFlag SHARE_WIFI_QS_BUTTON;
+    public static final ReleasedFlag SHORTCUT_LIST_SEARCH_LAYOUT;
+    public static final ReleasedFlag SHOW_WEATHER_COMPLICATION_ON_DREAM_OVERLAY;
+    public static final ReleasedFlag SIGNAL_CALLBACK_DEPRECATION;
+    private static final ReleasedFlag SIMULATE_DOCK_THROUGH_CHARGING;
+    private static final ReleasedFlag SMARTSPACE_SHARED_ELEMENT_TRANSITION_ENABLED;
+    public static final UnreleasedFlag SPLIT_SHADE_SUBPIXEL_OPTIMIZATION;
+    public static final ReleasedFlag STEP_CLOCK_ANIMATION;
+    public static final ReleasedFlag SWIPE_UNCLEARED_TRANSIENT_VIEW_FIX;
+    public static final ReleasedFlag TRACK_STYLUS_EVER_USED;
+    public static final ReleasedFlag TRANSIT_CLOCK;
+    public static final UnreleasedFlag TRIM_FONT_CACHES_AT_UNLOCK;
+    public static final ReleasedFlag UNCLEARED_TRANSIENT_HUN_FIX;
+    public static final UnreleasedFlag USER_TRACKER_BACKGROUND_CALLBACKS;
+    public static final ReleasedFlag USE_NEW_ACTIVITY_STARTER;
+    public static final ReleasedFlag WALLPAPER_FULLSCREEN_PREVIEW;
+    public static final UnreleasedFlag WALLPAPER_PICKER_GRID_APPLY_BUTTON;
+    public static final ReleasedFlag WALLPAPER_PICKER_PAGE_TRANSITIONS;
+    public static final ReleasedFlag WALLPAPER_PICKER_PREVIEW_ANIMATION;
+    public static final ReleasedFlag WALLPAPER_PICKER_UI_FOR_AIWP;
+    public static final UnreleasedFlag WARN_ON_BLOCKING_BINDER_TRANSACTIONS;
+    private static final ReleasedFlag WIFI_SECONDARY_NETWORKS;
+    public static final SysPropBooleanFlag WM_ALWAYS_ENFORCE_PREDICTIVE_BACK;
+    public static final SysPropBooleanFlag WM_BUBBLE_BAR;
+    public static final ReleasedFlag WM_ENABLE_PARTIAL_SCREEN_SHARING;
+    public static final ReleasedFlag WM_ENABLE_PARTIAL_SCREEN_SHARING_ENTERPRISE_POLICIES;
+    public static final SysPropBooleanFlag WM_ENABLE_PREDICTIVE_BACK_ANIM;
+    public static final SysPropBooleanFlag WM_ENABLE_SHELL_TRANSITIONS;
+    public static final ReleasedFlag ZJ_285570694_LOCKSCREEN_TRANSITION_FROM_AOD;
+
+    static {
+        FlagsFactory flagsFactory = FlagsFactory.INSTANCE;
+        NULL_FLAG = FlagsFactory.unreleasedFlag$default(flagsFactory, "null_flag", null, false, 6, null);
+        SWIPE_UNCLEARED_TRANSIENT_VIEW_FIX = FlagsFactory.releasedFlag$default(flagsFactory, "swipe_uncleared_transient_view_fix", null, 2, null);
+        UNCLEARED_TRANSIENT_HUN_FIX = FlagsFactory.releasedFlag$default(flagsFactory, "uncleared_transient_hun_fix", null, 2, null);
+        NOTIFICATION_PIPELINE_DEVELOPER_LOGGING = FlagsFactory.unreleasedFlag$default(flagsFactory, "notification_pipeline_developer_logging", null, false, 6, null);
+        NSSL_DEBUG_LINES = FlagsFactory.unreleasedFlag$default(flagsFactory, "nssl_debug_lines", null, false, 6, null);
+        NSSL_DEBUG_REMOVE_ANIMATION = FlagsFactory.unreleasedFlag$default(flagsFactory, "nssl_debug_remove_animation", null, false, 6, null);
+        NOTIFICATION_DRAG_TO_CONTENTS = FlagsFactory.resourceBooleanFlag$default(flagsFactory, R$bool.config_notificationToContents, "notification_drag_to_contents", null, 4, null);
+        NOTIFICATION_MEMORY_LOGGING_ENABLED = FlagsFactory.releasedFlag$default(flagsFactory, "notification_memory_logging_enabled", null, 2, null);
+        BUILDER_EXTRAS_OVERRIDE = FlagsFactory.sysPropBooleanFlag$default(flagsFactory, "persist.sysui.notification.builder_extras_override", null, true, 2, null);
+        STEP_CLOCK_ANIMATION = FlagsFactory.releasedFlag$default(flagsFactory, "step_clock_animation", null, 2, null);
+        DOZING_MIGRATION_1 = FlagsFactory.unreleasedFlag$default(flagsFactory, "dozing_migration_1", null, false, 6, null);
+        REFACTOR_GETCURRENTUSER = FlagsFactory.unreleasedFlag$default(flagsFactory, "refactor_getcurrentuser", null, true, 2, null);
+        BIOMETRICS_ANIMATION_REVAMP = FlagsFactory.unreleasedFlag$default(flagsFactory, "biometrics_animation_revamp", null, false, 6, null);
+        AUTO_PIN_CONFIRMATION = flagsFactory.releasedFlag("auto_pin_confirmation", "auto_pin_confirmation");
+        FALSING_OFF_FOR_UNFOLDED = FlagsFactory.releasedFlag$default(flagsFactory, "falsing_off_for_unfolded", null, 2, null);
+        ENABLE_WALLET_CONTEXTUAL_LOYALTY_CARDS = FlagsFactory.releasedFlag$default(flagsFactory, "enable_wallet_contextual_loyalty_cards", null, 2, null);
+        WALLPAPER_FULLSCREEN_PREVIEW = FlagsFactory.releasedFlag$default(flagsFactory, "wallpaper_fullscreen_preview", null, 2, null);
+        LOCK_SCREEN_LONG_PRESS_ENABLED = FlagsFactory.releasedFlag$default(flagsFactory, "lock_screen_long_press_enabled", null, 2, null);
+        LAZY_INFLATE_KEYGUARD = FlagsFactory.releasedFlag$default(flagsFactory, "lazy_inflate_keyguard", null, 2, null);
+        WALLPAPER_PICKER_UI_FOR_AIWP = FlagsFactory.releasedFlag$default(flagsFactory, "wallpaper_picker_ui_for_aiwp", null, 2, null);
+        LOCK_SCREEN_LONG_PRESS_DIRECT_TO_WPP = FlagsFactory.unreleasedFlag$default(flagsFactory, "lock_screen_long_press_directly_opens_wallpaper_picker", null, false, 6, null);
+        WALLPAPER_PICKER_PAGE_TRANSITIONS = FlagsFactory.releasedFlag$default(flagsFactory, "wallpaper_picker_page_transitions", null, 2, null);
+        WALLPAPER_PICKER_GRID_APPLY_BUTTON = FlagsFactory.unreleasedFlag$default(flagsFactory, "wallpaper_picker_grid_apply_button", null, false, 6, null);
+        REMOVE_NPVC_BOTTOM_AREA_USAGE = FlagsFactory.unreleasedFlag$default(flagsFactory, "remove_npvc_bottom_area_usage", null, false, 6, null);
+        KEYGUARD_TALKBACK_FIX = FlagsFactory.unreleasedFlag$default(flagsFactory, "keyguard_talkback_fix", null, false, 6, null);
+        TRANSIT_CLOCK = FlagsFactory.releasedFlag$default(flagsFactory, "lockscreen_custom_transit_clock", null, 2, null);
+        WALLPAPER_PICKER_PREVIEW_ANIMATION = FlagsFactory.releasedFlag$default(flagsFactory, "wallpaper_picker_preview_animation", null, 2, null);
+        POWER_MENU_LITE = FlagsFactory.releasedFlag$default(flagsFactory, "power_menu_lite", null, 2, null);
+        SMARTSPACE_SHARED_ELEMENT_TRANSITION_ENABLED = FlagsFactory.releasedFlag$default(flagsFactory, "smartspace_shared_element_transition_enabled", null, 2, null);
+        HIDE_SMARTSPACE_ON_DREAM_OVERLAY = FlagsFactory.releasedFlag$default(flagsFactory, "hide_smartspace_on_dream_overlay", null, 2, null);
+        SHOW_WEATHER_COMPLICATION_ON_DREAM_OVERLAY = FlagsFactory.releasedFlag$default(flagsFactory, "show_weather_complication_on_dream_overlay", null, 2, null);
+        PEOPLE_TILE = FlagsFactory.resourceBooleanFlag$default(flagsFactory, R$bool.flag_conversations, "people_tile", null, 4, null);
+        QS_USER_DETAIL_SHORTCUT = FlagsFactory.resourceBooleanFlag$default(flagsFactory, R$bool.flag_lockscreen_qs_user_detail_shortcut, "qs_user_detail_shortcut", null, 4, null);
+        FULL_SCREEN_USER_SWITCHER = FlagsFactory.resourceBooleanFlag$default(flagsFactory, R$bool.config_enableFullscreenUserSwitcher, "full_screen_user_switcher", null, 4, null);
+        QS_SECONDARY_DATA_SUB_INFO = FlagsFactory.releasedFlag$default(flagsFactory, "qs_secondary_data_sub_info", null, 2, null);
+        ENABLE_NEW_QS_EDIT_MODE = FlagsFactory.unreleasedFlag$default(flagsFactory, "enable_new_qs_edit_mode", null, false, 2, null);
+        SIGNAL_CALLBACK_DEPRECATION = FlagsFactory.releasedFlag$default(flagsFactory, "signal_callback_deprecation", null, 2, null);
+        NEW_NETWORK_SLICE_UI = FlagsFactory.releasedFlag$default(flagsFactory, "new_network_slice_ui", null, 2, null);
+        ROAMING_INDICATOR_VIA_DISPLAY_INFO = FlagsFactory.releasedFlag$default(flagsFactory, "roaming_indicator_via_display_info", null, 2, null);
+        FILTER_PROVISIONING_NETWORK_SUBSCRIPTIONS = FlagsFactory.releasedFlag$default(flagsFactory, "filter_provisioning_network_subscriptions", null, 2, null);
+        INCOMPATIBLE_CHARGING_BATTERY_ICON = FlagsFactory.releasedFlag$default(flagsFactory, "incompatible_charging_battery_icon", null, 2, null);
+        INSTANT_TETHER = FlagsFactory.releasedFlag$default(flagsFactory, "instant_tether", null, 2, null);
+        WIFI_SECONDARY_NETWORKS = FlagsFactory.releasedFlag$default(flagsFactory, "wifi_secondary_networks", null, 2, null);
+        NEW_SHADE_CARRIER_GROUP_MOBILE_ICONS = FlagsFactory.releasedFlag$default(flagsFactory, "new_shade_carrier_group_mobile_icons", null, 2, null);
+        MONET = FlagsFactory.resourceBooleanFlag$default(flagsFactory, R$bool.flag_monet, "monet", null, 4, null);
+        REGION_SAMPLING = FlagsFactory.unreleasedFlag$default(flagsFactory, "region_sampling", null, false, 6, null);
+        SCREEN_CONTENTS_TRANSLATION = FlagsFactory.unreleasedFlag$default(flagsFactory, "screen_contents_translation", null, false, 6, null);
+        MONOCHROMATIC_THEME = FlagsFactory.releasedFlag$default(flagsFactory, "monochromatic", null, 2, null);
+        COLOR_FIDELITY = FlagsFactory.unreleasedFlag$default(flagsFactory, "color_fidelity", null, false, 6, null);
+        MEDIA_TAP_TO_TRANSFER = FlagsFactory.releasedFlag$default(flagsFactory, "media_tap_to_transfer", null, 2, null);
+        MEDIA_SESSION_ACTIONS = FlagsFactory.unreleasedFlag$default(flagsFactory, "media_session_actions", null, false, 6, null);
+        DREAM_MEDIA_COMPLICATION = FlagsFactory.unreleasedFlag$default(flagsFactory, "dream_media_complication", null, false, 6, null);
+        DREAM_MEDIA_TAP_TO_OPEN = FlagsFactory.unreleasedFlag$default(flagsFactory, "dream_media_tap_to_open", null, false, 6, null);
+        MEDIA_RETAIN_SESSIONS = FlagsFactory.unreleasedFlag$default(flagsFactory, "media_retain_sessions", null, false, 6, null);
+        MEDIA_RESUME_PROGRESS = FlagsFactory.releasedFlag$default(flagsFactory, "media_resume_progress", null, 2, null);
+        MEDIA_RETAIN_RECOMMENDATIONS = FlagsFactory.unreleasedFlag$default(flagsFactory, "media_retain_recommendations", null, false, 6, null);
+        MEDIA_REMOTE_RESUME = FlagsFactory.unreleasedFlag$default(flagsFactory, "media_remote_resume", null, false, 6, null);
+        SIMULATE_DOCK_THROUGH_CHARGING = FlagsFactory.releasedFlag$default(flagsFactory, "simulate_dock_through_charging", null, 2, null);
+        ALWAYS_SHOW_HOME_CONTROLS_ON_DREAMS = FlagsFactory.releasedFlag$default(flagsFactory, "always_show_home_controls_on_dreams", null, 2, null);
+        WM_ENABLE_SHELL_TRANSITIONS = FlagsFactory.sysPropBooleanFlag$default(flagsFactory, "persist.wm.debug.shell_transit", null, true, 2, null);
+        WM_ENABLE_PARTIAL_SCREEN_SHARING = flagsFactory.releasedFlag("enable_record_task_content", "window_manager");
+        WM_BUBBLE_BAR = FlagsFactory.sysPropBooleanFlag$default(flagsFactory, "persist.wm.debug.bubble_bar", null, false, 2, null);
+        WM_ENABLE_PARTIAL_SCREEN_SHARING_ENTERPRISE_POLICIES = flagsFactory.releasedFlag("enable_screen_record_enterprise_policies", "window_manager");
+        LOCKSCREEN_ENABLE_LANDSCAPE = FlagsFactory.unreleasedFlag$default(flagsFactory, "lockscreen.enable_landscape", null, false, 6, null);
+        WM_ENABLE_PREDICTIVE_BACK_ANIM = FlagsFactory.sysPropBooleanFlag$default(flagsFactory, "persist.wm.debug.predictive_back_anim", null, true, 2, null);
+        WM_ALWAYS_ENFORCE_PREDICTIVE_BACK = FlagsFactory.sysPropBooleanFlag$default(flagsFactory, "persist.wm.debug.predictive_back_always_enforce", null, false, 2, null);
+        SCREENSHOT_APP_CLIPS = FlagsFactory.releasedFlag$default(flagsFactory, "screenshot_app_clips", null, 2, null);
+        QUICK_TAP_IN_PCC = FlagsFactory.releasedFlag$default(flagsFactory, "quick_tap_in_pcc", null, 2, null);
+        QUICK_TAP_FLOW_FRAMEWORK = FlagsFactory.unreleasedFlag$default(flagsFactory, "quick_tap_flow_framework", null, false, 2, null);
+        CLIPBOARD_REMOTE_BEHAVIOR = FlagsFactory.releasedFlag$default(flagsFactory, "clipboard_remote_behavior", null, 2, null);
+        CLIPBOARD_IMAGE_TIMEOUT = FlagsFactory.unreleasedFlag$default(flagsFactory, "clipboard_image_timeout", null, true, 2, null);
+        CLIPBOARD_SHARED_TRANSITIONS = FlagsFactory.unreleasedFlag$default(flagsFactory, "clipboard_shared_transitions", null, true, 2, null);
+        NOTE_TASKS = FlagsFactory.releasedFlag$default(flagsFactory, "keycode_flag", null, 2, null);
+        TRACK_STYLUS_EVER_USED = FlagsFactory.releasedFlag$default(flagsFactory, "track_stylus_ever_used", null, 2, null);
+        ENABLE_STYLUS_CHARGING_UI = FlagsFactory.releasedFlag$default(flagsFactory, "enable_stylus_charging_ui", null, 2, null);
+        ENABLE_USI_BATTERY_NOTIFICATIONS = FlagsFactory.releasedFlag$default(flagsFactory, "enable_usi_battery_notifications", null, 2, null);
+        ENABLE_STYLUS_EDUCATION = FlagsFactory.releasedFlag$default(flagsFactory, "enable_stylus_education", null, 2, null);
+        WARN_ON_BLOCKING_BINDER_TRANSACTIONS = FlagsFactory.unreleasedFlag$default(flagsFactory, "warn_on_blocking_binder_transactions", null, false, 6, null);
+        TRIM_FONT_CACHES_AT_UNLOCK = FlagsFactory.unreleasedFlag$default(flagsFactory, "trim_font_caches_on_unlock", null, false, 6, null);
+        USER_TRACKER_BACKGROUND_CALLBACKS = FlagsFactory.unreleasedFlag$default(flagsFactory, "user_tracker_background_callbacks", null, false, 6, null);
+        ENABLE_DARK_VIGNETTE_WHEN_FOLDING = FlagsFactory.unreleasedFlag$default(flagsFactory, "enable_dark_vignette_when_folding", null, false, 6, null);
+        ENABLE_UNFOLD_STATUS_BAR_ANIMATIONS = FlagsFactory.unreleasedFlag$default(flagsFactory, "enable_unfold_status_bar_animations", null, false, 6, null);
+        ENABLE_NOTIFICATIONS_SIMULATE_SLOW_MEASURE = FlagsFactory.unreleasedFlag$default(flagsFactory, "enable_notifications_simulate_slow_measure", null, false, 6, null);
+        EXPERIMENTAL_FLAG = FlagsFactory.unreleasedFlag$default(flagsFactory, "exp_flag_release", null, false, 6, null);
+        SHORTCUT_LIST_SEARCH_LAYOUT = FlagsFactory.releasedFlag$default(flagsFactory, "shortcut_list_search_layout", null, 2, null);
+        KEYBOARD_BACKLIGHT_INDICATOR = FlagsFactory.releasedFlag$default(flagsFactory, "keyboard_backlight_indicator", null, 2, null);
+        SPLIT_SHADE_SUBPIXEL_OPTIMIZATION = FlagsFactory.unreleasedFlag$default(flagsFactory, "split_shade_subpixel_optimization", null, false, 6, null);
+        USE_NEW_ACTIVITY_STARTER = FlagsFactory.releasedFlag$default(flagsFactory, "use_new_activity_starter", null, 2, null);
+        ZJ_285570694_LOCKSCREEN_TRANSITION_FROM_AOD = FlagsFactory.releasedFlag$default(flagsFactory, "zj_285570694_lockscreen_transition_from_aod", null, 2, null);
+        LOCKSCREEN_WALLPAPER_DREAM_ENABLED = FlagsFactory.unreleasedFlag$default(flagsFactory, "enable_lockscreen_wallpaper_dream", null, false, 6, null);
+        BIGPICTURE_NOTIFICATION_LAZY_LOADING = FlagsFactory.unreleasedFlag$default(flagsFactory, "bigpicture_notification_lazy_loading", null, false, 6, null);
+        ENABLE_NEW_PRIVACY_DIALOG = FlagsFactory.releasedFlag$default(flagsFactory, "enable_new_privacy_dialog", null, 2, null);
+        DECOUPLE_REMOTE_INPUT_DELEGATE_AND_CALLBACK_UPDATE = FlagsFactory.unreleasedFlag$default(flagsFactory, "decouple_remote_input_delegate_and_callback_update", null, false, 6, null);
+        ENABLE_CLOCK_KEYGUARD_PRESENTATION = FlagsFactory.releasedFlag$default(flagsFactory, "enable_clock_keyguard_presentation", null, 2, null);
+        COMPOSE_PEOPLE_SPACE = FlagsFactory.releasedFlag$default(flagsFactory, "compose_people_space", null, 2, null);
+        COMPOSE_QS_FOOTER_ACTIONS = FlagsFactory.releasedFlag$default(flagsFactory, "compose_qs_footer_actions", null, 2, null);
+        SHARE_WIFI_QS_BUTTON = FlagsFactory.releasedFlag$default(flagsFactory, "share_wifi_qs_button", null, 2, null);
+        BLUETOOTH_QS_TILE_DIALOG = FlagsFactory.releasedFlag$default(flagsFactory, "bluetooth_qs_tile_dialog", null, 2, null);
+        COMMUNAL_SERVICE_ENABLED = FlagsFactory.resourceBooleanFlag$default(flagsFactory, R$bool.config_communalServiceEnabled, "communal_service_enabled", null, 4, null);
+    }
+
+    private Flags() {
+    }
+
+    public final UnreleasedFlag getMEDIA_REMOTE_RESUME() {
+        return MEDIA_REMOTE_RESUME;
+    }
+
+    public final ReleasedFlag getMEDIA_RESUME_PROGRESS() {
+        return MEDIA_RESUME_PROGRESS;
+    }
+
+    public final UnreleasedFlag getMEDIA_RETAIN_SESSIONS() {
+        return MEDIA_RETAIN_SESSIONS;
+    }
+}

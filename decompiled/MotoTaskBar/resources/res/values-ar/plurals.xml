@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="zero">%d إشعار جديد</item>
+        <item quantity="one">إشعار جديد واحد (%d)</item>
+        <item quantity="two">إشعاران جديدان (%d)</item>
+        <item quantity="few">%d إشعارات جديدة</item>
+        <item quantity="many">%d إشعارًا جديدًا</item>
+        <item quantity="other">%d إشعار جديد</item>
+    </plurals>
+    <plurals name="notification_group_overflow_description">
+        <item quantity="zero">ثمة %s من الإعلامات الإضافية في الداخل.</item>
+        <item quantity="one">%s إشعار آخر بداخل المجموعة.</item>
+        <item quantity="two">ثمة %s من الإعلامات الإضافية في الداخل.</item>
+        <item quantity="few">ثمة %s من الإعلامات الإضافية في الداخل.</item>
+        <item quantity="many">ثمة %s من الإعلامات الإضافية في الداخل.</item>
+        <item quantity="other">ثمة %s من الإعلامات الإضافية في الداخل.</item>
+    </plurals>
+    <plurals name="quick_settings_hotspot_secondary_label_num_devices">
+        <item quantity="zero">%d من الأجهزة</item>
+        <item quantity="one">‏جهاز واحد (%d)</item>
+        <item quantity="two">%d من الأجهزة</item>
+        <item quantity="few">%d من الأجهزة</item>
+        <item quantity="many">%d من الأجهزة</item>
+        <item quantity="other">%d من الأجهزة</item>
+    </plurals>
+    <plurals name="taskbar_notification_num_devices">
+        <item quantity="zero">%d من الإشعارات الجديدة</item>
+        <item quantity="one">%d من الإشعارات الجديدة</item>
+        <item quantity="two">%d من الإشعارات الجديدة</item>
+        <item quantity="few">%d من الإشعارات الجديدة</item>
+        <item quantity="many">%d من الإشعارات الجديدة</item>
+        <item quantity="other">%d من الإشعارات الجديدة</item>
+    </plurals>
+</resources>

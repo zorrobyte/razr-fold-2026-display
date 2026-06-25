@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For et permet connectar-te a la televisió, a un monitor o a l\'ordinador per jugar, accedir a opcions d\'oci i controlar el telèfon de forma remota, entre altres coses.</item>
+        <item>Pots canviar a una experiència diferent tocant la bombolla flotant del telèfon.</item>
+        <item>Connecta un ratolí i un teclat per gaudir de la millor experiència. Si no tens un ratolí, la pantalla del telèfon es convertirà en un trackpad.</item>
+        <item>És possible que algunes aplicacions no funcionin correctament en el mode d\'escriptori i que altres no et permetin reproduir contingut en una pantalla secundària. També podria ser necessari ajustar el monitor o l\'aparell de televisió per optimitzar l\'experiència de visualització.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Et donem la benvinguda a Ready For</item>
+        <item>Canvi dels modes de visualització</item>
+        <item>Accessoris</item>
+        <item>Recorda</item>
+    </array>
+</resources>

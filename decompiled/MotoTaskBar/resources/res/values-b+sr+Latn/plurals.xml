@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d novo obaveštenje</item>
+        <item quantity="few">%d nova obaveštenja</item>
+        <item quantity="other">%d novih obaveštenja</item>
+    </plurals>
+    <plurals name="notification_group_overflow_description">
+        <item quantity="one">Još %s obaveštenje u grupi.</item>
+        <item quantity="few">Još %s obaveštenja unutra.</item>
+        <item quantity="other">Još %s obaveštenja unutra.</item>
+    </plurals>
+    <plurals name="quick_settings_hotspot_secondary_label_num_devices">
+        <item quantity="one">%d uređaj</item>
+        <item quantity="few">%d uređaja</item>
+        <item quantity="other">%d uređaja</item>
+    </plurals>
+    <plurals name="taskbar_notification_num_devices">
+        <item quantity="one">%d novo obaveštenje</item>
+        <item quantity="few">%d nova obaveštenja</item>
+        <item quantity="other">%d novih obaveštenja</item>
+    </plurals>
+</resources>

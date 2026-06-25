@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Com o Ready For, você pode conectar seu telefone a uma TV, monitor ou computador para jogos, entretenimento, controle remoto do aparelho e muito mais.</item>
+        <item>Para trocar de experiência, toque no ícone flutuante no telefone.</item>
+        <item>Para aproveitar melhor, conecte um mouse e um teclado. Se você não tiver um mouse, use a tela do telefone como um trackpad.</item>
+        <item>Talvez alguns apps não funcionem corretamente no modo desktop, e outros não permitam a exibição de conteúdo em uma tela secundária. Além disso, talvez seja preciso ajustar o monitor ou TV para otimizar a experiência.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Bem-vindo(a) ao Ready For</item>
+        <item>Alternar entre os modos de exibição</item>
+        <item>Acessórios</item>
+        <item>Lembrete</item>
+    </array>
+</resources>

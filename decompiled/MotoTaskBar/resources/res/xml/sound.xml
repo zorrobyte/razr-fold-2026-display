@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.motorola.taskbar.settings.WrappedSwitchPreference
+        android:layout="@layout/pref_start"
+        android:title="@string/setting_multi_playback_title"
+        android:key="settings_multi_playback"
+        android:summary="@string/setting_multi_playback_summary"
+        android:defaultValue="false"
+        app:iconSpaceReserved="false"/>
+</PreferenceScreen>

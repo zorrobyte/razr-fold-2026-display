@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For gør det muligt at tilslutte din telefon til et tv, en skærm eller en pc for spil, underholdning, telefonfjernbetjening og meget mere.</item>
+        <item>Du kan skifte til en anden oplevelse ved at trykke på den flydende boble på din telefon.</item>
+        <item>Tilslut et tastatur og en mus for den optimale oplevelse. Hvis du ikke har en mus, bliver din telefonskærm forvandlet til en trackpad.</item>
+        <item>Nogle apps virker muligvis ikke optimalt i Desktop-tilstand, og nogle tillader muligvis ikke afspilning af indhold på en sekundær skærm. Det kan desuden være nødvendigt at justere din skærm eller dit TV for en optimal visningsoplevelse.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Velkommen til Ready For</item>
+        <item>Skift mellem visningstilstande</item>
+        <item>Tilbehør</item>
+        <item>Husk</item>
+    </array>
+</resources>

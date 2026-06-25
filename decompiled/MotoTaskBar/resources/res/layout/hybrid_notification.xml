@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.systemui.statusbar.notification.row.HybridNotificationView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="start|bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@android:dimen/notification_header_touchable_height"
+    android:paddingEnd="12dp">
+    <TextView
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Title"
+        android:id="@+id/notification_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:paddingEnd="4dp"/>
+    <TextView
+        android:id="@+id/notification_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:paddingEnd="4dp"
+        style="@android:style/Widget.DeviceDefault.ProgressBar.Large.Inverse"/>
+</com.android.systemui.statusbar.notification.row.HybridNotificationView>

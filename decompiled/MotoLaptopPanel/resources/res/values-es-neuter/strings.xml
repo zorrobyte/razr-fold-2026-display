@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifitrackerlib_hotspot_network_summary_new">{DEVICE_TYPE,select, PHONE{{NETWORK_NAME} desde tu teléfono}TABLET{{NETWORK_NAME} desde tu teléfono}COMPUTER{{NETWORK_NAME} desde tu teléfono}WATCH{{NETWORK_NAME} desde tu smartwatch}VEHICLE{{NETWORK_NAME} desde tu smartwatch}other{{NETWORK_NAME} desde tu smartwatch}}</string>
+</resources>

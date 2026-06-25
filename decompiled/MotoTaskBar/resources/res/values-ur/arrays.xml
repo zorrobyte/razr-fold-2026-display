@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>سسٹم انتخاب کا استعمال کریں (ڈیفالٹ)</item>
+        <item>16 بٹس/نمونہ</item>
+        <item>24 بٹس/نمونہ</item>
+        <item>32 بٹس/نمونہ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>سسٹم انتخاب کا استعمال کریں (ڈیفالٹ)</item>
+        <item>16 بٹس/نمونہ</item>
+        <item>24 بٹس/نمونہ</item>
+        <item>32 بٹس/نمونہ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>سسٹم انتخاب کا استعمال کریں (ڈیفالٹ)</item>
+        <item>مونو</item>
+        <item>اسٹیریو</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>سسٹم انتخاب کا استعمال کریں (ڈیفالٹ)</item>
+        <item>مونو</item>
+        <item>اسٹیریو</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>آڈیو کے معیار کیلئے بہتر بنایا گيا</item>
+        <item>متوازن آڈیو اور کنکشن کا معیار</item>
+        <item>کنکشن کے معیار کیلئے بہتر بنایا گيا</item>
+        <item>بہترین کوشش (اڈاپٹیو بٹ ریٹ)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>‏آڈیو کے معیار کیلئے بہتر بنایا گيا (990kbps/909kbps)</item>
+        <item>‏متوازن آڈیو اور کنکشن کا معیار (660kbps/606kbps)</item>
+        <item>‏کنکشن کے معیار کیلئے بہتر بنایا گيا (330kbps/303kbps)</item>
+        <item>بہترین کوشش (اڈاپٹیو بٹ ریٹ)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>سسٹم انتخاب کا استعمال کریں (ڈیفالٹ)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>سسٹم انتخاب کا استعمال کریں (ڈیفالٹ)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>سسٹم انتخاب کا استعمال کریں (ڈیفالٹ)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ آڈیو</item>
+        <item>Qualcomm® aptX™ HD آڈیو</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>سسٹم انتخاب کا استعمال کریں (ڈیفالٹ)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ آڈیو</item>
+        <item>Qualcomm® aptX™ HD آڈیو</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>، فعال</item>
+        <item>، فعال (میڈیا)</item>
+        <item>، فعال (فون)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp14</item>
+        <item>avrcp13</item>
+        <item>avrcp15</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>‏AVRCP 1.4 (ڈیفالٹ)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.5</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>‏MAP 1.2 ‏(ڈیفالٹ)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>نا اہل کردہ</item>
+        <item>فعال کردہ فلٹر کردہ</item>
+        <item>اہل کردہ</item>
+    </array>
+    <array name="display_size_descriptions">
+        <item>چھوٹا</item>
+        <item>ڈیفالٹ</item>
+        <item>بڑا</item>
+        <item>قدرے بڑا</item>
+    </array>
+    <array name="font_size_descriptions">
+        <item>چھوٹا</item>
+        <item>ڈیفالٹ</item>
+        <item>بڑا</item>
+    </array>
+    <array name="open_app_option_array">
+        <item>ایپ کو ری اسٹارٹ کریں</item>
+        <item>ری اسٹارٹ کیے بغیر ایپ کھولیں</item>
+        <item>مجھ سے ہر وقت پوچھیں</item>
+    </array>
+    <array name="power_save_array">
+        <item>‏10 منٹ</item>
+        <item>‏15 منٹ</item>
+        <item>‏20 منٹ</item>
+        <item>‏30 منٹ</item>
+        <item>‏60 منٹ</item>
+        <item>کبھی منقطع نہ کریں</item>
+    </array>
+    <array name="preload_wallpapers_array">
+        <item>‏preload_wallpaper_geometry_1</item>
+        <item>‏preload_wallpaper_geometry_2</item>
+        <item>‏preload_wallpaper_geometry_3</item>
+        <item>‏preload_wallpaper_geometry_4</item>
+        <item>‏preload_wallpaper_geometry_5</item>
+        <item>‏preload_wallpaper_geometry_6</item>
+        <item>‏preload_wallpaper_geometry_7</item>
+        <item>‏preload_wallpaper_geometry_8</item>
+        <item>‏preload_wallpaper_geometry_9</item>
+        <item>‏preload_wallpaper_geometry_10</item>
+        <item>‏preload_wallpaper_nature_1</item>
+        <item>‏preload_wallpaper_nature_2</item>
+        <item>‏preload_wallpaper_nature_3</item>
+        <item>‏preload_wallpaper_nature_4</item>
+        <item>‏preload_wallpaper_nature_5</item>
+        <item>‏preload_wallpaper_nature_6</item>
+        <item>‏preload_wallpaper_nature_7</item>
+        <item>‏preload_wallpaper_nature_8</item>
+        <item>‏preload_wallpaper_nature_9</item>
+    </array>
+    <array name="timeout_array">
+        <item>1 منٹ</item>
+        <item>‏2 منٹ</item>
+        <item>‏5 منٹ</item>
+        <item>‏10 منٹ</item>
+        <item>‏20 منٹ</item>
+        <item>‏30 منٹ</item>
+        <item>‏60 منٹ</item>
+    </array>
+</resources>

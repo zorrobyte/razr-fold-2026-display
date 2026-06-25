@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:theme="@style/ThemeOverlay.MaterialComponents.PlatformBridge.CollapsingToolbar"
+        android:id="@+id/app_bar"
+        android:background="@color/hello_ui_settings_background"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:outlineAmbientShadowColor="@android:color/transparent">
+        <Toolbar
+            android:theme="?android:attr/actionBarTheme"
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hello_ui_action_bar_height"
+            android:transitionName="shared_element_view"
+            android:titleTextAppearance="@style/CollapsingToolbarTitle.Collapsed"
+            app:layout_collapseMode="pin"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:clipChildren="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</merge>

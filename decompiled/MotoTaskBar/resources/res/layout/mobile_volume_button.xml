@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/tablet_taskbar_appitem_width"
+    android:layout_height="@dimen/tablet_taskbar_appitem_width">
+    <com.motorola.taskbar.sysicons.VolumeSysIconView
+        android:id="@+id/volume"
+        android:scaleType="fitCenter"
+        android:layout_marginHorizontal="@dimen/mobile_taskbar_icon_horizontal_margin"
+        android:paddingHorizontal="@dimen/tablet_key_button_padding"
+        style="@style/TabletTaskTaskBarKeyRightButton"/>
+</merge>

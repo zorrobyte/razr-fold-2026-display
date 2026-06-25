@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="animator_duration_scale_entries">
+        <item>Hākoritanga weto</item>
+        <item>Tauine hākoritanga .5x</item>
+        <item>Tauine hākoritanga 1x</item>
+        <item>Tauine hākoritanga 1.5x</item>
+        <item>Tauine hākoritanga 2x</item>
+        <item>Tauine hākoritanga 5x</item>
+        <item>Tauine hākoritanga 10x</item>
+    </array>
+    <array name="app_process_limit_entries">
+        <item>Tepe paerewa</item>
+        <item>Kāore he tukanga papamuri</item>
+        <item>I te nuinga o te tukanga 1</item>
+        <item>I te nuinga o ngā tukanga e 2</item>
+        <item>I te nuinga o ngā tukanga e 3</item>
+        <item>I te nuinga o ngā tukanga e 4</item>
+    </array>
+    <array name="battery_labels">
+        <item>0%</item>
+        <item>50%</item>
+        <item>100%</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>Whakamahia te Tīpakonga Pūnaha (Taunoa)</item>
+        <item>16 ngā bit/tauira </item>
+        <item>24 ngā bit/tauira</item>
+        <item>32 ngā bit/tauira</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>Whakamahia te Tīpakonga Pūnaha (Taunoa)</item>
+        <item>16 ngā bit/tauira</item>
+        <item>24 ngā bit/tauira</item>
+        <item>32 ngā bit/tauira</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>Whakamahia te Tīpakonga Pūnaha (Taunoa)</item>
+        <item>Mono</item>
+        <item>Stereo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>Whakamahia te Tīpakonga Pūnaha (Taunoa)</item>
+        <item>Mono</item>
+        <item>Stereo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>Kua arotautia mō te Kounga Ororongo</item>
+        <item>Kounga Ororongo me te Tūhononga Whārite</item>
+        <item>Kua arotautia mō te Kounga Tūhononga</item>
+        <item>Ngā mahi tino pai (Mokatere Moka Urutau)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>Kua arotautia mō te Kounga Ororongo (990kih/909kih)</item>
+        <item>Kounga Ororongo me te Tūhononga Whārite (660c/606kih)</item>
+        <item>Kua arotautia mō te Kounga Tūhononga (330kih/303kih)</item>
+        <item>Ngā mahi tino pai (Mokatere Moka Urutau)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>Whakamahia te Tīpakonga Pūnaha (Taunoa)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+        <item>176.4 kHz</item>
+        <item>192.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>Whakamahia te Tīpakonga Pūnaha (Taunoa)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+        <item>176.4 kHz</item>
+        <item>192.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>Whakamahia te Tīpakonga Pūnaha (Taunoa)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ audio</item>
+        <item>Qualcomm® aptX™ HD audio</item>
+        <item>LDAC</item>
+        <item>LC3</item>
+        <item>Opus</item>
+        <item>Qualcomm® aptX™ Adaptive ororongo</item>
+        <item>Qualcomm® aptX™ TWS+ ororongo</item>
+        <item>LHDC V2</item>
+        <item>LHDC V3/V4</item>
+        <item>LHDC V5</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>Whakamahia te Tīpakonga Pūnaha (Taunoa)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ audio</item>
+        <item>Qualcomm® aptX™ HD audio</item>
+        <item>LDAC</item>
+        <item>LC3</item>
+        <item>Opus</item>
+        <item>Qualcomm® aptX™ Adaptive ororongo</item>
+        <item>Qualcomm® aptX™ TWS+ ororongo</item>
+        <item>LHDC V2</item>
+        <item>LHDC V3/V4</item>
+        <item>LHDC V5</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>, hohe</item>
+        <item>, hohe (pāpāho)</item>
+        <item>, hohe (waea)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp15</item>
+        <item>avrcp13</item>
+        <item>avrcp14</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.5 (Taunoa)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.4</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (Taunoa)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>Kua monokia</item>
+        <item>Kua Whakahohea te Tātari</item>
+        <item>Kua whakahohea</item>
+    </array>
+    <array name="bt_hci_snoop_log_filters_entries">
+        <item>Waiho ngā pane ACL anake</item>
+        <item>Tātarihia ngā pōkai pāpāho A2DP</item>
+        <item>Tātari hongere RFCOMM</item>
+    </array>
+    <array name="bt_hci_snoop_log_profile_filter_entries">
+        <item>Monokia</item>
+        <item>Whakakīa ki te aho pūāhua</item>
+        <item>Waiho te pane anake</item>
+        <item>Tango katoa</item>
+    </array>
+    <array name="cached_apps_freezer_values">
+        <item>device_default</item>
+        <item>Kua whakahohea</item>
+        <item>kua monokia</item>
+    </array>
+    <array name="color_mode_descriptions">
+        <item>Ngā tae whakarei</item>
+        <item>Ngā tae māori e kitea ana e te whatu</item>
+        <item>Ngā tae i arotautia mō ngā ihirangi mamati</item>
+    </array>
+    <array name="color_mode_names">
+        <item>Vibrant (taunoa)</item>
+        <item>Taiao</item>
+        <item>Paerewa</item>
+    </array>
+    <array name="debug_hw_overdraw_entries">
+        <item>Whakaweto</item>
+        <item>Whakaaturia ngā wāhi nui rawa</item>
+        <item>Whakaaturia ngā wāhi mō Deuteranomaly</item>
+    </array>
+    <array name="enable_opengl_traces_entries">
+        <item>Kore</item>
+        <item>Logcat</item>
+        <item>Systrace (Whakanikoniko)</item>
+        <item>Tāpae waea ki glGetError</item>
+    </array>
+    <array name="hdcp_checking_summaries">
+        <item>Kaua rawa e whakamahi i te taki HDCP</item>
+        <item>Whakamahia te taki HDCP mō ngā ihirangi DRM anake</item>
+        <item>Whakamahia te taki HDCP i ngā wā katoa</item>
+    </array>
+    <array name="hdcp_checking_titles">
+        <item>Kaua rawa e taki</item>
+        <item>Takina mō ngā ihirangi DRM anake</item>
+        <item>Tirohia i ngā wā katoa</item>
+    </array>
+    <array name="overlay_display_devices_entries">
+        <item>Kore</item>
+        <item>480p</item>
+        <item>480p (haumaru)</item>
+        <item>720p</item>
+        <item>720p (haumaru)</item>
+        <item>1080p</item>
+        <item>1080p (haumaru)</item>
+        <item>4K</item>
+        <item>4K (haumaru)</item>
+        <item>4K (whakarunga)</item>
+        <item>4K (whakarunga, haumaru)</item>
+        <item>720p, 1080p (mata takirua)</item>
+    </array>
+    <array name="select_logd_size_lowram_titles">
+        <item>Whakaweto</item>
+        <item>64K</item>
+        <item>256K</item>
+        <item>1M</item>
+    </array>
+    <array name="select_logd_size_summaries">
+        <item>Whakaweto</item>
+        <item>64K mō ia pūreirei rangitaki</item>
+        <item>256K mō ia pūreirei rangitaki</item>
+        <item>1M mō ia pūreirei rangitaki</item>
+        <item>4M mō ia pūreirei rangitaki</item>
+        <item>8M mō ia pūreirei rangitaki</item>
+    </array>
+    <array name="select_logd_size_titles">
+        <item>Whakaweto</item>
+        <item>64K</item>
+        <item>256K</item>
+        <item>1M</item>
+        <item>4M</item>
+        <item>8M</item>
+    </array>
+    <array name="select_logpersist_summaries">
+        <item>Whakaweto</item>
+        <item>Ngā pūreirei rangitaki katoa</item>
+        <item>Ngā pūreirei rangitaki reo irirangi katoa engari</item>
+        <item>moka rangitaki kernel anake</item>
+    </array>
+    <array name="select_logpersist_titles">
+        <item>Whakaweto</item>
+        <item>Katoa</item>
+        <item>Katoa engari he reo irirangi</item>
+        <item>kernel anake</item>
+    </array>
+    <array name="shade_display_awareness_entries">
+        <item>Whakaatu pūrere anake (Taunoa)</item>
+        <item>Whakaatu ā-waho</item>
+        <item>Pae tūnga pā hou</item>
+        <item>E hāngai ana ki te arotahi</item>
+    </array>
+    <array name="shade_display_awareness_summaries">
+        <item>Whakaatu ākau i runga i te whakaatu anake o te pūrere </item>
+        <item>Whakaaturanga ākau i runga i tētahi whakaatu tāwāhi kotahi</item>
+        <item>Whakaatu ākau i runga i te whakaatu i mutu ai te whiriwhiri ki te pae tūnga i te mutunga</item>
+        <item>Whakaatu ākau i runga i te whakaatu i aro nui ai i te mutunga</item>
+    </array>
+    <array name="shade_display_awareness_values">
+        <item>default_display</item>
+        <item>any_external_display</item>
+        <item>status_bar_latest_touch</item>
+        <item>focused_display</item>
+    </array>
+    <array name="show_non_rect_clip_entries">
+        <item>Whakaweto</item>
+        <item>Tātuhia te rohe topenga tapawhā-kore ki te kikorangi</item>
+        <item>Miramiratia ngā tono tātuhi kua whakamātauria ki te kākāriki</item>
+    </array>
+    <array name="track_frame_time_entries">
+        <item>Whakaweto</item>
+        <item>Kei te mata hei pae</item>
+        <item>I roto adb shell dumpsys gfxinfo</item>
+    </array>
+    <array name="transition_animation_scale_entries">
+        <item>Hākoritanga weto</item>
+        <item>Tauine hākoritanga .5x</item>
+        <item>Tauine hākoritanga 1x</item>
+        <item>Tauine hākoritanga 1.5x</item>
+        <item>Tauine hākoritanga 2x</item>
+        <item>Tauine hākoritanga 5x</item>
+        <item>Tauine hākoritanga 10x</item>
+    </array>
+    <array name="tts_rate_entries">
+        <item>60%</item>
+        <item>80%</item>
+        <item>100%</item>
+        <item>150%</item>
+        <item>200%</item>
+        <item>250%</item>
+        <item>300%</item>
+        <item>350%</item>
+        <item>400%</item>
+    </array>
+    <array name="usb_configuration_titles">
+        <item>Pūāhua ana</item>
+        <item>MTP (Kawa Whakawhiti Pāpāho)</item>
+        <item>PTP (Kawa Whakawhiti Pikitia)</item>
+        <item>RNDIS (USB Itarangi)</item>
+        <item>Pūtake Ororongo</item>
+        <item>MIDI</item>
+    </array>
+    <array name="wifi_status">
+        <item />
+        <item>Karapa…</item>
+        <item>Hono ana…</item>
+        <item>Whakamotuhēhē ana…</item>
+        <item>Kei te whiwhi IP address…</item>
+        <item>Kua tūhonoa</item>
+        <item>Kua Tārewatia</item>
+        <item>Momotu ana…</item>
+        <item>Kua momotu</item>
+        <item>Kāore i momoho</item>
+        <item>Kua Āraia</item>
+        <item>Kei te karo i te tūhononga rawakore</item>
+    </array>
+    <array name="wifi_status_with_ssid">
+        <item />
+        <item>Karapa…</item>
+        <item>Tūhono ana ki %1$s…</item>
+        <item>Whakamotuhēhē ana ki %1$s…</item>
+        <item>Kei te whiwhi wāhitau IP mai i %1$s…</item>
+        <item>Kua tūhonoa ki %1$s</item>
+        <item>Kua Tārewatia</item>
+        <item>Momotu ana mai i %1$s…</item>
+        <item>Kua momotu</item>
+        <item>Kāore i momoho</item>
+        <item>Kua Āraia</item>
+        <item>Kei te karo i te tūhononga rawakore</item>
+    </array>
+    <array name="wifitrackerlib_wifi_status">
+        <item />
+        <item>Karapa…</item>
+        <item>Hono ana…</item>
+        <item>Whakamotuhēhē ana…</item>
+        <item>Kei te whiwhi IP address…</item>
+        <item>Kua tūhonoa</item>
+        <item>Kua Tārewatia</item>
+        <item>Momotu ana…</item>
+        <item>Kua momotu</item>
+        <item>Kāore i momoho</item>
+        <item>Kua Āraia</item>
+        <item>Kei te karo i te tūhononga rawakore</item>
+    </array>
+    <array name="window_animation_scale_entries">
+        <item>Hākoritanga weto</item>
+        <item>Tauine hākoritanga .5x</item>
+        <item>Tauine hākoritanga 1x</item>
+        <item>Tauine hākoritanga 1.5x</item>
+        <item>Tauine hākoritanga 2x</item>
+        <item>Tauine hākoritanga 5x</item>
+        <item>Tauine hākoritanga 10x</item>
+    </array>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/settingslib_switchbar_margin"
+    android:paddingBottom="@dimen/settingslib_switchbar_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:paddingStart="@dimen/settingslib_switchbar_padding"
+    android:paddingEnd="@dimen/settingslib_switchbar_padding">
+    <LinearLayout
+        android:id="@+id/frame"
+        android:background="@drawable/zz_settingslib_switch_bar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/settingslib_min_switch_bar_height"
+        android:paddingStart="@dimen/settingslib_switchbar_padding_left"
+        android:paddingEnd="@dimen/settingslib_switchbar_padding_right">
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            android:ellipsize="end"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/switch_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/settingslib_switch_title_margin"
+            android:hyphenationFrequency="normalFast"
+            android:layout_marginVertical="@dimen/settingslib_switch_title_margin"
+            android:lineBreakWordStyle="phrase"
+            style="@style/SensiUISwitchBarTextAppearance"/>
+        <Switch
+            android:layout_gravity="center_vertical"
+            android:id="@android:id/switch_widget"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:thumb="@drawable/sensi_switch_bar_switch_thumb_v2"
+            android:track="@drawable/sensi_switch_bar_switch_track"
+            androidprv:mtpReserve="@dimen/sensi_switch_width"/>
+    </LinearLayout>
+</LinearLayout>

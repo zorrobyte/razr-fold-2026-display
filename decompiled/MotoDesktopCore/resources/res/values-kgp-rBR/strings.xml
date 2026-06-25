@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Connect tỹ han fã</string>
+    <string name="call_device_name_phone">Terefãnĩ kyr han fã kar ki vĩj fã</string>
+    <string name="call_output_route_fragment_sub_title">Vin fã ra rãj fã/kutẽj fã tỹ\'ũn ge</string>
+    <string name="call_output_route_fragment_title">Vẽjaprãr mỹ ki vãmén fã kyr tãn fã</string>
+    <string name="dialog_allow">hej ke</string>
+    <string name="dialog_cancel">Tỹ krỹ ké</string>
+    <string name="get_start">Kej ge</string>
+    <string name="got_it">Kinhrãg sóg</string>
+    <string name="hdmi_description">Ã terefãnĩ tỹ Téra ũ ketũmỹr HDMI ti mrũr to sa</string>
+    <string name="hdmi_media_device_name">HDMI</string>
+    <string name="hdmi_title">Ã terefãnĩ tỹ téra vẽnh ven nĩ ãn mré sa.</string>
+    <string name="main_core_bluetooth_connect_permission_grant">Bluetooth ki tỹ kej ge pi %1$s mỹ hej ke mũ. Ti tỹ kã sa ra Smart Connect tỹ vin fã tỹ Bluetooth tỹ terefãnĩ to ẽn ve jé.</string>
+    <string name="main_core_location_permission_grant">Nĩgja ki tỹ kej ge pi %1$s mỹ hej ke mũ. Kã sa ra ti Smart Connect to ã tỹ kakó mĩ vin fã ag to gem jé.</string>
+    <string name="media_output_route_fragment_done">Kãn kỹ nĩ</string>
+    <string name="media_output_route_fragment_sub_title">Ti kutẽj fã sa mãn</string>
+    <string name="media_output_route_fragment_title">Mĩnija ki kutẽ</string>
+    <string name="media_output_route_pair_new_device">Vin fã tãg tỹ jag kóm nĩm</string>
+    <string name="menu_about">to ke</string>
+    <string name="menu_audio_routing">Minhija sa mãn</string>
+    <string name="menu_help">Juna ke</string>
+    <string name="phone_media_device_name">Ki ẽmẽj fã (vĩ ven nĩ ki)</string>
+    <string name="record_audio_permission_required_message">Vin fã ki ti kyr han jé, Smart Connect ti vỹ ki kyr kãgran jé pini kej ge nĩ.</string>
+    <string name="record_audio_permission_required_title">Ra rã jé hej kej ge</string>
+    <string name="rf_audio_type_bluetooth">(Bluetooth)</string>
+    <string name="rf_audio_type_usb">(USB)</string>
+    <string name="rf_audio_type_wifi">(Wi-Fi)</string>
+    <string name="rpd_media_device_name">Vin fã tỹ to sa</string>
+    <string name="see_how_it_works">Ti hẽren kã kej ge.</string>
+    <string name="settings_summary">Terefãnĩ tỹ téra ũ to saj ge ketũmỹr vin fã to</string>
+    <string name="settings_title">Smart Connect</string>
+    <string name="switch_to_phone_mic">Vĩj fã vóg ge terefãnĩ ti ki</string>
+    <string name="tile_hdmi_title">Desktop ki fiv</string>
+    <string name="tile_label_lite">Smart Connect ki conexão</string>
+    <string name="wifi_quality_taskbar_content_poor_miracast">Fiv tũ ki conexão vỹ há sĩ nỹ. Téra jógo ki terefãnĩ ta ki kunũnh kar to sa mãn nĩ.</string>
+    <string name="wired_usb_media_device_name">Nĩgrẽg ra gem fã ki fiv</string>
+    <string name="wireless_display_media_device_name">Display ki fiv tũ</string>
+</resources>

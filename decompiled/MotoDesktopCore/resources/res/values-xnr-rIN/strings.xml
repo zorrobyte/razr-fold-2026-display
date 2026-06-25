@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Connect इंजन</string>
+    <string name="call_device_name_phone">फोन स्पीकर कने माइक</string>
+    <string name="call_output_route_fragment_sub_title">स्विच इनपुट-आउटपुट डिवाइस</string>
+    <string name="call_output_route_fragment_title">कॉल वॉल्यूम कने माइक्रोफोन</string>
+    <string name="dialog_allow">अनुमति देणा</string>
+    <string name="dialog_cancel">रद्द करा</string>
+    <string name="get_start">शुरू होइ जा</string>
+    <string name="got_it">समझी गया</string>
+    <string name="hdmi_description">अपने फोने जो एच डी एम आई केबला कने इक डिस्प्ले ने कनेक्ट करा</string>
+    <string name="hdmi_media_device_name">एच डी एम आई</string>
+    <string name="hdmi_title">कनेक्टेड डिस्प्ले कने अपने फ़ोने जो साझा करा</string>
+    <string name="main_core_bluetooth_connect_permission_grant">%1$s दे लेई ब्लूटूथ अनुमति नि दिति| ऐ सुनिश्चित करने दे लेई कि Smart Connect इस फोने दे कनेक्टेड ब्लूटूथ डिवाइस दी जांच करी सकदा ऐ, इसजो चालू करा।</string>
+    <string name="main_core_location_permission_grant">%1$s दे लेई लोकेशन दी अनुमति नि दिति जांदी। ऐ सुनिश्चित करने दे लेई कि Smart Connect अखे - बखे दे उपकरणे जो कनेक्ट करी सकदा ऐ, इसजो चालू करा|</string>
+    <string name="media_output_route_fragment_done">होई गेया</string>
+    <string name="media_output_route_fragment_sub_title">स्विच आउटपुट</string>
+    <string name="media_output_route_fragment_title">मीडिया आउटपुट</string>
+    <string name="media_output_route_pair_new_device">नए डिवाइस दी जोड़ी बनाओ</string>
+    <string name="menu_about">दें बारे च</string>
+    <string name="menu_audio_routing">मीडिया स्विच</string>
+    <string name="menu_help">मदद करा</string>
+    <string name="phone_media_device_name">फोन स्पीकर</string>
+    <string name="record_audio_permission_required_message">अपने उपकरण पर ऑडियो चलाने दे लेई, Smart Connect जो ऑडियो रिकॉर्ड करने दी अनुमति दी आवश्यकता होंदी ऐ</string>
+    <string name="record_audio_permission_required_title">अनुमति चाइदी ए</string>
+    <string name="rf_audio_type_bluetooth">(बीटी)</string>
+    <string name="rf_audio_type_usb">(यु एस बी)</string>
+    <string name="rf_audio_type_wifi">(वाईफ़ाई)</string>
+    <string name="rpd_media_device_name">कनेक्ट होयो उपकरण</string>
+    <string name="see_how_it_works">देखो ए कैसे कम्म करदा ए</string>
+    <string name="settings_summary">अपने फ़ोने जो इक डिस्प्ले या उपकरणे ने जोड़ा</string>
+    <string name="settings_title">Smart Connect</string>
+    <string name="switch_to_phone_mic">फोने दे माइक दा उपयोग करा</string>
+    <string name="tile_hdmi_title">तारा आला डेस्कटॉप</string>
+    <string name="tile_label_lite">Smart Connect जोड़ा</string>
+    <string name="wifi_quality_taskbar_content_poor_miracast">अस्थिर वायरलेस कनेक्शन। डिस्प्ले दे नेटवर्क कने अपने फोने जो डिस्कनेक्ट कने फिरी ते कनेक्ट करा।</string>
+    <string name="wired_usb_media_device_name">तारा आले हैडफ़ोन</string>
+    <string name="wireless_display_media_device_name">तारा दे बगेर डिस्प्ले</string>
+</resources>

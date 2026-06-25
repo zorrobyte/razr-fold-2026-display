@@ -1,0 +1,57 @@
+package com.motorola.mobiledesktop.core.bean;
+
+import E.a;
+import android.app.ActivityManager;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+/* JADX INFO: loaded from: classes.dex */
+public class MotoRunningTaskInfo implements Parcelable {
+    public static final Parcelable.Creator<MotoRunningTaskInfo> CREATOR = new a(7);
+    public int displayId;
+    public boolean isFocused;
+    public boolean isRunning;
+    public boolean isVisible;
+    public int taskId;
+    public int userId;
+
+    public MotoRunningTaskInfo() {
+    }
+
+    public MotoRunningTaskInfo(Parcel parcel) {
+        this.userId = parcel.readInt();
+        this.taskId = parcel.readInt();
+        this.isRunning = parcel.readByte() != 0;
+        this.displayId = parcel.readInt();
+        this.isFocused = parcel.readByte() != 0;
+        this.isVisible = parcel.readByte() != 0;
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public void setRunningTaskInfo(ActivityManager.RunningTaskInfo runningTaskInfo) {
+        this.userId = runningTaskInfo.userId;
+        this.taskId = runningTaskInfo.taskId;
+        this.isRunning = runningTaskInfo.isRunning;
+        this.displayId = runningTaskInfo.displayId;
+        this.isFocused = runningTaskInfo.isFocused;
+        this.isVisible = runningTaskInfo.isVisible;
+    }
+
+    public String toString() {
+        return "MotoRunningTaskInfo{userId=" + this.userId + ", taskId=" + this.taskId + ", isRunning=" + this.isRunning + ", displayId=" + this.displayId + ", isFocused=" + this.isFocused + ", isVisible=" + this.isVisible + '}';
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel parcel, int i2) {
+        parcel.writeInt(this.userId);
+        parcel.writeInt(this.taskId);
+        parcel.writeByte(this.isRunning ? (byte) 1 : (byte) 0);
+        parcel.writeInt(this.displayId);
+        parcel.writeByte(this.isFocused ? (byte) 1 : (byte) 0);
+        parcel.writeByte(this.isVisible ? (byte) 1 : (byte) 0);
+    }
+}

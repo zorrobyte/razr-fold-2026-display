@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/_media_seekbar_thumb__0_res_0x7f08006d">
+    <target
+        android:name="time_group"
+        android:animation="@drawable/_media_seekbar_thumb__1_res_0x7f08006e"/>
+</animated-vector>

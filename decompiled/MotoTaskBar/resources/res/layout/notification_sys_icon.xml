@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.android.systemui.statusbar.policy.KeyButtonView
+        android:id="@+id/main_icon"
+        android:layout_width="@dimen/desktop_taskbar_left_icon_width"
+        android:layout_height="match_parent"
+        style="@style/TaskBarRightKeyButton"/>
+    <ImageView
+        android:id="@+id/indicate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/taskbar_ic_new_notifications_indicate"
+        android:scaleType="center"
+        android:paddingStart="@dimen/navigation_key_padding"
+        android:paddingEnd="@dimen/navigation_key_padding"/>
+</FrameLayout>

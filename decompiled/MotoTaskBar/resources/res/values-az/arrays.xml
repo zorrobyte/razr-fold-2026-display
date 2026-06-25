@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>Sistem Seçimini istifadə edin (Defolt)</item>
+        <item>16 bit/nümunə</item>
+        <item>24 bit/nümunə</item>
+        <item>32 bit/nümunə</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>Sistem Seçimini istifadə edin (Defolt)</item>
+        <item>16 bit/nümunə</item>
+        <item>24 bit/nümunə</item>
+        <item>32 bit/nümunə</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>Sistem Seçimini istifadə edin (Defolt)</item>
+        <item>Mono</item>
+        <item>Stereo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>Sistem Seçimini istifadə edin (Defolt)</item>
+        <item>Mono</item>
+        <item>Stereo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>Audio Keyfiyyəti üçün optimallaşdırıldı</item>
+        <item>Balanslı Audio və Bağlantı Keyfiyyəti</item>
+        <item>Bağlantı Keyfiyyəti üçün optimallaşdırıldı</item>
+        <item>Yüksək Cəhd (Adaptiv Bit Ölçüsü)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>Audio Keyfiyyəti üçün optimallaşdırıldı (990kbps/909kbps)</item>
+        <item>Balanslı Audio və Bağlantı Keyfiyyəti (660kbps/606kbps)</item>
+        <item>Bağlantı Keyfiyyəti üçün optimallaşdırıldı (330kbps/303kbps)</item>
+        <item>Yüksək Cəhd (Adaptiv Bit Ölçüsü)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>Sistem Seçimini istifadə edin (Defolt)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>Sistem Seçimini istifadə edin (Defolt)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>Sistem Seçimini istifadə edin (Defolt)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ audio</item>
+        <item>Qualcomm® aptX™ HD audio</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>Sistem Seçimini istifadə edin (Defolt)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ audio</item>
+        <item>Qualcomm® aptX™ HD audio</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>, aktiv</item>
+        <item>, aktiv (media)</item>
+        <item>, aktiv (telefon)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp14</item>
+        <item>avrcp13</item>
+        <item>avrcp15</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.4 (Defolt)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.5</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (Defolt)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>Əlil</item>
+        <item>Filtrləmə aktivdir</item>
+        <item>Aktivdir</item>
+    </array>
+    <array name="display_size_descriptions">
+        <item>Kiçik</item>
+        <item>Defolt</item>
+        <item>Böyük</item>
+        <item>Daha böyük</item>
+    </array>
+    <array name="font_size_descriptions">
+        <item>Kiçik</item>
+        <item>Defolt</item>
+        <item>Böyük</item>
+    </array>
+    <array name="open_app_option_array">
+        <item>Tətbiqi yenidən başlat</item>
+        <item>Tətbiqi yenidən başlatmadan aç</item>
+        <item>Hər dəfə məndən soruş</item>
+    </array>
+    <array name="power_save_array">
+        <item>10 dəq</item>
+        <item>15 dəq</item>
+        <item>20 dəq</item>
+        <item>30 dəq</item>
+        <item>60 dəq</item>
+        <item>Heç vaxt kəsmə</item>
+    </array>
+    <array name="preload_wallpapers_array">
+        <item>preload_wallpaper_geometry_1</item>
+        <item>preload_wallpaper_geometry_2</item>
+        <item>preload_wallpaper_geometry_3</item>
+        <item>preload_wallpaper_geometry_4</item>
+        <item>preload_wallpaper_geometry_5</item>
+        <item>preload_wallpaper_geometry_6</item>
+        <item>preload_wallpaper_geometry_7</item>
+        <item>preload_wallpaper_geometry_8</item>
+        <item>preload_wallpaper_geometry_9</item>
+        <item>preload_wallpaper_geometry_10</item>
+        <item>preload_wallpaper_nature_1</item>
+        <item>preload_wallpaper_nature_2</item>
+        <item>preload_wallpaper_nature_3</item>
+        <item>preload_wallpaper_nature_4</item>
+        <item>preload_wallpaper_nature_5</item>
+        <item>preload_wallpaper_nature_6</item>
+        <item>preload_wallpaper_nature_7</item>
+        <item>preload_wallpaper_nature_8</item>
+        <item>preload_wallpaper_nature_9</item>
+    </array>
+    <array name="tile_states_airplane">
+        <item>Əlçatan deyil</item>
+        <item>Qeyri-aktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_alarm">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_battery">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_bt">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_cameratoggle">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_cast">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_cell">
+        <item>Əlçatan deyil</item>
+        <item>Qeyri-aktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_color_correction">
+        <item>Əlçatmazdır</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_controls">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_dark">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_dnd">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_dream">
+        <item>Əlçatmazdır</item>
+        <item>Deaktiv</item>
+        <item>Aktivdir</item>
+    </array>
+    <array name="tile_states_flashlight">
+        <item>Əlçatan deyil</item>
+        <item>Qeyri-aktiv</item>
+        <item>Aktivdir</item>
+    </array>
+    <array name="tile_states_font_scaling">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_hearing_devices">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_hotspot">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_internet">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktivdir</item>
+    </array>
+    <array name="tile_states_inversion">
+        <item>Əlçatan deyil</item>
+        <item>Qeyri-aktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_location">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_mictoggle">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktivdir</item>
+    </array>
+    <array name="tile_states_night">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_onehanded">
+        <item>Əlçatmazdır</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_qr_code_scanner">
+        <item>Əlçatan deyil</item>
+        <item>Qeyri-aktiv</item>
+        <item>Aktivdir</item>
+    </array>
+    <array name="tile_states_record_issue">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktivdir</item>
+    </array>
+    <array name="tile_states_reduce_brightness">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktivdir</item>
+    </array>
+    <array name="tile_states_reverse">
+        <item>Əlçatan deyil</item>
+        <item>Qeyri-aktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_rotation">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_saver">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_screenrecord">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_wallet">
+        <item>Əlçatan deyil</item>
+        <item>Qeyri-aktiv</item>
+        <item>Aktivdir</item>
+    </array>
+    <array name="tile_states_wifi">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="tile_states_work">
+        <item>Əlçatan deyil</item>
+        <item>Deaktiv</item>
+        <item>Aktiv</item>
+    </array>
+    <array name="timeout_array">
+        <item>1 dəq</item>
+        <item>2 dəq</item>
+        <item>5 dəq</item>
+        <item>10 dəq</item>
+        <item>20 dəq</item>
+        <item>30 dəq</item>
+        <item>60 dəq</item>
+    </array>
+</resources>

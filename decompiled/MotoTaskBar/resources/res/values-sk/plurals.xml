@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d nové upozornenie</item>
+        <item quantity="few">%d nové upozornenia</item>
+        <item quantity="many">%d new notifications</item>
+        <item quantity="other">%d nových upozornení</item>
+    </plurals>
+    <plurals name="notification_group_overflow_description">
+        <item quantity="one">Skupina obsahuje ešte %s upozornenie.</item>
+        <item quantity="few">%s ďalšie upozornenia vnútri.</item>
+        <item quantity="many">%s ďalšie upozornenia vnútri.</item>
+        <item quantity="other">%s ďalšie upozornenia vnútri.</item>
+    </plurals>
+    <plurals name="quick_settings_hotspot_secondary_label_num_devices">
+        <item quantity="one">%d zariadenie</item>
+        <item quantity="few">%d zariadení</item>
+        <item quantity="many">%d zariadení</item>
+        <item quantity="other">%d zariadení</item>
+    </plurals>
+    <plurals name="taskbar_notification_num_devices">
+        <item quantity="one">%d nové upozornenie</item>
+        <item quantity="few">Nové upozornenia: %d</item>
+        <item quantity="many">Nové upozornenia: %d</item>
+        <item quantity="other">Nové upozornenia: %d</item>
+    </plurals>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.motorola.taskbar.panel.MirrorPhonePanel xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/mirror_phone_title_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.motorola.taskbar.panel.MirrorPhoneTitleBar
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mirror_phone_panel_title_bar_height"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+        <TextView
+            android:textSize="20sp"
+            android:textColor="@color/mirror_phone_titlebar_text"
+            android:id="@+id/title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/mirror_phone_setting_description"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/title_close_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tilebar_close_24px"/>
+    </com.motorola.taskbar.panel.MirrorPhoneTitleBar>
+    <com.motorola.taskbar.panel.MirrorPhoneDisplayLayout
+        android:orientation="vertical"
+        android:id="@+id/display_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</com.motorola.taskbar.panel.MirrorPhonePanel>

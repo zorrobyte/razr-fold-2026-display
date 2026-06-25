@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="36dp"
+    android:width="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+    <path
+        android:fillColor="@color/glass_status_toast_type_icon_color"
+        android:pathData="M22.5,19.5L22.5,7.5C22.5,5.01 20.49,3 18,3C15.51,3 13.5,5.01 13.5,7.5L13.5,19.5C11.685,20.865 10.5,23.055 10.5,25.5C10.5,29.64 13.86,33 18,33C22.14,33 25.5,29.64 25.5,25.5C25.5,23.055 24.315,20.865 22.5,19.5ZM16.5,7.5C16.5,6.675 17.175,6 18,6C18.825,6 19.5,6.675 19.5,7.5L18,7.5L18,9L19.5,9L19.5,12L18,12L18,13.5L19.5,13.5L19.5,16.5L16.5,16.5L16.5,7.5Z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1"
+        android:fillType="nonZero"/>
+</vector>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For te permite conectar el teléfono a un televisor, monitor externo o PC para trabajar en remoto, jugar o divertirte, entre otras muchas más cosas.</item>
+        <item>Puedes cambiar a otra experiencia tocando la burbuja flotante que aparece en el teléfono.</item>
+        <item>Conecta un ratón y un teclado para disfrutar de la mejor experiencia. Si no tienes ratón, la pantalla del teléfono se convertirá en un panel táctil.</item>
+        <item>Puede que algunas apps no funcionen bien en el modo de escritorio y que otras no te permitan reproducir contenido en una pantalla secundaria. Además, puede que necesites ajustar el monitor o TV para disfrutar de la mejor experiencia de visualización.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Te damos la bienvenida a Ready For</item>
+        <item>Cambiar los modos de visualización</item>
+        <item>Accesorios</item>
+        <item>Recuerda</item>
+    </array>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.preference.PreferenceCategory
+        android:layout="@layout/color_preference_category"
+        android:title="@string/settings_mouse"
+        android:key="mouse_category">
+        <com.motorola.taskbar.settings.prefs.SeekbarPreference
+            android:layout="@layout/pref_start_mouse"
+            android:title="@string/settings_mouse_speed"
+            android:key="settings_mouse_speed"
+            app:allowDividerAbove="false"
+            app:allowDividerBelow="false"
+            app:iconSpaceReserved="false"/>
+        <com.motorola.taskbar.settings.prefs.ThreeRadioPreference
+            android:layout="@layout/pref_3_radio_group"
+            android:title="@string/settings_mouse_pointer"
+            android:key="settings_mouse_pointer"
+            app:allowDividerAbove="false"
+            app:allowDividerBelow="false"
+            app:iconSpaceReserved="false"/>
+        <com.motorola.taskbar.settings.RadioSwitchPreference
+            android:layout="@layout/pref_radio_group"
+            android:title="@string/settings_mouse_primary_button"
+            android:key="settings_mouse_primary_button"
+            app:iconSpaceReserved="false"
+            app:radioOffText="@string/settings_mouse_primary_left"
+            app:radioOnText="@string/settings_mouse_primary_right"/>
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory
+        android:layout="@layout/color_preference_category"
+        android:title="@string/settings_text_input"
+        android:key="keyboard_category"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+        <Preference
+            android:layout="@layout/pref_end"
+            android:title="@string/system_settings_language_input"
+            android:key="system_settings_language"
+            app:iconSpaceReserved="false"/>
+    </androidx.preference.PreferenceCategory>
+</androidx.preference.PreferenceScreen>

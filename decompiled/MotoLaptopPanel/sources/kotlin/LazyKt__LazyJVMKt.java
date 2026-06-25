@@ -1,0 +1,56 @@
+package kotlin;
+
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+
+/* JADX INFO: Access modifiers changed from: package-private */
+/* JADX INFO: compiled from: LazyJVM.kt */
+/* JADX INFO: loaded from: classes.dex */
+public abstract class LazyKt__LazyJVMKt {
+
+    /* JADX INFO: compiled from: LazyJVM.kt */
+    public abstract /* synthetic */ class WhenMappings {
+        public static final /* synthetic */ int[] $EnumSwitchMapping$0;
+
+        static {
+            int[] iArr = new int[LazyThreadSafetyMode.values().length];
+            try {
+                iArr[LazyThreadSafetyMode.SYNCHRONIZED.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                iArr[LazyThreadSafetyMode.PUBLICATION.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                iArr[LazyThreadSafetyMode.NONE.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+            $EnumSwitchMapping$0 = iArr;
+        }
+    }
+
+    public static Lazy lazy(LazyThreadSafetyMode lazyThreadSafetyMode, Function0 function0) {
+        lazyThreadSafetyMode.getClass();
+        function0.getClass();
+        int i = WhenMappings.$EnumSwitchMapping$0[lazyThreadSafetyMode.ordinal()];
+        int i2 = 2;
+        if (i == 1) {
+            DefaultConstructorMarker defaultConstructorMarker = null;
+            return new SynchronizedLazyImpl(function0, defaultConstructorMarker, i2, defaultConstructorMarker);
+        }
+        if (i == 2) {
+            return new SafePublicationLazyImpl(function0);
+        }
+        if (i == 3) {
+            return new UnsafeLazyImpl(function0);
+        }
+        throw new NoWhenBranchMatchedException();
+    }
+
+    public static Lazy lazy(Function0 function0) {
+        function0.getClass();
+        DefaultConstructorMarker defaultConstructorMarker = null;
+        return new SynchronizedLazyImpl(function0, defaultConstructorMarker, 2, defaultConstructorMarker);
+    }
+}

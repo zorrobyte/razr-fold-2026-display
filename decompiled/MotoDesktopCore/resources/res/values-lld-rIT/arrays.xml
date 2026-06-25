@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Cun Ready For poste te colié cun na televijiun, n monitor o n PC por soghé, l\'aurela cörta, por controlé le telefon da dalunc y d\'ater lapró.</item>
+        <item>Te pos passé a n\'atra esperiënza azican la flocora che se möi sön to telefon.</item>
+        <item>Coliëia na tastadöra y na sorücia por na esperiënza otimala. Sce te n\'as degöna sorücia, poste adoré le vidrel dl telefon sciöche trackpad.</item>
+        <item>N valgönes apps podess ne funzioné nia bun tla modalité desktop y n valgönes podess ne lascé nia jí i contignüs söl vidrel secundar. Implü mësseste bonamënter adaté to monitor o tüa televijiun por avëi na visualisaziun otimala.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Bëgngnü / Bëgngnüda te Ready For</item>
+        <item>Mudé les modalités de visualisaziun</item>
+        <item>Azessurs</item>
+        <item>Recordete</item>
+    </array>
+</resources>

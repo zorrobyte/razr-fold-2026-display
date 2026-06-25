@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="40dp"
+    android:width="40dp"
+    android:viewportWidth="40"
+    android:viewportHeight="40">
+    <group>
+        <clip-path android:pathData="M0,0h40v40h-40z"/>
+        <path
+            android:fillColor="@color/sensi_seekbar_thumb_active_color"
+            android:pathData="M20,20m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0"
+            android:fillAlpha="0.08"/>
+        <path
+            android:fillColor="@color/sensi_seekbar_thumb_active_color"
+            android:pathData="M20,10C25.523,10 30,14.477 30,20C30,25.523 25.523,30 20,30C14.477,30 10,25.523 10,20C10,14.477 14.477,10 20,10Z"
+            android:fillType="evenOdd"/>
+    </group>
+</vector>

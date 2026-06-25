@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Connect ᎠᏥᎸ ᎠᏂᎩᏍᎩ</string>
+    <string name="call_device_name_phone">ᏗᎳᏃᎮᏗ ᎦᏬᏂᏍᎩ ᎠᎴ ᎦᏬᏂᎯᏍᏙᏗ</string>
+    <string name="call_output_route_fragment_sub_title">ᎥᎦᏁᏟᏴᏍᎬᎢ ᎦᏬᎯᎵᏴᏓ-ᏚᏬᏢᏅᎩ ᏥᏂᎬᏅᏗᏓᎾ</string>
+    <string name="call_output_route_fragment_title">ᏪᏯᎾ ᎤᏃᏴᎬᎢ &amp; ᎦᏬᏂᎯᏍᏙᏗ</string>
+    <string name="dialog_allow">ᎠᎵᏍᎪᎸᏗᏍᎬ</string>
+    <string name="dialog_cancel">ᎠᏎᏒᏗ</string>
+    <string name="get_start">ᎭᎴᎾᏊ</string>
+    <string name="got_it">ᏥᎩ</string>
+    <string name="hdmi_description">ᎱᏓᎸᎩ ᏣᏤᎵ ᏗᏟᏃᎮᏗ ᎾᎾᎢ ᎬᏂᎨᏒ ᏱᎬᏁᏗ ᎾᏍᎩ ᎬᏗ HDMI  </string>
+    <string name="hdmi_media_device_name">HDMI</string>
+    <string name="hdmi_title">ᎠᏯᏙᎯᏍᏗ ᏣᏤᎵ ᏗᏟᏃᎮᏗ ᎤᏠᏯᏍᏕᏍᏗ ᎫᏓᎸᏅᎯ ᎬᎨᏒ ᏱᎬᏁᏗ</string>
+    <string name="main_core_bluetooth_connect_permission_grant">ᏌᎪᏂᎨ ᎠᏓᎾᏙᏓ ᎠᏓᎵᏍᎪᎸᏓᏁᎯ ᏄᏍᏛ ᎥᏝ ᎤᎵᏍᎪᎸᏔᏅ ᏂᎨᏒᎾ ᎾᏍᎩᎾ %1$s. ᏙᏳᎢ ᏚᏳᎪᏛ ᎨᏎᏍᏗ Smart Connect ᏰᎵᏇ ᏣᎦᏛᎲᎦ ᎫᏓᎸᏅᎯ bluetooth ᏥᏂᎬᏅᏗᏓᎾ ᎾᎿ ᏗᎳᏃᎮᏗ, ᎯᏍᏚᎢ.</string>
+    <string name="main_core_location_permission_grant">Location ᎠᏓᎾᏙᏓ ᎠᏓᎵᏍᎪᎸᏓᏁᎯ ᏄᏍᏛ ᎥᏝ ᎤᎵᏍᎪᎸᏔᏅ ᏂᎨᏒᎾ ᎾᏍᎩᎾ %1$s. ᎾᎿᎢ ᏙᏳᎢ ᏚᏳᎪᏛ ᎨᏎᏍᏗ Smart Connect ᏰᎵᏊ ᏗᎵᎪᏙᏗᎢ ᎭᏫᏂ ᏥᏂᎬᏅᏗᏓᎾ, ᎯᏍᏚᎢ.</string>
+    <string name="media_output_route_fragment_done">ᎠᎵᏍᏆᏓ</string>
+    <string name="media_output_route_fragment_sub_title">ᎦᏁᏟᏴᏍᏗ ᎤᏅᎪᎢᏍᏗ</string>
+    <string name="media_output_route_fragment_title">ᎧᏃᎮᏓ ᎠᏗᎦᎴᏯᏍᏗ ᏚᏬᏢᏅᎩ</string>
+    <string name="media_output_route_pair_new_device">ᏗᎵᎪᏙᏗ ᏗᏤ ᏥᏂᎬᏅᏗᏓᎾ</string>
+    <string name="menu_about">ᏄᏰᎵᏛᎢ</string>
+    <string name="menu_audio_routing">ᎧᏃᎮᏍᎩ ᎦᏁᏟᏴᏍᏗ</string>
+    <string name="menu_help">ᎠᎵᏍᏕᎸᏓ</string>
+    <string name="phone_media_device_name">ᏗᏟᏃᎮᏗ ᎦᏬᏂᏍᎩ</string>
+    <string name="record_audio_permission_required_message">ᎾᎢ ᏗᏁᎸᏙᏗ ᎤᏃᏴᎬ ᎤᎾᎢ ᏣᏤᎵ PC, Smart Connect ᎠᏓᎵᏍᎪᎸᏓᏁᎯ ᎤᏚᎸᏓ ᎾᏍᎩ ᎦᏂᏴᏙᏗ ᎤᏃᏴᎬ</string>
+    <string name="record_audio_permission_required_title">ᏗᏓᎵᏍᎪᎸᏓᏁᎯ ᎢᏯᏛᏁᏗ</string>
+    <string name="rf_audio_type_bluetooth">(BT)</string>
+    <string name="rf_audio_type_usb">(USB)</string>
+    <string name="rf_audio_type_wifi">(WIFI)</string>
+    <string name="rpd_media_device_name">ᎫᏓᎸᏅᎢ ᏥᏂᎬᏅᏗᏓᎾ</string>
+    <string name="see_how_it_works">ᎠᎪᏩᏛᏗ ᏰᎵ ᏂᎦᎵᏍᏗᏍᎬ ᏚᎸᏫᏍᏓᏁᎲᎢ</string>
+    <string name="settings_summary">ᎱᏓᎸᎩ ᏣᏤᎵ ᏗᏟᏃᎮᏗ ᎾᎢ ᎬᏂᎨᏒ ᏱᎬᏁᏗ ᎠᎴᏃ PC</string>
+    <string name="settings_title">Smart Connect</string>
+    <string name="switch_to_phone_mic">ᎬᏙᏓ ᏗᏟᏃᎮᏗ ᎦᏬᏂᎯᏍᏙᏗ</string>
+    <string name="tile_hdmi_title">ᎠᏏᎳᏛ ᎦᏍᎩᎶᎩ ᎦᏚ</string>
+    <string name="tile_label_lite">Smart Connect ᏱᎨᎫᏓᎸᎥᎦ</string>
+    <string name="wifi_quality_taskbar_content_poor_miracast">ᎦᎷᎶᎩ ᏕᎫᎪᏛᎢ ᏂᏓᏏᎳᏛ ᎫᏓᎸᎢ. ᎱᏓᎴᎩ ᎠᎴ ᎢᎱᏓᎸᎦ ᏣᏤᎵ ᏗᏟᏃᎮᏗᎢ ᎬᏗ Ꮎ ᎬᏂᎨᏒ ᏱᎬᏁᏗᎢ ᏧᏅᏚᏓᎵ.</string>
+    <string name="wired_usb_media_device_name">ᎠᏏᎳᏛ ᏗᏟᏳᏙᎾᏗᏍᏗ</string>
+    <string name="wireless_display_media_device_name">ᏂᏓᏏᎳᏛ ᎠᏓᏴᎳᏔᏍᎩ</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/_qs_bluetooth_icon_on__3_res_0x7f08009a">
+    <target
+        android:name="_R_G_L_1_G"
+        android:animation="@drawable/_qs_bluetooth_icon_on__0_res_0x7f080097"/>
+    <target
+        android:name="_R_G_L_0_G"
+        android:animation="@drawable/_qs_bluetooth_icon_on__1_res_0x7f080098"/>
+    <target
+        android:name="time_group"
+        android:animation="@drawable/_qs_bluetooth_icon_on__2_res_0x7f080099"/>
+</animated-vector>
