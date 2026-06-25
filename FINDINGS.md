@@ -363,3 +363,30 @@ It's uniform across browser and native content — purely the idle-downclock pow
   (read-only prop → needs Magisk `resetprop` at boot, or a system.prop module)
 - These disable SurfaceFlinger's static-content/idle refresh lowering so it holds peak even when idle.
   Trade-off: higher power draw (the exact "battery saving" being defeated).
+
+---
+
+## 17. 🎉 FULL UNLOCK — direct DP cable + framework patch = 5K2K / 4K / 3440×1440@100
+Swapped the TB5 dock for a **direct USB-C→DisplayPort cable** and set the monitor to its standard mode.
+Result — the phone now exposes the FULL panel:
+
+| Mode | Pixels | vs governor limit (5.54 M) | Shows? |
+|---|---|---|---|
+| **5120×2160 @ 60** (5K2K native) | 11.1 M | EXCEEDS | ✅ |
+| **3840×2160 @ 60** (4K) | 8.29 M | EXCEEDS | ✅ |
+| **3440×1440 @ 100** (active) | 4.95 M | under | ✅ |
+| 1920×1080 @ 120 | 2.07 M | under | ✅ |
+
+**This proves BOTH fixes were necessary:**
+1. **Direct 4-lane cable + DSC** — the dock forced 2-lane + blocked DSC pass-through; the direct cable
+   lets the phone read the monitor's DPCD directly and negotiate DSC → enough bandwidth for 5K2K/4K.
+   (2560×1080@240 had already appeared on the direct link, confirming 4-lane.)
+2. **Framework patch (§11)** — 5120×2160 (11.1 M px) and 4K (8.3 M px) EXCEED the internal-panel
+   governor limit (5.54 M). Stock, `enable_mode_limit_for_external_display` filters them out. They only
+   appear because we patched `DisplayManagerFlags.isExternalDisplayLimitModeEnabled()` → false. Through
+   the dock the link hid this (capped below the governor); direct cable + patch together expose it.
+
+### Final achieved state
+Verizon Razr Fold 2026 (SD 8 Gen 5), bootloader-unlocked + Magisk-rooted + services.jar-patched, driving
+an **LG 45GX950A 5K2K ultrawide** at **3440×1440@100 / 4K@60 / 5120×2160@60** over a direct USB-C→DP
+cable — resolutions the phone is hard-coded by AOSP to refuse. Mission fully accomplished.
