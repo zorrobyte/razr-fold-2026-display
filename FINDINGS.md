@@ -390,3 +390,25 @@ Result — the phone now exposes the FULL panel:
 Verizon Razr Fold 2026 (SD 8 Gen 5), bootloader-unlocked + Magisk-rooted + services.jar-patched, driving
 an **LG 45GX950A 5K2K ultrawide** at **3440×1440@100 / 4K@60 / 5120×2160@60** over a direct USB-C→DP
 cable — resolutions the phone is hard-coded by AOSP to refuse. Mission fully accomplished.
+
+---
+
+## 18. DSC investigation — NOT active, NOT forceable from root (kernel-gated)
+Question: are we using DSC, and can we force it? Mounted real debugfs (`mount -t debugfs none
+/sys/kernel/debug` — it wasn't mounted) to reach the Qualcomm DP driver.
+
+- Are we using DSC? **No** (inferred). Modes top out at the *uncompressed* 4-lane budget
+  (5K2K@60 / 2560×1080@240 ≈ link ceiling). The direct cable's win was **2-lane→4-lane**, not compression.
+- DP driver debugfs (`/sys/kernel/debug/dri/0/DP-1/`) exposes only **generic DRM nodes**: `edid_override`,
+  `force`, `output_bpc` (max 10-bit), `vrr_range` (48–165 Hz). **No DSC / link-rate / DPCD control.**
+- The driver **drops** modes exceeding the uncompressed budget (5K2K@120, 4K@120) rather than keeping
+  them with DSC → DSC isn't wired for the external DP-alt path. Monitor advertises 165 Hz VRR + 10-bit,
+  so the sink isn't the blocker — the kernel driver is.
+- **Can't force from userspace.** Would need a **custom kernel** (source unreleased for this 2026 device)
+  to enable DSC on external DP. `edid_override` could inject a DSC mode but the driver won't negotiate DSC
+  → black-screen, not compression. Not worth it.
+
+### FINAL display ceiling (definitive)
+**5120×2160@60 / 3840×2160@60 / 3440×1440@100** — the max for this phone+monitor. Set by the kernel DP
+driver declining DSC over USB-C DP-alt. Everything the uncompressed 4-lane link + framework patch allow is
+achieved; higher refresh at high res (DSC territory) is kernel-locked.
