@@ -343,3 +343,23 @@ Native apps / the desktop UI itself get the full 120.
   (disable: `service call SurfaceFlinger 1034 i32 0`).
 
 **Bottom line: 120 Hz on the external display is achieved for native content. Mission complete.**
+
+---
+
+## 16. CORRECTION to §13/§15: it's interaction-gated, NOT a Chrome cap
+User-confirmed: **Blur Busters in Chrome DOES hit 120 when the mouse moves** (drops to 60 when idle).
+So §13's "Chrome rAF capped at 60 on secondary displays" was WRONG. The real behavior:
+
+- The external display refresh is **gated on user interaction** (AOSP touch/pointer boost), not on content.
+- **Any interaction (mouse move/scroll) → whole display + all content (incl. Chrome) boosts to 120.**
+- **Idle (no pointer input) → drops to 60**, even with a continuously-animating page like TestUFO.
+- That's why TestUFO read 60 standalone (animation ≠ interaction) but jumps to 120 the moment you move the mouse.
+
+It's uniform across browser and native content — purely the idle-downclock power-saving, not a per-app limit.
+
+### To get SUSTAINED 120 (kill the idle downclock) — candidate levers
+- `debug.sf.limit_special_idle_render` (currently `1`) → set `0`
+- `ro.surface_flinger.use_content_detection_for_refresh_rate` (currently `true`) → `false`
+  (read-only prop → needs Magisk `resetprop` at boot, or a system.prop module)
+- These disable SurfaceFlinger's static-content/idle refresh lowering so it holds peak even when idle.
+  Trade-off: higher power draw (the exact "battery saving" being defeated).
