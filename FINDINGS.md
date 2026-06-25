@@ -314,3 +314,32 @@ Would need to defeat the category downclock — e.g., raise the external `frameR
 the render floor to 120 in the framework (another services.jar-class patch), or an SF frame-rate-override
 property. Diminishing returns; the panel/link/patch already deliver 120 to anything that explicitly votes
 for a high frame rate.
+
+---
+
+## 15. RESOLVED/CORRECTED: external desktop is ADAPTIVE 60↔120, not hard-capped
+Correction to §14: the `render: (0.0 60.0)` reading was the **idle** snapshot. The external display uses
+**adaptive frame pacing** (AOSP interaction/touch boost):
+- **Idle → 60 Hz** (battery saving)
+- **Mouse move / scroll / interaction → boosts to 120 Hz** (render range opens to `(0.0 120.0)`,
+  SF `renderRate=120.00 Hz`; desktop layers vote `FrameRateCategory::HighHint`)
+- User-confirmed: "move the mouse → 120, idle → 60."
+
+So there is **no hard 60 cap** on the external desktop — native content renders at the full **120 Hz**
+during actual interaction (when motion matters). The panel scans 120, SF composites 120, and the
+framework adaptively drives 120 on activity.
+
+### The ONLY remaining 60 is Chrome (browser), not the device
+Blur Busters/TestUFO reports 60 because **Chrome caps web-page `requestAnimationFrame` to 60 fps on
+secondary/external displays** (§13). That's a Chromium limitation, independent of everything we control.
+Native apps / the desktop UI itself get the full 120.
+
+### Final state of the external-display goal
+- Software governor removed (framework patch, §11) ✅ persistent
+- Link delivers up to 2560×1080@120 / 3440×1440@60 (§12) — DP-alt 2-lane / DP 1.4 ceiling
+- System renders external at 120 adaptively (§15) ✅
+- Browser web content stuck at 60 = Chromium, not fixable on-device
+- Leftover tweaks: `peak_refresh_rate=120` left set (harmless, = panel max); refresh-rate overlay enabled
+  (disable: `service call SurfaceFlinger 1034 i32 0`).
+
+**Bottom line: 120 Hz on the external display is achieved for native content. Mission complete.**
