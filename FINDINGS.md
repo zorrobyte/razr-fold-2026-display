@@ -176,3 +176,24 @@ pinned to **3440×1440@60** by Android's `enable_mode_limit_for_external_display
 internal panel pixels), which is framework-level and read-only → no APK patch reaches it. Bootloader is
 now **unlocked**; **root + an LSPosed/`DisplayModeDirector` stub** is the lever, realistically buying
 **4K@120 or 5K2K@60** — not the panel's native 5K2K@165 (a DP-alt vs DP2.1 link limit).
+
+---
+
+## 10. Root + hook target found; LSPosed module BLOCKED on this device
+- Root ✅ (Magisk 30.7). Hook target confirmed via services.jar decompile:
+  **`com.android.server.display.feature.DisplayManagerFlags.isExternalDisplayLimitModeEnabled()` → return false**
+  short-circuits the limit (DisplayModeDirector line ~1650; flag cached at construction line ~2878).
+- Built a correct legacy-Xposed module (`com.dispunlock`, `DispUnlock.apk`) — valid APK (aapt2 + LSPosed
+  PackageParser parse fine standalone).
+- Installed **Vector (LSPosed fork) v2.0-3021** (Release AND Debug), enabled + scoped to System Framework.
+- **BLOCKER:** `lspd` (root) cannot read the module APK at boot:
+  `Failed to open APK /data/app/~~.../com.dispunlock-.../base.apk: I/O error` / `ENOENT` / `skip`.
+  `lspd`'s mount namespace doesn't contain `/data/app` (even `su` is denied reading `/proc/<lspd>/root`).
+  Reproduces every boot, both Vector builds → **Vector/Magisk mount-namespace incompatibility on
+  blanc / Android 16**, not our module. So NO Xposed module can load.
+
+### Remaining options
+- (A) Debug the Vector namespace/SELinux issue (uncertain).
+- (B) Pivot: patch `services.jar` directly via a Magisk module (bypasses LSPosed; heavier, dexopt/bootloop
+  risk on A16 ART).
+- The hook itself is proven-correct and one line — only the delivery mechanism is blocked.
