@@ -197,3 +197,30 @@ now **unlocked**; **root + an LSPosed/`DisplayModeDirector` stub** is the lever,
 - (B) Pivot: patch `services.jar` directly via a Magisk module (bypasses LSPosed; heavier, dexopt/bootloop
   risk on A16 ART).
 - The hook itself is proven-correct and one line — only the delivery mechanism is blocked.
+
+---
+
+## 11. SOLVED via framework patch (LSPosed abandoned) — software cap removed
+LSPosed was a dead end (lspd couldn't read any module APK; ReZygisk didn't help). Pivoted to a direct
+`services.jar` patch:
+- Decompiled `services.jar` classes.dex (apktool, via wrapper-APK since the smali CLI wasn't available),
+  edited `DisplayManagerFlags.isExternalDisplayLimitModeEnabled()` → `const/4 v0,0x0; return v0` (false),
+  reassembled.
+- **Magisk module** (`framework-patch/services-dispcap.zip`): ships patched `services.jar` +
+  `customize.sh` that **whiteouts the stale oat** (`services.odex/vdex/art` + fsv_meta) so ART loads the
+  patched dex from the jar (JIT). Booted clean; `ClassLoaderContext mismatch` warnings confirm the new
+  jar is live; `services.odex`/`vdex` gone.
+- **Result:** the `enable_mode_limit_for_external_display` governor is disabled. A previously-filtered
+  mode (2560×1080) now appears.
+
+### BUT the real ceiling here is the LINK, not software
+- DRM connector `card0-DP-1/modes` delivers **max 3440×1440** to the phone over the TB5 dock.
+- 3440×1440 (4.95 M px) is already **under** the internal-panel limit (5.54 M), so the software cap was
+  never the binding constraint for this monitor — 4K/5K2K never reach the phone at all.
+- Cause: USB-C **DP Alt-Mode is 2-lane** through the dock (keeps USB3) → ~3440×1440 ceiling. Phone DP-alt
+  is **DP 1.4**, so 5K2K@165 is physically impossible regardless.
+- **To test higher:** direct USB-C→DP cable (forces 4-lane) → possibly 4K. Software is no longer the gate.
+
+### Net
+Root project complete: bootloader unlocked, rooted, **framework governor removed (persistent)**. Remaining
+limit is the phone's DP-alt link bandwidth to this specific 5K2K panel, which is hardware, not software.
