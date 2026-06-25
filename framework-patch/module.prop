@@ -1,0 +1,6 @@
+id=services_dispcap
+name=Services Display-Cap Removal
+version=v1.0
+versionCode=1
+author=local
+description=Patches services.jar DisplayManagerFlags.isExternalDisplayLimitModeEnabled() to false, removing the external-display resolution/refresh governor.
