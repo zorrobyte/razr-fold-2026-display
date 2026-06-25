@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ka taea e Ready For te hono atu ki te TV, te aroturuki, te PC ranei mo te petipeti, whakangahau, whakahaere waea mamao, me etahi atu.</item>
+        <item>Ka taea e koe te whakawhiti ki tētahi wheako rerekē mā te patopato i te miru māngi i tō waea.</item>
+        <item>Tūhonoa he papapātuhi me te kiore mō te wheako tino pai. Mēnā kāore i a koe he kiore, ka huri tō mata waea hei pūpatopā.</item>
+        <item>Kāore pea ētahi taupānga e mahi pai i te aratau papamahi, ā, kāore pea ētahi e tuku i a koe kia purei ihirangi i tētahi whakaatu tuarua. Me whakarite hoki koe i tō kaupane, i te TV mo te wheako tirohanga tino pai.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Nau mai ki Ready For</item>
+        <item>Whakawhiti ana i ngā aratau whakaatu</item>
+        <item>Ngā Uru</item>
+        <item>Kia mau ki te hinengaro</item>
+    </array>
+</resources>

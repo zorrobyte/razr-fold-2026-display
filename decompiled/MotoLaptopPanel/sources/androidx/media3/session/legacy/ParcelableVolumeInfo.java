@@ -1,0 +1,46 @@
+package androidx.media3.session.legacy;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+/* JADX INFO: loaded from: classes.dex */
+public class ParcelableVolumeInfo implements Parcelable {
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() { // from class: androidx.media3.session.legacy.ParcelableVolumeInfo.1
+        @Override // android.os.Parcelable.Creator
+        public ParcelableVolumeInfo createFromParcel(Parcel parcel) {
+            return new ParcelableVolumeInfo(parcel);
+        }
+
+        @Override // android.os.Parcelable.Creator
+        public ParcelableVolumeInfo[] newArray(int i) {
+            return new ParcelableVolumeInfo[i];
+        }
+    };
+    public int audioStream;
+    public int controlType;
+    public int currentVolume;
+    public int maxVolume;
+    public int volumeType;
+
+    public ParcelableVolumeInfo(Parcel parcel) {
+        this.volumeType = parcel.readInt();
+        this.controlType = parcel.readInt();
+        this.maxVolume = parcel.readInt();
+        this.currentVolume = parcel.readInt();
+        this.audioStream = parcel.readInt();
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(this.volumeType);
+        parcel.writeInt(this.controlType);
+        parcel.writeInt(this.maxVolume);
+        parcel.writeInt(this.currentVolume);
+        parcel.writeInt(this.audioStream);
+    }
+}

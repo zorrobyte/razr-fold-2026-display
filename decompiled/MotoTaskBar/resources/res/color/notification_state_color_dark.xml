@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_pressed="true"
+        android:color="#ffffff"
+        android:alpha="0"/>
+    <item
+        android:color="#ffffff"
+        android:alpha="0.11"
+        android:state_hovered="true"/>
+    <item android:color="@color/transparent"/>
+</selector>

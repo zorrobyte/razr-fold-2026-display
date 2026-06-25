@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For ļauj Jums savienoties ar TV, monitoru vai PC spēļu spēlēšanai, izklaidei, attālinātai tālruņa pārvaldībai un vēl.</item>
+        <item>Jūs varat pārslēgties uz citu pieredzi, pieskaroties peldošajam burbulim Jūsu tālrunī.</item>
+        <item>Ērtākai lietošanai pieslēdziet tastatūru un peli. Ja jums nav peles, Jūsu tālruņa ekrānu var pārvērst par skārienpaliktni.</item>
+        <item>Dažas programmas darbvirsmas režīmā var darboties sliktāk, un dažas var neļaut rādīt saturu uz sekundārā displeja. Iespējams arī, ka vajadzēs pielāgot monitoru vai TV baudāmākai skatīšanai.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Laipni lūgti Ready For</item>
+        <item>Pārslēdz displeja režīmus</item>
+        <item>Piederumi</item>
+        <item>Svarīga informācija</item>
+    </array>
+</resources>

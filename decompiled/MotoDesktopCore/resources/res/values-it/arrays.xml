@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Con Ready For puoi eseguire il collegamento a una TV, a un monitor o a un PC per giocare, svagarti, controllare il telefono da remoto e molto altro.</item>
+        <item>Puoi passare a un\'altra esperienza selezionando il fumetto mobile sul telefono.</item>
+        <item>Connetti un mouse e una tastiera per un\'esperienza ottimale. Se non disponi di un mouse, puoi utilizzare lo schermo del telefono come un trackpad.</item>
+        <item>Alcune app potrebbero non funzionare correttamente in modalità desktop, altre potrebbero non riprodurre contenuti su uno schermo secondario. Inoltre, per un\'esperienza ottimale, potrebbe essere necessario regolare il monitor o la TV.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Ready For</item>
+        <item>Cambia le modalità di visualizzazione</item>
+        <item>Accessori</item>
+        <item>Ricordati</item>
+    </array>
+</resources>

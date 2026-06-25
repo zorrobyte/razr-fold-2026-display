@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/wallpaper_item_padding_end"
+    android:layout_marginEnd="@dimen/wallpaper_item_padding_end">
+    <com.motorola.taskbar.settings.RoundedRectImageView
+        android:id="@+id/wallpaper_image"
+        android:layout_width="@dimen/wallpaper_item_basic_width"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/wallpaper_item_highlight"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:radius="12dp"/>
+</FrameLayout>

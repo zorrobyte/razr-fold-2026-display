@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>စနစ်ရွေးချယ်မှုကို အသုံးပြုပါ (မူရင်း)</item>
+        <item>၁၆ bits/နမူနာ</item>
+        <item>၂၄ bits/နမူနာ</item>
+        <item>၃၂ bits/နမူနာ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>စနစ်ရွေးချယ်မှုကို အသုံးပြုပါ (မူရင်း)</item>
+        <item>၁၆ bits/နမူနာ</item>
+        <item>၂၄ bits/နမူနာ</item>
+        <item>၃၂ bits/နမူနာ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>စနစ်ရွေးချယ်မှုကို အသုံးပြုပါ (မူရင်း)</item>
+        <item>မိုနို</item>
+        <item>စတီရီယို</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>စနစ်ရွေးချယ်မှုကို အသုံးပြုပါ (မူရင်း)</item>
+        <item>မိုနို</item>
+        <item>စတီရီယို</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>အသံအရည်အသွေးကို ပိုကောင်းအောင် ပြုလုပ်ထားသည်</item>
+        <item>အသံနှင့် ချိတ်ဆက်မှု အရည်သွေးကို မျှတအောင် ချိန်ဆပေးသည်</item>
+        <item>ချိတ်ဆက်မှု အရည်အသွေးကို ပိုကောင်းအောင် ပြုလုပ်ထားသည်</item>
+        <item>အကောင်းဆုံးကြိုးပမ်းမှု (ပေးပို့နှုန်း အလိုက်)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>အသံအရည်အသွေးကို ပိုကောင်းအောင် ပြုလုပ်ထားသည် (၉၉၀kbps/၉၀၉kbps)</item>
+        <item>အသံနှင့် ချိတ်ဆက်မှု အရည်အသွေးကို မျှတအောင် ချိန်ဆပေးသည် (၆၆၀kbps/၆၀၆kbps)</item>
+        <item>ချိတ်ဆက်မှု အရည်အသွေးကို ပိုကောင်းအောင် ပြုလုပ်ထားသည် (၃၃၀kbps/၃၀၃kbps)</item>
+        <item>အကောင်းဆုံးကြိုးပမ်းမှု (ပေးပို့နှုန်း အလိုက်)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>စနစ်ရွေးချယ်မှုကို အသုံးပြုပါ (မူရင်း)</item>
+        <item>၄၄.၁ kHz</item>
+        <item>၄၈.၀ kHz</item>
+        <item>၈၈.၂ kHz</item>
+        <item>၉၆.၀ kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>စနစ်ရွေးချယ်မှုကို အသုံးပြုပါ (မူရင်း)</item>
+        <item>၄၄.၁ kHz</item>
+        <item>၄၈.၀ kHz</item>
+        <item>၈၈.၂ kHz</item>
+        <item>၉၆.၀ kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>စနစ်ရွေးချယ်မှုကို အသုံးပြုပါ (မူရင်း)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ အသံ</item>
+        <item>Qualcomm® aptX™ HD အသံ</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>စနစ်ရွေးချယ်မှုကို အသုံးပြုပါ (မူရင်း)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ အသံ</item>
+        <item>Qualcomm® aptX™ HD အသံ</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>၊ ဖွင့်ထားသည်</item>
+        <item>၊ ဖွင့်ထားသည် (မီဒီယာ)</item>
+        <item>၊ ဖွင့်ထားသည် (ဖုန်း)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp14</item>
+        <item>avrcp13</item>
+        <item>avrcp15</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.4 (မူလ)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.5</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (မူရင်း)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>သုံးမရအောင် ပိတ်ထားသည်</item>
+        <item>စစ်ထုတ်ထားသည်များကို ဖွင့်ထားသည်</item>
+        <item>ဖွင့်ထား</item>
+    </array>
+    <array name="display_size_descriptions">
+        <item>သေးငယ်သော</item>
+        <item>ပျက်ကွက်</item>
+        <item>အကြီးစား</item>
+        <item>ပိုကြီးတဲ့</item>
+    </array>
+    <array name="font_size_descriptions">
+        <item>သေးငယ်သော</item>
+        <item>ပျက်ကွက်</item>
+        <item>အကြီးစား</item>
+    </array>
+    <array name="open_app_option_array">
+        <item>အက်ပ်ကိုပြန်လည်စတင်ပါ</item>
+        <item>အက်ပ်ကိုပြန်လည်စတင်ခြင်းမရှိပဲဖွင့်ပါ</item>
+        <item>အချိန်တိုင်းငါ့ကိုမေးပါ</item>
+    </array>
+    <array name="power_save_array">
+        <item>10 မိနစ်</item>
+        <item>၁၅ မိနစ်</item>
+        <item>20 မိနစ်</item>
+        <item>30 မိနစ်</item>
+        <item>60 မိနစ်</item>
+        <item>ဘယ္ေတာ့မွ ခ်ိတ္ဆက္မႈမျဖဳတ္ပါႏွင့္</item>
+    </array>
+    <array name="preload_wallpapers_array">
+        <item>preload_wallpaper_geometry_1</item>
+        <item>preload_wallpaper_geometry_2</item>
+        <item>preload_wallpaper_geometry_3</item>
+        <item>preload_wallpaper_geometry_4</item>
+        <item>preload_wallpaper_geometry_5</item>
+        <item>preload_wallpaper_geometry_6</item>
+        <item>preload_wallpaper_geometry_7</item>
+        <item>preload_wallpaper_geometry_8</item>
+        <item>preload_wallpaper_geometry_9</item>
+        <item>preload_wallpaper_geometry_10</item>
+        <item>preload_wallpaper_nature_1</item>
+        <item>preload_wallpaper_nature_2</item>
+        <item>preload_wallpaper_nature_3</item>
+        <item>preload_wallpaper_nature_4</item>
+        <item>preload_wallpaper_nature_5</item>
+        <item>preload_wallpaper_nature_6</item>
+        <item>preload_wallpaper_nature_7</item>
+        <item>preload_wallpaper_nature_8</item>
+        <item>preload_wallpaper_nature_9</item>
+    </array>
+    <array name="tile_states_airplane">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်ထားသည်</item>
+    </array>
+    <array name="tile_states_alarm">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_battery">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_bt">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_cameratoggle">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_cast">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်ထားသည်</item>
+    </array>
+    <array name="tile_states_cell">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်ထားသည်</item>
+    </array>
+    <array name="tile_states_color_correction">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်ထားသည်</item>
+    </array>
+    <array name="tile_states_controls">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်ထားသည်</item>
+    </array>
+    <array name="tile_states_dark">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_dnd">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_dream">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_flashlight">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_font_scaling">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_hearing_devices">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်ထားသည်</item>
+    </array>
+    <array name="tile_states_hotspot">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_internet">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_inversion">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်ထားသည်</item>
+    </array>
+    <array name="tile_states_location">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်ထားသည်</item>
+    </array>
+    <array name="tile_states_mictoggle">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_night">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_onehanded">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်ထားသည်</item>
+    </array>
+    <array name="tile_states_qr_code_scanner">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_record_issue">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_reduce_brightness">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_reverse">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_rotation">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်ထားသည်</item>
+    </array>
+    <array name="tile_states_saver">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်ထားသည်</item>
+    </array>
+    <array name="tile_states_screenrecord">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_wallet">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_wifi">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="tile_states_work">
+        <item>မရနိုင်ပါ</item>
+        <item>ပိတ်</item>
+        <item>ဖွင့်</item>
+    </array>
+    <array name="timeout_array">
+        <item>၁ မိနစ်</item>
+        <item>2 မိနစ်</item>
+        <item>5 မိနစ်</item>
+        <item>10 မိနစ်</item>
+        <item>20 မိနစ်</item>
+        <item>30 မိနစ်</item>
+        <item>60 မိနစ်</item>
+    </array>
+</resources>

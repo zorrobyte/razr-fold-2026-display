@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For pozwala połączyć się z telewizorem, monitorem lub komputerem, co umożliwia rozrywkę, zdalne sterowanie telefonem, rozgrywkę i nie tylko.</item>
+        <item>Możesz przełączać funkcje, dotykając dymka na telefonie.</item>
+        <item>Największy komfort obsługi osiągniesz, podłączając mysz i klawiaturę Jeśli nie masz myszy, ekran telefonu będzie służył jako touchpad.</item>
+        <item>Niektóre aplikacje mogą nie działać prawidłowo w trybie pulpitu lub blokować wyświetlanie treści na dodatkowym wyświetlaczu. Być może trzeba będzie zmienić ustawienia telewizora lub monitora, aby uzyskać najlepszy komfort.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Ready For – witamy</item>
+        <item>Przełączanie trybów wyświetlania</item>
+        <item>Akcesoria</item>
+        <item>Pamiętaj</item>
+    </array>
+</resources>

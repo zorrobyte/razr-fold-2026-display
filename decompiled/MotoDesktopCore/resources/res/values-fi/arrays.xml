@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready Forin avulla voit liittää puhelimesi televisioon, näyttöön tai tietokoneeseen esimerkiksi pelaamista, viihdettä ja puhelinohjausta varten.</item>
+        <item>Voit vaihtaa toiseen kokemukseen napauttamalla kelluvaa kuplaa.</item>
+        <item>Liitä parasta kokemusta varten hiiri ja näppäimistö. Jos käytössä ei ole hiirtä, puhelimen näyttö toimii kosketuslevynä.</item>
+        <item>Kaikki sovellukset eivät välttämättä toimi oikein työpöytätilassa, eikä sisältöjä voi välttämättä toistaa toisella näytöllä. Näytön tai TV:n asetuksia on mahdollisesti säädettävä parasta katselukokemusta varten.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Tämä on Ready For</item>
+        <item>Näyttötilojen vaihtaminen</item>
+        <item>Lisävarusteet</item>
+        <item>Muistutus</item>
+    </array>
+</resources>

@@ -1,0 +1,12 @@
+Third-Party Software for motogenericapisdk (aar)
+
+The following 3rd-party software packages may be used by or distributed with motogenericapisdk aar package. Any information relevant to third-party vendors listed below are collected using common, reasonable means.
+
+Date generated: 2025-5-21
+Revision ID: 9eaac7cadedca59eafb056c2824acaf8089c9405
+FOSSA: https://fossa.mot.com/projects/custom%2B1%2Fmotogenericapisdk/refs/branch/main/9eaac7cadedca59eafb056c2824acaf8089c9405
+LaunchCal: https://idart.mot.com/browse/LCFRTEDOSS-560
+--------------------------------------------------------------------------------
+LICENSE: Motorola Mobility LLC Confidential and Restricted
+--------------------------------------------------------------------------------
+

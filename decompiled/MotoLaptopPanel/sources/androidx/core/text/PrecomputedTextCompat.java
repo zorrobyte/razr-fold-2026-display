@@ -1,0 +1,7 @@
+package androidx.core.text;
+
+import android.text.Spannable;
+
+/* JADX INFO: loaded from: classes.dex */
+public abstract class PrecomputedTextCompat implements Spannable {
+}

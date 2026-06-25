@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Mit Ready For kannst du eine Verbindung zu einem Fernseher, Monitor oder PC herstellen – für Gaming, Unterhaltung, Telefon-Fernsteuerung und mehr.</item>
+        <item>Du kannst zu einem anderen Erlebnis wechseln, indem du die schwebende Bubble auf deinem Telefon antippst.</item>
+        <item>Schließe für das beste Erlebnis eine Tastatur und eine Maus an. Wenn du keine Maus hast, kannst du dein Telefondisplay als Trackpad benutzen.</item>
+        <item>Möglicherweise funktionieren einige Apps im Desktop-Modus nicht einwandfrei und andere lassen dich keine Inhalte auf einem zweiten Bildschirm wiedergeben. Auch musst du für ein optimales Benutzererlebnis eventuell die Einstellungen deines Monitors bzw. TV-Geräts anpassen.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Willkommen bei Ready For</item>
+        <item>Anzeigemodus wechseln</item>
+        <item>Zubehör</item>
+        <item>Bitte beachten Sie</item>
+    </array>
+</resources>

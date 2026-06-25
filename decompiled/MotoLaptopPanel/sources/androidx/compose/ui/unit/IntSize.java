@@ -1,0 +1,87 @@
+package androidx.compose.ui.unit;
+
+import kotlin.jvm.internal.DefaultConstructorMarker;
+
+/* JADX INFO: compiled from: IntSize.kt */
+/* JADX INFO: loaded from: classes.dex */
+public final class IntSize {
+    public static final Companion Companion = new Companion(null);
+    private static final long Zero = m1919constructorimpl(0);
+    private final long packedValue;
+
+    /* JADX INFO: compiled from: IntSize.kt */
+    public final class Companion {
+        private Companion() {
+        }
+
+        public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
+            this();
+        }
+
+        /* JADX INFO: renamed from: getZero-YbymL2g, reason: not valid java name */
+        public final long m1927getZeroYbymL2g() {
+            return IntSize.Zero;
+        }
+    }
+
+    private /* synthetic */ IntSize(long j) {
+        this.packedValue = j;
+    }
+
+    /* JADX INFO: renamed from: box-impl, reason: not valid java name */
+    public static final /* synthetic */ IntSize m1918boximpl(long j) {
+        return new IntSize(j);
+    }
+
+    /* JADX INFO: renamed from: constructor-impl, reason: not valid java name */
+    public static long m1919constructorimpl(long j) {
+        return j;
+    }
+
+    /* JADX INFO: renamed from: equals-impl, reason: not valid java name */
+    public static boolean m1920equalsimpl(long j, Object obj) {
+        return (obj instanceof IntSize) && j == ((IntSize) obj).m1926unboximpl();
+    }
+
+    /* JADX INFO: renamed from: equals-impl0, reason: not valid java name */
+    public static final boolean m1921equalsimpl0(long j, long j2) {
+        return j == j2;
+    }
+
+    /* JADX INFO: renamed from: getHeight-impl, reason: not valid java name */
+    public static final int m1922getHeightimpl(long j) {
+        return (int) (j & 4294967295L);
+    }
+
+    /* JADX INFO: renamed from: getWidth-impl, reason: not valid java name */
+    public static final int m1923getWidthimpl(long j) {
+        return (int) (j >> 32);
+    }
+
+    /* JADX INFO: renamed from: hashCode-impl, reason: not valid java name */
+    public static int m1924hashCodeimpl(long j) {
+        return Long.hashCode(j);
+    }
+
+    /* JADX INFO: renamed from: toString-impl, reason: not valid java name */
+    public static String m1925toStringimpl(long j) {
+        return ((int) (j >> 32)) + " x " + ((int) (j & 4294967295L));
+    }
+
+    public boolean equals(Object obj) {
+        return m1920equalsimpl(this.packedValue, obj);
+    }
+
+    public int hashCode() {
+        return m1924hashCodeimpl(this.packedValue);
+    }
+
+    public String toString() {
+        return m1925toStringimpl(this.packedValue);
+    }
+
+    /* JADX INFO: renamed from: unbox-impl, reason: not valid java name */
+    public final /* synthetic */ long m1926unboximpl() {
+        return this.packedValue;
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For vous permet de vous connecter à un téléviseur, un écran ou un PC pour des jeux, des divertissements, le contrôle d\'un téléphone à distance, et bien plus encore.</item>
+        <item>Vous pouvez passer à une autre expérience en touchant la bulle flottante sur votre téléphone.</item>
+        <item>Connectez un clavier et une souris pour une expérience optimale. Si vous n\'avez pas de souris, l\'écran de votre téléphone se transformera en pavé tactile.</item>
+        <item>Certaines applications peuvent ne pas fonctionner correctement en mode bureau, et d\'autres peuvent ne pas vous permettre de lire du contenu sur un écran secondaire. Il se peut également que vous deviez régler votre moniteur ou votre téléviseur pour profiter d\'une expérience visuelle optimale.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Bienvenue à Ready For</item>
+        <item>Changement de mode d\'affichage</item>
+        <item>Accessoires</item>
+        <item>Garder à l\'esprit</item>
+    </array>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For membenarkan anda menyambung kepada TV, monitor atau PC untuk permainan, hiburan, kawalan telefon jauh. dan banyak lagi.</item>
+        <item>Anda boleh bertukar kepada pengalaman berlainan dengan mengetik pada gelembung terapung pada telefon anda.</item>
+        <item>Sambungkan papan kekunci dan tetikus untuk pengalaman terbaik. Jika anda tiada tetikus, skrin telefon anda akan bertukar menjadi pad jejak.</item>
+        <item>Sesetengah apl mungkin tidak berfungsi dengan baik dalam mod desktop, dan sesetengah apl mungkin tidak membenarkan anda memainkan kandungan pada paparan kedua. Anda juga mungkin perlu melaraskan monitor atau TV anda untuk pengalaman paparan terbaik.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Selamat datang ke Ready For</item>
+        <item>Bertukar mod paparan</item>
+        <item>Aksesori</item>
+        <item>Perlu diingati bahawa</item>
+    </array>
+</resources>

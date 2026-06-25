@@ -1,0 +1,52 @@
+package androidx.compose.foundation.gestures;
+
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.IntrinsicsKt;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlinx.coroutines.CoroutineScope;
+
+/* JADX INFO: compiled from: TapGestureDetector.kt */
+/* JADX INFO: loaded from: classes.dex */
+final class TapGestureDetectorKt$detectTapGestures$2$1$resetJob$1 extends SuspendLambda implements Function2 {
+    final /* synthetic */ PressGestureScopeImpl $pressScope;
+    int label;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    TapGestureDetectorKt$detectTapGestures$2$1$resetJob$1(PressGestureScopeImpl pressGestureScopeImpl, Continuation continuation) {
+        super(2, continuation);
+        this.$pressScope = pressGestureScopeImpl;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Continuation create(Object obj, Continuation continuation) {
+        return new TapGestureDetectorKt$detectTapGestures$2$1$resetJob$1(this.$pressScope, continuation);
+    }
+
+    @Override // kotlin.jvm.functions.Function2
+    public final Object invoke(CoroutineScope coroutineScope, Continuation continuation) {
+        return ((TapGestureDetectorKt$detectTapGestures$2$1$resetJob$1) create(coroutineScope, continuation)).invokeSuspend(Unit.INSTANCE);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object obj) {
+        Object coroutine_suspended = IntrinsicsKt.getCOROUTINE_SUSPENDED();
+        int i = this.label;
+        if (i == 0) {
+            ResultKt.throwOnFailure(obj);
+            PressGestureScopeImpl pressGestureScopeImpl = this.$pressScope;
+            this.label = 1;
+            if (pressGestureScopeImpl.reset(this) == coroutine_suspended) {
+                return coroutine_suspended;
+            }
+        } else {
+            if (i != 1) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            ResultKt.throwOnFailure(obj);
+        }
+        return Unit.INSTANCE;
+    }
+}

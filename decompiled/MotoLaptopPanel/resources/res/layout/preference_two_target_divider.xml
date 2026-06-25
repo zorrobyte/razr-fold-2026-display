@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="start|center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/two_target_divider"
+    android:paddingLeft="?android:attr/listPreferredItemPaddingEnd"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingStart="?android:attr/listPreferredItemPaddingEnd">
+    <View
+        android:background="?android:attr/listDivider"
+        android:layout_width="1dp"
+        android:layout_height="32dp"/>
+</LinearLayout>

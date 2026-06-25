@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="animator_duration_scale_entries">
+        <item>animasiyo zakuweho</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro .5x</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 1</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 1.5</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 2</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 5</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 10</item>
+    </array>
+    <array name="app_process_limit_entries">
+        <item>Igipimo ntarengwa</item>
+        <item>Nta bikorwa by\'inyuma</item>
+        <item>Imikorere 1 itarenga</item>
+        <item>Ibikorwa bitarenze 2</item>
+        <item>Ibice hafi 3 gusa</item>
+        <item>Ibikorwa bitarenze 4</item>
+    </array>
+    <array name="battery_labels">
+        <item>0%</item>
+        <item>50 %</item>
+        <item>100%</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>Koresha Guhitamo Sisitemu (Default)</item>
+        <item>16 bayiti/icyitegererezo</item>
+        <item>24bayiti/icyitegererezo</item>
+        <item>bayiti 32/icyitegererezo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>Koresha Guhitamo Sisitemu (Default)</item>
+        <item>16 bayiti/icyitegererezo</item>
+        <item>24bayiti/icyitegererezo</item>
+        <item>bayiti 32/icyitegererezo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>Koresha Guhitamo Sisitemu (Default)</item>
+        <item>Kimwe</item>
+        <item>Siterewo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>Koresha Guhitamo Sisitemu (Default)</item>
+        <item>Kimwe</item>
+        <item>Siterewo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>Iboneye cyane ku ireme ry\'amajwi</item>
+        <item>Amajwi n\'ubwiza bw\'umuyoboro byumvikana</item>
+        <item>Iboneye ku ireme ryumuyoboro </item>
+        <item>Igikorwa cyiza (Igipimo cya Bayiti)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>Iboneye cyane ku ireme ry\'amajwi (990kbps/909kbps)</item>
+        <item>Amajwi n\'ubwiza bw\'umuyoboro byumvikana (660kbps/606kbps)</item>
+        <item>Iboneye ku ireme ryumuyoboro (330kbps/303kbps)</item>
+        <item>Igikorwa cyiza (Igipimo cya Bayiti)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>Koresha Guhitamo Sisitemu (Default)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+        <item>176.4 kHz</item>
+        <item>192.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>Koresha Guhitamo Sisitemu (Default)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+        <item>176.4 kHz</item>
+        <item>192.0 kHz</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>,ikora</item>
+        <item>,ikora(mediya)</item>
+        <item>, ikora (telefoni)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp15</item>
+        <item>avrcp13</item>
+        <item>avrcp14</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.5 (isanzwe)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.4</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (Isanzwe)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>Yangiwe</item>
+        <item>Gushoboza Ibyayunguruwe</item>
+        <item>Yemerewe</item>
+    </array>
+    <array name="bt_hci_snoop_log_filters_entries">
+        <item>Gusiga imitwe ya ACL gusa</item>
+        <item>Gucunga ibikubiye muri A2DP</item>
+        <item>Gucunga umuyoboro wa RFCOMM</item>
+    </array>
+    <array name="bt_hci_snoop_log_profile_filter_entries">
+        <item>Angira</item>
+        <item>uzuzamo inyuguti</item>
+        <item>Gusiga imitwe gusa</item>
+        <item>Gukuraho burundu</item>
+    </array>
+    <array name="cached_apps_freezer_values">
+        <item>igikoresho_cy\'ibanze</item>
+        <item>yemerewe</item>
+        <item>yangiwe</item>
+    </array>
+    <array name="color_mode_descriptions">
+        <item>Amabara yagutse</item>
+        <item>Amabara asanzwe nkuko bigaragara ku jisho</item>
+        <item>Amabara yagenzuwe neza kubintu bya digitale</item>
+    </array>
+    <array name="color_mode_names">
+        <item>Ku vibura (bisanzwe)</item>
+        <item>Karemano</item>
+        <item>Ibimenyerewe</item>
+    </array>
+    <array name="debug_hw_overdraw_entries">
+        <item>Kuzimya</item>
+        <item>Erekana uduce twirengagijwe</item>
+        <item>Erekana ibice by\'amabara atagaragara neza</item>
+    </array>
+    <array name="enable_opengl_traces_entries">
+        <item>Nta na kimwe</item>
+        <item>Logcat</item>
+        <item>Systrace (Ibishushanyo)</item>
+        <item>Guhamagara urusobe kuri glGetError</item>
+    </array>
+    <array name="hdcp_checking_summaries">
+        <item>Ntuzigere ukoresha igenzura rya HDCP</item>
+        <item>Koresha igenzura rya HDCP kubintu bya DRM gusa</item>
+        <item>Buri gihe ukoreshe igenzura rya HDCP</item>
+    </array>
+    <array name="hdcp_checking_titles">
+        <item>Ntuzigere ugenzura</item>
+        <item>Genzura ibikubiye muri DRM gusa</item>
+        <item>Buri gihe ujye ugenzura</item>
+    </array>
+    <array name="overlay_display_devices_entries">
+        <item>Nta na kimwe</item>
+        <item>480p</item>
+        <item>480p (itekanye)</item>
+        <item>720p</item>
+        <item>720p(itekanye)</item>
+        <item>1080p</item>
+        <item>1080p (itekanye)</item>
+        <item>4K</item>
+        <item>4K (itekanye)</item>
+        <item>4K (byongerewe ingano)</item>
+        <item>4K (byongerewe ingano, umutekano)</item>
+        <item>720p, 1080p (ekara ebyiri)</item>
+    </array>
+    <array name="select_logd_size_lowram_titles">
+        <item>Kuzimya</item>
+        <item>64K</item>
+        <item>256K</item>
+        <item>1M</item>
+    </array>
+    <array name="select_logd_size_summaries">
+        <item>Kuzimya</item>
+        <item>64K kuri bufe yo kwinjira</item>
+        <item>256K icyarimwe</item>
+        <item>1M icyarimwe</item>
+        <item>4M kunshuro imwe</item>
+        <item>8M kunshuro imwe</item>
+    </array>
+    <array name="select_logd_size_titles">
+        <item>Kuzimya</item>
+        <item>64K</item>
+        <item>256K</item>
+        <item>1M</item>
+        <item>4M</item>
+        <item>8M</item>
+    </array>
+    <array name="select_logpersist_summaries">
+        <item>Kuzimya</item>
+        <item>Ibikubiye mu bitabo byose</item>
+        <item>Ibikubiye mu bitabo byose bya radiyo</item>
+        <item>gusa ububiko bw\'ibaruramari bwa kernel</item>
+    </array>
+    <array name="select_logpersist_titles">
+        <item>Kuzimya</item>
+        <item>Byose</item>
+        <item>Byose uretse radiyo</item>
+        <item>sisitemu ya Kernel gusa</item>
+    </array>
+    <array name="show_non_rect_clip_entries">
+        <item>Kuzimya</item>
+        <item>Shushanya agace kitari urukiramende mugace k\'ubururu</item>
+        <item>Garagaza amabwiriza yo gushushanya yageragejwe mu ibara ry\'icyatsi</item>
+    </array>
+    <array name="track_frame_time_entries">
+        <item>Kuzimya</item>
+        <item>Kumirongo yo kuri ekara</item>
+        <item>Muri adb shell dumpsys gfxinfo</item>
+    </array>
+    <array name="transition_animation_scale_entries">
+        <item>animasiyo zakuweho</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro .5x</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 1</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 1.5</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 2</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 5</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 10</item>
+    </array>
+    <array name="tts_rate_entries">
+        <item>60%</item>
+        <item>80%</item>
+        <item>100%</item>
+        <item>150%</item>
+        <item>200%</item>
+        <item>250%</item>
+        <item>300%</item>
+        <item>350%</item>
+        <item>400%</item>
+    </array>
+    <array name="usb_configuration_titles">
+        <item>Kwinjiza umuriro</item>
+        <item>MTP (Media Transfer Protocol) (Gahunda yo kohereza itangazamakuru)</item>
+        <item>PTP (Picture Transfer Protocol)(Porogaramu yo kohereza amashusho)</item>
+        <item>RNDIS (umuyoboro ukoresheje USB )</item>
+        <item>Aho amajwi aturuka</item>
+        <item>MIDI</item>
+    </array>
+    <array name="wifi_status">
+        <item />
+        <item>gushakisha…</item>
+        <item>Guhuza…</item>
+        <item>Kwemeza…</item>
+        <item>Kubona aderesi ya IP…</item>
+        <item>Yahujwe</item>
+        <item>Yahagaritswe</item>
+        <item>Kuvanaho…</item>
+        <item>Yatandukanyijwe</item>
+        <item>Ntibyakunze</item>
+        <item>Yazitiwe</item>
+        <item>Kwirinda byagateganyo itumanaho ribi</item>
+    </array>
+    <array name="wifi_status_with_ssid">
+        <item />
+        <item>gushakisha…</item>
+        <item>Kwihuza n\'igikoresho…%1$s</item>
+        <item>Kwemeza ko uri umwirondoro wa%1$s …</item>
+        <item>Kubona aderesi ya IP…%1$s</item>
+        <item>Yihuje na %1$s</item>
+        <item>Yahagaritswe</item>
+        <item>Gukuraho umurongo wa%1$s …</item>
+        <item>Yatandukanyijwe</item>
+        <item>Ntibyakunze</item>
+        <item>Yazitiwe</item>
+        <item>Kwirinda byagateganyo itumanaho ribi</item>
+    </array>
+    <array name="wifitrackerlib_wifi_status">
+        <item />
+        <item>gushakisha…</item>
+        <item>guhuza…</item>
+        <item>Kwemeza…</item>
+        <item>Kubona aderesi ya IP…</item>
+        <item>Yahujwe</item>
+        <item>yahagaritswe</item>
+        <item>Kuvanaho…</item>
+        <item>yakuweho</item>
+        <item>ntibyakunze</item>
+        <item>Yazitiwe</item>
+        <item>Kwirinda byagateganyo itumanaho ribi</item>
+    </array>
+    <array name="window_animation_scale_entries">
+        <item>Animasiyo zakuweho</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro .5x</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 1</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 1.5</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 2</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 5</item>
+        <item>Igipimo cya Animasiyo gikubye inshuro 10</item>
+    </array>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="?android:attr/colorControlHighlight">
+    <item android:id="@android:id/background">
+        <layer-list
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/settingslib_expressive_space_small4"
+            android:paddingMode="stack">
+            <item>
+                <shape>
+                    <corners android:radius="@dimen/settingslib_expressive_radius_full"/>
+                    <solid android:color="@color/settingslib_materialColorSecondaryContainer"/>
+                    <size android:height="@dimen/settingslib_expressive_space_medium3"/>
+                </shape>
+            </item>
+            <item
+                android:gravity="end|center_vertical"
+                android:height="@dimen/settingslib_expressive_space_small4"
+                android:width="@dimen/settingslib_expressive_space_small4"
+                android:end="@dimen/settingslib_expressive_space_small1">
+                <vector
+                    android:tint="@color/settingslib_materialColorOnSecondaryContainer"
+                    android:height="24dp"
+                    android:width="24dp"
+                    android:viewportWidth="24"
+                    android:viewportHeight="24">
+                    <path
+                        android:fillColor="@android:color/white"
+                        android:pathData="M16.59,8.59L12,13.17 7.41,8.59 6,10l6,6 6,-6 -1.41,-1.41z"/>
+                </vector>
+            </item>
+        </layer-list>
+    </item>
+</ripple>

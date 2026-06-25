@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.preference.PreferenceCategory
+        android:layout="@layout/app_preference_category"
+        android:title="@string/time_out_category_title"
+        android:key="time_out_category"
+        android:summary="@string/time_out_category_summary"/>
+    <androidx.preference.PreferenceCategory
+        android:layout="@layout/app_preference_category"
+        android:title="@string/power_save_category_title"
+        android:key="power_save_category"
+        android:summary="@string/power_save_category_summary"/>
+</androidx.preference.PreferenceScreen>

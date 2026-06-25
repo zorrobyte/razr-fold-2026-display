@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For tỹ, ã vỹ ã terefãnĩ ta TV ũ to saj ge há nĩ, monitor ketũmỹr vẽnh kanhir ag mỹ kãputanor ki, jagnã mré ki han, vóg nĩ ẽn vóg há han ge mré ke ũ kar ag.</item>
+        <item>Ã tỹ ti ki han kãmã sór kỹ, terefãnĩ ki ikonẽ vo tĩ ẽn ki vóg nĩ.</item>
+        <item>Ã tỹ vóg há han jé, ti kasĩn tỹ to sam nĩ. Ã tỹ kasĩn tũn kỹ, terefãnĩ tékra tỹ trackpad vóg ãn ge han nĩ.</item>
+        <item>Hẽremũn app kã\'ũ ag pi vóg há nỹtĩj mũ mãnu desktop ki, kar ũ ag vỹ téra tỹ ẽgno tá vẽnh ven ki kroj mũ gé. Hẽremũn vỹ TV ketũmỹr ti vẽnh ven fã nĩm mãn há han tỹ kej ge nĩ ti vẽnh ki króm jé.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Kãtĩg há han ã tóg Ready For ki</item>
+        <item>Ti vẽnhven ge mãnu tỹ jagnã mré jãgjaj ge</item>
+        <item>Kãmĩ nỹtĩ ag</item>
+        <item>Tu ẽkrén ge</item>
+    </array>
+</resources>

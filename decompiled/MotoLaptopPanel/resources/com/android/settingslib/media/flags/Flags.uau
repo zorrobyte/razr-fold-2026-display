@@ -1,0 +1,6 @@
+signature,file,startline,startcol,endline,endcol,properties
+Lcom/android/settingslib/media/flags/Flags;->enableOutputSwitcherForSystemRouting()Z,out/soong/.intermediates/frameworks/base/packages/SettingsLib/settingslib_media_flags_lib/android_common/javac/srcjars/com/android/settingslib/media/flags/Flags.java,19,5,19,25,
+Lcom/android/settingslib/media/flags/Flags;->enableTvMediaOutputDialog()Z,out/soong/.intermediates/frameworks/base/packages/SettingsLib/settingslib_media_flags_lib/android_common/javac/srcjars/com/android/settingslib/media/flags/Flags.java,26,5,26,25,
+Lcom/android/settingslib/media/flags/Flags;->removeUnnecessaryRouteScanning()Z,out/soong/.intermediates/frameworks/base/packages/SettingsLib/settingslib_media_flags_lib/android_common/javac/srcjars/com/android/settingslib/media/flags/Flags.java,33,5,33,25,
+Lcom/android/settingslib/media/flags/Flags;->useMediaRouter2ForInfoMediaManager()Z,out/soong/.intermediates/frameworks/base/packages/SettingsLib/settingslib_media_flags_lib/android_common/javac/srcjars/com/android/settingslib/media/flags/Flags.java,40,5,40,25,
+Lcom/android/settingslib/media/flags/Flags;->usePlaybackInfoForRoutingControls()Z,out/soong/.intermediates/frameworks/base/packages/SettingsLib/settingslib_media_flags_lib/android_common/javac/srcjars/com/android/settingslib/media/flags/Flags.java,47,5,47,25,

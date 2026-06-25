@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">새 알림 %d개</item>
+        <item quantity="other">새 알림 %d개</item>
+    </plurals>
+    <plurals name="notification_group_overflow_description">
+        <item quantity="other">내부에 추가 알림이 %s개 있습니다.</item>
+    </plurals>
+    <plurals name="quick_settings_hotspot_secondary_label_num_devices">
+        <item quantity="other">기기 %d개</item>
+    </plurals>
+    <plurals name="taskbar_notification_num_devices">
+        <item quantity="other">새 알림 %d개</item>
+    </plurals>
+</resources>

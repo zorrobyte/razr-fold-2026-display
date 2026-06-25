@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:layout="@layout/pref_start"
+        android:title="@string/settings_open_same_app"
+        android:key="open_same_app"
+        android:summary="@string/settings_open_same_app_summary"
+        app:iconSpaceReserved="false"/>
+    <com.motorola.taskbar.settings.WrappedSwitchPreference
+        android:layout="@layout/pref_start"
+        android:title="@string/desktop_auto_add"
+        android:key="desktop_auto_add"
+        android:summary="@string/desktop_auto_add_summary"
+        android:defaultValue="false"
+        app:iconSpaceReserved="false"/>
+    <com.motorola.taskbar.settings.WrappedSwitchPreference
+        android:layout="@layout/pref_start"
+        android:title="@string/settings_phone_in_window"
+        android:key="settings_phone_in_window"
+        android:summary="@string/settings_phone_in_window_summary"
+        android:defaultValue="false"
+        app:iconSpaceReserved="false"/>
+    <com.motorola.taskbar.settings.WrappedSwitchPreference
+        android:layout="@layout/pref_start"
+        android:title="@string/dnd_setting_title"
+        android:key="settings_dnd"
+        android:summary="@string/dnd_setting_summary"
+        android:defaultValue="false"
+        app:iconSpaceReserved="false"/>
+    <PreferenceCategory
+        android:layout="@layout/app_preference_category"
+        android:title="@string/display_setting"
+        android:key="display_setting"/>
+</PreferenceScreen>

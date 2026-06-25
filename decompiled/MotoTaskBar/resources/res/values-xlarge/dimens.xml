@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_dialog_fixed_width_major">50%</dimen>
+    <dimen name="abc_dialog_fixed_width_minor">70%</dimen>
+    <dimen name="abc_dialog_min_width_major">45%</dimen>
+    <dimen name="abc_dialog_min_width_minor">72%</dimen>
+    <dimen name="choose_icon_stroke">6dp</dimen>
+    <dimen name="choose_text_size">36dp</dimen>
+    <dimen name="desktop_mirror_mode_horizontal_padding">36dp</dimen>
+    <dimen name="desktop_mirror_mode_vertical_padding">18dp</dimen>
+    <dimen name="menu_icons_margin">54dp</dimen>
+    <dimen name="menu_icons_size">48dp</dimen>
+    <dimen name="mirror_stroke_width">3dp</dimen>
+    <dimen name="mode_icon_size">162dp</dimen>
+    <dimen name="mode_padding">15dp</dimen>
+    <dimen name="mode_radius">60dp</dimen>
+    <dimen name="mode_text_size">25dp</dimen>
+    <dimen name="mode_tile_size">264dp</dimen>
+</resources>

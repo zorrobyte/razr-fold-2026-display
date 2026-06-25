@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>A Ready For segítségével csatlakozhat egy tévéhez, monitorhoz vagy számítógéphez telefonja távoli elérése érdekében vagy egyéb célból.</item>
+        <item>A lehetőségeknél egy másféle élményre válthat, ha a telefonján megérinti a lebegő buborékot.</item>
+        <item>Csatlakoztasson egy billentyűzetet vagy egeret a legjobb élmény érdekében. Ha nincs egere, a telefon képernyője lesz az érintőpad.</item>
+        <item>Előfordulhat, hogy egyes alkalmazások nem működnek jól asztal módban, illetve nem teszik lehetővé a tartalmak másodlagos kijelzőn történő lejátszását. Emellett szükség lehet a monitor vagy TV beállításához is a legjobb látvány érdekében.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Üdvözli a Ready For!</item>
+        <item>Váltás a megjelenítési módok között </item>
+        <item>Tartozékok</item>
+        <item>Ne feledje!</item>
+    </array>
+</resources>

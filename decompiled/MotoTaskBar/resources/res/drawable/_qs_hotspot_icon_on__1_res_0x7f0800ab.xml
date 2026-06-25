@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:ordering="together">
+    <objectAnimator
+        android:interpolator="@drawable/__qs_hotspot_icon_on__1__0_res_0x7f08002a"
+        android:duration="167"
+        android:startOffset="0"
+        android:valueFrom="0.3"
+        android:valueTo="0.3"
+        android:valueType="floatType"
+        android:propertyName="fillAlpha"/>
+    <objectAnimator
+        android:interpolator="@drawable/__qs_hotspot_icon_on__1__1_res_0x7f08002b"
+        android:duration="250"
+        android:startOffset="167"
+        android:valueFrom="0.3"
+        android:valueTo="1"
+        android:valueType="floatType"
+        android:propertyName="fillAlpha"/>
+</set>

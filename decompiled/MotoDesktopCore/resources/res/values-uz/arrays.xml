@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For oʻyin oʻynash, koʻngil ochish, telefonni masofadan boshqarish va boshqa maqsadlar uchun televizor, monitor yoki kompyuterga ulash imkonini beradi.</item>
+        <item>Telefoningizdagi suzuvchi pufakchani bosish orqali boshqa funksiyaga oʻtishingiz mumkin.</item>
+        <item>Eng yaxshi taassurot uchun klaviatura va sichqonchani ulang. Agar sichqonchangiz boʻlmasa, telefon ekrani trekpadga aylanadi.</item>
+        <item>Ayrim ilovalar ish stoli rejimida yaxshi ishlamasligi mumkin, ayrimlari esa kontentni ikkinchi darajali displeyda ijro etishga ruxsat bermasligi mumkin. Bundan tashqari, eng yaxshi tomosha taassuroti uchun monitor yoki televizorni sozlash kerak boʻlishi mumkin.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Ready For ilovasiga xush kelibsiz</item>
+        <item>Displey rejimlarini almashtirish</item>
+        <item>Aksessuarlar</item>
+        <item>Yodda tuting</item>
+    </array>
+</resources>

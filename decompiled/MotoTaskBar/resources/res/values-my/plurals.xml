@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">အကြောင်းကြားချက်အသစ် %d ခု</item>
+        <item quantity="other">အကြောင်းကြားချက်အသစ် %d ခု</item>
+    </plurals>
+    <plurals name="notification_group_overflow_description">
+        <item quantity="other">%s အတွင်းပိုင်း ပိုမိုသတိပေးချက်များ</item>
+    </plurals>
+    <plurals name="quick_settings_hotspot_secondary_label_num_devices">
+        <item quantity="other">%d ကိရိယာများ</item>
+    </plurals>
+    <plurals name="taskbar_notification_num_devices">
+        <item quantity="other">%d အသိပေးချက်အသစ်</item>
+    </plurals>
+</resources>

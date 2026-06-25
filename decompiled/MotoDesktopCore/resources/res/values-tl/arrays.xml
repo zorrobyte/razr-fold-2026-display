@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Binibigyang-daan ka ng Ready For na kumonekta sa isang TV, monitor, o PC para sa paglalaro, entertainment, remote na pagkontrol sa telepono, at higit pa.</item>
+        <item>Puwede kang lumipat sa ibang karanasan sa pamamagitan ng pag-tap sa lumulutang na bubble sa iyong telepono.</item>
+        <item>Magkonekta ng keyboard at mouse para sa pinakamagandang karanasan. Kung wala kang mouse, magiging trackpad ang screen ng telepono mo.</item>
+        <item>Posibleng hindi gumana nang mahusay ang ilang app sa desktop mode, at may ilan kung saan hindi ka makakapag-play ng content sa pangalawang display. Baka kailangan mo ring isaayos ang iyong monitor o TV para sa pinakamagandang karanasan sa panonood.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Welcome sa Ready For</item>
+        <item>Lumilipat ng display mode</item>
+        <item>Mga Accessory</item>
+        <item>Tandaan</item>
+    </array>
+</resources>

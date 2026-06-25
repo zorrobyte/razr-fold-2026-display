@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">(F)[Fåšţ ƒöŕŵåŕð %d šéçöñð one two three]</item>
+        <item quantity="other">(F)[Fåšţ ƒöŕŵåŕð %d šéçöñðš one two three]</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">(F)[Ŕéŵîñð %d šéçöñð one two three]</item>
+        <item quantity="other">(F)[Ŕéŵîñð %d šéçöñðš one two three]</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">(F)[%d ñéŵ ñöţîƒîçåţîöñ one two three]</item>
+        <item quantity="other">(F)[%d ñéŵ ñöţîƒîçåţîöñš one two three]</item>
+    </plurals>
+</resources>

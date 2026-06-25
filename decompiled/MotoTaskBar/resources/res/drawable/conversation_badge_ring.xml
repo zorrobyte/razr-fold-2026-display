@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <solid android:color="@android:color/transparent"/>
+    <stroke
+        android:width="@dimen/importance_ring_stroke_width"
+        android:color="@color/conversation_important_highlight"/>
+    <size
+        android:height="@dimen/importance_ring_size"
+        android:width="@dimen/importance_ring_size"/>
+</shape>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d notificare nouă</item>
+        <item quantity="few">%d notificări noi</item>
+        <item quantity="other">%d de notificări noi</item>
+    </plurals>
+    <plurals name="notification_group_overflow_description">
+        <item quantity="one">Încă %s notificare în grup.</item>
+        <item quantity="few">Alte %s notificări în interior.</item>
+        <item quantity="other">Alte %s notificări în interior.</item>
+    </plurals>
+    <plurals name="quick_settings_hotspot_secondary_label_num_devices">
+        <item quantity="one">%d dispozitiv</item>
+        <item quantity="few">%d dispozitive</item>
+        <item quantity="other">%d dispozitive</item>
+    </plurals>
+    <plurals name="taskbar_notification_num_devices">
+        <item quantity="one">%d notificare nouă</item>
+        <item quantity="few">%d notificări noi</item>
+        <item quantity="other">%d notificări noi</item>
+    </plurals>
+</resources>

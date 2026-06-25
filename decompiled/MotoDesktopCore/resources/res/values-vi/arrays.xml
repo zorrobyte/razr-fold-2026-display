@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For cho phép bạn kết nối điện thoại với TV, màn hình hoặc máy tính để chơi trò chơi, giải trí, điều khiển điện thoại từ xa, v.v.</item>
+        <item>Bạn có thể chuyển sang trải nghiệm khác bằng cách chạm vào bong bóng nổi trên điện thoại.</item>
+        <item>Kết nối chuột và bàn phím cho trải nghiệm tốt nhất. Nếu bạn không có con chuột, màn hình điện thoại sẽ biến thành bàn di chuột cảm ứng.</item>
+        <item>Một số ứng dụng có thể không hoạt động trong chế độ máy tính, và một số ứng dụng có thể không cho bạn phát nội dung trên màn hình thứ hai. Ngoài ra, bạn có thể cần điều chỉnh màn hình hoặc TV để có trải nghiệm xem tốt nhất.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Chào mừng bạn đến Ready For</item>
+        <item>Chuyển chế độ màn hình</item>
+        <item>Phụ kiện</item>
+        <item>Nhớ rằng</item>
+    </array>
+</resources>

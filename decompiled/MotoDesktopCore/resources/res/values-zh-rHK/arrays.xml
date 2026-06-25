@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For 可讓您連接至電視、顯示器或電腦，進行遊戲、娛樂、遠端控制手機等多種功能。</item>
+        <item>您可以透過輕按手機上的漂浮泡泡，切換至不同的使用經驗。</item>
+        <item>連接鍵盤和滑鼠可享有最佳體驗。若沒有滑鼠，手機螢幕會顯示觸控板。</item>
+        <item>部分應用程式在桌面模式中可能效果不佳，部分應用程式可能無法讓您在次要顯示器上播放內容。您可能也需要調整顯示器或電視設定，以享有最佳檢視體驗。</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>歡迎使用 Ready For</item>
+        <item>切換顯示模式</item>
+        <item>配件</item>
+        <item>請記住</item>
+    </array>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d התראות חדשות</item>
+        <item quantity="two">%d התראות חדשות</item>
+        <item quantity="other">%d התראות חדשות</item>
+    </plurals>
+    <plurals name="notification_group_overflow_description">
+        <item quantity="one">יש בפנים עוד הודעה %s.</item>
+        <item quantity="two">יש בפנים עוד %s הודעות.</item>
+        <item quantity="many">יש בפנים עוד %s הודעות.</item>
+        <item quantity="other">יש בפנים עוד %s הודעות.</item>
+    </plurals>
+    <plurals name="quick_settings_hotspot_secondary_label_num_devices">
+        <item quantity="one">מכשיר אחד</item>
+        <item quantity="two">%d מכשירים</item>
+        <item quantity="many">%d מכשירים</item>
+        <item quantity="other">%d מכשירים</item>
+    </plurals>
+    <plurals name="taskbar_notification_num_devices">
+        <item quantity="one">הודעה חדשה %d</item>
+        <item quantity="two">%d הודעות חדשות</item>
+        <item quantity="many">%d הודעות חדשות</item>
+        <item quantity="other">%d הודעות חדשות</item>
+    </plurals>
+</resources>

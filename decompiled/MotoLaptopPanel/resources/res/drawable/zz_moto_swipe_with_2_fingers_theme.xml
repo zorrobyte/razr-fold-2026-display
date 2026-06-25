@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="100dp"
+    android:width="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <group>
+        <clip-path android:pathData="M19,16h56v82h-56z"/>
+        <group>
+            <clip-path android:pathData="M25,136.38l0,-110.77l32,-0l0,110.77z"/>
+            <path
+                android:fillColor="@drawable/_zz_moto_swipe_with_2_fingers_theme__0_res_0x7f08004f"
+                android:pathData="M31,136L31,42C31,36.48 35.48,32 41,32C46.52,32 51,36.48 51,42L51,136H31Z"/>
+            <path
+                android:fillColor="#a6c8ff"
+                android:pathData="M57,41.62C57,32.78 49.84,25.62 41,25.62C32.16,25.62 25,32.78 25,41.62C25,50.45 32.16,57.62 41,57.62C49.84,57.62 57,50.45 57,41.62Z"
+                android:strokeAlpha="0.2"
+                android:fillAlpha="0.2"/>
+            <path
+                android:fillColor="#a6c8ff"
+                android:pathData="M51,42C51,36.48 46.52,32 41,32C35.48,32 31,36.48 31,42C31,47.52 35.48,52 41,52C46.52,52 51,47.52 51,42Z"
+                android:strokeAlpha="0.8"
+                android:fillAlpha="0.8"/>
+        </group>
+    </group>
+</vector>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready Forを使用すると、テレビ、モニタ、PCに接続でき、ゲームプレイ、エンターテインメント体験、電話のリモートコントロールなどが可能になります。</item>
+        <item>電話のフローティングバブルをタップして、別のエクスペリエンスに切り替えることができます。</item>
+        <item>最適なエクスペリエンスのために、キーボードとマウスを接続します。マウスがなければ、電話の画面がトラックパッドになります。</item>
+        <item>一部のアプリがデスクトップモードで正常に動作しない/セカンダリディスプレイでコンテンツ再生できない場合があります。モニタやテレビを調整しないと画質が良くない場合もあります。</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Ready Forへようこそ</item>
+        <item>表示モードの切り替え</item>
+        <item>アクセサリ</item>
+        <item>注意事項</item>
+    </array>
+</resources>

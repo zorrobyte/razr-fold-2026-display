@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>O Ready For permite-lhe estabelecer ligação a um televisor, monitor ou PC, para que possa jogar, divertir-se, controlar o telemóvel remotamente e fazer muitas outras coisas.</item>
+        <item>Pode mudar para uma experiência diferente ao tocar no balão flutuante no telemóvel.</item>
+        <item>Ligue um teclado e um rato para desfrutar da melhor experiência possível. Se não tiver um rato, o ecrã do telemóvel torna-se num trackpad.</item>
+        <item>Algumas apps podem não funcionar corretamente no modo de ambiente de trabalho e algumas podem não permitir a reprodução de conteúdos num ecrã secundário. Pode também ter de ajustar o monitor ou o televisor para desfrutar da melhor experiência de visualização possível.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Damos-lhe as boas-vindas ao Ready For</item>
+        <item>Mudar modo de ecrã</item>
+        <item>Acessórios</item>
+        <item>Lembre-se do seguinte</item>
+    </array>
+</resources>

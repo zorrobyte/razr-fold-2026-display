@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="animator_duration_scale_entries">
+        <item>アニメーションOFF</item>
+        <item>アニメーションスケール.5x</item>
+        <item>アニメーションスケール1x</item>
+        <item>アニメーションスケール1.5x</item>
+        <item>アニメーションスケール2x</item>
+        <item>アニメーションスケール5x</item>
+        <item>アニメーションスケール10x</item>
+    </array>
+    <array name="app_process_limit_entries">
+        <item>標準の上限</item>
+        <item>バックグラウンドプロセスを使用しない</item>
+        <item>プロセスの上限: 1</item>
+        <item>プロセスの上限: 2</item>
+        <item>プロセスの上限: 3</item>
+        <item>プロセスの上限: 4</item>
+    </array>
+    <array name="battery_labels">
+        <item>0%</item>
+        <item>50%</item>
+        <item>100%</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>システムの選択（デフォルト）を使用</item>
+        <item>16 ビット / サンプル</item>
+        <item>24 ビット / サンプル</item>
+        <item>32 ビット / サンプル</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>システムの選択（デフォルト）を使用</item>
+        <item>16 ビット / サンプル</item>
+        <item>24 ビット / サンプル</item>
+        <item>32 ビット / サンプル</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>システムの選択（デフォルト）を使用</item>
+        <item>モノラル</item>
+        <item>ステレオ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>システムの選択（デフォルト）を使用</item>
+        <item>モノラル</item>
+        <item>ステレオ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>音質重視で最適化</item>
+        <item>音質と接続の品質のバランスを確保</item>
+        <item>接続の品質重視で最適化</item>
+        <item>ベスト エフォート（アダプティブ ビットレート）</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>音質重視で最適化（990 kbps / 909 kbps）</item>
+        <item>音質と接続の品質のバランスを確保（660 kbps / 606 kbps）</item>
+        <item>接続の品質重視で最適化（330 kbps / 303 kbps）</item>
+        <item>ベスト エフォート（アダプティブ ビットレート）</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>システムの選択（デフォルト）を使用</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+        <item>176.4kHz</item>
+        <item>192.0kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>システムの選択（デフォルト）を使用</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+        <item>176.4kHz</item>
+        <item>192.0kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>システムの選択（デフォルト）を使用</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ オーディオ</item>
+        <item>Qualcomm® aptX™ HD オーディオ</item>
+        <item>LDAC</item>
+        <item>LC3</item>
+        <item>Opus</item>
+        <item>Qualcomm® aptX™ Adaptiveオーディオ</item>
+        <item>Qualcomm® aptX™ TWS+オーディオ</item>
+        <item>LHDC V2</item>
+        <item>LHDC V3/V4</item>
+        <item>LHDC V5</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>システムの選択（デフォルト）を使用</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ オーディオ</item>
+        <item>Qualcomm® aptX™ HD オーディオ</item>
+        <item>LDAC</item>
+        <item>LC3</item>
+        <item>Opus</item>
+        <item>Qualcomm® aptX™ Adaptiveオーディオ</item>
+        <item>Qualcomm® aptX™ TWS+オーディオ</item>
+        <item>LHDC V2</item>
+        <item>LHDC V3/V4</item>
+        <item>LHDC V5</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>、有効</item>
+        <item>、有効（メディア）</item>
+        <item>、有効（スマートフォン）</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp15</item>
+        <item>avrcp13</item>
+        <item>avrcp14</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.5 (デフォルト)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.4</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2（デフォルト）</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>無効</item>
+        <item>有効(フィルタリング)</item>
+        <item>有効</item>
+    </array>
+    <array name="bt_hci_snoop_log_filters_entries">
+        <item>ACL ヘッダーのみを残す</item>
+        <item>A2DP メディア パケットをフィルタ</item>
+        <item>RFCOMM チャネルをフィルタ</item>
+    </array>
+    <array name="bt_hci_snoop_log_profile_filter_entries">
+        <item>無効にする</item>
+        <item>文字列を入力</item>
+        <item>ヘッダーのみを残す</item>
+        <item>完全に削除</item>
+    </array>
+    <array name="cached_apps_freezer_values">
+        <item>device_default</item>
+        <item>有効</item>
+        <item>無効</item>
+    </array>
+    <array name="color_mode_descriptions">
+        <item>拡張色</item>
+        <item>目に自然な色</item>
+        <item>デジタルコンテンツに最適な色</item>
+    </array>
+    <array name="color_mode_names">
+        <item>鮮やか（既定）</item>
+        <item>自然</item>
+        <item>標準</item>
+    </array>
+    <array name="debug_hw_overdraw_entries">
+        <item>OFF</item>
+        <item>オーバードロー領域の表示</item>
+        <item>第二色弱の方向けの領域の表示</item>
+    </array>
+    <array name="enable_opengl_traces_entries">
+        <item>なし</item>
+        <item>Logcat</item>
+        <item>Systrace（画像）</item>
+        <item>glGetErrorでのスタック呼び出し</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>標準</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </array>
+    <array name="hdcp_checking_summaries">
+        <item>HDCPチェックを使用しない</item>
+        <item>DRMコンテンツにのみHDCPチェックを使用する</item>
+        <item>HDCPチェックを常に使用する</item>
+    </array>
+    <array name="hdcp_checking_titles">
+        <item>チェックしない</item>
+        <item>DRMコンテンツのみをチェック</item>
+        <item>常にチェック</item>
+    </array>
+    <array name="overlay_display_devices_entries">
+        <item>なし</item>
+        <item>480p</item>
+        <item>480p（セキュア）</item>
+        <item>720p</item>
+        <item>720p（セキュア）</item>
+        <item>1080p</item>
+        <item>1080p（セキュア）</item>
+        <item>4K</item>
+        <item>4K（セキュア）</item>
+        <item>4K（アップスケール）</item>
+        <item>4K（アップスケール、セキュア）</item>
+        <item>720p、1080p（デュアルスクリーン）</item>
+    </array>
+    <array name="select_logd_size_lowram_titles">
+        <item>OFF</item>
+        <item>64K</item>
+        <item>256K</item>
+        <item>1M</item>
+    </array>
+    <array name="select_logd_size_summaries">
+        <item>OFF</item>
+        <item>64K/ログバッファ</item>
+        <item>256K/ログバッファ</item>
+        <item>1M/ログバッファ</item>
+        <item>4M/ログバッファ</item>
+        <item>8 M / ログバッファ</item>
+    </array>
+    <array name="select_logd_size_titles">
+        <item>OFF</item>
+        <item>64K</item>
+        <item>256K</item>
+        <item>1M</item>
+        <item>4M</item>
+        <item>8 M</item>
+    </array>
+    <array name="select_logpersist_summaries">
+        <item>OFF</item>
+        <item>すべてのログバッファ</item>
+        <item>無線通信ログバッファ以外</item>
+        <item>カーネルログバッファのみ</item>
+    </array>
+    <array name="select_logpersist_titles">
+        <item>OFF</item>
+        <item>すべて</item>
+        <item>無線通信以外</item>
+        <item>カーネル専用</item>
+    </array>
+    <array name="shade_display_awareness_entries">
+        <item>デバイスのディスプレイのみ（デフォルト）</item>
+        <item>アウトディスプレイ</item>
+        <item>ステータスバーの最新のタップ</item>
+        <item>フォーカスに基づく</item>
+    </array>
+    <array name="shade_display_awareness_summaries">
+        <item>デバイスのディスプレイにのみシェードを表示する</item>
+        <item>1 台のアウトディスプレイにシェードを表示する</item>
+        <item>最後にステータスバーが操作されたディスプレイにシェードを表示する</item>
+        <item>最後にフォーカスされたディスプレイにシェードを表示する</item>
+    </array>
+    <array name="shade_display_awareness_values">
+        <item>default_display</item>
+        <item>any_external_display</item>
+        <item>status_bar_latest_touch</item>
+        <item>focused_display</item>
+    </array>
+    <array name="show_non_rect_clip_entries">
+        <item>OFF</item>
+        <item>非矩形クリップ領域を青で描画</item>
+        <item>テスト済み描画コマンドを緑でハイライト表示</item>
+    </array>
+    <array name="track_frame_time_entries">
+        <item>OFF</item>
+        <item>バーとして画面に表示</item>
+        <item>adb shell dumpsys gfxinfo 内</item>
+    </array>
+    <array name="transition_animation_scale_entries">
+        <item>アニメーションOFF</item>
+        <item>アニメーションスケール.5x</item>
+        <item>アニメーションスケール1x</item>
+        <item>アニメーションスケール1.5x</item>
+        <item>アニメーションスケール2x</item>
+        <item>アニメーションスケール5x</item>
+        <item>アニメーションスケール10x</item>
+    </array>
+    <array name="tts_rate_entries">
+        <item>60%</item>
+        <item>80%</item>
+        <item>100%</item>
+        <item>150%</item>
+        <item>200%</item>
+        <item>250%</item>
+        <item>300%</item>
+        <item>350%</item>
+        <item>400%</item>
+    </array>
+    <array name="usb_configuration_titles">
+        <item>充電</item>
+        <item>MTP (メディア転送プロトコル)</item>
+        <item>PTP (画像転送プロトコル)</item>
+        <item>RNDIS (USBイーサネット)</item>
+        <item>音声ソース</item>
+        <item>MIDI</item>
+    </array>
+    <array name="wifi_status">
+        <item />
+        <item>スキャン中...</item>
+        <item>接続処理中...</item>
+        <item>認証中...</item>
+        <item>IPアドレスを取得中...</item>
+        <item>接続済み</item>
+        <item>保留中</item>
+        <item>切断中...</item>
+        <item>切断されました</item>
+        <item>失敗しました</item>
+        <item>ブロック中</item>
+        <item>接続不良により一時的に無効</item>
+    </array>
+    <array name="wifi_status_with_ssid">
+        <item />
+        <item>スキャン中...</item>
+        <item>%1$sに接続中...</item>
+        <item>%1$sによる認証中...</item>
+        <item>IPアドレスを%1$sから取得中...</item>
+        <item>%1$sに接続しました</item>
+        <item>保留中</item>
+        <item>%1$sから切断中...</item>
+        <item>切断されました</item>
+        <item>失敗しました</item>
+        <item>ブロック中</item>
+        <item>接続不良により一時的に無効</item>
+    </array>
+    <array name="wifitrackerlib_wifi_status">
+        <item />
+        <item>スキャン中…</item>
+        <item>接続中…</item>
+        <item>認証中…</item>
+        <item>IP アドレスを取得中…</item>
+        <item>接続済み</item>
+        <item>停止中</item>
+        <item>切断中…</item>
+        <item>未接続</item>
+        <item>エラー</item>
+        <item>ブロック済み</item>
+        <item>接続不良により一時的に無効</item>
+    </array>
+    <array name="window_animation_scale_entries">
+        <item>アニメーションOFF</item>
+        <item>アニメーションスケール.5x</item>
+        <item>アニメーションスケール1x</item>
+        <item>アニメーションスケール1.5x</item>
+        <item>アニメーションスケール2x</item>
+        <item>アニメーションスケール5x</item>
+        <item>アニメーションスケール10x</item>
+    </array>
+</resources>

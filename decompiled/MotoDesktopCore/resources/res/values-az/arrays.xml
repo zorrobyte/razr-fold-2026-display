@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For oyun, əyləncə, telefondan uzaqdan idarəetmə və daha çox şey üçün bir TV, monitor və ya PC-yə qoşulma imkanı verir.</item>
+        <item>Telefonunuzdakı üzən balonu vuraraq fərqli bir təcrübəyə keçə bilərsiniz.</item>
+        <item>Ən yaxşı təcrübə üçün klaviatura və siçan bağlayın. Bir siçanınız yoxdursa, telefonunuzun ekranı bir trackpad-a çevriləcəkdir.</item>
+        <item>Bəzi tətbiqlər masa üstü rejimində yaxşı işləməyə bilər, bəziləri isə ikinci dərəcəli ekranda məzmun oynatmağınıza icazə verə bilməz. Ayrıca, ən yaxşı izləmə təcrübəsi üçün monitorunuzu və ya televizorunuzu tənzimləməlisiniz.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Ready For xoş gəlmisiniz</item>
+        <item>Ekran rejimlərinin dəyişdirilməsi</item>
+        <item>Aksessuarlar</item>
+        <item>Yadında saxla</item>
+    </array>
+</resources>

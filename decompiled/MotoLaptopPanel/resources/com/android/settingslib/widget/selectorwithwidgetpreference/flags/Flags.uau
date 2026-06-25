@@ -1,0 +1,2 @@
+signature,file,startline,startcol,endline,endcol,properties
+Lcom/android/settingslib/widget/selectorwithwidgetpreference/flags/Flags;->allowSetTitleMaxLines()Z,out/soong/.intermediates/frameworks/base/packages/SettingsLib/SelectorWithWidgetPreference/settingslib_selectorwithwidgetpreference_flags_lib/android_common/javac/srcjars/com/android/settingslib/widget/selectorwithwidgetpreference/flags/Flags.java,11,5,11,25,

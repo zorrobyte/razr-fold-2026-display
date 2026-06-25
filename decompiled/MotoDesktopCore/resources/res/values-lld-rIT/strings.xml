@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Injin de Smart Connect</string>
+    <string name="call_device_name_phone">Rondenel y microfon dl telefon</string>
+    <string name="call_output_route_fragment_sub_title">Barata l\'aparat de imisciun-emisciun</string>
+    <string name="call_output_route_fragment_title">Volum dles telefonades y microfon</string>
+    <string name="dialog_allow">Autorisëia</string>
+    <string name="dialog_cancel">Anulëia</string>
+    <string name="get_start">Mët man</string>
+    <string name="got_it">OK</string>
+    <string name="hdmi_description">Coliëia to telefon cun n vidrel tres n cabl HDMI</string>
+    <string name="hdmi_media_device_name">HDMI</string>
+    <string name="hdmi_title">Partësc to telefon cun n vidrel colié</string>
+    <string name="main_core_bluetooth_connect_permission_grant">L\'autorisaziun por le Bluetooth ne vel nia por %1$s. Por che Smart Connect pois verifiché l\'aparat bluetooth colié cun chësc telefon, mësseste l\'ativé.</string>
+    <string name="main_core_location_permission_grant">L\'autorisaziun por la geolocalisaziun ne vel nia por %1$s. Por che Smart Connect pois se colié cun aparac dlungia, mësseste l\'ativé.</string>
+    <string name="media_output_route_fragment_done">Fat</string>
+    <string name="media_output_route_fragment_sub_title">Müda l\'emisciun</string>
+    <string name="media_output_route_fragment_title">Emisciun de contignüs multimediai</string>
+    <string name="media_output_route_pair_new_device">Injunj n aparat nü</string>
+    <string name="menu_about">Informaziuns</string>
+    <string name="menu_audio_routing">Barata media</string>
+    <string name="menu_help">Aiüt</string>
+    <string name="phone_media_device_name">Rondenel dl telefon</string>
+    <string name="record_audio_permission_required_message">Por lascé jí l\'audio sön to aparat, adora Smart Connect l\'autorisaziun da tó sö l\'audio</string>
+    <string name="record_audio_permission_required_title">Autorisaziun ghirada</string>
+    <string name="rf_audio_type_bluetooth">(BT)</string>
+    <string name="rf_audio_type_usb">(USB)</string>
+    <string name="rf_audio_type_wifi">(Wi-Fi)</string>
+    <string name="rpd_media_device_name">Aparat colié</string>
+    <string name="see_how_it_works">Ciara coche ara funzionëia</string>
+    <string name="settings_summary">Coliëia to telefon cun n vidrel o aparat </string>
+    <string name="settings_title">Smart Connect</string>
+    <string name="switch_to_phone_mic">Té le microfon dl telefon</string>
+    <string name="tile_hdmi_title">Desktop cun cabl</string>
+    <string name="tile_label_lite">Conesciun de Smart Connect</string>
+    <string name="wifi_quality_taskbar_content_poor_miracast">Conesciun zënza cabl nia stabila. Descoliëia y coliëia danü to telefon cun la rëi dl vidrel.</string>
+    <string name="wired_usb_media_device_name">Oredlins cun cabl</string>
+    <string name="wireless_display_media_device_name">Vidrel zënza cabl</string>
+</resources>

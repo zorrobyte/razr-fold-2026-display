@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="audio_bluetooth_volume">
+        <item>@drawable/ic_bluetooth_volume_on</item>
+        <item>@drawable/ic_bluetooth_volume_off</item>
+    </array>
+    <array name="audio_earpiece_volume">
+        <item>@drawable/ic_earpiece_volume_on</item>
+        <item>@drawable/ic_earpiece_volume_off</item>
+    </array>
+    <array name="audio_headset_volume">
+        <item>@drawable/ic_headset_volume_on</item>
+        <item>@drawable/ic_headset_volume_off</item>
+    </array>
+    <array name="audio_local_volume">
+        <item>@drawable/ic_volume_on</item>
+        <item>@drawable/ic_volume_off</item>
+    </array>
+    <array name="audio_phone_speaker_volume">
+        <item>@drawable/ic_phone_speaker_volume_on</item>
+        <item>@drawable/ic_phone_speaker_volume_off</item>
+    </array>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For lets you connect to a TV, monitor, or PC for gaming, entertainment, remote phone control, and more.</item>
+        <item>You can switch to a different experience by tapping on the floating bubble on your phone.</item>
+        <item>Connect a keyboard and mouse for the best experience. If you don\'t have a mouse, your phone screen will turn into a trackpad.</item>
+        <item>Some apps may not work well in desktop mode, and some may not let you play content on a secondary display. Also, you may need to adjust your monitor or TV for the best viewing experience.</item>
+    </array>
+    <array name="helper_content_icon_id_hdmi">
+        <item>@drawable/ic_tutorial_hdmi_welcome</item>
+        <item>@drawable/ic_tutorial_hdmi_switch_mode</item>
+        <item>@drawable/ic_tutorial_hdmi_accessory</item>
+        <item>@drawable/ic_tutorial_hdmi_keep_in_mind</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Welcome to Ready For</item>
+        <item>Switching display modes</item>
+        <item>Accessories</item>
+        <item>Keep in mind</item>
+    </array>
+    <array name="know_sign_key">
+        <item>be8804a55e9045a580d204979f6efb15c058731aa1021b78c046feab8ae76a26</item>
+        <item>ab92681535f44b602a9e7a383a55b1d678225b19dc1039eb3dc4b9b87711d5a6</item>
+        <item>9d6eae941e0746dbba295d3b5551718dc6b5adbb553b3268acfc2df6191ac3b6</item>
+        <item>c463fa2a0351086dd6328d9daf6218146ee1651521c1cb6b4c538f85eeec7a3c</item>
+    </array>
+</resources>

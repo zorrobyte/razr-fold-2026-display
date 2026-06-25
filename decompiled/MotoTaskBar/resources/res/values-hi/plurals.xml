@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d नई सूचनाएं</item>
+        <item quantity="other">%d नई सूचनाएं</item>
+    </plurals>
+    <plurals name="notification_group_overflow_description">
+        <item quantity="one">इसमें %s और सूचनाएं हैं.</item>
+        <item quantity="other">अंदर %s और सूचनाएं हैं.</item>
+    </plurals>
+    <plurals name="quick_settings_hotspot_secondary_label_num_devices">
+        <item quantity="one">%d डिवाइस</item>
+        <item quantity="other">%d उपकरण</item>
+    </plurals>
+    <plurals name="taskbar_notification_num_devices">
+        <item quantity="one">%d नई सूचना</item>
+        <item quantity="other">%d नई सूचनाएं</item>
+    </plurals>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d اعلان جدید</item>
+        <item quantity="other">%d اعلان جدید</item>
+    </plurals>
+    <plurals name="notification_group_overflow_description">
+        <item quantity="one">%s اعلان دیگر در گروه.</item>
+        <item quantity="other">%s اعلان بیشتر در داخل.</item>
+    </plurals>
+    <plurals name="quick_settings_hotspot_secondary_label_num_devices">
+        <item quantity="one">‏%d دستگاه</item>
+        <item quantity="other">%d دستگاه</item>
+    </plurals>
+    <plurals name="taskbar_notification_num_devices">
+        <item quantity="one">%d اعلان جدید</item>
+        <item quantity="other">%d اعلان جدید</item>
+    </plurals>
+</resources>

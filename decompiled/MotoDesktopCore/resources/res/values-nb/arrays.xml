@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Med Ready For kan du koble til en TV, skjerm eller PC slik at du kan spille, bli underholdt, fjernstyre telefonen med mer.</item>
+        <item>Du kan bytte til en annen versjon ved å trykke på den svevende boblen på telefonen din.</item>
+        <item>Koble til tastatur og mus for en best mulig opplevelse. Hvis du ikke har mus, gjøres telefonskjermen din om til en trackpad.</item>
+        <item>Noen apper er ikke kompatible med desktopmodus, og noen kan hindre deg i å spille av innhold på en sekundær skjerm. Det kan også hende at du må justere skjermen eller TV-en for å få den beste seeropplevelsen.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Velkommen til Ready For</item>
+        <item>Bytte skjermmodus</item>
+        <item>Tilbehør</item>
+        <item>Merk deg følgende</item>
+    </array>
+</resources>

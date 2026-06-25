@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>„Ready For“ suteikia galimybę prisijungti prie televizoriaus, monitoriaus ar kompiuterio ir žaisti žaidimus, mėgautis pramogomis, valdyti nuotoliniu būdu iš telefono ir pan.</item>
+        <item>Kitą režimą galite įjungti bakstelėję slankųjį burbulą telefone.</item>
+        <item>Prijunkite klaviatūrą ir pelę, kad būtų patogiau naudotis. Jei pelės nenaudojate, telefono ekranas taps jutikliniu kilimėliu.</item>
+        <item>Kai kurios programos gali neveikti darbalaukio režimu, o kai kurios gali neleisti atkurti turinio antriniame ekrane. Be to, gali tekti sureguliuoti monitorių arba televizorių, kad vaizdas būtų geriausias.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Sveikiname pradėjus naudotis „Ready For“</item>
+        <item>Ekrano režimų perjungimas</item>
+        <item>Priedai</item>
+        <item>Atminkite</item>
+    </array>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.motorola.taskbar.bar.DateView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:textSize="@dimen/more_panel_item_text_size"
+    android:gravity="center"
+    android:id="@+id/date"
+    android:paddingHorizontal="0dp"
+    app:needHover="false"
+    style="@style/TaskBarRightItemView"/>

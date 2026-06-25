@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@color/tutorial_close_icon_bg"
+        android:pathData="M19.071,19.071c-0.39,0.39 -1.024,0.391 -1.414,0L12,13.414l-5.657,5.657c-0.39,0.39 -1.024,0.391 -1.414,0c-0.391,-0.391 -0.39,-1.024 0,-1.414L10.586,12L4.929,6.343c-0.391,-0.391 -0.39,-1.024 0,-1.414c0.391,-0.391 1.024,-0.391 1.414,0L12,10.586l5.657,-5.657c0.391,-0.391 1.024,-0.391 1.414,0c0.391,0.391 0.391,1.024 0,1.414L13.414,12l5.657,5.657C19.462,18.047 19.462,18.681 19.071,19.071z"/>
+</vector>

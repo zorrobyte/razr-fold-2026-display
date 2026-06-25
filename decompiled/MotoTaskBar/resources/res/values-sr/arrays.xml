@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>Користи избор система (подразумевано)</item>
+        <item>16 битова по узорку</item>
+        <item>24 бита по узорку</item>
+        <item>32 бита по узорку</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>Користи избор система (подразумевано)</item>
+        <item>16 битова по узорку</item>
+        <item>24 бита по узорку</item>
+        <item>32 бита по узорку</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>Користи избор система (подразумевано)</item>
+        <item>Моно</item>
+        <item>Стерео</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>Користи избор система (подразумевано)</item>
+        <item>Моно</item>
+        <item>Стерео</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>Оптимизовано за квалитет звука</item>
+        <item>Уједначен квалитет звука и везе</item>
+        <item>Оптимизовано за квалитет везе</item>
+        <item>Најбоље могуће (прилагодљива брзина преноса)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>Оптимизовано за квалитет звука (990 kb/s/909 kb/s)</item>
+        <item>Уједначен квалитет звука и везе (660 kb/s/606 kb/s)</item>
+        <item>Оптимизовано за квалитет везе (330 kb/s/303 kb/s)</item>
+        <item>Најбоље могуће (прилагодљива брзина преноса)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>Користи избор система (подразумевано)</item>
+        <item>44,1 kHz</item>
+        <item>48,0 kHz</item>
+        <item>88,2 kHz</item>
+        <item>96,0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>Користи избор система (подразумевано)</item>
+        <item>44,1 kHz</item>
+        <item>48,0 kHz</item>
+        <item>88,2 kHz</item>
+        <item>96,0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>Користи избор система (подразумевано)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ аудио</item>
+        <item>Qualcomm® aptX™ HD аудио</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>Користи избор система (подразумевано)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ аудио</item>
+        <item>Qualcomm® aptX™ HD аудио</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>, активан</item>
+        <item>, активан (медијски)</item>
+        <item>, активан (телефон)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp14</item>
+        <item>avrcp13</item>
+        <item>avrcp15</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.4 (подразумевано)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.5</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (подразумевано)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>Онемогућено</item>
+        <item>Омогућено филтрирано</item>
+        <item>Омогућено</item>
+    </array>
+    <array name="display_size_descriptions">
+        <item>Мало</item>
+        <item>Подразумевано</item>
+        <item>Велико</item>
+        <item>Веће</item>
+    </array>
+    <array name="font_size_descriptions">
+        <item>Мало</item>
+        <item>Подразумевано</item>
+        <item>Велико</item>
+    </array>
+    <array name="open_app_option_array">
+        <item>Поново покрени апликацију</item>
+        <item>Отвори апликацију без поновног покретања</item>
+        <item>Питај ме сваки пут</item>
+    </array>
+    <array name="power_save_array">
+        <item>10 мин</item>
+        <item>15 мин</item>
+        <item>20 мин</item>
+        <item>30 мин</item>
+        <item>60 мин</item>
+        <item>Никада немој да прекидаш везу</item>
+    </array>
+    <array name="preload_wallpapers_array">
+        <item>унапред_учитана_позадина_геометрија_1</item>
+        <item>унапред_учитана_позадина_геометрија_2</item>
+        <item>унапред_учитана_позадина_геометрија_3</item>
+        <item>унапред_учитана_позадина_геометрија_4</item>
+        <item>унапред_учитана_позадина_геометрија_5</item>
+        <item>унапред_учитана_позадина_геометрија_6</item>
+        <item>унапред_учитана_позадина_геометрија_7</item>
+        <item>унапред_учитана_позадина_геометрија_8</item>
+        <item>унапред_учитана_позадина_геометрија_9</item>
+        <item>унапред_учитана_позадина_геометрија_10</item>
+        <item>унапред_учитана_позадина_природа_1</item>
+        <item>унапред_учитана_позадина_природа_2</item>
+        <item>унапред_учитана_позадина_природа_3</item>
+        <item>унапред_учитана_позадина_природа_4</item>
+        <item>унапред_учитана_позадина_природа_5</item>
+        <item>унапред_учитана_позадина_природа_6</item>
+        <item>унапред_учитана_позадина_природа_7</item>
+        <item>унапред_учитана_позадина_природа_8</item>
+        <item>унапред_учитана_позадина_природа_9</item>
+    </array>
+    <array name="tile_states_airplane">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_alarm">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_battery">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_bt">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_cameratoggle">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_cast">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_cell">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_color_correction">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_controls">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_dark">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_dnd">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_dream">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_flashlight">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_font_scaling">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_hearing_devices">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_hotspot">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_internet">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_inversion">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_location">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_mictoggle">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_night">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_onehanded">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_qr_code_scanner">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_record_issue">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_reduce_brightness">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_reverse">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_rotation">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_saver">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_screenrecord">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_wallet">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_wifi">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="tile_states_work">
+        <item>Недоступно</item>
+        <item>Искључено</item>
+        <item>Укључено</item>
+    </array>
+    <array name="timeout_array">
+        <item>1 мин</item>
+        <item>2 мин</item>
+        <item>5 мин</item>
+        <item>10 мин</item>
+        <item>20 мин</item>
+        <item>30 мин</item>
+        <item>60 мин</item>
+    </array>
+</resources>

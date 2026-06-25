@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For vám umožňuje pripojiť zariadenie k televízoru, monitoru alebo počítaču na hranie hier, pozeranie videí, ovládanie telefónu na diaľku a ešte oveľa viac.</item>
+        <item>Klepnutím na plávajúcu bublinu v telefóne môžete zmeniť režim.</item>
+        <item>Pripojením klávesnice a myši si môžete zjednodušiť ovládanie prostredia. Ak nemáte myš, obrazovka telefónu sa zmení na trackpad.</item>
+        <item>Niektoré aplikácie nemusia v režime plochy správne fungovať a niektoré nemusia umožňovať prehrávanie obsahu na sekundárnej obrazovke. Takisto bude možno potrebné nastaviť monitor alebo televízor na optimálne zobrazenie.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Vitajte v aplikácii Ready For</item>
+        <item>Prepínanie zobrazovacích režimov</item>
+        <item>Príslušenstvo</item>
+        <item>Nezabudnite</item>
+    </array>
+</resources>

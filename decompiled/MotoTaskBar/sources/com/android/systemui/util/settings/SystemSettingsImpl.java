@@ -1,0 +1,37 @@
+package com.android.systemui.util.settings;
+
+import android.content.ContentResolver;
+import android.net.Uri;
+import android.provider.Settings;
+import com.android.systemui.settings.UserTracker;
+
+/* JADX INFO: loaded from: classes.dex */
+class SystemSettingsImpl implements SystemSettings {
+    private final ContentResolver mContentResolver;
+    private final UserTracker mUserTracker;
+
+    SystemSettingsImpl(ContentResolver contentResolver, UserTracker userTracker) {
+        this.mContentResolver = contentResolver;
+        this.mUserTracker = userTracker;
+    }
+
+    @Override // com.android.systemui.util.settings.SettingsProxy
+    public ContentResolver getContentResolver() {
+        return this.mContentResolver;
+    }
+
+    @Override // com.android.systemui.util.settings.UserSettingsProxy
+    public String getStringForUser(String str, int i) {
+        return Settings.System.getStringForUser(this.mContentResolver, str, getRealUserHandle(i));
+    }
+
+    @Override // com.android.systemui.util.settings.SettingsProxy
+    public Uri getUriFor(String str) {
+        return Settings.System.getUriFor(str);
+    }
+
+    @Override // com.android.systemui.util.settings.UserSettingsProxy
+    public UserTracker getUserTracker() {
+        return this.mUserTracker;
+    }
+}

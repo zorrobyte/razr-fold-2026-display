@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For vă permite să vă conectați la un televizor, monitor sau computer pentru jocuri, divertisment, controlul telefonului de la distanță și multe altele.</item>
+        <item>Puteți comuta la o experiență diferită atingând bula plutitoare de pe telefon.</item>
+        <item>Conectați o tastatură și un mouse pentru cea mai bună experiență. Dacă nu aveți mouse, ecranul telefonului se va transforma într-un trackpad.</item>
+        <item>S-ar putea ca unele aplicații să nu funcționeze bine în modul desktop, iar altele s-ar putea să nu vă permită să redați conținut pe un afișaj secundar. În plus, s-ar putea să fie necesar să vă ajustați monitorul sau televizorul pentru cea mai bună experiență de vizualizare.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Bun venit în Ready For</item>
+        <item>Comutarea modurilor de afișare</item>
+        <item>Accesorii</item>
+        <item>Rețineți următoarele</item>
+    </array>
+</resources>

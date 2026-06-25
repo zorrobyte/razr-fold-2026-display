@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>Χρήση επιλογής συστήματος (Προεπιλογή)</item>
+        <item>16 bit/δείγμα</item>
+        <item>24 bit/δείγμα</item>
+        <item>32 bit/δείγμα</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>Χρήση επιλογής συστήματος (Προεπιλογή)</item>
+        <item>16 bit/δείγμα</item>
+        <item>24 bit/δείγμα</item>
+        <item>32 bit/δείγμα</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>Χρήση επιλογής συστήματος (Προεπιλογή)</item>
+        <item>Μονοφωνικό</item>
+        <item>Στερεοφωνικό</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>Χρήση επιλογής συστήματος (Προεπιλογή)</item>
+        <item>Μονοφωνικό</item>
+        <item>Στερεοφωνικό</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>Βελτιστοποιημένο για ποιότητα ήχου</item>
+        <item>Ισορροπημένος ήχος και ποιότητα σύνδεσης</item>
+        <item>Βελτιστοποιημένο για ποιότητα σύνδεσης</item>
+        <item>Βέλτιστη προσπάθεια (ρυθμός δεδομένων με δυνατότητα προσαρμογής)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>Βελτιστοποιημένο για ποιότητα ήχου (990kbps/909kbps)</item>
+        <item>Ισορροπημένος ήχος και ποιότητα σύνδεσης (660kbps/606kbps)</item>
+        <item>Βελτιστοποιημένο για ποιότητα σύνδεσης (330kbps/303kbps)</item>
+        <item>Βέλτιστη προσπάθεια (ρυθμός δεδομένων με δυνατότητα προσαρμογής)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>Χρήση επιλογής συστήματος (Προεπιλογή)</item>
+        <item>44,1 kHz</item>
+        <item>48,0 kHz</item>
+        <item>88,2 kHz</item>
+        <item>96,0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>Χρήση επιλογής συστήματος (Προεπιλογή)</item>
+        <item>44,1 kHz</item>
+        <item>48,0 kHz</item>
+        <item>88,2 kHz</item>
+        <item>96,0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>Χρήση επιλογής συστήματος (Προεπιλογή)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Ήχος Qualcomm® aptX™</item>
+        <item>Ήχος Qualcomm® aptX™ HD</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>Χρήση επιλογής συστήματος (Προεπιλογή)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Ήχος Qualcomm® aptX™</item>
+        <item>Ήχος Qualcomm® aptX™ HD</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>, ενεργή</item>
+        <item>, ενεργή (μέσα)</item>
+        <item>, ενεργή (τηλέφωνο)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp14</item>
+        <item>avrcp13</item>
+        <item>avrcp15</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.4 (Προεπιλογή)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.5</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (Προεπιλογή)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>Ανενεργό</item>
+        <item>Ενεργοποιήθηκε το φιλτράρισμα</item>
+        <item>Ενεργοποιημένο</item>
+    </array>
+    <array name="display_size_descriptions">
+        <item>Μικρό</item>
+        <item>Προεπιλογή</item>
+        <item>Μεγάλο</item>
+        <item>Πιο μεγάλα</item>
+    </array>
+    <array name="font_size_descriptions">
+        <item>Μικρό</item>
+        <item>Προεπιλογή</item>
+        <item>Μεγάλο</item>
+    </array>
+    <array name="open_app_option_array">
+        <item>Επανεκκίνηση της εφαρμογής</item>
+        <item>Άνοιγμα της εφαρμογής χωρίς επανεκκίνηση</item>
+        <item>Ερώτηση κάθε φορά</item>
+    </array>
+    <array name="power_save_array">
+        <item>10 λεπτά</item>
+        <item>15 λεπτά</item>
+        <item>20 λεπτά</item>
+        <item>30 λεπτά</item>
+        <item>60 λεπτά</item>
+        <item>Να μην γίνεται ποτέ αποσύνδεση</item>
+    </array>
+    <array name="preload_wallpapers_array">
+        <item>preload_wallpaper_geometry_1</item>
+        <item>preload_wallpaper_geometry_2</item>
+        <item>preload_wallpaper_geometry_3</item>
+        <item>preload_wallpaper_geometry_4</item>
+        <item>preload_wallpaper_geometry_5</item>
+        <item>preload_wallpaper_geometry_6</item>
+        <item>preload_wallpaper_geometry_7</item>
+        <item>preload_wallpaper_geometry_8</item>
+        <item>preload_wallpaper_geometry_9</item>
+        <item>preload_wallpaper_geometry_10</item>
+        <item>preload_wallpaper_nature_1</item>
+        <item>preload_wallpaper_nature_2</item>
+        <item>preload_wallpaper_nature_3</item>
+        <item>preload_wallpaper_nature_4</item>
+        <item>preload_wallpaper_nature_5</item>
+        <item>preload_wallpaper_nature_6</item>
+        <item>preload_wallpaper_nature_7</item>
+        <item>preload_wallpaper_nature_8</item>
+        <item>preload_wallpaper_nature_9</item>
+    </array>
+    <array name="tile_states_airplane">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_alarm">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_battery">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_bt">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_cameratoggle">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_cast">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_cell">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_color_correction">
+        <item>Μη διαθέσιμη</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_controls">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_dark">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_dnd">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_dream">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_flashlight">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_font_scaling">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_hearing_devices">
+        <item>Μη διαθέσιμη</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_hotspot">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_internet">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_inversion">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_location">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_mictoggle">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_night">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_onehanded">
+        <item>Μη διαθέσιμη</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_qr_code_scanner">
+        <item>Μη διαθέσιμη</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_record_issue">
+        <item>Μη διαθέσιμη</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_reduce_brightness">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_reverse">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_rotation">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_saver">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_screenrecord">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_wallet">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_wifi">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="tile_states_work">
+        <item>Μη διαθέσιμο</item>
+        <item>Ανενεργό</item>
+        <item>Ενεργό</item>
+    </array>
+    <array name="timeout_array">
+        <item>1 λεπτό</item>
+        <item>2 λεπτά</item>
+        <item>5 λεπτά</item>
+        <item>10 λεπτά</item>
+        <item>20 λεπτά</item>
+        <item>30 λεπτά</item>
+        <item>60 λεπτά</item>
+    </array>
+</resources>

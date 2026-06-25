@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/pill_button_ripple_color">
+    <item>
+        <inset android:inset="1dp">
+            <shape android:shape="rectangle">
+                <corners android:radius="14dp"/>
+                <padding
+                    android:left="12dp"
+                    android:right="12dp"/>
+                <solid android:color="@color/pill_button_bg_color"/>
+            </shape>
+        </inset>
+    </item>
+</ripple>

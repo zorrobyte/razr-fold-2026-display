@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/_qs_dnd_icon_off__1_res_0x7f0800a2">
+    <target
+        android:name="time_group"
+        android:animation="@drawable/_qs_dnd_icon_off__0_res_0x7f0800a1"/>
+</animated-vector>

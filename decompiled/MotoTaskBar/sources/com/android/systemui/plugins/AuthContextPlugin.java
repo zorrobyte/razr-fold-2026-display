@@ -1,0 +1,169 @@
+package com.android.systemui.plugins;
+
+import android.os.IBinder;
+import android.view.View;
+import com.android.systemui.plugins.annotations.ProvidesInterface;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: compiled from: AuthContextPlugin.kt */
+/* JADX INFO: loaded from: classes.dex */
+@ProvidesInterface(action = "com.android.systemui.action.PLUGIN_AUTH_CONTEXT", version = 1)
+public interface AuthContextPlugin extends Plugin {
+    public static final String ACTION = "com.android.systemui.action.PLUGIN_AUTH_CONTEXT";
+    public static final Companion Companion = Companion.$$INSTANCE;
+    public static final int VERSION = 1;
+
+    /* JADX INFO: compiled from: AuthContextPlugin.kt */
+    public final class Companion {
+        static final /* synthetic */ Companion $$INSTANCE = new Companion();
+        public static final String ACTION = "com.android.systemui.action.PLUGIN_AUTH_CONTEXT";
+        public static final int VERSION = 1;
+
+        private Companion() {
+        }
+    }
+
+    /* JADX INFO: compiled from: AuthContextPlugin.kt */
+    public interface Saucier {
+        IBinder getSauce(String str);
+    }
+
+    /* JADX INFO: compiled from: AuthContextPlugin.kt */
+    public interface SensitiveSurface {
+
+        /* JADX INFO: compiled from: AuthContextPlugin.kt */
+        public final class BiometricPrompt implements SensitiveSurface {
+            public static final int $stable = 8;
+            private final boolean isCredential;
+            private final View view;
+
+            /* JADX WARN: Multi-variable type inference failed */
+            public BiometricPrompt() {
+                this(null, false, 3, 0 == true ? 1 : 0);
+            }
+
+            public BiometricPrompt(View view, boolean z) {
+                this.view = view;
+                this.isCredential = z;
+            }
+
+            public /* synthetic */ BiometricPrompt(View view, boolean z, int i, DefaultConstructorMarker defaultConstructorMarker) {
+                this((i & 1) != 0 ? null : view, (i & 2) != 0 ? false : z);
+            }
+
+            public static /* synthetic */ BiometricPrompt copy$default(BiometricPrompt biometricPrompt, View view, boolean z, int i, Object obj) {
+                if ((i & 1) != 0) {
+                    view = biometricPrompt.view;
+                }
+                if ((i & 2) != 0) {
+                    z = biometricPrompt.isCredential;
+                }
+                return biometricPrompt.copy(view, z);
+            }
+
+            public final View component1() {
+                return this.view;
+            }
+
+            public final boolean component2() {
+                return this.isCredential;
+            }
+
+            public final BiometricPrompt copy(View view, boolean z) {
+                return new BiometricPrompt(view, z);
+            }
+
+            public boolean equals(Object obj) {
+                if (this == obj) {
+                    return true;
+                }
+                if (!(obj instanceof BiometricPrompt)) {
+                    return false;
+                }
+                BiometricPrompt biometricPrompt = (BiometricPrompt) obj;
+                return Intrinsics.areEqual(this.view, biometricPrompt.view) && this.isCredential == biometricPrompt.isCredential;
+            }
+
+            public final View getView() {
+                return this.view;
+            }
+
+            public int hashCode() {
+                View view = this.view;
+                return ((view == null ? 0 : view.hashCode()) * 31) + Boolean.hashCode(this.isCredential);
+            }
+
+            public final boolean isCredential() {
+                return this.isCredential;
+            }
+
+            public String toString() {
+                return "BiometricPrompt(view=" + this.view + ", isCredential=" + this.isCredential + ")";
+            }
+        }
+
+        /* JADX INFO: compiled from: AuthContextPlugin.kt */
+        public final class LockscreenBouncer implements SensitiveSurface {
+            public static final int $stable = 8;
+            private final View view;
+
+            /* JADX WARN: Multi-variable type inference failed */
+            public LockscreenBouncer() {
+                this(null, 1, 0 == true ? 1 : 0);
+            }
+
+            public LockscreenBouncer(View view) {
+                this.view = view;
+            }
+
+            public /* synthetic */ LockscreenBouncer(View view, int i, DefaultConstructorMarker defaultConstructorMarker) {
+                this((i & 1) != 0 ? null : view);
+            }
+
+            public static /* synthetic */ LockscreenBouncer copy$default(LockscreenBouncer lockscreenBouncer, View view, int i, Object obj) {
+                if ((i & 1) != 0) {
+                    view = lockscreenBouncer.view;
+                }
+                return lockscreenBouncer.copy(view);
+            }
+
+            public final View component1() {
+                return this.view;
+            }
+
+            public final LockscreenBouncer copy(View view) {
+                return new LockscreenBouncer(view);
+            }
+
+            public boolean equals(Object obj) {
+                if (this == obj) {
+                    return true;
+                }
+                return (obj instanceof LockscreenBouncer) && Intrinsics.areEqual(this.view, ((LockscreenBouncer) obj).view);
+            }
+
+            public final View getView() {
+                return this.view;
+            }
+
+            public int hashCode() {
+                View view = this.view;
+                if (view == null) {
+                    return 0;
+                }
+                return view.hashCode();
+            }
+
+            public String toString() {
+                return "LockscreenBouncer(view=" + this.view + ")";
+            }
+        }
+    }
+
+    void activated(Saucier saucier);
+
+    void onHidingSensitiveSurface(SensitiveSurface sensitiveSurface);
+
+    void onShowingSensitiveSurface(SensitiveSurface sensitiveSurface);
+}

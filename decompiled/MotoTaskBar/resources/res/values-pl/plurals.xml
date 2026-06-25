@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d nowe powiadomienie</item>
+        <item quantity="few">%d nowe powiadomienia</item>
+        <item quantity="many">%d nowych powiadomień</item>
+        <item quantity="other">%d nowego powiadomienia</item>
+    </plurals>
+    <plurals name="notification_group_overflow_description">
+        <item quantity="one">Jeszcze %s powiadomienie w grupie.</item>
+        <item quantity="few">Więcej powiadomień (%s) w środku.</item>
+        <item quantity="many">Więcej powiadomień (%s) w środku.</item>
+        <item quantity="other">Więcej powiadomień (%s) w środku.</item>
+    </plurals>
+    <plurals name="quick_settings_hotspot_secondary_label_num_devices">
+        <item quantity="one">%d urządzenie</item>
+        <item quantity="few">Urządzenia: %d</item>
+        <item quantity="many">Urządzenia: %d</item>
+        <item quantity="other">Urządzenia: %d</item>
+    </plurals>
+    <plurals name="taskbar_notification_num_devices">
+        <item quantity="one">%d nowe powiadomienie</item>
+        <item quantity="few">Nowe powiadomienia: %d</item>
+        <item quantity="many">Nowe powiadomienia: %d</item>
+        <item quantity="other">Nowe powiadomienia: %d</item>
+    </plurals>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:background="@drawable/tooltip_frame"
+        android:paddingTop="@dimen/desktop_tooltip_vertical_padding"
+        android:paddingBottom="@dimen/desktop_tooltip_vertical_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/taskbar_thumbnail_margin"
+        android:scaleType="fitCenter"
+        android:paddingStart="@dimen/desktop_tooltip_horizontal_padding"
+        android:paddingEnd="@dimen/desktop_tooltip_horizontal_padding"/>
+    <ImageButton
+        android:id="@+id/close_btn"
+        android:background="@android:color/transparent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_minimized_close_24px"
+        android:scaleType="fitXY"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

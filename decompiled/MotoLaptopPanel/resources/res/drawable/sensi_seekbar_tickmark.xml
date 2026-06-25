@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="4dp"
+    android:width="4dp"
+    android:viewportWidth="4"
+    android:viewportHeight="4">
+    <path
+        android:fillColor="@color/sensi_seekbar_tickmark_color"
+        android:pathData="M2,2m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0"
+        android:strokeAlpha="0.38"
+        android:fillAlpha="0.38"/>
+</vector>

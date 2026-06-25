@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.motorola.systemui.desktop.widget.DesktopNotificationRootLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:systemui="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/content"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="@dimen/desktop_qs_panel_margin"
+    android:defaultFocusHighlightEnabled="false">
+    <com.motorola.systemui.desktop.widget.DesktopQSPanelLayout
+        android:id="@+id/qs_frame"
+        android:background="@color/desktop_qs_notification_panel_bg"
+        android:paddingTop="@dimen/desktop_qs_panel_padding_top"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/desktop_qs_panel_margin"
+        systemui:layout_constraintBottom_toBottomOf="parent"
+        systemui:layout_constraintEnd_toEndOf="parent"
+        systemui:layout_constraintStart_toStartOf="parent"
+        systemui:layout_constraintTop_toTopOf="parent"
+        systemui:viewType="com.android.systemui.plugins.qs.QS"/>
+    <com.motorola.systemui.desktop.widget.DesktopNotificationPanelLayout
+        android:id="@+id/notification_stack_panel"
+        android:background="@color/desktop_qs_notification_panel_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.android.systemui.statusbar.notification.stack.NotificationStackScrollLayout
+            android:id="@+id/notification_stack_scroller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/notification_panel_margin_top"
+            android:layout_marginBottom="32dp"/>
+    </com.motorola.systemui.desktop.widget.DesktopNotificationPanelLayout>
+</com.motorola.systemui.desktop.widget.DesktopNotificationRootLayout>

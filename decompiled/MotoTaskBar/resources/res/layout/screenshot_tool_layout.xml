@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom|center_horizontal"
+    android:id="@+id/selector_tools_bar"
+    android:background="@android:color/transparent"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/screenshot_tools_height"
+    android:layout_marginBottom="@dimen/screenshot_tools_margin_bottom">
+    <ImageButton
+        android:id="@+id/btn_rect"
+        android:background="@drawable/circle_shape_bg"
+        android:layout_width="@dimen/screenshot_tools_btn_width"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_rectangular_snip"
+        android:pointerIcon="arrow"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <ImageButton
+        android:id="@+id/btn_curve"
+        android:background="@drawable/circle_shape_bg"
+        android:layout_width="@dimen/screenshot_tools_btn_width"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_free_form_snip"
+        android:pointerIcon="arrow"
+        android:layout_marginHorizontal="@dimen/screenshot_tools_btn_padding"
+        app:layout_constraintStart_toEndOf="@+id/btn_rect"/>
+    <ImageButton
+        android:id="@+id/btn_window"
+        android:background="@drawable/circle_shape_bg"
+        android:layout_width="@dimen/screenshot_tools_btn_width"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_window_snip"
+        android:pointerIcon="arrow"
+        android:layout_marginHorizontal="@dimen/screenshot_tools_btn_padding"
+        app:layout_constraintStart_toEndOf="@+id/btn_curve"/>
+    <ImageButton
+        android:id="@+id/btn_full_screen"
+        android:background="@drawable/circle_shape_bg"
+        android:layout_width="@dimen/screenshot_tools_btn_width"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_fullscreen_snip"
+        android:pointerIcon="arrow"
+        android:layout_marginHorizontal="@dimen/screenshot_tools_btn_padding"
+        app:layout_constraintStart_toEndOf="@+id/btn_window"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

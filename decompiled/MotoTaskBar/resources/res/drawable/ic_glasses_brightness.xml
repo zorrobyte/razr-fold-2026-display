@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="36dp"
+    android:width="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+    <path
+        android:fillColor="@color/glass_status_toast_type_icon_color"
+        android:pathData="M30,13.035L30,6L22.965,6L18,1.035L13.035,6L6,6L6,13.035L1.035,18L6,22.965L6,30L13.035,30L18,34.965L22.965,30L30,30L30,22.965L34.965,18L30,13.035ZM27,21.72L27,27L21.72,27L18,30.72L14.28,27L9,27L9,21.72L5.28,18L9,14.28L9,9L14.28,9L18,5.28L21.72,9L27,9L27,14.28L30.72,18L27,21.72ZM18,9.75L18,26.25C22.545,26.25 26.25,22.545 26.25,18C26.25,13.455 22.545,9.75 18,9.75Z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1"
+        android:fillType="nonZero"/>
+</vector>

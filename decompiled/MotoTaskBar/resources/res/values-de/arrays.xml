@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>Systemauswahl verwenden (Standard)</item>
+        <item>16 Bits pro Sample</item>
+        <item>24 Bits pro Sample</item>
+        <item>32 Bits pro Sample</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>Systemauswahl verwenden (Standard)</item>
+        <item>16 Bits pro Sample</item>
+        <item>24 Bits pro Sample</item>
+        <item>32 Bits pro Sample</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>Systemauswahl verwenden (Standard)</item>
+        <item>Mono</item>
+        <item>Stereo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>Systemauswahl verwenden (Standard)</item>
+        <item>Mono</item>
+        <item>Stereo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>Für Audioqualität optimiert</item>
+        <item>Ausgeglichene Audio- und Verbindungsqualität</item>
+        <item>Für Verbindungsqualität optimiert</item>
+        <item>Bestmöglich (adaptive Bitrate)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>Für Audioqualität optimiert (990 kbit/s/909 kbit/s)</item>
+        <item>Ausgeglichene Audio- und Verbindungsqualität (660 kbit/s/606 kbit/s)</item>
+        <item>Für Verbindungsqualität optimiert (330 kbit/s/303 kbit/s)</item>
+        <item>Bestmöglich (adaptive Bitrate)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>Systemauswahl verwenden (Standard)</item>
+        <item>44,1 kHz</item>
+        <item>48 kHz</item>
+        <item>88,2 kHz</item>
+        <item>96 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>Systemauswahl verwenden (Standard)</item>
+        <item>44,1 kHz</item>
+        <item>48 kHz</item>
+        <item>88,2 kHz</item>
+        <item>96 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>Systemauswahl verwenden (Standard)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™-Audio</item>
+        <item>Qualcomm® aptX™ HD-Audio</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>Systemauswahl verwenden (Standard)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™-Audio</item>
+        <item>Qualcomm® aptX™ HD-Audio</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>, aktiv</item>
+        <item>, aktiv (Medien)</item>
+        <item>, aktiv (Telefon)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp14</item>
+        <item>avrcp13</item>
+        <item>avrcp15</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.4 (Standard)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.5</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (Standard)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>Deaktiviert</item>
+        <item>Filter aktiviert</item>
+        <item>Aktiviert</item>
+    </array>
+    <array name="display_size_descriptions">
+        <item>Klein</item>
+        <item>Standard</item>
+        <item>Groß</item>
+        <item>Größer</item>
+    </array>
+    <array name="font_size_descriptions">
+        <item>Klein</item>
+        <item>Standard</item>
+        <item>Groß</item>
+    </array>
+    <array name="open_app_option_array">
+        <item>Die App neu starten</item>
+        <item>Die App ohne Neustart öffnen</item>
+        <item>Jedes Mal nachfragen</item>
+    </array>
+    <array name="power_save_array">
+        <item>10 Min.</item>
+        <item>15 Min.</item>
+        <item>20 Min.</item>
+        <item>30 Min.</item>
+        <item>60 Min.</item>
+        <item>Verbindung niemals trennen</item>
+    </array>
+    <array name="preload_wallpapers_array">
+        <item>preload_wallpaper_geometry_1</item>
+        <item>preload_wallpaper_geometry_2</item>
+        <item>preload_wallpaper_geometry_3</item>
+        <item>preload_wallpaper_geometry_4</item>
+        <item>preload_wallpaper_geometry_5</item>
+        <item>preload_wallpaper_geometry_6</item>
+        <item>preload_wallpaper_geometry_7</item>
+        <item>preload_wallpaper_geometry_8</item>
+        <item>preload_wallpaper_geometry_9</item>
+        <item>preload_wallpaper_geometry_10</item>
+        <item>preload_wallpaper_nature_1</item>
+        <item>preload_wallpaper_nature_2</item>
+        <item>preload_wallpaper_nature_3</item>
+        <item>preload_wallpaper_nature_4</item>
+        <item>preload_wallpaper_nature_5</item>
+        <item>preload_wallpaper_nature_6</item>
+        <item>preload_wallpaper_nature_7</item>
+        <item>preload_wallpaper_nature_8</item>
+        <item>preload_wallpaper_nature_9</item>
+    </array>
+    <array name="tile_states_airplane">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_alarm">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_battery">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_bt">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_cameratoggle">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_cast">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_cell">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_color_correction">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_controls">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_dark">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_dnd">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_dream">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_flashlight">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_font_scaling">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_hearing_devices">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_hotspot">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_internet">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_inversion">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_location">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_mictoggle">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_night">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_onehanded">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_qr_code_scanner">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_record_issue">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_reduce_brightness">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_reverse">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_rotation">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_saver">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_screenrecord">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_wallet">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_wifi">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="tile_states_work">
+        <item>Nicht verfügbar</item>
+        <item>Aus</item>
+        <item>Ein</item>
+    </array>
+    <array name="timeout_array">
+        <item>1 Min.</item>
+        <item>2 Min.</item>
+        <item>5 Min.</item>
+        <item>10 Min.</item>
+        <item>20 Min.</item>
+        <item>30 Min.</item>
+        <item>60 Min.</item>
+    </array>
+</resources>

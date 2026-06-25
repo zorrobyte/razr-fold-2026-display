@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item
+                android:height="24dp"
+                android:width="24dp"
+                android:left="4dp"
+                android:top="4dp"
+                android:right="4dp"
+                android:bottom="4dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/zz_switch_bar_background_on"/>
+                    <corners android:radius="23dp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="false">
+        <layer-list>
+            <item
+                android:height="24dp"
+                android:width="24dp"
+                android:left="4dp"
+                android:top="4dp"
+                android:right="4dp"
+                android:bottom="4dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/sensi_switch_track_stroke_color"/>
+                    <corners android:radius="23dp"/>
+                    <stroke
+                        android:width="4dp"
+                        android:color="@color/sensi_switch_track_color"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

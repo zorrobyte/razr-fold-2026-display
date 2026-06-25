@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d புதிய அறிவிப்பு</item>
+        <item quantity="other">%d புதிய அறிவிப்புகள்</item>
+    </plurals>
+    <plurals name="notification_group_overflow_description">
+        <item quantity="one">உள்ளே மேலும் %s அறிவிப்பு உள்ளது.</item>
+        <item quantity="other">உட்புறத்தில் மேலும் %s அறிவிப்புகள் உள்ளன.</item>
+    </plurals>
+    <plurals name="quick_settings_hotspot_secondary_label_num_devices">
+        <item quantity="one">%d சாதனம்</item>
+        <item quantity="other">%d சாதனங்கள்</item>
+    </plurals>
+    <plurals name="taskbar_notification_num_devices">
+        <item quantity="one">%d புதிய அறிவிப்பு</item>
+        <item quantity="other">%d புதிய அறிவிப்புகள்</item>
+    </plurals>
+</resources>

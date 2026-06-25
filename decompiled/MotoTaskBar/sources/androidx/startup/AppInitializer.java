@@ -1,0 +1,136 @@
+package androidx.startup;
+
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import androidx.tracing.Trace;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class AppInitializer {
+    private static volatile AppInitializer sInstance;
+    private static final Object sLock = new Object();
+    final Context mContext;
+    final Set mDiscovered = new HashSet();
+    final Map mInitialized = new HashMap();
+
+    AppInitializer(Context context) {
+        this.mContext = context.getApplicationContext();
+    }
+
+    private Object doInitialize(Class cls, Set set) {
+        Object objCreate;
+        if (Trace.isEnabled()) {
+            try {
+                Trace.beginSection(cls.getSimpleName());
+            } finally {
+                Trace.endSection();
+            }
+        }
+        if (set.contains(cls)) {
+            throw new IllegalStateException(String.format("Cannot initialize %s. Cycle detected.", cls.getName()));
+        }
+        if (this.mInitialized.containsKey(cls)) {
+            objCreate = this.mInitialized.get(cls);
+        } else {
+            set.add(cls);
+            try {
+                Class[] clsArr = new Class[0];
+                Initializer initializer = (Initializer) cls.getDeclaredConstructor(null).newInstance(null);
+                List<Class> listDependencies = initializer.dependencies();
+                if (!listDependencies.isEmpty()) {
+                    for (Class cls2 : listDependencies) {
+                        if (!this.mInitialized.containsKey(cls2)) {
+                            doInitialize(cls2, set);
+                        }
+                    }
+                }
+                objCreate = initializer.create(this.mContext);
+                set.remove(cls);
+                this.mInitialized.put(cls, objCreate);
+            } catch (Throwable th) {
+                throw new StartupException(th);
+            }
+        }
+        return objCreate;
+    }
+
+    public static AppInitializer getInstance(Context context) {
+        if (sInstance == null) {
+            synchronized (sLock) {
+                try {
+                    if (sInstance == null) {
+                        sInstance = new AppInitializer(context);
+                    }
+                } finally {
+                }
+            }
+        }
+        return sInstance;
+    }
+
+    void discoverAndInitialize(Bundle bundle) {
+        String string = this.mContext.getString(R$string.androidx_startup);
+        if (bundle != null) {
+            try {
+                HashSet hashSet = new HashSet();
+                for (String str : bundle.keySet()) {
+                    if (string.equals(bundle.getString(str, null))) {
+                        Class<?> cls = Class.forName(str);
+                        if (Initializer.class.isAssignableFrom(cls)) {
+                            this.mDiscovered.add(cls);
+                        }
+                    }
+                }
+                Iterator it = this.mDiscovered.iterator();
+                while (it.hasNext()) {
+                    doInitialize((Class) it.next(), hashSet);
+                }
+            } catch (ClassNotFoundException e) {
+                throw new StartupException(e);
+            }
+        }
+    }
+
+    void discoverAndInitialize(Class cls) {
+        try {
+            try {
+                Trace.beginSection("Startup");
+                discoverAndInitialize(this.mContext.getPackageManager().getProviderInfo(new ComponentName(this.mContext, (Class<?>) cls), 128).metaData);
+            } catch (PackageManager.NameNotFoundException e) {
+                throw new StartupException(e);
+            }
+        } finally {
+            Trace.endSection();
+        }
+    }
+
+    Object doInitialize(Class cls) {
+        Object objDoInitialize;
+        synchronized (sLock) {
+            try {
+                objDoInitialize = this.mInitialized.get(cls);
+                if (objDoInitialize == null) {
+                    objDoInitialize = doInitialize(cls, new HashSet());
+                }
+            } catch (Throwable th) {
+                throw th;
+            }
+        }
+        return objDoInitialize;
+    }
+
+    public Object initializeComponent(Class cls) {
+        return doInitialize(cls);
+    }
+
+    public boolean isEagerlyInitialized(Class cls) {
+        return this.mDiscovered.contains(cls);
+    }
+}

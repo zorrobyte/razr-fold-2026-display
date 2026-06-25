@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>පද්ධති තේරීම භාවිත කරන්න (පෙරනිමි)</item>
+        <item>බිටු 16/නියැදිය</item>
+        <item>බිටු 24/නියැදිය</item>
+        <item>බිටු 32/නියැදිය</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>පද්ධති තේරීම භාවිත කරන්න (පෙරනිමි)</item>
+        <item>බිටු 16/නියැදිය</item>
+        <item>බිටු 24/නියැදිය</item>
+        <item>බිටු 32/නියැදිය</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>පද්ධති තේරීම භාවිත කරන්න (පෙරනිමි)</item>
+        <item>ඒකල</item>
+        <item>ස්ටීරියෝ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>පද්ධති තේරීම භාවිත කරන්න (පෙරනිමි)</item>
+        <item>ඒකල</item>
+        <item>ස්ටීරියෝ</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>ශ්‍රව්‍ය ගුණත්වය සඳහා ප්‍රශස්ත කරන ලදී</item>
+        <item>සමබර ශ්‍රව්‍ය සහ සබැඳුම් ගුණත්වය</item>
+        <item>සබැඳුම් ගුණත්වය සඳහා ප්‍රශස්ත කරන ලදී</item>
+        <item>හොඳම වෑයම (අනුවර්තී බිට් අනුපාතය)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>ශ්‍රව්‍ය ගුණත්වය සඳහා ප්‍රශස්ත කරන ලදී (990kbps/909kbps)</item>
+        <item>සමබර ශ්‍රව්‍ය සහ සබැඳුම් ගුණත්වය (660kbps/606kbps)</item>
+        <item>සබැඳුම් ගුණත්වය සඳහා ප්‍රශස්ත කරන ලදී (330kbps/303kbps)</item>
+        <item>හොඳම වෑයම (අනුවර්තී බිට් අනුපාතය)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>පද්ධති තේරීම භාවිත කරන්න (පෙරනිමි)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>පද්ධති තේරීම භාවිත කරන්න (පෙරනිමි)</item>
+        <item>44.1 kHz</item>
+        <item>48.0 kHz</item>
+        <item>88.2 kHz</item>
+        <item>96.0 kHz</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_summaries">
+        <item>පද්ධති තේරීම භාවිත කරන්න (පෙරනිමි)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ ශ්‍රව්‍යය</item>
+        <item>Qualcomm® aptX™ HD ශ්‍රව්‍යය</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_titles">
+        <item>පද්ධති තේරීම භාවිත කරන්න (පෙරනිමි)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Qualcomm® aptX™ ශ්‍රව්‍යය</item>
+        <item>Qualcomm® aptX™ HD ශ්‍රව්‍යය</item>
+        <item>LDAC</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>, ක්‍රියාකාරී</item>
+        <item>, ක්‍රියාකාරී (මාධ්‍ය)</item>
+        <item>, ක්‍රියාකාරී (දුරකථන)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp14</item>
+        <item>avrcp13</item>
+        <item>avrcp15</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.4 (පෙරනිමි)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.5</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (පෙරනිමි)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>අබලයි</item>
+        <item>සබල පෙරහන් කළ</item>
+        <item>සබලයි</item>
+    </array>
+    <array name="display_size_descriptions">
+        <item>කුඩා</item>
+        <item>පෙරනිමි</item>
+        <item>විශාල</item>
+        <item>වඩා විශාල</item>
+    </array>
+    <array name="font_size_descriptions">
+        <item>කුඩා</item>
+        <item>පෙරනිමි</item>
+        <item>විශාල</item>
+    </array>
+    <array name="open_app_option_array">
+        <item>යෙදුම යළි අරඹන්න</item>
+        <item>යළි ආරම්භ නොකර යෙදුම විවෘත කරන්න</item>
+        <item>මගෙන් සැම විට ම අසන්න</item>
+    </array>
+    <array name="power_save_array">
+        <item>විනා 10</item>
+        <item>විනාඩි 15ක්</item>
+        <item>විනා 20</item>
+        <item>විනා 30</item>
+        <item>විනා 6</item>
+        <item>කිසිවිටෙක විසන්ධි නොකරන්න</item>
+    </array>
+    <array name="preload_wallpapers_array">
+        <item>preload_wallpaper_geometry_1</item>
+        <item>preload_wallpaper_geometry_2</item>
+        <item>preload_wallpaper_geometry_3</item>
+        <item>preload_wallpaper_geometry_4</item>
+        <item>preload_wallpaper_geometry_5</item>
+        <item>preload_wallpaper_geometry_6</item>
+        <item>preload_wallpaper_geometry_7</item>
+        <item>preload_wallpaper_geometry_8</item>
+        <item>preload_wallpaper_geometry_9</item>
+        <item>preload_wallpaper_geometry_10</item>
+        <item>preload_wallpaper_nature_1</item>
+        <item>preload_wallpaper_nature_2</item>
+        <item>preload_wallpaper_nature_3</item>
+        <item>preload_wallpaper_nature_4</item>
+        <item>preload_wallpaper_nature_5</item>
+        <item>preload_wallpaper_nature_6</item>
+        <item>preload_wallpaper_nature_7</item>
+        <item>preload_wallpaper_nature_8</item>
+        <item>preload_wallpaper_nature_9</item>
+    </array>
+    <array name="timeout_array">
+        <item>විනා 1</item>
+        <item>විනා 2</item>
+        <item>විනා 5</item>
+        <item>විනා 10</item>
+        <item>විනා 20</item>
+        <item>විනා 30</item>
+        <item>විනා 6</item>
+    </array>
+</resources>

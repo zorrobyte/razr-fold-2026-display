@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/settingslib_ripple_color">
+    <item android:id="@android:id/background">
+        <layer-list
+            android:paddingStart="0dp"
+            android:paddingEnd="24dp"
+            android:paddingMode="stack">
+            <item
+                android:top="8dp"
+                android:bottom="8dp">
+                <shape>
+                    <corners android:radius="28dp"/>
+                    <solid android:color="@color/settingslib_materialColorPrimaryContainer"/>
+                    <size android:height="@dimen/settingslib_spinner_height"/>
+                </shape>
+            </item>
+            <item
+                android:gravity="end|center_vertical"
+                android:height="18dp"
+                android:width="18dp"
+                android:drawable="@drawable/settingslib_arrow_drop_down"
+                android:end="12dp"/>
+        </layer-list>
+    </item>
+</ripple>

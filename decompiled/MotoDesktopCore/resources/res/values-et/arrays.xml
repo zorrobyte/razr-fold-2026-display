@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Ready For võimaldab teil ühendada teleri, monitori või arvutiga mängimiseks, meelelahutuseks, telefoni kaugjuhtimiseks ja muuks.</item>
+        <item>Saate lülituda teisele kasutuskogemusele, puudutades oma telefonis ujuvat mulli.</item>
+        <item>Parima kogemuse saamiseks ühendage hiir ja klaviatuur. Kui teil pole hiirt, muutub teie telefoni ekraan puuteplaadiks.</item>
+        <item>Mõned rakendused ei pruugi töölauarežiimis hästi töötada ja mõned ei pruugi lubada teil teisese kuvari sisu esitada. Samuti peate parima vaatamiskogemuse saamiseks võib-olla kohandama oma monitori või telerit.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Tere tulemast Ready For-i</item>
+        <item>Kuvarežiimide vahetamine</item>
+        <item>Aksessuaarid</item>
+        <item>Pidage meeles</item>
+    </array>
+</resources>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="animator_duration_scale_entries">
+        <item>Animación desactivada</item>
+        <item>Escala de animación de 0,5x</item>
+        <item>Escala de animación de 1x</item>
+        <item>Escala de animación de 1,5x</item>
+        <item>Escala de animación de 2x</item>
+        <item>Escala de animación de 5x</item>
+        <item>Escala de animación de 10x</item>
+    </array>
+    <array name="app_process_limit_entries">
+        <item>Límite estándar</item>
+        <item>Ningún proceso en segundo plano</item>
+        <item>Como moito 1 proceso</item>
+        <item>Como moito 2 procesos</item>
+        <item>Como moito 3 procesos</item>
+        <item>Como moito 4 procesos</item>
+    </array>
+    <array name="battery_labels">
+        <item>0 %</item>
+        <item>50 %</item>
+        <item>100 %</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>Usa a selección do sistema (predeterminado)</item>
+        <item>16 bits/mostra</item>
+        <item>24 bits/mostra</item>
+        <item>32 bits/mostra</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>Usar selección do sistema (predeterminado)</item>
+        <item>16 bits/mostra</item>
+        <item>24 bits/mostra</item>
+        <item>32 bits/mostra</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>Usa a selección do sistema (predeterminado)</item>
+        <item>Mono</item>
+        <item>Estéreo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>Usar selección do sistema (predeterminado)</item>
+        <item>Mono</item>
+        <item>Estéreo</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>Optimizado para a calidade de audio</item>
+        <item>Calidade equilibrada do audio e da conexión</item>
+        <item>Optimizado para a calidade da conexión</item>
+        <item>Máxima (taxa de bits adaptable)</item>
+    </array>
+    <array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>Optimizado para a calidade de audio (990 kb/s ou 909 kb/s)</item>
+        <item>Calidade equilibrada do audio e da conexión (660 kb/s ou 606 kb/s)</item>
+        <item>Optimizado para a calidade da conexión (330 kb/s ou 303 kb/s)</item>
+        <item>Máxima (taxa de bits adaptable)</item>
+    </array>
+    <array name="bluetooth_audio_active_device_summaries">
+        <item />
+        <item>, activo</item>
+        <item>, activo (contido multimedia)</item>
+        <item>, activo (teléfono)</item>
+    </array>
+    <array name="bluetooth_avrcp_version_values">
+        <item>avrcp15</item>
+        <item>avrcp13</item>
+        <item>avrcp14</item>
+        <item>avrcp16</item>
+    </array>
+    <array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.5 (predeterminado)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.4</item>
+        <item>AVRCP 1.6</item>
+    </array>
+    <array name="bluetooth_map_version_values">
+        <item>map12</item>
+        <item>map13</item>
+        <item>map14</item>
+    </array>
+    <array name="bluetooth_map_versions">
+        <item>MAP 1.2 (predeterminado)</item>
+        <item>MAP 1.3</item>
+        <item>MAP 1.4</item>
+    </array>
+    <array name="bt_hci_snoop_log_entries">
+        <item>Desactivado</item>
+        <item>Está activado o filtrado</item>
+        <item>Activada</item>
+    </array>
+    <array name="bt_hci_snoop_log_filters_entries">
+        <item>Deixar só as cabeceiras de ACL</item>
+        <item>Filtrar paquetes multimedia A2DP</item>
+        <item>Filtrar canle RFCOMM</item>
+    </array>
+    <array name="bt_hci_snoop_log_profile_filter_entries">
+        <item>Desactivar</item>
+        <item>Completar cunha cadea de caracteres</item>
+        <item>Deixar só a cabeceira</item>
+        <item>Quitar por completo</item>
+    </array>
+    <array name="color_mode_descriptions">
+        <item>Cores melloradas</item>
+        <item>Cores naturais tal e o como se ven</item>
+        <item>Cores optimizadas para contido dixital</item>
+    </array>
+    <array name="color_mode_names">
+        <item>Brillante (predeterminado)</item>
+        <item>Naturais</item>
+        <item>Estándar</item>
+    </array>
+    <array name="debug_hw_overdraw_entries">
+        <item>Desactivado</item>
+        <item>Mostrar áreas superpostas</item>
+        <item>Mostrar áreas de deuteranomalía</item>
+    </array>
+    <array name="enable_opengl_traces_entries">
+        <item>Ningún</item>
+        <item>Logcat</item>
+        <item>Systrace (gráficos)</item>
+        <item>Pilla de chamadas en glGetError</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>x 0,25</item>
+        <item>x 0,5</item>
+        <item>x 0,75</item>
+        <item>Normal</item>
+        <item>x 1,25</item>
+        <item>x 1,5</item>
+        <item>x 2</item>
+    </array>
+    <array name="hdcp_checking_summaries">
+        <item>Non utilizar nunca a comprobación HDCP</item>
+        <item>Utiliza a comprobación HDCP só para contido DRM</item>
+        <item>Utilizar sempre a comprobación HDCP</item>
+    </array>
+    <array name="hdcp_checking_titles">
+        <item>Non comprobar nunca</item>
+        <item>Comprobar só contidos DRM</item>
+        <item>Comprobar sempre</item>
+    </array>
+    <array name="overlay_display_devices_entries">
+        <item>Ningunha</item>
+        <item>480p</item>
+        <item>480p (seguro)</item>
+        <item>720p</item>
+        <item>720p (seguro)</item>
+        <item>1080p</item>
+        <item>1080p (seguro)</item>
+        <item>4K</item>
+        <item>4K (seguro)</item>
+        <item>4K (mellorado)</item>
+        <item>4K (mellorado e seguro)</item>
+        <item>720p, 1080p (Dual Screen)</item>
+    </array>
+    <array name="select_logd_size_lowram_titles">
+        <item>Desactivado</item>
+        <item>64 K</item>
+        <item>256 K</item>
+        <item>1 M</item>
+    </array>
+    <array name="select_logd_size_summaries">
+        <item>Desactivado</item>
+        <item>64 K por búfer de rexistro</item>
+        <item>256 K por búfer de rexistro</item>
+        <item>1 M por búfer de rexistro</item>
+        <item>4 M por búfer de rexistro</item>
+        <item>8 MB por búfer de rexistro</item>
+    </array>
+    <array name="select_logd_size_titles">
+        <item>Desactivado</item>
+        <item>64 K</item>
+        <item>256 K</item>
+        <item>1 M</item>
+        <item>4 M</item>
+        <item>8 MB</item>
+    </array>
+    <array name="select_logpersist_summaries">
+        <item>Desactivado</item>
+        <item>Todos os búfers de rexistro</item>
+        <item>Todo agás os búfers de rexistro de radio</item>
+        <item>só búfer do rexistro do kernel</item>
+    </array>
+    <array name="select_logpersist_titles">
+        <item>Desactivado</item>
+        <item>Todo</item>
+        <item>Agás radio</item>
+        <item>só kernel</item>
+    </array>
+    <array name="shade_display_awareness_entries">
+        <item>Só pantalla do dispositivo (opción predeterminada)</item>
+        <item>Pantalla externa</item>
+        <item>Último toque na barra de estado</item>
+        <item>En función do enfoque</item>
+    </array>
+    <array name="shade_display_awareness_summaries">
+        <item>Mostrar panel despregable só na pantalla do dispositivo</item>
+        <item>Mostrar panel despregable nunha única pantalla externa</item>
+        <item>Mostrar panel despregable na pantalla na que tivo lugar a última interacción coa barra de estado</item>
+        <item>Mostrar panel despregable na última pantalla enfocada</item>
+    </array>
+    <array name="shade_display_awareness_values">
+        <item>pantalla_predeterminada</item>
+        <item>calquera_pantalla_externa</item>
+        <item>último_toque_barra_estado</item>
+        <item>pantalla_enfocada</item>
+    </array>
+    <array name="show_non_rect_clip_entries">
+        <item>Desactivado</item>
+        <item>Área recorte non rectangular azul</item>
+        <item>Resaltar comandos debuxo en verde</item>
+    </array>
+    <array name="track_frame_time_entries">
+        <item>Desactivado</item>
+        <item>En pantalla en forma de barras</item>
+        <item>En adb shell dumpsys gfxinfo</item>
+    </array>
+    <array name="transition_animation_scale_entries">
+        <item>Animación desactivada</item>
+        <item>Escala de animación 0,5x</item>
+        <item>Escala de animación de 1x</item>
+        <item>Escala de animación 1,5x</item>
+        <item>Escala de animación 2x</item>
+        <item>Escala de animación de 5x</item>
+        <item>Escala de animación de 10x</item>
+    </array>
+    <array name="tts_rate_entries">
+        <item>60 %</item>
+        <item>80 %</item>
+        <item>100 %</item>
+        <item>150 %</item>
+        <item>200 %</item>
+        <item>250 %</item>
+        <item>300 %</item>
+        <item>350 %</item>
+        <item>400 %</item>
+    </array>
+    <array name="usb_configuration_titles">
+        <item>Cargando</item>
+        <item>MTP (protocolo de transferencia multimedia)</item>
+        <item>PTP (protocolo de transferencia de imaxes)</item>
+        <item>RNDIS (Ethernet USB)</item>
+        <item>Fonte de audio</item>
+        <item>MIDI</item>
+    </array>
+    <array name="wifi_status">
+        <item />
+        <item>Buscando...</item>
+        <item>Conectando...</item>
+        <item>Autenticando…</item>
+        <item>Obtendo enderezo IP...</item>
+        <item>Conectado</item>
+        <item>Suspendida</item>
+        <item>Desconectando...</item>
+        <item>Desconectado</item>
+        <item>Incorrecta</item>
+        <item>Bloqueada</item>
+        <item>Evitando conexión deficiente temporalmente</item>
+    </array>
+    <array name="wifi_status_with_ssid">
+        <item />
+        <item>Buscando...</item>
+        <item>Conectando con %1$s…</item>
+        <item>Autenticando con %1$s…</item>
+        <item>Obtendo enderezo IP de %1$s…</item>
+        <item>Conectado a %1$s</item>
+        <item>Suspendida</item>
+        <item>Desconectando de %1$s…</item>
+        <item>Desconectada</item>
+        <item>Incorrecta</item>
+        <item>Bloqueada</item>
+        <item>Evitando conexión deficiente temporalmente</item>
+    </array>
+    <array name="wifitrackerlib_wifi_status">
+        <item />
+        <item>Buscando…</item>
+        <item>Conectando…</item>
+        <item>Autenticando…</item>
+        <item>Obtendo enderezo IP…</item>
+        <item>Conectado</item>
+        <item>Suspendida</item>
+        <item>Desconectando…</item>
+        <item>Desconectado</item>
+        <item>Produciuse un erro</item>
+        <item>Bloqueada</item>
+        <item>Evitando conexión deficiente temporalmente</item>
+    </array>
+    <array name="window_animation_scale_entries">
+        <item>Animación desactivada</item>
+        <item>Escala de animación 0,5x</item>
+        <item>Escala de animación de 1x</item>
+        <item>Escala de animación 1,5x</item>
+        <item>Escala de animación 2x</item>
+        <item>Escala de animación 5x</item>
+        <item>Escala de animación 10x</item>
+    </array>
+</resources>

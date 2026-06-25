@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="helper_content_desc_hdmi">
+        <item>Met Ready For kun je je telefoon verbinden met een tv, monitor of pc om gemakkelijk op afstand te kunnen werken, te gamen, voor entertainment, het op afstand bedienen van je telefoon en meer.</item>
+        <item>Je kunt je ervaring veranderen door op de zwevende bubbel op je telefoon te tikken.</item>
+        <item>Sluit een toetsenbord en muis aan voor de beste ervaring. Als je geen muis hebt, verandert je telefoon in een trackpad.</item>
+        <item>Sommige apps werken mogelijk niet goed in de desktopmodus en sommige laten het niet toe om inhoud weer te geven op een secundair display. Je moet misschien ook je monitor of tv aanpassen voor de beste kijkervaring.</item>
+    </array>
+    <array name="helper_content_title_hdmi">
+        <item>Welkom bij Ready For</item>
+        <item>Schakelen tussen weergavemodi</item>
+        <item>Accessoires</item>
+        <item>Onthoud het volgende</item>
+    </array>
+</resources>

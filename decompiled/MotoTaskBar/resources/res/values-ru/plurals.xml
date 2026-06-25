@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d новое уведомление</item>
+        <item quantity="few">%d новых уведомления</item>
+        <item quantity="many">%d новых уведомлений</item>
+        <item quantity="other">%d нового уведомления</item>
+    </plurals>
+    <plurals name="notification_group_overflow_description">
+        <item quantity="one">Ещё %s уведомление.</item>
+        <item quantity="few">Еще %s уведомления внутри.</item>
+        <item quantity="many">Еще %s уведомлений внутри.</item>
+        <item quantity="other">Еще %s уведомления внутри.</item>
+    </plurals>
+    <plurals name="quick_settings_hotspot_secondary_label_num_devices">
+        <item quantity="one">%d устройство</item>
+        <item quantity="few">Устройств: %d</item>
+        <item quantity="many">Устройств: %d</item>
+        <item quantity="other">Устройств: %d</item>
+    </plurals>
+    <plurals name="taskbar_notification_num_devices">
+        <item quantity="one">%d новое уведомление</item>
+        <item quantity="few">Новых уведомлений: %d</item>
+        <item quantity="many">Новых уведомлений: %d</item>
+        <item quantity="other">Новых уведомлений: %d </item>
+    </plurals>
+</resources>

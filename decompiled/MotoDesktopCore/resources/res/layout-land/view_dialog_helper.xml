@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scrollbars="none"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/helper_dialog_content_padding_left">
+        <ImageView
+            android:id="@+id/iv_helper_content_icon"
+            android:layout_width="@dimen/helper_dialog_content_icon_land_width"
+            android:layout_height="@dimen/helper_dialog_content_icon_land_height"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="@dimen/helper_dialog_content_title_text_size"
+                android:textStyle="bold"
+                android:textColor="@color/tutorial_content_headline_text"
+                android:id="@+id/tv_helper_content_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textSize="@dimen/helper_dialog_content_desc_text_size"
+                android:textColor="@color/tutorial_content_text"
+                android:id="@+id/tv_helper_content_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/helper_dialog_content_margin_top"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
