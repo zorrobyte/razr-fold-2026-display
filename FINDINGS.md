@@ -428,3 +428,43 @@ GPL req #836 open). On-device inspection of `/sys/firmware/devicetree/base/soc/q
 
 PLAN: extract dtbo DTBs → raise `max-pclk` (→ ~1.6 GHz) + drop `hbr3-disable` → repack → `fastboot flash dtbo_b`.
 Recovery: `dtbo-mod/dtbo.stock.img` (this backup) + the 15 GB firmware zip.
+
+---
+
+## 20. FINAL WALL: phone's USB-C DP-alt PHY (proven via Mac isolation test)
+Tried lifting the dtbo caps to unlock 5K2K@120 / 4K@120:
+- **v1** (HBR3 on + pclk + no downgrade): BROKE link → 1080p. Phone DP-alt can't sustain HBR3 here.
+- **v2** (HBR2 + pclk 1.6GHz): stock modes restored, NO new high-refresh modes. pclk wasn't the limit.
+- **v3** (HBR2 + pclk + remove dp-downgrade): **DPCD still reads 0x12 = DP 1.2** (dmesg AUX `RD 0h: 12`).
+  Removing downgrade did nothing — DPCD rev is SINK-reported, not phone-negotiable.
+- DSC requires sink DPCD ≥ 1.4. Phone's DP-alt establishes only DP 1.2/HBR2 → driver never reads DSC caps
+  → 5K2K@120 / 4K@120 dropped (exceed uncompressed HBR2 budget).
+
+### Mac isolation test — decisive
+Connected the SAME monitor to a Mac (M4 Max). Thunderbolt controllers show **"No device connected"**, yet
+the LG drives **5120×2160 @ 165 Hz** → it's running over **USB-C DisplayPort Alt Mode** (same connection
+class as the phone), with DSC.
+
+| Source over USB-C DP-alt | Result |
+|---|---|
+| Mac M4 Max (DP 2.1 / UHBR alt-mode) | **5120×2160 @ 165 Hz** ✅ |
+| Razr Fold (DP 1.2 / HBR2 alt-mode) | 5120×2160 @ **60 Hz** max |
+
+→ **The monitor + cable are fully capable. The wall is the phone's USB-C DP-alt PHY** — a DP 1.2/HBR2-class
+source. No software (framework patch, dtbo, etc.) upgrades the alt-mode DP version. **Hardware ceiling.**
+
+## 21. What survives an un-root / revert to OEM? (decision guide)
+| Tweak | Needs root? | Survives un-root? | Display benefit |
+|---|---|---|---|
+| **Framework patch** (`services.jar`, removes `enable_mode_limit_for_external_display`) | **YES** | ❌ gone | **THE one that matters** — unlocks 4K/5K2K@60 |
+| dtbo mods (pclk/HBR3/downgrade) | no (partition flash) | ✅ persists | **none** (PHY wall) → revert to stock |
+| Direct USB-C→DP cable (4-lane) | no (hardware) | ✅ | real (4-lane vs dock 2-lane), but cable-only |
+| Bootloader unlock | — | ✅ | none on its own |
+
+### The math (why root matters for 4K/5K2K)
+The governor caps external res to the INTERNAL panel's pixel budget = **5.54 M px**:
+- 3440×1440 = 4.95 M ≤ budget → **allowed WITHOUT root**
+- 3840×2160 (4K) = 8.3 M, 5120×2160 (5K2K) = 11 M → **OVER budget → filtered WITHOUT root**
+
+**→ Revert to OEM (no root) = lose 4K/5K2K, drop back to ~3440×1440@100.** The framework patch (root) is the
+ONLY software change that buys display capability. The dtbo mods buy nothing and should be reverted to stock.
