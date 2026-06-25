@@ -6,7 +6,7 @@
 
 ## The setup
 
-- **Phone:** Motorola Razr Fold 2026 (Snapdragon 8 Gen 5, Android 16), Verizon model
+- **Phone:** Motorola Razr Fold 2026 (Snapdragon 8 Gen 5, Android 16), unlocked
 - **Monitor:** LG 45GX950A — 45" bendable OLED, **5120×2160 (5K2K) ultrawide, 165Hz**, DisplayPort 2.1
 - **Goal:** use Moto's built-in desktop mode ("Smart Connect") to run the monitor as big and smooth as possible
 
@@ -28,11 +28,9 @@ It's enforced in `DisplayModeDirector` (system_server) and it **drops any extern
 
 This is why **Pixels cap external displays at ~1440p too** — it's an AOSP power/thermal policy, not a Moto thing. The flag is read-only and baked into the build, so you can't just toggle it. You have to **change the compiled framework** — which means root.
 
-## Discovery #2: unlocking a Verizon bootloader (the part everyone says is impossible)
+## Discovery #2: root
 
-Verizon Motorola = famously locked bootloaders. But the OEM-unlock toggle wasn't greyed out, so I tried the official Moto unlock-data flow… and it **went through**. `fastboot oem unlock`, factory wipe, done. (YMMV wildly by model/carrier — this surprised me.)
-
-Then: extracted `init_boot.img` from the stock firmware, patched it with Magisk, `fastboot flash init_boot` (had to use **fastbootd**, not bootloader mode — Moto rejects Magisk-patched images with "Preflash validation failed" otherwise). Root achieved.
+Unlocked the bootloader (OEM-unlock toggle in Developer Options → Moto's official unlock-data flow → `fastboot oem unlock` → factory wipe). Then extracted `init_boot.img` from the stock firmware, patched it with Magisk, and `fastboot flash init_boot` — with one gotcha: you have to flash in **fastbootd**, not bootloader mode, or Moto rejects the Magisk-patched image with "Preflash validation failed." Root achieved.
 
 ## Discovery #3: killing the cap
 
