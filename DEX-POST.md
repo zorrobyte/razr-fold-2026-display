@@ -1,47 +1,32 @@
-# DeX has been locked to 60Hz external for years. I got a Razr Fold's desktop mode running an external monitor at 100Hz (and 5K2K@60) — here's the comparison, and where the *real* hardware ceiling is
+# Comparison point for the DeX community: a Razr Fold's desktop mode runs an external monitor at 5120×2160 — AND above 60Hz (3440×1440@100)
 
-Posting this for the DeX crowd as a **comparison data point**, because the #1 complaint here forever has been: **DeX outputs 60Hz to external monitors, period — no high refresh, no matter your display.**
+DeX has been 60Hz-locked on external displays basically forever. So as a **comparison data point**, here's what I got out of a *different* Android desktop mode — Motorola's, on a Razr Fold 2026 (Snapdragon 8 Gen 5) — driving an LG 45GX950A (5K2K ultrawide). Not trying to tell anyone what DeX should do; just putting real numbers from another phone next to it.
 
-I just went deep on a different Android desktop mode — Motorola's, on a rooted Razr Fold 2026 (SD 8 Gen 5) — driving an LG 45GX950A (5K2K ultrawide). And it does things DeX won't. Sharing the numbers and the technical *why*, so you know exactly what's a Samsung software choice vs. an actual hardware wall.
+## What the Razr's desktop mode runs externally
 
----
+- **5120×2160 (5K2K) @ 60Hz**
+- 3840×2160 (4K) @ 60Hz
+- **3440×1440 @ 100Hz** ← *above 60*
+- 2560×1080 @ 120Hz / 240Hz, 1920×1080 @ 120Hz
 
-## What the Razr's desktop mode actually did (vs DeX's 60Hz lock)
+**Headline: 5K2K works, and the external refresh goes above 60Hz on current Snapdragon hardware.** If you've ever been told a phone desktop mode physically can't do high-refresh external, here's one that does.
 
-| | DeX (typical) | Razr Fold desktop mode |
-|---|---|---|
-| External refresh | **60Hz, locked** | **3440×1440 @ 100Hz**, plus 1080p@120, 2560×1080@120/240 |
-| Max resolution | up to 4K (flagships) | **5120×2160 @ 60** / 4K@60 / 3440×1440@100 |
-| Frame pacing | 60 | adaptive — boosts to panel max on interaction |
+## How
 
-So a phone desktop mode running an external monitor at **100Hz** is clearly possible on current Android/Snapdragon hardware. **DeX's 60Hz cap is a Samsung software decision, not a silicon limit.** That's the comparison point — if you've been told "phones can't do high-refresh DeX," here's a phone doing it.
+- The **>60Hz modes came straight from Moto's desktop mode** — no hacking, it just offers them.
+- The **4K/5K2K *resolution* needed root.** Android has a hidden flag (`enable_mode_limit_for_external_display`) that caps external resolution to your phone's *own screen's* pixel count; I patched the compiled framework to remove it. (It's the same AOSP flag that holds stock Pixels around 1440p.)
+- Honesty note on the Razr: the desktop *renders* adaptively — it idles around 60 and boosts to the panel's mode when you interact (mouse/scroll). So the panel runs a 100Hz mode, but TestUFO reads 60 unless you're moving the cursor. That's an AOSP frame-pacing thing; mentioning it so nobody thinks it's a magic constant-100.
 
-(Caveat for honesty: the Razr needed root + a framework patch to lift Android's resolution cap — see below — but the *refresh-rate* side, the 100Hz/120Hz external modes, came from Moto's desktop mode itself, not from any hack. Samsung simply chose to lock DeX at 60.)
+## Where even the Razr stops — and this part is universal to phones
 
-## Two things I learned that explain a LOT of phone-desktop behavior
+The hard ceiling is the **USB-C DisplayPort version**. Same monitor, **same exact cable and input**: plugged into a Mac it ran **5120×2160 @ 165Hz**; the phone on that identical cable maxed at 5K2K@60. Reading the DisplayPort AUX channel, the monitor handed the **phone DP 1.2** but the **Mac DP 2.1**. It's the source's USB-C controller.
 
-**1. Android hides an external-resolution cap.** There's an AOSP flag (`enable_mode_limit_for_external_display`) that drops any external mode bigger than your phone's *own screen's* pixel count. It's why stock Pixels cap external around 1440p. Samsung tunes DeX past it (hence 4K), but it's the baseline mechanism — and on my Razr I had to patch the compiled framework (root) to get 4K/5K2K at all.
+Phones top out at **DisplayPort 1.4**, and **as of 2026 no phone ships DisplayPort 2.1** — UHBR (40/54/80 Gbps) needs a USB4/Thunderbolt-class USB-C controller, and no phone has one (they're all USB 3.2). So the really heavy modes (5K2K@120, 8K) aren't happening on *any* phone — that needs a laptop/PC port.
 
-**2. The "60Hz feeling" on a high-refresh panel is adaptive frame-pacing.** Even with a 100Hz external *mode* set, Android renders content at 60 when idle and **boosts to the panel max only when you interact** (mouse/scroll). TestUFO will read 60 unless you're moving the cursor mid-test. This part *is* the same on DeX — so even if Samsung unlocked the mode, the desktop would still idle at 60 to save power and boost on use. Worth knowing before you blame the cable.
+## One practical thing I measured: direct cable beats a dock
 
-## The real hardware ceiling (this part hits DeX too)
-
-Here's where even the Razr stops, and it's universal to phones: **USB-C DisplayPort version.** It's negotiated at the USB-C Alt-Mode layer by the phone, and **phones top out at DisplayPort 1.4** (recent Samsung flagships included — that's HBR3 + DSC, which is how DeX does 4K@120-with-DSC over a good cable). **No phone does DisplayPort 2.1.**
-
-I proved it brutally: same monitor, **same exact cable and input** — plugged into a Mac it ran **5120×2160 @ 165Hz** (DP 2.1); the phone on that identical cable maxed at 5K2K@60 and the DisplayPort AUX channel showed the monitor handing the *phone* DP 1.2 but the *Mac* DP 2.1. It's the source's USB-C controller firmware. Nothing software-side — not root, not a custom kernel — changes it.
-
-**So for any DeX setup:** your phone is a DP-1.4 source at best. 4K@120 w/ DSC is the realistic top end on good hardware; the truly heavy stuff (5K2K@120, 8K) needs a laptop/PC with a real DP-2.1/Thunderbolt port.
-
-## The most actionable DeX tip in here: ditch the dock for resolution
-
-One USB-C port, 4 lanes. A dock/hub usually runs DisplayPort in **2-lane mode** (keeping 2 lanes for USB) — **half your DP bandwidth.** Measured it directly: through a Thunderbolt dock the Razr did 3440×1440@60; on a **direct USB-C→DP cable** the *same phone + monitor* jumped to 5K2K@60 / 4K@60 / 3440×1440@100. For DeX, if you want max resolution/refresh, **use a direct USB-C→DisplayPort cable, not a hub.** The hub costs you display bandwidth.
+Through a Thunderbolt dock the Razr did **3440×1440@60**; on a **direct USB-C→DP cable** the *same phone + monitor* jumped to **5K2K@60 / 3440×1440@100**. A dock runs DisplayPort in 2-lane mode (keeping 2 lanes for USB), roughly halving your DP bandwidth. If you ever want max resolution/refresh out of a phone, a direct cable gets you more than a hub.
 
 ---
 
-## Bottom line for DeX users
-- **A phone desktop mode running external at 100Hz is real** (Moto does it). DeX's 60Hz lock is **Samsung's software choice, not hardware** — good ammo for feature requests.
-- **Even unlocked, "60Hz feel" persists at idle** (adaptive pacing, AOSP). It boosts on interaction.
-- **Direct cable > dock** for bandwidth (docks halve DisplayPort).
-- **Phones max at DisplayPort 1.4.** 4K@120/DSC is the realistic ceiling; nothing phone-side reaches DP-2.1 modes.
-
-If anyone from the DeX side knows whether newer One UI builds have *ever* shipped >60Hz external, I'd love to hear it — from the hardware side there's no reason it couldn't.
+**Why I'm posting it here:** purely as a comparison. The Razr's desktop mode does **5K2K and above-60Hz external** on this generation of Snapdragon silicon. Make of that what you will. Genuinely curious — has One UI / DeX *ever* output above 60Hz to an external monitor? From the hardware side I saw, there's no reason a phone couldn't.
