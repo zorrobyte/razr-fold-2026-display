@@ -468,3 +468,35 @@ The governor caps external res to the INTERNAL panel's pixel budget = **5.54 M p
 
 **→ Revert to OEM (no root) = lose 4K/5K2K, drop back to ~3440×1440@100.** The framework patch (root) is the
 ONLY software change that buys display capability. The dtbo mods buy nothing and should be reverted to stock.
+
+---
+
+## 22. TRUE ROOT CAUSE: USB-C DP Alt-Mode is DP 1.2 (Type-C firmware, not the DP driver)
+Final HBR3 experiment (v4: HBR3 enabled): link collapsed to 1080p AGAIN, and **DPCD still read `0x12` = DP 1.2**
+even with HBR3 on. Combined with the same-cable Mac test, this pins the true cause:
+
+- DP version is negotiated at the **USB-C Alt-Mode (PD/VDM) layer by the SOURCE**, before DP link training.
+- **Phone's USB-C controller advertises DP 1.2** → monitor outputs DP 1.2 (HBR2 max, DPCD 0x12).
+- **Mac's advertises DP 2.1** → same monitor + same cable + same input → DP 2.1 / UHBR / 5K2K@165.
+- HBR3 (DP 1.3+ rate) therefore can't train on the phone (link is DP 1.2) → falls back to RBR → 1080p.
+- DSC (DP 1.4 feature) is impossible for the same reason.
+
+**This lives in the Type-C/PD/PMIC firmware (`qcom,altmode-dev`), NOT the msm-dp driver.** No dtbo property,
+no DP-driver patch, not even kernel source changes the Alt-Mode DP version the USB-C silicon advertises.
+It is effectively **firmware-locked in the phone's USB-C controller.**
+
+### DEFINITIVE CEILING
+Phone is a **DP 1.2 / HBR2 Alt-Mode source**. Absolute max output = **5120×2160@60 / 4K@60 / 3440×1440@100**.
+HBR3 / DSC / higher-refresh-at-high-res are blocked below anything software can reach. Not a phone defect —
+just a DP 1.2-class USB-C output vs a DP 2.1 source like the Mac. **End of the road. dtbo reverted to stock.**
+
+---
+
+## FINAL PROJECT STATE
+- Bootloader **unlocked** (Verizon Moto), **rooted** (Magisk 30.7).
+- **Framework patch active** (`services.jar` Magisk overlay) — removes `enable_mode_limit_for_external_display`
+  governor → THIS unlocks 4K/5K2K (root-required; reverting to OEM loses it, drops to ~3440×1440).
+- **dtbo: stock** (all mods reverted — proven to buy nothing; the wall is USB-C Alt-Mode DP 1.2).
+- **Direct USB-C→DP cable → 5K2K@60 / 4K@60 / 3440×1440@100.** Dock → 3440×1440@60 (2-lane).
+- Desktop renders 120Hz on interaction (adaptive). Browser web content 60Hz (interaction-gated, AOSP).
+- Walls (all hardware/firmware, not software): USB-C Alt-Mode **DP 1.2** (no HBR3/DSC/UHBR).
