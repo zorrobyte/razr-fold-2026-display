@@ -2,7 +2,7 @@
 
 Device: `motorola razr_fold_2026` (codename **blanc**), Android 16, Verizon (`ro.carrier=retus`).
 SoC: **Qualcomm SM8845 = Snapdragon 8 Gen 5** (platform `canoe`, Adreno 840).
-Serial: `ZP2223437N`. Bootloader: **UNLOCKED** (as of this writeup).
+Serial: `ZP2223437N`. Bootloader: **UNLOCKED**. Root: **Magisk v30.7 flashed** (init_boot patched).
 
 ---
 
@@ -115,17 +115,22 @@ is literally a thermal kill-switch for external displays. Conservative default; 
 
 ---
 
-## 8. Rooting plan (Magisk) — ready to execute
-Android 16, **A/B slots** → patch **`init_boot.img`** (NOT `boot.img`; ramdisk moved to init_boot in A13+).
+## 8. Rooting (Magisk) — ✅ DONE
+Android 16, **A/B slots** (active `_b`) → patched **`init_boot.img`** (NOT `boot.img`; ramdisk moved
+to init_boot in A13+). Firmware: `BLANC_G_W3WBS36.36-48-5-1 ... cid50` (matched build exactly).
 
-1. Get exact build first: `adb shell getprop ro.build.fingerprint` / `ro.build.version.incremental`.
-2. Source matching `init_boot.img` (see action item #3 — LMSA on Windows).
-3. `adb push init_boot.img /sdcard/` → Magisk app → "Select and Patch a File".
-4. `adb pull /sdcard/Download/magisk_patched-*.img`
-5. `fastboot flash init_boot magisk_patched.img`
-   - "Flashing is not allowed" → `fastboot reboot fastboot` (fastbootd), flash there.
-   - Stubborn → both slots: `fastboot flash init_boot_a …` / `fastboot flash init_boot_b …`
-6. `fastboot reboot` → Magisk = root.
+Steps that worked:
+1. Confirmed build: `W3WBS36.36-48-5-1 / 1c4b8-a3faa` == firmware. ✅
+2. Extracted `init_boot.img` from the 15 GB firmware zip (`unzip -j`).
+3. `adb push init_boot.img /sdcard/Download/` → Magisk app v30.7 → "Select and Patch a File"
+   → produced `magisk_patched-30700_2S4nL.img` (validated: contains `KEEPVERITY`, `/.magisk`, `overlay.d`).
+4. `adb pull` patched img.
+5. **`fastboot flash init_boot` in BOOTLOADER mode → "Preflash validation failed"** (known Moto issue).
+6. **FIX: `fastboot reboot fastboot` (fastbootd) → `fastboot flash init_boot magisk_patched.img` → OKAY.** ✅
+7. `fastboot reboot` → booted, Magisk active.
+
+> ⚠️ Key gotcha for next time: Moto rejects Magisk-patched images in bootloader mode
+> ("Preflash validation failed") — **flash in fastbootd** (`fastboot reboot fastboot`) instead.
 
 ### Then the goal
 7. Install **LSPosed** via Magisk → hook the `DisplayModeDirector` external-mode-limit vote to return
