@@ -224,3 +224,49 @@ LSPosed was a dead end (lspd couldn't read any module APK; ReZygisk didn't help)
 ### Net
 Root project complete: bootloader unlocked, rooted, **framework governor removed (persistent)**. Remaining
 limit is the phone's DP-alt link bandwidth to this specific 5K2K panel, which is hardware, not software.
+
+---
+
+## 12. Why not higher? SoC says 4K@120/8K@30 — we get ~3.3 Mpix worth. The LINK.
+
+The Snapdragon 8 Gen 5's "4K@120 / 8K@30 external" is the **DPU's internal capability assuming a
+DP 2.1 UHBR link** (reference/laptop platform). A phone's USB-C cannot present that link. Three stacked
+bottlenecks sit between the SoC and the monitor:
+
+### Bottleneck 1 — DP version: DP 1.4 (HBR3), not DP 2.1 (UHBR)
+Phones implement DisplayPort Alt Mode over **DP 1.4 / HBR3 = 8.1 Gbps per lane**. DP 2.1 UHBR
+(10–20 Gbps/lane) needs Thunderbolt/USB4-class PHY that phones don't ship. This phone is NOT a TB host —
+the TB5 cable/dock fall back to DP-alt. So per-lane rate is capped at HBR3.
+
+### Bottleneck 2 — lane count: 2-lane, not 4-lane (shares USB-C with USB3)
+USB-C has 4 high-speed lanes. DP-alt can use **4 (DP-only)** or **2 for DP + 2 for USB3**. Through the
+dock (which keeps USB data alive), the phone negotiates **2-lane DP**:
+- 2-lane HBR3 = 16.2 Gbps raw → ~13 Gbps usable (8b/10b)
+- ≈ **~450–500 Mpix/s** ceiling at 24bpp + blanking
+
+### Bottleneck 3 — no DSC negotiated
+DP 1.4 + Display Stream Compression (~3:1) could fake 4K@120, but the phone/dock aren't negotiating DSC
+for these modes, so we get the raw-bandwidth ceiling.
+
+### The math matches exactly what we observe
+| Mode | Mpix/s | Link bits (24bpp×1.2) | Fits 2-lane (~13 Gbps)? |
+|---|---|---|---|
+| 3440×1440 @ 60 | 297 | 8.6 Gbps | ✅ (was active) |
+| 2560×1080 @ 120 | 332 | 9.6 Gbps | ✅ (active now) |
+| 1920×1080 @ 120 | 249 | 7.2 Gbps | ✅ |
+| 3440×1440 @ 100 | 495 | 14.3 Gbps | ❌ just over |
+| **3840×2160 @ 60 (4K)** | 498 | 14.3 Gbps | ❌ just over |
+| **5120×2160 @ 60 (5K2K)** | 663 | 19 Gbps | ❌ |
+| 5120×2160 @ 165 (native) | 1825 | 53 Gbps | ❌ (needs DP 2.1 UHBR) |
+
+→ The link delivers a **fixed ~3.3 Mpix@60-equivalent budget**, spent on EITHER resolution
+(3440×1440@60) OR refresh (2560×1080@120). That's why the dual-mode LG trades one for the other.
+
+### What WOULD raise it
+- **Direct USB-C→DP cable (forces 4-lane DP-alt)** → ~26 Gbps → unlocks **4K@60 / 5K2K@60 / 3440×1440@120**.
+  This is the single highest-value test left; software is no longer the gate.
+- **5K2K@165 is physically impossible** from this phone — needs DP 2.1 UHBR the USB-C PHY can't source.
+
+### Summary of the bottleneck stack
+SoC DPU (4K120/8K30) → ❌ DP 1.4 not 2.1 → ❌ 2-lane not 4-lane → ❌ no DSC → **~3.3 Mpix@60 link budget**.
+The framework software cap (now removed) sat ABOVE all of this and was never the binding limit for real panels.
