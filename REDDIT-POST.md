@@ -34,9 +34,11 @@ Unlocked the bootloader (OEM-unlock toggle in Developer Options → Moto's offic
 
 ## Discovery #3: killing the cap
 
-LSPosed was a dead end (the daemon couldn't load modules on this Android 16 build — a known mount-namespace issue, ReZygisk didn't help either). So I went straight at the framework: **decompiled `services.jar`, patched the one method** `DisplayManagerFlags.isExternalDisplayLimitModeEnabled()` to return `false`, repacked it, and served it as a **Magisk module** (with the stale dexopt files whiteout'd so ART loads the patched jar).
+Stock LSPosed was a dead end at first — the daemon couldn't load modules on this Android 16 build (the `lspd` mount-namespace bug: `Failed to open APK … I/O error`), and ReZygisk didn't help. So I went straight at the framework: **decompiled `services.jar`, patched the one method** `DisplayManagerFlags.isExternalDisplayLimitModeEnabled()` to return `false`, repacked it, and served it as a **Magisk module** (with the stale dexopt files whiteout'd so ART loads the patched jar).
 
 Booted clean. **The governor was gone.** Now the phone would *accept* 4K/5K2K — if the cable could deliver them.
+
+**Update — LSPosed actually works now (the cleaner route):** the **JingMatrix Vector fork, canary `v2.0-3043`**, fixes that mount-namespace bug — it injects into `system_server` with no APK-open error. So instead of re-patching `services.jar` after every OTA, you can hook the exact same method from a one-class Xposed module and just re-enable it after updates. I packaged it: **https://github.com/zorrobyte/external-display-unlock** (verified holding the cap off on its own — 5K2K@60/4K@60/3440×1440@100 still enumerate with the services.jar patch removed).
 
 ## Discovery #4: the cable matters more than you think
 
