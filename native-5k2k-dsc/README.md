@@ -171,8 +171,12 @@ adb shell su -c 'echo 0 > /sys/module/drm/parameters/debug' # ‼️ MUST turn o
 
 ## 6. Select native 5K2K (the patch enables DSC; this picks the mode)
 
-The patch makes the **5120×2160@100** DisplayID timing valid. Force it with the QTI `mode_override`,
-then **physically replug** the monitor (mode_override applies on the next probe):
+**Easiest: install the 📱 [`app/`](app/) "5K Display Control" root app** — open it, it lists the
+connected monitor's modes (5120×2160@100 ★ shows up once the patch is flashed), tap the one you want,
+then unplug + replug the monitor. Works on any monitor (it only lists modes that display supports).
+
+CLI equivalent — the patch makes the **5120×2160@100** DisplayID timing valid; force it with the QTI
+`mode_override`, then **physically replug** the monitor (mode_override applies on the next probe):
 
 ```sh
 adb shell su -c 'mount -t debugfs none /sys/kernel/debug 2>/dev/null; \
