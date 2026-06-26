@@ -11,5 +11,23 @@ Works on any monitor (LG 5K2K, Samsung 3440, etc.) — it just reads the connect
   works for uncompressed modes without it.
 - "Clear override" reverts to Auto/stock (then replug).
 
-Build: `javac` → `d8` → `aapt2 link` → zip `classes.dex` → `zipalign` → `apksigner` (see parent
-README for tool paths). Prebuilt: `5K-Display-Control.apk`.
+## UI scale slider (NEW)
+
+At native 5120×2160 the external display defaults to **~138 dpi** (the internal panel runs 420), so
+everything is tiny. The app has a **UI-scale slider** that adjusts the external display's density
+**live — no replug, applies instantly**:
+
+- It auto-detects the external display's logical id via `DisplayManager` (here: display **19**) and
+  runs `wm density <dpi> -d <id>` under root.
+- Drag right = larger (range 96–360 dpi), or use the **Smaller − / Larger +** buttons for ±20 dpi steps.
+- **Reset** restores the display's stock density (`wm density reset -d <id>`).
+- The change is per-display, so it doesn't touch your phone's internal-screen scaling.
+- Try **~170–200 dpi** as a comfortable 5K2K desktop scale.
+
+CLI equivalent: `wm density 180 -d 19` (find the id in `dumpsys display | grep -A2 EXTERNAL`).
+
+## Build
+
+`./build.sh` — `aapt2 link` → `javac` → `d8` → zip `classes.dex` → `zipalign` → `apksigner`
+(debug keystore `android`/`android`; build-tools 37.0.0, android-36 jar). Prebuilt:
+`5K-Display-Control.apk`.
