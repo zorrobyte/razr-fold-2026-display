@@ -523,3 +523,36 @@ Switched the device to the module (`services_dispcap` Magisk module deleted; `fr
 backup). Packaged the module + how-to as a standalone **public** repo:
 **https://github.com/zorrobyte/external-display-unlock** (`lsposed-module/` here holds the same APK +
 `vector-v2.0-3043-canary.zip` + README). Requirements: Magisk + Zygisk + Vector canary ≥3043.
+
+---
+
+## 24. 🔓🔓 DSC UNLOCKED — supersedes §18's "not forceable / kernel-locked"
+
+§18 concluded DSC over external DP-alt was kernel-gated and **not forceable without kernel source**,
+making 5120×2160@**60** (uncompressed) the ceiling. **That ceiling is now broken.** Native
+**5120×2160 @ 100 Hz with DSC** is working — by reverse-engineering the *real* blocker and
+binary-patching the vendor display module (no kernel source needed).
+
+**The real blocker (not a hard PHY/kernel limit):** the SDE display driver computes the DP path's DSC
+budget once at boot. With `SDE_DP_DSC_RESERVATION_SWITCH` **off** for Eliza,
+`dp_display->max_dsc_count = catalog_dsc − DSI_panel_dsc = 0` — so `DP_PANEL_CAPS_DSC` is never set and
+every wide DP mode validates `dsc:0`. Proven live: `convert_to_dp_mode … max:0 … caps:0x0`, while
+`get_available_dp_resources` shows `avail_dsc:4` (4 blocks free) clamped to `dp_avail_dsc:0`. So the
+blocks exist — the budget was just **zero**. (Sink + driver both support DSC: `fec_en=1, dsc_en=1`.)
+
+**The fix:** one instruction in `dp_drm_bridge_init()` in `msm_drm.ko` — `mov w19,w3` → `movz w19,#4`
+(forces `max_dsc_count = 4`). `msm_drm.ko` is a loadable `vendor_dlkm` module (NOT the GKI kernel), so
+no full kernel rebuild — but it's LZ4-EROFS under dm-verity on a VABC snapshot and loads in
+first-stage, so installing meant: rebuild the EROFS on-device (SELinux labels intact) → disable AVB
+verity (`fastboot --disable-verity` on stock vbmeta) → `fastboot flash vendor_dlkm`.
+
+**After the patch:** `convert_to_dp_mode … max:4 … caps:0x1`; the monitor's real 5120×2160@100 DSC
+timing (1196 MHz) validates; `_sde_rm_reserve_dsc` reserves DSC blocks 1+2 (`tot_dsc_blks_in_use=2`);
+DSCMERGE dual-pipe (2×2560 = 5120). 30bpp, smooth (~14% composer, ~85% idle).
+
+**Both unlocks are required together:** the **framework patch (§11)** lets the framework offer the
+>5.54 MP modes; this **DSC patch** lets the native one actually negotiate compression and run at high
+refresh. The §19 dtbo-cap path is an alternative angle, not needed for this route.
+
+➡️ **Full writeup, scripts, patched/stock `msm_drm.ko`, ready-to-flash `vendor_dlkm`, recovery
+backups, and PROOF: [`native-5k2k-dsc/`](native-5k2k-dsc/).**
