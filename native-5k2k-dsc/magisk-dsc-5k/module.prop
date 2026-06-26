@@ -1,0 +1,6 @@
+id=dsc_5k
+name=Razr Fold 2026 Native 5K2K (DSC mode select)
+version=v1
+versionCode=1
+author=zorrobyte
+description=Auto-applies the QTI mode_override for native 5120x2160@100 DSC on the external display at boot (the max_dsc_count patch must already be flashed into vendor_dlkm). Also quiets the HDCP auth loop. Dock-after-boot is automatic; docked-at-boot may need one replug.
