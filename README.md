@@ -27,7 +27,7 @@ folder and deep-dive.
 | **1b. Mode/refresh list** | Moto's ReadyFor/desktop list (`getDisplayDeviceInfoLocked → getMaxResolution`) **clamps resolution to ≤ active mode and hardcodes 60 Hz** | Hook `getDisplayDeviceInfoLocked` and **rebuild `supportedReadyForModes` from the real `mSupportedModes` — every resolution at its TRUE max refresh** (the `R4` helper) | `lsposed-module/src/com/dispunlock/` (`R4.java`, `Hook-with-mode-rebuild.java`) |
 | **2. Link/cable** | A USB-C **dock** runs 2-lane DP (shares lanes with USB3) → bandwidth-starved (3440@60) | **Direct USB-C→DP cable** (4-lane) or a 4-lane "DP-priority" dock | FINDINGS §17, native-5k2k-dsc §lanes |
 | **3. DSC (kernel)** | `SDE_DP_DSC_RESERVATION_SWITCH` is **off** for Eliza → DP path's DSC budget = **0** at boot → DSC never engages → only uncompressed timings (5K2K capped @60, which the panel won't take at native) | **Binary-patch `msm_drm.ko`**: force `dp_display->max_dsc_count = 4` (one instruction) → DSC engages, native 5120@100 DSC timing validates, SDE reserves the DSC pair | **`native-5k2k-dsc/`** |
-| **+ Mode select** | SF defaults to the EDID-preferred 3440 | QTI `mode_override`: `echo "5120 2160 100 0" > /sys/kernel/debug/drm_dp/edid_modes` + replug | `native-5k2k-dsc/` |
+| **+ Mode select** | SF defaults to the EDID-preferred 3440 | 📱 **the "5K Display Control" app** (tap the mode, replug) — or the QTI `mode_override` CLI: `echo "5120 2160 100 0" > /sys/kernel/debug/drm_dp/edid_modes` | `native-5k2k-dsc/app/` |
 | **+ Settings** | Cross-group switch off; HDCP 2.2 auth-retry loop | `settings put secure match_content_frame_rate 2`; `settings put global hdcp_checking 0` | `native-5k2k-dsc/` |
 
 **All of layer 1 + 2 + 3 are required together** for native 5120-with-DSC: layer 1 makes the framework
@@ -69,6 +69,7 @@ connector), sim-HPD cycling (wedges the framework display state to OFF), the 704
 | Path | What it is |
 |---|---|
 | **`native-5k2k-dsc/`** | ⭐ **The DSC kernel-module unlock — the final win.** Full replicate-from-scratch guide, `apply-patch.py`, on-device EROFS rebuild script, Magisk persistence module, **patched + stock `msm_drm.ko`**, **ready-to-flash `vendor_dlkm`**, recovery backups (`vbmeta`, `vendor_dlkm`), and **`PROOF.md`**. |
+| **`native-5k2k-dsc/app/`** | 📱 **5K Display Control** — a tap-to-set **root app**: reads whatever monitor is plugged in, lists its modes (incl. native 5K2K-DSC), tap one → it sets the QTI `mode_override` → replug to apply. Works on any monitor. Source + prebuilt APK. **No adb needed for daily use.** |
 | **`FINDINGS.md`** | The full investigation log, §1–§24: bootloader unlock, root, desktop mode, the resolution-cap root cause, the framework patch, the lane/bandwidth math, refresh-rate investigations, the DSC dead-ends, the dtbo-cap path, and the final DSC unlock (§24). |
 | **`framework-patch/`** | The **`services.jar`** framework patch (`DisplayManagerFlags.patched.smali`, `services-dispcap.zip` Magisk module) — layer 1a. |
 | **`lsposed-module/`** | The same framework unlock as an **LSPosed/Vector module** (`com.dispunlock`). `Hook.java` = cap-only; **`Hook-with-mode-rebuild.java` + `R4.java` = the full layer-1a+1b** (cap removal **and** `supportedReadyForModes` rebuild). |
@@ -105,8 +106,10 @@ connector), sim-HPD cycling (wedges the framework display state to OFF), the 704
 4. **Layer 3 (DSC):** follow **`native-5k2k-dsc/README.md`** — patch `msm_drm.ko`
    (`scripts/apply-patch.py`), rebuild `vendor_dlkm` on-device (`scripts/rebuild-vendor-dlkm.sh`),
    disable AVB verity, `fastboot flash vendor_dlkm`, install the persistence module.
-5. **Select the mode:** `echo "5120 2160 100 0" > /sys/kernel/debug/drm_dp/edid_modes` + replug
-   (or let the Magisk module arm it).
+5. **Select the mode — easiest way: install the 📱 [`native-5k2k-dsc/app/`](native-5k2k-dsc/app/)
+   "5K Display Control" app**, open it, tap the mode you want for the connected monitor, then replug.
+   (CLI equivalent: `echo "5120 2160 100 0" > /sys/kernel/debug/drm_dp/edid_modes` + replug; or let the
+   `magisk-dsc-5k/` service auto-arm a single saved mode.)
 
 ## Recovery
 Bootloader unlocked + the backups in `native-5k2k-dsc/backup/` (stock `vendor_dlkm`, `vbmeta`,
