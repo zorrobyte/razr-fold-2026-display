@@ -1,0 +1,10 @@
+# clone-kit checksums (sha256) — verified by flash-device2.sh
+efe471ea97f12a14728cff4a779ae0547cf44abfd530d89efecbb7f3a40f11fa  native-5k2k-dsc/artifacts/vendor_dlkm_patched.img
+b894d31bdb8cb4e503e2e648737439a67075bf58286127fdfd096aadbb54f126  firmware-boot/magisk_patched.img
+30b985d94e644f15d97845032191e5fc24a02ea24d445d7b788bfb8366270176  firmware-boot/vbmeta.img
+db56883a5e40bc6a71ecc4842a365e7abe5b48e1c5679341a86ea3db087bbc84  firmware-boot/vbmeta_system.img
+04b030c2283d8b24c906cb8754631bf26bdbca81fd4ec5d77461aef99c2c24f9  framework-patch/services_desktop5k_v4.zip
+465e3404bb838254704508836d9696fee7916c1669df2443a0f60eff7f3a09af  native-5k2k-dsc/app/5K-Display-Control.apk
+e0d32d2123532860f97123d927b1bb86c4e08e6fd8a48bfc6b5bee0afae9ebd5  tools/Magisk-v30.7.apk
+975d7ff3e89dd0bb628308b5c570a7dd99185b69695ae5c19c63fe7b535b24e9  native-5k2k-dsc/backup/vendor_dlkm_b.stock.img
+2498fee2a3cac0a5a21b1cb7d49dbfc6d38b6352525d38efb9ad40a068c8a7b1  firmware-boot/init_boot.img

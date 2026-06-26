@@ -76,6 +76,7 @@ connector), sim-HPD cycling (wedges the framework display state to OFF), the 704
 | **`dtbo-mod/`** | The **devicetree-cap** angle (`qcom,max-pclk-frequency-khz`, `qcom,dp-hbr3-disable`) + stock dtbo backup — an alternative unlock path (§19). |
 | **`firmware-boot/`** | Boot/firmware artifacts. |
 | **`decompiled/`, `apks/`, `tools/`** | Decompiled Moto desktop APKs (LaptopPanel/DesktopCore/TaskBar) + tooling used during RE. |
+| **`CLONE.md` + `flash-device2.sh`** | 🧬 **Clone the whole setup to a second `blanc`** — checksum-verified flash kit (DSC `vendor_dlkm` + verity-off `vbmeta` + Magisk init_boot + v4 `services.jar` module + app + settings) and a guided script. Same-build only; never touches per-device IMEI/persist/userdata. |
 | **`REDDIT-POST.md`, `DEX-POST.md`** | Write-ups / posts. |
 
 ---
@@ -110,6 +111,12 @@ connector), sim-HPD cycling (wedges the framework display state to OFF), the 704
    "5K Display Control" app**, open it, tap the mode you want for the connected monitor, then replug.
    (CLI equivalent: `echo "5120 2160 100 0" > /sys/kernel/debug/drm_dp/edid_modes` + replug; or let the
    `magisk-dsc-5k/` service auto-arm a single saved mode.)
+
+## Clone to a second device
+`./flash-device2.sh` (see **[`CLONE.md`](CLONE.md)**) reproduces this entire stack on another `blanc`
+on the **same build** — it verifies checksums, then flashes the DSC `vendor_dlkm`, verity-off `vbmeta`,
+Magisk `init_boot`, the v4 `services.jar` module, the app, and the settings. It deliberately does **not**
+image the whole device: per-unit partitions (IMEI/persist/DRM/userdata) must never move between phones.
 
 ## Recovery
 Bootloader unlocked + the backups in `native-5k2k-dsc/backup/` (stock `vendor_dlkm`, `vbmeta`,
