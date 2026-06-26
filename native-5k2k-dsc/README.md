@@ -33,6 +33,14 @@ and flash the partition. All of that is below.
 
 ## 1. Prerequisites
 
+> **This is layer 2 of a 2-part stack.** This folder is the **DSC** unlock. You ALSO need the
+> **framework cap removal** (`DisplayManagerFlags.isExternalDisplayLimitModeEnabled → false`), or
+> AOSP's external-display governor filters out 5120×2160 / 4K before they ever reach SurfaceFlinger.
+> Install it from [`../framework-patch/`](../framework-patch/) (`services.jar` patch) or
+> [`../lsposed-module/`](../lsposed-module/) (LSPosed/Vector module). See the root
+> [`../README.md`](../README.md) for the full stack and [`../FINDINGS.md`](../FINDINGS.md) §11/§17/§24.
+
+- **Framework cap removal active** (above) — required for the framework to offer 5120/4K modes at all.
 - **Unlocked bootloader** (this device's `ro.boot.flash.locked=1`/`verifiedbootstate=green` are
   **spoofed by the PlayIntegrityFix Magisk module** — the real state is unlocked).
 - **Root** (Magisk).
