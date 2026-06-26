@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import android.graphics.Color;
+import android.hardware.display.DisplayManager;
+import android.view.Display;
 import java.io.*;
 import java.util.*;
 
@@ -14,7 +16,10 @@ import java.util.*;
 // you tap one, it writes mode_override; replug the monitor to apply.
 public class MainActivity extends Activity {
     LinearLayout list;
-    TextView status;
+    TextView status, scaleLabel;
+    SeekBar scaleBar;
+    int extDisplayId = -1;       // logical id of the external display (for `wm density -d`)
+    static final int DPI_MIN = 96, DPI_MAX = 360;
 
     @Override protected void onCreate(Bundle b) {
         super.onCreate(b);
@@ -38,6 +43,54 @@ public class MainActivity extends Activity {
         list = new LinearLayout(this);
         list.setOrientation(LinearLayout.VERTICAL);
         root.addView(list);
+
+        // ---- UI scale (display density) ----
+        TextView scaleHdr = new TextView(this);
+        scaleHdr.setText("UI scale — external display");
+        scaleHdr.setTextColor(Color.WHITE); scaleHdr.setTextSize(18);
+        scaleHdr.setPadding(0, 30, 0, 4);
+        root.addView(scaleHdr);
+
+        scaleLabel = new TextView(this);
+        scaleLabel.setTextColor(Color.parseColor("#9fd0ff")); scaleLabel.setTextSize(14);
+        scaleLabel.setPadding(0, 0, 0, 6);
+        root.addView(scaleLabel);
+
+        scaleBar = new SeekBar(this);
+        scaleBar.setMax(DPI_MAX - DPI_MIN);
+        scaleBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            public void onProgressChanged(SeekBar s, int p, boolean fromUser) {
+                if (scaleLabel != null) scaleLabel.setText(scaleText(DPI_MIN + p));
+            }
+            public void onStartTrackingTouch(SeekBar s) {}
+            public void onStopTrackingTouch(SeekBar s) {        // apply on release
+                int dpi = DPI_MIN + s.getProgress();
+                if (extDisplayId < 0) { toast("No external display found — tap Refresh"); return; }
+                su("wm density " + dpi + " -d " + extDisplayId);
+                toast("UI scale set to " + dpi + " dpi");
+            }
+        });
+        root.addView(scaleBar);
+
+        LinearLayout scaleRow = new LinearLayout(this);
+        scaleRow.setOrientation(LinearLayout.HORIZONTAL);
+        Button smaller = btn("Smaller –", "#2a3138");
+        Button bigger  = btn("Larger +",  "#2a3138");
+        Button resetD  = btn("Reset",     "#3a2a2a");
+        LinearLayout.LayoutParams half = new LinearLayout.LayoutParams(0,
+            LinearLayout.LayoutParams.WRAP_CONTENT, 1f);
+        half.setMargins(0, 8, 8, 8);
+        smaller.setLayoutParams(half); bigger.setLayoutParams(half); resetD.setLayoutParams(half);
+        smaller.setOnClickListener(v -> nudge(-20));
+        bigger.setOnClickListener(v -> nudge(+20));
+        resetD.setOnClickListener(v -> {
+            if (extDisplayId < 0) { toast("No external display"); return; }
+            su("wm density reset -d " + extDisplayId);
+            toast("UI scale reset to default");
+            reload();
+        });
+        scaleRow.addView(smaller); scaleRow.addView(bigger); scaleRow.addView(resetD);
+        root.addView(scaleRow);
 
         Button refresh = btn("⟳  Refresh / re-read monitor", "#2a3138");
         refresh.setOnClickListener(v -> reload());
@@ -64,6 +117,51 @@ public class MainActivity extends Activity {
         return b;
     }
 
+    String scaleText(int dpi) {
+        // 160 dpi = 1.0x baseline (mdpi). Show dpi + relative scale.
+        int pct = Math.round(dpi * 100f / 160f);
+        return "Density " + dpi + " dpi  (~" + pct + "% — drag right = larger)";
+    }
+
+    // Find the external display's logical id (matches `wm density -d <id>`).
+    int findExternalDisplay() {
+        try {
+            DisplayManager dm = (DisplayManager) getSystemService(DISPLAY_SERVICE);
+            for (Display d : dm.getDisplays()) {
+                if (d.getDisplayId() == Display.DEFAULT_DISPLAY) continue;
+                String n = d.getName() == null ? "" : d.getName().toLowerCase();
+                if (n.contains("hdmi") || n.contains("dp") || n.contains("ultragear")
+                        || n.contains("odyssey") || n.contains("screen"))
+                    return d.getDisplayId();
+            }
+            // fallback: first non-default display
+            for (Display d : dm.getDisplays())
+                if (d.getDisplayId() != Display.DEFAULT_DISPLAY) return d.getDisplayId();
+        } catch (Exception e) { }
+        return -1;
+    }
+
+    // Read the current density for a display from `wm density -d <id>`.
+    int readDensity(int id) {
+        String o = su("wm density -d " + id);
+        int phys = DPI_MIN, over = -1;
+        for (String ln : o.split("\n")) {
+            try {
+                if (ln.contains("Override density:")) over = Integer.parseInt(ln.replaceAll("\\D+", ""));
+                else if (ln.contains("Physical density:")) phys = Integer.parseInt(ln.replaceAll("\\D+", ""));
+            } catch (Exception e) { }
+        }
+        return over > 0 ? over : phys;
+    }
+
+    void nudge(int delta) {
+        if (extDisplayId < 0) { toast("No external display found — tap Refresh"); return; }
+        int dpi = Math.max(DPI_MIN, Math.min(DPI_MAX, DPI_MIN + scaleBar.getProgress() + delta));
+        scaleBar.setProgress(dpi - DPI_MIN);
+        su("wm density " + dpi + " -d " + extDisplayId);
+        toast("UI scale set to " + dpi + " dpi");
+    }
+
     void reload() {
         new Thread(() -> {
             String dp = su("mount -t debugfs none /sys/kernel/debug 2>/dev/null; "
@@ -74,6 +172,15 @@ public class MainActivity extends Activity {
             for (String ln : dp.split("\n")) if (ln.contains("resolution=")) cur = ln.trim();
             final String header = "Current: " + cur + "   [" + st + "]";
             final List<String[]> ms = parseModes(modes);
+            extDisplayId = findExternalDisplay();
+            final int dens = extDisplayId >= 0 ? readDensity(extDisplayId) : DPI_MIN;
+            runOnUiThread(() -> {
+                int clamped = Math.max(DPI_MIN, Math.min(DPI_MAX, dens));
+                scaleBar.setProgress(clamped - DPI_MIN);
+                scaleLabel.setText(extDisplayId >= 0
+                    ? scaleText(dens) + "   [display " + extDisplayId + "]"
+                    : "No external display detected");
+            });
             runOnUiThread(() -> {
                 status.setText(header + "\nTap a mode, then UNPLUG + REPLUG the monitor to apply it.");
                 list.removeAllViews();
