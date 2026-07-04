@@ -78,6 +78,7 @@ connector), sim-HPD cycling (wedges the framework display state to OFF), the 704
 | **`decompiled/`, `apks/`, `tools/`** | Decompiled Moto desktop APKs (LaptopPanel/DesktopCore/TaskBar) + tooling used during RE. |
 | **`CLONE.md` + `flash-device2.sh`** | 🧬 **Clone the whole setup to a second `blanc`** — checksum-verified flash kit (DSC `vendor_dlkm` + verity-off `vbmeta` + Magisk init_boot + v4 `services.jar` module + app + settings) and a guided script. Same-build only; never touches per-device IMEI/persist/userdata. |
 | **`REDDIT-POST.md`, `DEX-POST.md`** | Write-ups / posts. |
+| **`newer-software-W3WBS36.36-48-5-1/`** | 🆕 The full stack **rebuilt + confirmed on the newer OTA build `W3WBS36.36-48-5-1`** (Verizon `blanc_gu`): DSC-patched `msm_drm.ko` (same `0x953a4`) + a Magisk `services.jar` module carrying **both** layer 1a (cap) **and** 1b (`supportedReadyForModes` rebuild), with the exact reproducible `baksmali`/`smali` + `d8` steps. On this device the DSC patch sits on top of a [from-source GKI kernel with audio + Lindroid](https://github.com/zorrobyte/razr-fold-2026-kernel-build). |
 
 ---
 

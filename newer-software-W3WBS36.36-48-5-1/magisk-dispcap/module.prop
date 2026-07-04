@@ -1,0 +1,6 @@
+id=services_dispcap
+name=Display-Cap Removal + ReadyFor mode rebuild (blanc W3WBS36.36-48-5-1)
+version=v1.0-1a1b
+versionCode=1
+author=zorrobyte
+description=Layer 1a+1b for build 48-5-1. Patched services.jar: DisplayManagerFlags.isExternalDisplayLimitModeEnabled()->false (cap removal) AND supportedReadyForModes rebuilt from mSupportedModes (every resolution at true max refresh). Removes the external-display resolution/refresh governor.
