@@ -1,12 +1,18 @@
-# HDCP on the external display — diagnosis (CONCLUSION: not achievable)
+# HDCP on the external display — diagnosis (CONCLUSION: blocked by the unlocked bootloader)
 
-> Status (2026-07): **HDCP cannot work on this device + LG 45GX950A.** Both crypto
-> backends are blocked outside the OS: HDCP **2.2** fails at the **sink** (LG AKE bug),
-> and HDCP **1.4** is refused by the **phone's TrustZone** (QTEE won't load the 1.x TA).
-> The force-1.4 patch below was built, flashed, and tested — it correctly makes the
-> driver skip 2.2 and try 1.4, but the 1.4 TA won't load, so HDCP ends up INACTIVE.
-> **Recommend reverting the patch** (it globally disables 2.2, which would break HDCP
-> on a *different* monitor that does support 2.2) — see §7.
+> Status (2026-07, corrected): **HDCP cannot work while the bootloader is unlocked.**
+> This is SOURCE-side, not a monitor bug — confirmed by testing **two different
+> monitors** (LG 45GX950A on a 2-lane dock *with* DSC, and a CX158 on a 4-lane direct
+> link *without* DSC): **both fail HDCP 2.2 identically** (`hdcp2p2_rcvd_msg failed :13`
+> / `AKE_SEND_CERT`). `ro.boot.verifiedbootstate = orange` (unlocked). HDCP crypto is
+> gated on verified boot — the TrustZone withholds it in an untrusted boot state, which
+> explains both failures: 2.2 AKE never completes (`:13`) and the 1.x TA won't even load
+> (`qtee … :16`). The only way to get HDCP back is to **relock the bootloader**, which
+> undoes root + this whole unlock stack. Not fixable from Linux/driver/app.
+>
+> (Earlier drafts of this doc blamed the LG sink and proposed a force-1.4 patch — the
+> second monitor disproved that. The patch was built/flashed/tested and reverted; it
+> can't help because 1.4 is blocked by the same verified-boot gate. See §6–§7.)
 
 ## 1. Symptom
 With the LG 45GX950A connected, HDCP never authenticates — it loops forever:
@@ -19,16 +25,24 @@ hdcp2p2_rcvd_msg failed :13
 `/sys/kernel/debug/drm_dp/hdcp` → `HDCP_VERSION_2P2: HDCP_STATE_AUTH_FAIL`, source `caps: 2`.
 Protected video (Netflix/DRM) won't play on the external display; the desktop itself is unaffected.
 
-## 2. Root cause
-The source (SM8845) supports HDCP 2.2 and the LG **advertises** 2.2, so the driver always picks 2.2.
-HDCP 2.2 auth starts with AKE: the source sends `AKE_Init`, waits ~110 ms, then reads the sink's
-`AKE_Send_Cert` (534 bytes) from the HDCP DPCD region. On this LG-over-DP-alt link that read fails
-(`hdcp2p2_rcvd_msg failed :13`) — the sink's certificate response is not returned correctly. The driver
-**never falls back to HDCP 1.4**; it just retries 2.2 forever. This is a sink/link interop bug in the
-LG's HDCP 2.2 DP implementation — not fixable from the phone at the 2.2 layer.
+## 2. Root cause — the unlocked bootloader (verified-boot gate)
+HDCP 2.2 auth starts with AKE: the source sends `AKE_Init`, waits, then reads the sink's
+`AKE_Send_Cert` and hands it to the TZ HDCP app to verify. Here it fails at `hdcp2p2_rcvd_msg failed :13`
+→ `AUTH_FAIL`, and never falls back to 1.4.
 
-Runtime knobs that do **not** help: `hdcp_wait_sink_sync=1`, `hdcp_checking=2`, re-probe. There is no
-userspace/debugfs way to force the HDCP version.
+**This is source-side, caused by the unlocked bootloader — not the monitor.** Proof: two different
+monitors on different links fail *identically*:
+- **LG 45GX950A**, 2-lane dock, 5120×2160@60 **with DSC** → `AKE_SEND_CERT :13`
+- **CX158**, 4-lane direct, 2880×1800@120 **without DSC** → `AKE_SEND_CERT :13`
+
+Different sink, different lane count, DSC on vs off — same failure. The common factor is the phone:
+`ro.boot.verifiedbootstate = orange` (**unlocked**). HDCP device keys / provisioning are released by the
+TrustZone only under verified boot; an unlocked/rooted boot state is untrusted, so the TZ withholds the
+HDCP crypto. That is why 2.2 AKE never completes **and** the HDCP 1.x TA won't load (§6, `qtee … :16`).
+
+Runtime knobs that do **not** help (as expected — the gate is in the TZ): `hdcp_wait_sink_sync=1`,
+`hdcp_checking=2`, re-probe, forcing the HDCP version. **The only way to restore HDCP is to relock the
+bootloader**, which reverts root and the entire unlock stack — so it's incompatible with this setup.
 
 ## 3. The fix — force HDCP 1.4 (skip 2.2)
 HDCP 1.4 uses a different, simpler DPCD flow (0x68xxx, no certificate exchange) that may authenticate
