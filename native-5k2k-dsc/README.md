@@ -318,7 +318,9 @@ See `../FINDINGS.md` and `mechanism.md` for the full diagnosis. Short version of
 the gate passes, after which the SDE RM (`_sde_rm_reserve_dsc`) reserves the DSC pair at commit.
 
 ## Files in this folder
-- `scripts/apply-patch.py` — re‑derive the unique anchor + apply the 4‑byte patch to a stock `.ko`.
+- `scripts/apply-patch.py` — re‑derive the unique anchor + apply the 4‑byte DSC patch to a stock `.ko`.
+- `scripts/apply-hdcp14-patch.py` — force HDCP 1.4 (patch `dp_hdcp2p2_supported`→false) — see [`HDCP.md`](HDCP.md).
+- [`HDCP.md`](HDCP.md) — HDCP diagnosis (LG 2.2 AKE_Send_Cert fails), the prepared force‑1.4 patch, and why it needs USB fastboot to apply.
 - `scripts/rebuild-vendor-dlkm.sh` — on‑device EROFS extract → swap `.ko` → relabel → `mkfs.erofs`.
 - `scripts/vendor_dlkm_file_contexts` — SELinux file_contexts reference for the rebuild.
 - `magisk-dsc-5k/` — persistence module (sets `edid_modes` at boot + quiets HDCP).
