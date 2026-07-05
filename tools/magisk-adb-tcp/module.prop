@@ -1,0 +1,6 @@
+id=adb_tcp_persist
+name=Persistent ADB over TCP (port 5555)
+version=v1.0
+versionCode=1
+author=zorrobyte
+description=Keeps adbd listening on TCP 5555 across every reboot, so wireless adb (adb connect <ip>:5555) survives even when a USB-C->DP cable occupies the only port. Needed for external-display work on the Razr Fold 2026.

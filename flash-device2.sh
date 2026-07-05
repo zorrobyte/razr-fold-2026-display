@@ -102,8 +102,14 @@ fastboot getvar unlocked 2>&1 | grep -qi 'unlocked: *yes' || {
   [ "$FORCE" = 1 ] && warn "bootloader not reported unlocked (forced)" || die "bootloader is LOCKED — unlock first (this wipes the device)."
 }
 c "==> Flashing vbmeta + vbmeta_system with verity/verification DISABLED"
-run fastboot --disable-verity --disable-verification flash vbmeta "$VBMETA"
-run fastboot --disable-verity --disable-verification flash vbmeta_system "$VBMETA_SYS"
+# NOTE: `fastboot --disable-verity --disable-verification flash vbmeta` errors
+# "Failed to find AVB_MAGIC at offset: 0" on this device (platform-tools 37.0.0),
+# despite a valid AVB0 header. Pre-patch the disable flags into the image, then
+# flash it PLAIN. See native-5k2k-dsc/README.md §9 + tools/vbmeta-disable-verity.py.
+run python3 tools/vbmeta-disable-verity.py "$VBMETA" /tmp/vbmeta_verity_off.img
+run fastboot flash vbmeta /tmp/vbmeta_verity_off.img
+run python3 tools/vbmeta-disable-verity.py "$VBMETA_SYS" /tmp/vbmeta_system_verity_off.img
+run fastboot flash vbmeta_system /tmp/vbmeta_system_verity_off.img
 c "==> Flashing Magisk-patched init_boot (root)"
 run fastboot flash init_boot "$INIT_BOOT"
 c "==> Entering userspace fastboot (fastbootd) for the dynamic partition"

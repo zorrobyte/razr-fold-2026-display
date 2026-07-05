@@ -52,6 +52,24 @@ Both layer-1 patches live in `classes.dex` (dex version **039**), applied with `
    ship via the Magisk module, which deletes the stale `services.{odex,vdex,art}` + all `.fsv_meta`
    + `.prof` so ART reloads the patched dex.
 
+## Verity / vbmeta gotcha (READ before flashing `vendor_dlkm`)
+The DSC `vendor_dlkm` is dm‑verity‑protected — you must disable AVB verity or the modified partition
+fails to boot. On this device + **platform‑tools fastboot 37.0.0**, the usual
+`fastboot --disable-verity --disable-verification flash vbmeta …` **errors with
+`Failed to find AVB_MAGIC at offset: 0`** even though the image is a valid vbmeta (host‑side fastboot
+bug, happens in both fastbootd and the bootloader). Instead pre‑patch the disable flags and flash plain:
+```sh
+python3 ../tools/vbmeta-disable-verity.py ../firmware-boot/vbmeta.img vbmeta_verity_off.img
+fastboot flash vbmeta vbmeta_verity_off.img          # PLAIN — no --disable-* flags
+```
+Do this **before** rebooting with the patched `vendor_dlkm`; flashing the partition while verity is
+still `enforcing` and rebooting drops the device back to the bootloader (recoverable). Full detail:
+[`../native-5k2k-dsc/README.md` §9](../native-5k2k-dsc/README.md).
+
+*Confirmed on this device (2026‑07): stock `msm_drm.ko` sha `03c53b47…` → patched `7ed8b938…` @
+`0x953a4`, `vendor_dlkm` rebuilt to 28061696 B, vbmeta flags `0x0→0x3`, boots in ~12 s, patched module
+live‑mounted.*
+
 ## Recovery
 If `system_server` bootloops: reboot to Magisk **safe mode** (or `adb shell su -c 'touch
 /data/adb/modules/services_dispcap/disable'`) and reboot. For DSC: re-flash the stock `vendor_dlkm`.

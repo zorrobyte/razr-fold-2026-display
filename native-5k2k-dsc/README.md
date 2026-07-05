@@ -147,15 +147,25 @@ the logical `vendor_dlkm`):
 adb reboot fastboot          # NOT 'bootloader' — must be fastbootd for logical partitions
 fastboot devices             # confirm 'fastboot' (userspace)
 
-# disable verity by re-flashing the stock vbmeta with the disable flags:
-fastboot --disable-verity --disable-verification flash vbmeta        backup/vbmeta_b.img
-fastboot --disable-verity --disable-verification flash vbmeta_system backup/vbmeta_system_b.img
+# disable verity FIRST (see §9 — the plain --disable-verity form errors "Failed to find AVB_MAGIC"
+# on this device/fastboot; pre-patch the flags into the image instead, then flash it plain):
+python3 ../tools/vbmeta-disable-verity.py backup/vbmeta_b.img        vbmeta_verity_off.img
+fastboot flash vbmeta vbmeta_verity_off.img          # PLAIN — no --disable-* flags
+# (vbmeta alone disables the whole AVB chain; vbmeta_system is optional. If you prefer, also do:
+#  python3 ../tools/vbmeta-disable-verity.py backup/vbmeta_system_b.img vbmeta_system_verity_off.img
+#  fastboot flash vbmeta_system vbmeta_system_verity_off.img)
 
-# flash the patched partition (fastbootd resizes + handles the VABC snapshot automatically):
+# THEN flash the patched partition (fastbootd resizes + handles the VABC snapshot automatically):
 fastboot flash vendor_dlkm vendor_dlkm_new.img
 
 fastboot reboot
 ```
+
+> ⚠️ Order matters: disable verity **before** you reboot with the modified `vendor_dlkm`. Flashing the
+> patched partition while `ro.boot.veritymode == enforcing` and rebooting fails the boot and drops you
+> back to the bootloader (recoverable — see §9). Note `vbmeta` is a **physical** partition, so it can be
+> flashed from either fastbootd or the primary bootloader; `vendor_dlkm` is **logical** and needs
+> fastbootd.
 
 ### Verify the patch took (briefly!)
 ```sh
@@ -172,12 +182,24 @@ adb shell su -c 'echo 0 > /sys/module/drm/parameters/debug' # ‼️ MUST turn o
 ## 6. Select native 5K2K (the patch enables DSC; this picks the mode)
 
 **Easiest: install the 📱 [`app/`](app/) "5K Display Control" root app** — open it, it lists the
-connected monitor's modes (5120×2160@100 ★ shows up once the patch is flashed), tap the one you want,
-then unplug + replug the monitor. Works on any monitor (it only lists modes that display supports).
+connected monitor's modes (5120×2160@100 ★ shows up once the patch is flashed), tap the one you want.
 
-CLI equivalent — the patch makes the **5120×2160@100** DisplayID timing valid; force it with the QTI
-`mode_override`, then **physically replug** the monitor (mode_override applies on the next probe):
+**Live, no physical replug** (the good way — full detail + limits in
+[`LIVE-MODE-SWITCHING.md`](LIVE-MODE-SWITCHING.md)): inject the mode, then cycle the QTI `hpd` node
+**0 → 1**. The driver re‑probes, re‑runs DSC, and the framework re‑adds the display at the new timing:
 
+```sh
+adb shell su -c '
+  mount -t debugfs none /sys/kernel/debug 2>/dev/null
+  echo "5120 2160 100 0" > /sys/kernel/debug/drm_dp/edid_modes
+  echo 0 > /sys/kernel/debug/drm_dp/hpd; sleep 1; echo 1 > /sys/kernel/debug/drm_dp/hpd'
+```
+- **Do NOT set `skip_uevent`** — that suppresses the reconnect and looks like a wedge (§9 corrected).
+- Reachable modes are gated by the **current trained link**: 5120@100 needs a **4‑lane direct cable**;
+  a **2‑lane dock caps at 5120@60** (bandwidth math in `LIVE-MODE-SWITCHING.md` §2). sim‑HPD keeps the
+  trained lane count — only a **physical** replug renegotiates 2→4 lanes.
+
+Old CLI (physical replug) still works if you prefer it:
 ```sh
 adb shell su -c 'mount -t debugfs none /sys/kernel/debug 2>/dev/null; \
   echo "5120 2160 100 0" > /sys/kernel/debug/drm_dp/edid_modes'
@@ -245,11 +267,35 @@ A patched‑module failure usually does **not** panic the kernel (ADB stays up) 
 - **🔴 NEVER write the DRM `force` node** (`/sys/kernel/debug/dri/0/DP-1/force`). It only accepts
   `on`/`off`, **latches**, and has no working "return to auto" value → wedges the connector
   disconnected until reboot. (`detect`/`unspecified`/`reset` are silently ignored.)
-- **🔴 NEVER cycle the QTI `hpd` node** (`drm_dp/hpd`) to apply changes — repeated sim‑HPD wedges the
-  Android framework display state to `OFF` (black, won't repaint). **Use a physical replug** to apply
-  `mode_override`/EDID changes.
+- **🟢 CORRECTED: cycling the QTI `hpd` node 0 → 1 is the *live, no‑replug* way to apply a mode** — it
+  does **not** wedge, *provided* you (a) leave `skip_uevent=0` and (b) always send the `1` after the
+  `0`. The earlier "hpd wedges" claim was cycling it with `skip_uevent=1` (which suppresses the
+  reconnect uevent so the framework never re‑adds the display) or sending a lone `0`. Proven to
+  live‑apply DSC modes (5120@60) with no physical replug. Full recipe + the bandwidth/lane limits (why
+  5120@100 still needs a 4‑lane cable): [`LIVE-MODE-SWITCHING.md`](LIVE-MODE-SWITCHING.md).
+  (`cmd display set-user-preferred-display-mode` is a dead end for external displays — SurfaceFlinger
+  refuses it; `disable/enable-display` only dpms‑toggles and doesn't re‑read `edid_modes`.)
 - **`mode_override` only selects an already‑valid enumerated mode** and matches by W/H/Hz/aspect only.
   Forcing 5120 picks **@100** (good) — the **@60** 704 MHz timing the monitor rejects.
+- **🔴 `fastboot --disable-verity --disable-verification flash vbmeta` FAILS on this device** with
+  `fastboot: error: Failed to find AVB_MAGIC at offset: 0` — **even though the vbmeta image has a valid
+  `AVB0` header at offset 0** (`xxd vbmeta.img | head -1` → `4156 4230…`). Seen on platform‑tools
+  **fastboot 37.0.0**, in **both** fastbootd (`is-userspace: yes`) *and* the primary bootloader
+  (`is-userspace: no`). The bug is in fastboot's host‑side AVB header patcher, not the image.
+  **Workaround:** set the disable bits in the vbmeta `flags` field yourself, then flash the result
+  **plain** (no `--disable-*` flags):
+  ```sh
+  python3 ../tools/vbmeta-disable-verity.py vbmeta.img vbmeta_verity_off.img
+  fastboot flash vbmeta vbmeta_verity_off.img      # PLAIN — do NOT pass --disable-* flags
+  ```
+  The tool ORs `HASHTREE_DISABLED(0x1) | VERIFICATION_DISABLED(0x2)` into the big‑endian u32 at header
+  offset **120 (0x78)** — exactly what `--disable-verity/-verification` would have done. On an
+  **unlocked** bootloader the now‑broken vbmeta signature isn't enforced, so it flashes and boots.
+- **🔴 Disable verity BEFORE (or in the same session as) flashing the modified `vendor_dlkm`.** If you
+  flash the patched `vendor_dlkm` while verity is still **enforcing** (`getprop ro.boot.veritymode` ==
+  `enforcing`) and then reboot, the hashtree mismatch fails the boot: the device **bounces out of
+  fastbootd and lands back in the primary bootloader** after ~40–60 s (it does **not** brick — `/data`
+  and everything else are intact). Recover by flashing the flags‑patched `vbmeta` (above) and rebooting.
 - **Magisk file‑overlay of `msm_drm.ko` does NOT work** — it loads in first‑stage, before any Magisk
   hook. You must flash the partition.
 - **Rebuild EROFS on‑device**, not on macOS (`mkfs.erofs` on macOS lacks SELinux; you'd lose labels).
@@ -277,3 +323,6 @@ the gate passes, after which the SDE RM (`_sde_rm_reserve_dsc`) reserves the DSC
 - `scripts/vendor_dlkm_file_contexts` — SELinux file_contexts reference for the rebuild.
 - `magisk-dsc-5k/` — persistence module (sets `edid_modes` at boot + quiets HDCP).
 - `PROOF.md` — captured kernel logs + load numbers proving the working result.
+- [`LIVE-MODE-SWITCHING.md`](LIVE-MODE-SWITCHING.md) — **live no‑replug mode switching** (`hpd` 0→1
+  re‑probe), the measured bandwidth/lane math (why 5120@100 needs a 4‑lane cable, DSC 18‑bpp floor),
+  SoC DP ceilings (SM8845 = DP 1.4/HBR3, no UHBR), and the SurfaceFlinger external‑modeset block.

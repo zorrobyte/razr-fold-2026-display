@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zorrobyte.dispctl" android:versionCode="1" android:versionName="1.0">
+    package="com.zorrobyte.dispctl" android:versionCode="2" android:versionName="2.0-live">
     <uses-sdk android:minSdkVersion="30" android:targetSdkVersion="34"/>
     <application android:label="5K Display Control" android:allowBackup="true">
         <activity android:name=".MainActivity" android:exported="true"

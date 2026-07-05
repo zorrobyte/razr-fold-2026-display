@@ -1,0 +1,7 @@
+# build artifacts
+debug.ks
+*.idsig
+out/
+dex/
+base.apk
+aligned.apk
