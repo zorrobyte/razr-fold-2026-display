@@ -1,8 +1,12 @@
-# HDCP on the external display — diagnosis + prepared fix (force HDCP 1.4)
+# HDCP on the external display — diagnosis (CONCLUSION: not achievable)
 
-> Status (2026-07): **root-caused and a byte-validated patch is ready, but NOT yet
-> applied or verified** — applying it needs a `vendor_dlkm` reflash (USB fastboot),
-> and the USB-C port is occupied by the DP cable. See §4.
+> Status (2026-07): **HDCP cannot work on this device + LG 45GX950A.** Both crypto
+> backends are blocked outside the OS: HDCP **2.2** fails at the **sink** (LG AKE bug),
+> and HDCP **1.4** is refused by the **phone's TrustZone** (QTEE won't load the 1.x TA).
+> The force-1.4 patch below was built, flashed, and tested — it correctly makes the
+> driver skip 2.2 and try 1.4, but the 1.4 TA won't load, so HDCP ends up INACTIVE.
+> **Recommend reverting the patch** (it globally disables 2.2, which would break HDCP
+> on a *different* monitor that does support 2.2) — see §7.
 
 ## 1. Symptom
 With the LG 45GX950A connected, HDCP never authenticates — it loops forever:
@@ -65,9 +69,27 @@ adb shell su -c 'dmesg | grep -iE "hdcp|auth" | tail'
 **Revert** (if 1.4 also fails or anything misbehaves): reflash the DSC-only `vendor_dlkm`
 (rebuild from `../newer-software-W3WBS36.36-48-5-1/msm_drm.ko.patched` unmodified) or stock.
 
-## 6. Open uncertainty
-Forcing 1.4 is **unverified** — it will only help if this LG's HDCP **1.4** authenticates over the same
-link where 2.2 fails. If 1.4 also fails, HDCP simply can't work with this monitor/cable and the
-practical option is the repo's original quiet-it approach (`settings put global hdcp_checking 0`), which
-disables HDCP (protected video won't play on the external display, desktop stays clean). Note also:
-HDCP 1.4 caps some services (e.g. Netflix limits resolution without 2.2).
+## 6. Result of applying the force-1.4 patch (tested 2026-07)
+Flashed and tested on USB. The patch works as designed — the driver skips 2.2 and tries HDCP 1.4 — but
+the **1.x TA is refused by the TrustZone**:
+```
+[drm:dp_display_check_source_hdcp_caps]
+smcinvoke_kernel: do_invoke: qtee-47 object invocation ... returned with 16
+hdcp1 TA load failed :16
+[sde-hdcp1x] sde_hdcp_1x_feature_supported: feature_supported = 0
+[drm:dp_display_update_hdcp_info] HDCP version supported: HDCP_VERSION_NONE, HDCP_STATE_INACTIVE
+```
+The `hdcp1.b0x`/`hdcp1.mdt` TA images *are* present in `/vendor/firmware_mnt/image/`, but QTEE returns
+error 16 loading the 1.x trustlet via smcinvoke (the 2.2 TA `dxhdcp2`/`hdcp2p2` loads fine —
+`dp_hdcp2p2_feature_supported = 1`). This is a secure-firmware decision Motorola made; it cannot be
+changed from Linux/the driver/the app. **Conclusion: HDCP is not achievable on this device+monitor.**
+
+## 7. Revert (recommended)
+The force-1.4 patch provides no benefit here and globally disables HDCP 2.2, so restore the DSC-only
+`vendor_dlkm` (rebuild from `../newer-software-W3WBS36.36-48-5-1/msm_drm.ko.patched` **unmodified**, or
+reuse a saved DSC-only image), then flash it (USB fastbootd):
+```sh
+adb reboot fastboot && fastboot flash vendor_dlkm vendor_dlkm_dsc_only.img && fastboot reboot
+```
+For a clean desktop with any HDCP-incapable link, `settings put global hdcp_checking 0` quiets the auth
+loop (protected video won't play on the external display; the desktop is unaffected).
