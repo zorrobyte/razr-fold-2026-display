@@ -1,138 +1,211 @@
-# Razr Fold 2026 — Full External-Display Unlock (Native 5K2K + DSC)
+# Razr Fold 2026 — Native 5K2K + DSC External Display
 
-> Driving a **Motorola Razr Fold 2026** at **native 5120×2160 @ 100 Hz, 10-bit, with DSC** on a wired
-> ultrawide — plus 4K@60 and 3440×1440@100 — resolutions, refresh rates, and a compression path the
-> phone is hard-coded to refuse out of the box. Sharp, smooth, permanent, and fully reproducible.
+Drive a **Motorola Razr Fold 2026** at **native 5120×2160 @ 100 Hz, 10-bit, with DSC** (Display
+Stream Compression) over a wired USB-C→DisplayPort ultrawide — resolutions and a compression path
+the phone refuses out of the box. Also unlocks 4K@60 and 3440×1440@100.
 
 |  |  |
 |---|---|
-| **Device** | Motorola Razr Fold 2026 · codename **`blanc`** (product `blanc_g`) · Verizon |
-| **SoC / DPU** | Snapdragon 8 Gen 5 = **SM8845** · QTI DPU codename **"Eliza"** |
-| **OS / kernel** | Android 16 · GKI `6.12.38-android16-5-…-4k` · build `W3WBS36V.36-48-ST4.6-5` |
-| **Monitors** | **LG 45GX950A** (5120×2160 / 21:9 / 165 Hz) · **Samsung Odyssey G85SD** (3440×1440 / 240 Hz) |
-| **Final state** | **5120×2160@100 + DSC**, 4K@60, 3440×1440@100 — direct USB-C→DP, bootloader-unlocked + Magisk |
+| **Device** | Motorola Razr Fold 2026 · codename `blanc` (product `blanc_gu`) · Verizon retail |
+| **Build**  | Android 16 · **`W3WBS36.36-48-5-1`** (this repo is pinned to this build) |
+| **Kernel** | GKI `6.12.38-android16-5-…-4k` — **works on the stock kernel** |
+| **SoC / DPU** | Snapdragon 8 Gen 5 = SM8845 · QTI DPU "Eliza" |
+| **Needs**  | Unlocked bootloader · Magisk root · a **direct 4-lane USB-C→DP cable** · a 5K2K monitor |
 
-This was not one fix. It was a **stack of unlocks across three layers** (framework, link, kernel),
-each of which independently blocks native 5K2K. This README is the master map; each piece has its own
-folder and deep-dive.
+> This is the condensed, single-device guide. The full RE journey, dead-ends, alternate paths
+> (LSPosed, dtbo cap-edit), and decompiled Moto APKs were removed — see the `backup/pre-cleanup`
+> branch if you need them.
 
 ---
 
-## TL;DR — the complete unlock stack
+## Why it's blocked (3 layers, condensed)
 
-| Layer | What blocks it stock | The unlock | Lives in |
+The hardware can do it (sink advertises DSC 1.2 + FEC, link trains HBR3 ×4 ≈ 25.9 Gbps, SoC has 4
+free DSC blocks). Three independent software locks stop it:
+
+| Layer | Block | Unlock | Lives in |
 |---|---|---|---|
-| **0. Access** | Locked bootloader, no root | Unlock bootloader + Magisk (props are PIF-spoofed to look locked/green) | FINDINGS §7–§8 |
-| **1a. Framework cap** | AOSP `enable_mode_limit_for_external_display` filters out any external mode > the internal-panel budget (~5.54 MP) → 5120 & 4K never appear | Hook `DisplayManagerFlags.isExternalDisplayLimitModeEnabled()` → `false` | `framework-patch/`, `lsposed-module/` |
-| **1b. Mode/refresh list** | Moto's ReadyFor/desktop list (`getDisplayDeviceInfoLocked → getMaxResolution`) **clamps resolution to ≤ active mode and hardcodes 60 Hz** | Hook `getDisplayDeviceInfoLocked` and **rebuild `supportedReadyForModes` from the real `mSupportedModes` — every resolution at its TRUE max refresh** (the `R4` helper) | `lsposed-module/src/com/dispunlock/` (`R4.java`, `Hook-with-mode-rebuild.java`) |
-| **2. Link/cable** | A USB-C **dock** runs 2-lane DP (shares lanes with USB3) → bandwidth-starved (3440@60) | **Direct USB-C→DP cable** (4-lane) or a 4-lane "DP-priority" dock | FINDINGS §17, native-5k2k-dsc §lanes |
-| **3. DSC (kernel)** | `SDE_DP_DSC_RESERVATION_SWITCH` is **off** for Eliza → DP path's DSC budget = **0** at boot → DSC never engages → only uncompressed timings (5K2K capped @60, which the panel won't take at native) | **Binary-patch `msm_drm.ko`**: force `dp_display->max_dsc_count = 4` (one instruction) → DSC engages, native 5120@100 DSC timing validates, SDE reserves the DSC pair | **`native-5k2k-dsc/`** |
-| **+ Mode select** | SF defaults to the EDID-preferred 3440 | 📱 **the "5K Display Control" app** (tap the mode, replug) — or the QTI `mode_override` CLI: `echo "5120 2160 100 0" > /sys/kernel/debug/drm_dp/edid_modes` | `native-5k2k-dsc/app/` |
-| **+ Settings** | Cross-group switch off; HDCP 2.2 auth-retry loop | `settings put secure match_content_frame_rate 2`; `settings put global hdcp_checking 0` | `native-5k2k-dsc/` |
+| **1a — framework cap** | AOSP filters any external mode above the internal-panel pixel budget (~5.54 MP) → 5120/4K never appear | `DisplayManagerFlags.isExternalDisplayLimitModeEnabled() → false` | `modules/magisk-dispcap` |
+| **1b — Moto mode list** | Moto's ReadyFor list clamps resolution ≤ active mode and pins 60 Hz | rebuild `supportedReadyForModes` from real `mSupportedModes` (the `R4` hook) | `modules/magisk-dispcap` (same `services.jar`) |
+| **2 — link** | a USB-C **dock** runs 2-lane DP → bandwidth-starved (caps ≈ 3440@60 / 5120@60) | a **direct 4-lane USB-C→DP cable** | *hardware* |
+| **3 — DSC (kernel)** | `dp_display->max_dsc_count` is computed as **0** at boot (`SDE_DP_DSC_RESERVATION_SWITCH` off for Eliza) → DSC never engages | binary-patch `msm_drm.ko`: force `max_dsc_count = 4` (one instruction) | `scripts/apply-patch.py` → rebuilt `vendor_dlkm` |
 
-**All of layer 1 + 2 + 3 are required together** for native 5120-with-DSC: layer 1 makes the framework
-*offer* the big modes with correct refresh, layer 2 gives the bandwidth, layer 3 makes the native
-timing actually negotiate compression.
+All of 1 + 2 + 3 are required together for native 5120-with-DSC.
 
 ---
 
-## The journey (and the dead ends — so you don't repeat them)
+## Repo layout
 
-1. **Removed the AOSP software cap** (layer 1a). First via an **LSPosed/Vector module** — which was
-   **blocked** on this device by a Vector release bug (`lspd` couldn't read the module APK), then
-   **solved** with Vector canary `v2.0-3043` (FINDINGS §10 → §23). Also delivered the same hooks as a
-   **`services.jar` patch** (dex **039** — `smali --api 28`; get the dex version wrong and
-   `system_server` bootloops, see `razr-services-jar-dex-version`).
-2. **Rebuilt Moto's mode/refresh list** (layer 1b) so 3440@100, 5120, 4K appear with correct refresh
-   instead of a 60 Hz-clamped, resolution-capped list — the `R4` `supportedReadyForModes` rebuild.
-3. **Direct 4-lane cable** (layer 2): exposed the full panel → **5120×2160@60 / 4K@60 / 3440@100**
-   appeared and worked (FINDINGS §17) — but **uncompressed**, so 5K2K topped out at 60 Hz.
-4. **Declared DSC "kernel-locked, not forceable without source"** (FINDINGS §18) — the documented
-   ceiling. Explored a **dtbo cap-edit** angle as an alternative (`max-pclk`, `hbr3-disable`; §19).
-5. **Broke that ceiling** (layer 3, FINDINGS §24): RE'd the *actual* DSC blocker — `max_dsc_count = 0`,
-   not a hard PHY/kernel limit — and **binary-patched the vendor display module** → native
-   **5120×2160 @ 100 Hz with DSC**. See `native-5k2k-dsc/` + `native-5k2k-dsc/PROOF.md`.
-6. **Chased a phantom "performance ceiling"** for an hour that turned out to be **my own DRM debug mask
-   left on** (`/sys/module/drm/parameters/debug = 0x07` logs every plane/commit per frame, crippling
-   the pipeline and poisoning measurements). With it off: native 5K2K-DSC is **smooth** (~14% composer,
-   ~85% idle). **Lesson: never leave that mask on.**
-
-Other dead ends documented so nobody re-suffers them: the DRM `force` node (latches → wedges the
-connector), sim-HPD cycling (wedges the framework display state to OFF), the 704 MHz reduced-blanking
-5120@60 timing (the panel rejects it — use the 1196 MHz @100), and Magisk file-overlay of `msm_drm.ko`
-(loads first-stage, too early). Full gotcha list in `native-5k2k-dsc/README.md §9`.
+```
+scripts/
+  apply-patch.py            # derive+apply the 4-byte DSC patch to a stock msm_drm.ko
+  rebuild-vendor-dlkm.sh    # ON-DEVICE: rebuild the vendor_dlkm EROFS with the patched .ko
+  vbmeta-disable-verity.py  # set AVB disable flags so a modified partition boots
+  apply-hdcp14-patch.py     # OPTIONAL: force HDCP 1.4 (quiets LG HDCP-2.2 retry loop)
+  vendor_dlkm_file_contexts # SELinux file_contexts reference for the rebuild
+modules/
+  magisk-dispcap/           # LAYER 1a+1b — patched services.jar (for build 48-5-1)
+  magisk-dsc-5k/            # persistence — arms 5120@100 on the external display at boot
+app/
+  5K-Display-Control.apk    # tap-to-set root app (pick the mode per monitor) + source
+prebuilt/
+  msm_drm.ko.patched        # reference patched module for 48-5-1 (see step 2 note)
+```
 
 ---
 
-## Repository map
+## Reproduce
 
-| Path | What it is |
+### 0. Prereqs — unlock + root
+- **Unlock bootloader** (Motorola: enable *OEM unlocking* + *USB debugging*, then
+  `fastboot oem get_unlock_data` → motorola.com/bootloader → `fastboot oem unlock <code>`). Wipes data.
+- **Root**: extract stock `init_boot.img` from your factory firmware, patch with the Magisk app,
+  `fastboot flash init_boot magisk_patched.img`.
+- Confirm build is `W3WBS36.36-48-5-1` and note your slot: `adb shell getprop ro.boot.slot_suffix`
+  (**examples below use `_a` — substitute yours**).
+
+### 1. Layer 3 — DSC patch → rebuilt `vendor_dlkm`
+
+**Derive the patch from YOUR OWN stock module** (guarantees vermagic matches your kernel — do NOT
+blindly reuse `prebuilt/`; see note):
+
+```sh
+# pull this device's stock msm_drm.ko
+adb shell su -c 'cp /vendor_dlkm/lib/modules/msm_drm.ko /data/local/tmp/'
+adb pull /data/local/tmp/msm_drm.ko msm_drm.ko.stock
+#   expect sha256: 03c53b47fdf01232bf701e2843a698313830bdf2354abb927b2db64516470e48
+
+python3 scripts/apply-patch.py msm_drm.ko.stock msm_drm.ko.patched
+#   finds the unique 16-byte anchor, patches 4 bytes @ 0x953a4 (mov w19,w3 -> movz w19,#4)
+#   expect patched sha256: 7ed8b938b302ecceb40036435c273ea912362c38544440245e8d578876488c45
+```
+
+**Back up the partitions you'll touch** (recovery net — keep these OUTSIDE the repo). `vendor_dlkm`
+is a logical partition under `/dev/block/mapper`:
+
+```sh
+mkdir -p backup
+for p in vbmeta_a vbmeta_system_a init_boot_a; do
+  adb shell su -c "dd if=/dev/block/by-name/$p of=/data/local/tmp/$p.img" && adb pull /data/local/tmp/$p.img backup/
+done
+adb shell su -c 'dd if=/dev/block/mapper/vendor_dlkm_a of=/data/local/tmp/vendor_dlkm_a.img bs=1M'
+adb pull /data/local/tmp/vendor_dlkm_a.img backup/
+```
+
+**Rebuild `vendor_dlkm` ON-DEVICE** (needs native SELinux + `mkfs.erofs`; the phone has them):
+
+```sh
+adb push msm_drm.ko.patched            /data/local/tmp/
+adb push scripts/rebuild-vendor-dlkm.sh /data/local/tmp/rebuild.sh
+adb shell su -c 'cp /data/local/tmp/vendor_dlkm_a.img /data/local/tmp/vendor_dlkm_b.img'  # script reads *_b.img
+adb shell su -c 'cd /data/local/tmp && sh rebuild.sh'
+adb pull /data/local/tmp/vendor_dlkm_new.img
+#   expect: size 28061696 (fits 28672000), UUID 9e483606-ec3c-5687-9f51-3a0f140e5aec,
+#           msm_drm.ko label u:object_r:vendor_file:s0, sha 7ed8b938...
+```
+
+**Disable AVB verity, then flash in fastbootd** (order matters — verity off *before* the modified
+partition boots):
+
+```sh
+python3 scripts/vbmeta-disable-verity.py backup/vbmeta_a.img vbmeta_verity_off.img  # flags 0x0 -> 0x3
+
+adb reboot fastboot                 # fastbootD (userspace) — required for logical vendor_dlkm
+fastboot getvar is-userspace        # -> yes
+fastboot flash vbmeta      vbmeta_verity_off.img   # PLAIN — do NOT pass --disable-* flags (see Gotchas)
+fastboot flash vendor_dlkm vendor_dlkm_new.img
+fastboot reboot
+
+# verify live:
+adb shell su -c 'sha256sum /vendor_dlkm/lib/modules/msm_drm.ko'  # == 7ed8b938...
+adb shell getprop ro.boot.veritymode                             # empty (was "enforcing")
+```
+
+### 2. Layer 1 — framework cap + mode-list (`services.jar`)
+
+```sh
+adb push modules/magisk-dispcap /data/local/tmp/            # or zip it first
+adb shell su -c 'magisk --install-module /data/local/tmp/magisk-dispcap.zip'   # if zipped
+# (module = patched services.jar; customize.sh whiteouts the stale oat/vdex/art + fs-verity meta)
+adb reboot
+# after boot, no bootloop = success; /system/framework/services.jar is 26660134 B (patched)
+```
+
+### 3. Persistence module + control app
+
+```sh
+adb shell su -c 'magisk --install-module /data/local/tmp/magisk-dsc-5k.zip'   # arms 5120@100 on dock
+adb install app/5K-Display-Control.apk
+adb reboot
+```
+
+### 4. Select the mode (needs the monitor + 4-lane cable)
+Open **5K Display Control**, plug the monitor in with a **direct 4-lane USB-C→DP cable**, tap
+**5120×2160@100**, replug once.
+
+CLI equivalent (live, no physical replug — cycle QTI `hpd` 0→1):
+```sh
+adb shell su -c '
+  mount -t debugfs none /sys/kernel/debug 2>/dev/null
+  echo "5120 2160 100 0" > /sys/kernel/debug/drm_dp/edid_modes
+  echo 0 > /sys/kernel/debug/drm_dp/hpd; sleep 1; echo 1 > /sys/kernel/debug/drm_dp/hpd'
+```
+Expected proof (`dmesg`, info level):
+```
+dp_panel_resolution_info: 5120(...)x2160(...)@100fps 30bpp 1196340Khz 20LR 4Ln
+dp_display_stream_enable: ... tot_dsc_blks_in_use=2
+```
+
+---
+
+## Verified values (build 48-5-1)
+
+| Thing | Value |
 |---|---|
-| **`native-5k2k-dsc/`** | ⭐ **The DSC kernel-module unlock — the final win.** Full replicate-from-scratch guide, `apply-patch.py`, on-device EROFS rebuild script, Magisk persistence module, **patched + stock `msm_drm.ko`**, **ready-to-flash `vendor_dlkm`**, recovery backups (`vbmeta`, `vendor_dlkm`), and **`PROOF.md`**. |
-| **`native-5k2k-dsc/app/`** | 📱 **5K Display Control** — a tap-to-set **root app**: reads whatever monitor is plugged in, lists its modes (incl. native 5K2K-DSC), tap one → it sets the QTI `mode_override` → replug to apply. Plus a **live UI-scale slider** (`wm density -d <ext>`) — fixes the tiny-at-5K2K default (~138 dpi) with no replug. Works on any monitor. Source + prebuilt APK. **No adb needed for daily use.** |
-| **`native-5k2k-dsc/LIVE-MODE-SWITCHING.md`** | 🔀 **Live no-replug mode switching** — the `hpd` 0→1 re-probe that changes the external resolution/refresh **without physically unplugging** (corrects the old "hpd wedges" gotcha), the measured **bandwidth/lane math** (why 5120@100 needs a 4-lane direct cable and a 2-lane dock caps at @60, the DSC 18-bpp floor), **SoC DP ceilings** (SM8845 = DP 1.4/HBR3 + DSC 1.2, no UHBR), and the SurfaceFlinger external-modeset block. |
-| **`FINDINGS.md`** | The full investigation log, §1–§24: bootloader unlock, root, desktop mode, the resolution-cap root cause, the framework patch, the lane/bandwidth math, refresh-rate investigations, the DSC dead-ends, the dtbo-cap path, and the final DSC unlock (§24). |
-| **`framework-patch/`** | The **`services.jar`** framework patch (`DisplayManagerFlags.patched.smali`, `services-dispcap.zip` Magisk module) — layer 1a. |
-| **`lsposed-module/`** | The same framework unlock as an **LSPosed/Vector module** (`com.dispunlock`). `Hook.java` = cap-only; **`Hook-with-mode-rebuild.java` + `R4.java` = the full layer-1a+1b** (cap removal **and** `supportedReadyForModes` rebuild). |
-| **`dtbo-mod/`** | The **devicetree-cap** angle (`qcom,max-pclk-frequency-khz`, `qcom,dp-hbr3-disable`) + stock dtbo backup — an alternative unlock path (§19). |
-| **`firmware-boot/`** | Boot/firmware artifacts. |
-| **`decompiled/`, `apks/`, `tools/`** | Decompiled Moto desktop APKs (LaptopPanel/DesktopCore/TaskBar) + tooling used during RE. |
-| **`CLONE.md` + `flash-device2.sh`** | 🧬 **Clone the whole setup to a second `blanc`** — checksum-verified flash kit (DSC `vendor_dlkm` + verity-off `vbmeta` + Magisk init_boot + v4 `services.jar` module + app + settings) and a guided script. Same-build only; never touches per-device IMEI/persist/userdata. |
-| **`REDDIT-POST.md`, `DEX-POST.md`** | Write-ups / posts. |
-| **`newer-software-W3WBS36.36-48-5-1/`** | 🆕 The full stack **rebuilt + confirmed on the newer OTA build `W3WBS36.36-48-5-1`** (Verizon `blanc_gu`): DSC-patched `msm_drm.ko` (same `0x953a4`) + a Magisk `services.jar` module carrying **both** layer 1a (cap) **and** 1b (`supportedReadyForModes` rebuild), with the exact reproducible `baksmali`/`smali` + `d8` steps. On this device the DSC patch sits on top of a [from-source GKI kernel with audio + Lindroid](https://github.com/zorrobyte/razr-fold-2026-kernel-build). |
+| stock `msm_drm.ko` sha256 | `03c53b47fdf01232bf701e2843a698313830bdf2354abb927b2db64516470e48` |
+| patched `msm_drm.ko` sha256 | `7ed8b938b302ecceb40036435c273ea912362c38544440245e8d578876488c45` |
+| patch offset / instr | `0x953a4` · `f3 03 03 2a` (mov w19,w3) → `93 00 80 52` (movz w19,#4) |
+| rebuilt `vendor_dlkm` | 28,061,696 B · EROFS lz4hc · UUID `9e483606-ec3c-5687-9f51-3a0f140e5aec` |
+| patched `services.jar` | 26,660,134 B |
+| `vbmeta` flags | `0x00000000` → `0x00000003` (hashtree + verification disabled) |
 
 ---
-
-## Why it was blocked (the mechanism, condensed)
-
-- **Hardware can do it.** Sink advertises DSC (`DPCD 0x60=0x01`, DSC 1.2) + FEC; link is HBR3 ×4
-  (`DPCD 0x02=0xc4`, ~25.9 Gbps); the SoC has **4 free DSC blocks** (`avail_dsc=4`). Nothing physical
-  blocks native 5K2K — 5120@60 needs DSC; 5120@100 needs DSC; both fit compressed.
-- **Layer 1 — Android refuses to offer it.** The external-display governor filters modes above the
-  internal-panel pixel budget; Moto's ReadyFor list clamps resolution and pins 60 Hz. → modes don't
-  appear / appear wrong.
-- **Layer 3 — the driver won't compress.** `dp_panel_read_sink_caps: fec_en=1, dsc_en=1` (capability is
-  there), but `dp_display_convert_to_dp_mode`'s gate `free_dsc_blks >= required_dsc_blks` fails because
-  `max_dsc_count` is computed once at boot as `catalog_dsc − DSI_panel_dsc` with the reservation switch
-  **off** → DP gets **0**. Live proof: `… max:0 … caps:0x0` (stock) → `… max:4 … caps:0x1` (patched).
-  After the patch the SDE RM reserves the DSC pair (`_sde_rm_reserve_dsc blk 1,2`) and the panel runs
-  native 5120@100 at 30bpp via DSCMERGE dual-pipe (2×2560).
-
----
-
-## Replicate (high level — full steps in the sub-READMEs)
-
-1. **Unlock + root** (FINDINGS §7–§8).
-2. **Layer 1 (framework):** install `framework-patch/` (services.jar) **or** `lsposed-module/`
-   (Vector canary ≥3043 + `com.dispunlock`, using `Hook-with-mode-rebuild.java` + `R4.java`).
-3. **Layer 2:** use a **direct USB-C→DP cable** (4-lane), not a dock.
-4. **Layer 3 (DSC):** follow **`native-5k2k-dsc/README.md`** — patch `msm_drm.ko`
-   (`scripts/apply-patch.py`), rebuild `vendor_dlkm` on-device (`scripts/rebuild-vendor-dlkm.sh`),
-   disable AVB verity, `fastboot flash vendor_dlkm`, install the persistence module.
-5. **Select the mode — easiest way: install the 📱 [`native-5k2k-dsc/app/`](native-5k2k-dsc/app/)
-   "5K Display Control" app**, open it, tap the mode you want for the connected monitor, then replug.
-   (CLI equivalent: `echo "5120 2160 100 0" > /sys/kernel/debug/drm_dp/edid_modes` + replug; or let the
-   `magisk-dsc-5k/` service auto-arm a single saved mode.)
-
-## Clone to a second device
-`./flash-device2.sh` (see **[`CLONE.md`](CLONE.md)**) reproduces this entire stack on another `blanc`
-on the **same build** — it verifies checksums, then flashes the DSC `vendor_dlkm`, verity-off `vbmeta`,
-Magisk `init_boot`, the v4 `services.jar` module, the app, and the settings. It deliberately does **not**
-image the whole device: per-unit partitions (IMEI/persist/DRM/userdata) must never move between phones.
 
 ## Recovery
-Bootloader unlocked + the backups in `native-5k2k-dsc/backup/` (stock `vendor_dlkm`, `vbmeta`,
-`vbmeta_system`) + the full `blanc` factory image. Re-flash stock `vendor_dlkm` and stock `vbmeta`
-(without the disable flags) to revert; flash the factory image as last resort. The DSC patch is
-DP-path-only — internal displays are never affected.
-
-## Proof
-`native-5k2k-dsc/PROOF.md` — `max:0 caps:0x0` → `max:4 caps:0x1`; `resolution=5120x2160@100Hz bpp=30`;
-`tot_dsc_blks_in_use=2`; `_sde_rm_reserve_dsc blk 1,2`; `dumpsys: real 5120 x 2160`; monitor OSD
-`5120x2160@100`; clean load ~14% composer / ~85% idle.
+Unlocked bootloader + your `backup/` images + the full `blanc` factory image = always recoverable.
+```sh
+fastboot flash vendor_dlkm  backup/vendor_dlkm_a.img     # stock partition
+fastboot flash vbmeta       backup/vbmeta_a.img          # WITHOUT the disable flags -> re-enables verity
+fastboot reboot
+```
+A bad `services.jar` (bootloop) → Magisk safe mode, or
+`adb shell su -c 'touch /data/adb/modules/services_dispcap/disable'` + reboot.
+The DSC patch is **DP-path only** — internal/fold displays are never touched.
 
 ---
 
-*Bootloader-unlocked + Magisk + framework-cap-removed + Moto-mode-list-rebuilt + 4-lane-cable +
-`msm_drm.ko` DSC-patched = a foldable that drives a 5K2K ultrawide at native 100 Hz. A genuine first
-for this device.*
+## Gotchas (the ones that will bite you)
+
+- **CRLF kills on-device scripts.** Android sh reads `set -e\r` as `set: -: unknown option`. This
+  repo's `.gitattributes` forces `eol=lf` on `*.sh/*.py/*.prop` — keep it. If you author on Windows
+  another way, `tr -d '\r'` before running.
+- **`prebuilt/msm_drm.ko.patched` is a `.text`-only patch** (vermagic/symbols untouched), so it's
+  byte-identical to patching your own stock module and loads on the stock kernel. Still, **re-derive
+  from your device** (step 1) — a different sub-build can move the offset, and `apply-patch.py`
+  re-finds it via the unique anchor.
+- **`fastboot --disable-verity flash vbmeta` FAILS** here (`Failed to find AVB_MAGIC at offset: 0`,
+  platform-tools 37.0.0, a host-side bug). That's why we pre-patch the flags with
+  `vbmeta-disable-verity.py` and flash **plain**.
+- **Disable verity BEFORE rebooting with the modified `vendor_dlkm`.** Flashing it while verity is
+  `enforcing` and rebooting bounces you back to the bootloader (recoverable, not a brick).
+- **`vendor_dlkm` is logical** → flash from **fastbootd** (`adb reboot fastboot`), not the primary
+  bootloader. `vbmeta` is physical → either works.
+- **Rebuild EROFS on-device**, never on desktop (you'd lose `security.selinux` xattrs). Verify labels
+  by loop-mount, not by extracting to `/data` (that relabels to `shell_data_file`).
+- **Never leave the DRM debug mask on** (`echo 0x07 > /sys/module/drm/parameters/debug`) — it logs
+  every plane/commit per frame and cripples the pipeline. 1-second read, then `echo 0`.
+- **5120@100 needs a 4-lane direct cable.** A 2-lane dock caps at 5120@60. sim-HPD keeps the trained
+  lane count — only a physical replug renegotiates 2→4 lanes.
+- **HDCP:** the LG fails HDCP 2.2 over DP-alt (retry loop). `settings put global hdcp_checking 0`
+  quiets it (the `dsc_5k` module does this); `scripts/apply-hdcp14-patch.py` is the clean kill.
+  Disabling HDCP breaks protected video on that display.

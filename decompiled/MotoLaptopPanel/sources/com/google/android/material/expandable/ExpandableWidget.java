@@ -1,5 +1,0 @@
-package com.google.android.material.expandable;
-
-/* JADX INFO: loaded from: classes.dex */
-public interface ExpandableWidget {
-}

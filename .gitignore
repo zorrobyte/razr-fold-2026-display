@@ -1,0 +1,19 @@
+# Device dumps & build intermediates — NEVER commit (per-device / reproducible).
+# Keep the recovery images OUTSIDE the repo (see README "Recovery").
+backup/
+device-backups/
+*_a.img
+*_b.img
+vendor_dlkm_new.img
+vbmeta_verity_off.img
+vbmeta_*_off.img
+msm_drm.ko.stock
+msm_drm.ko.patched.local
+
+# tooling you download rather than track
+Magisk-*.apk
+platform-tools*/
+
+# OS cruft
+.DS_Store
+Thumbs.db
