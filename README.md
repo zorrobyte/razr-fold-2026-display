@@ -45,7 +45,7 @@ scripts/
   vendor_dlkm_file_contexts # SELinux file_contexts reference for the rebuild
 modules/
   magisk-dispcap/           # LAYER 1a+1b — patched services.jar (for build 48-5-1)
-  magisk-dsc-5k/            # persistence — arms 5120@100 on the external display at boot
+  magisk-dsc-5k/            # boot service — quiets the HDCP auth loop (mode select is the app's job)
 app/
   5K-Display-Control.apk    # tap-to-set root app (pick the mode per monitor) + source
 prebuilt/
@@ -131,17 +131,20 @@ adb reboot
 # after boot, no bootloop = success; /system/framework/services.jar is 26660134 B (patched)
 ```
 
-### 3. Persistence module + control app
+### 3. HDCP-quiet module + control app
 
 ```sh
-adb shell su -c 'magisk --install-module /data/local/tmp/magisk-dsc-5k.zip'   # arms 5120@100 on dock
+adb shell su -c 'magisk --install-module /data/local/tmp/magisk-dsc-5k.zip'   # only quiets HDCP
 adb install app/5K-Display-Control.apk
 adb reboot
 ```
 
 ### 4. Select the mode (needs the monitor + 4-lane cable)
-Open **5K Display Control**, plug the monitor in with a **direct 4-lane USB-C→DP cable**, tap
-**5120×2160@100**, replug once.
+Open **5K Display Control** and plug the monitor in with a **direct 4-lane USB-C→DP cable**. The app
+**auto-selects the highest mode that fits the link** (native 5120×2160@100 with DSC) on the fly — no
+replug. Tap any mode to override; the app remembers your choice per monitor (by EDID) and re-applies
+it on the next plug. There is no background service setting resolution — the app is the only
+mode-setter.
 
 CLI equivalent (live, no physical replug — cycle QTI `hpd` 0→1):
 ```sh

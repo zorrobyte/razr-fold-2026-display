@@ -1,6 +1,6 @@
 id=dsc_5k
-name=Razr Fold 2026 Native 5K2K (DSC mode select)
-version=v1
-versionCode=1
+name=Razr Fold 2026 — HDCP quiet
+version=v2
+versionCode=2
 author=zorrobyte
-description=Auto-applies the QTI mode_override for native 5120x2160@100 DSC on the external display at boot (the max_dsc_count patch must already be flashed into vendor_dlkm). Also quiets the HDCP auth loop. Dock-after-boot is automatic; docked-at-boot may need one replug.
+description=Quiets the HDCP 2.2 auth-retry loop on the external DisplayPort display (the LG 5K2K panel fails HDCP over DP-alt). Resolution/mode selection is handled by the 5K Display Control app, not a background service.

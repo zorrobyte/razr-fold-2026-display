@@ -1,6 +1,7 @@
 package com.zorrobyte.dispctl;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -32,6 +33,12 @@ import java.util.concurrent.atomic.AtomicBoolean;
 //     plugging, unplugging, and mode changes update the UI on their own — no relaunch.
 //   * Honest. After applying a mode we poll the link until it settles, then report the
 //     resolution actually achieved (a 2-lane dock can't fit 5120@100; we say so).
+//   * Automatic. On a fresh connection the app picks a mode on its own: the one it
+//     remembers you last chose for THIS monitor (keyed by EDID), else the highest
+//     res/refresh that fits the trained link. It never overrides a mode you tapped by
+//     hand this session, and the whole behaviour is toggleable. No background service
+//     sets resolution — the app is the only mode-setter (the Magisk module only quiets
+//     HDCP). See onCreate()/reloadWork() for the auto-select path.
 public class MainActivity extends Activity {
 
     // palette
@@ -58,6 +65,13 @@ public class MainActivity extends Activity {
     volatile boolean rootOk=true;
     volatile boolean present=false;       // last known external-display presence
 
+    // auto-select state
+    SharedPreferences prefs;              // per-monitor remembered mode + auto toggle
+    volatile boolean autoEnabled=true;    // "auto-set on plug" master switch (persisted)
+    volatile String curMonitorId=null;    // identity of the connected monitor (EDID-derived)
+    volatile String autoHandledId=null;   // monitor already auto/manually handled this connection
+    Switch autoSwitch;
+
     final AtomicBoolean applying=new AtomicBoolean(false);
     ExecutorService worker;               // serialises all su/state work
     Handler ui;                           // main-looper handler (debounce)
@@ -70,6 +84,8 @@ public class MainActivity extends Activity {
         worker=Executors.newSingleThreadExecutor();
         ui=new Handler(Looper.getMainLooper());
         dm=(DisplayManager)getSystemService(DISPLAY_SERVICE);
+        prefs=getSharedPreferences("dispctl", MODE_PRIVATE);
+        autoEnabled=prefs.getBoolean("auto_enabled", true);
 
         ScrollView sv=new ScrollView(this); sv.setBackgroundColor(BG);
         LinearLayout root=new LinearLayout(this);
@@ -96,6 +112,20 @@ public class MainActivity extends Activity {
         TextView hint=new TextView(this);
         hint.setText("Tap a mode — applied live over the current link (no replug).");
         hint.setTextColor(SUBTLE); hint.setTextSize(12); hint.setPadding(0,0,0,dp(8)); root.addView(hint);
+
+        // Auto-select toggle: on a fresh plug, apply the remembered (else highest fitting) mode.
+        autoSwitch=new Switch(this);
+        autoSwitch.setText("Auto-set best mode on plug  (remembers per monitor)");
+        autoSwitch.setTextColor(TEXT); autoSwitch.setTextSize(13);
+        autoSwitch.setChecked(autoEnabled);
+        autoSwitch.setPadding(0,0,0,dp(6));
+        autoSwitch.setOnCheckedChangeListener((sw,c)->{
+            autoEnabled=c; prefs.edit().putBoolean("auto_enabled",c).apply();
+            toast(c?"Auto-select on — best mode applied on each plug":"Auto-select off — pick modes manually");
+            if(c){ autoHandledId=null; reload(); }   // re-evaluate current monitor now
+        });
+        root.addView(autoSwitch);
+
         list=new LinearLayout(this); list.setOrientation(LinearLayout.VERTICAL); root.addView(list);
 
         LinearLayout ctl=new LinearLayout(this); ctl.setOrientation(LinearLayout.HORIZONTAL);
@@ -213,10 +243,31 @@ public class MainActivity extends Activity {
         curLanes = lanes>0?lanes:curLanes;
         curRateKhz = linkRate>0?linkRate:curRateKhz;
 
+        final List<int[]> modes = present?collectModes():new ArrayList<>();
+
+        // ---- auto-select on a fresh connection --------------------------------
+        // Identify the monitor by its EDID. When a not-yet-handled monitor is present
+        // and auto is on, pick the mode to apply — the one remembered for THIS monitor,
+        // else the highest res/refresh that fits the trained link — and apply it once.
+        // A manual tap marks the monitor handled (see applyMode), so we never fight the
+        // user; unplugging resets, so the next plug re-applies the remembered mode.
+        String monId = present ? readMonitorId() : null;
+        curMonitorId = monId;
+        if(!present){
+            autoHandledId=null;                              // reset so replug re-triggers
+        } else if(autoEnabled && !applying.get() && monId!=null && !monId.equals(autoHandledId)){
+            long budget = linkBudget(curLanes,curRateKhz);
+            int[] tgt = chooseAuto(modes, budget, monId);
+            autoHandledId = monId;                           // mark handled (prevents re-fire loop)
+            if(tgt!=null && !sameMode(curRes,tgt[0],tgt[1],tgt[2])){
+                boolean tfits = budget<=0 || (long)tgt[0]*tgt[1]*tgt[2]*DSC_FLOOR_BPP<=budget;
+                applyMode(tgt[0],tgt[1],tgt[2],tfits,true);  // auto=true (enqueued on worker)
+            }
+        }
+
         final boolean fPresent=present, fApplying=applying.get(), fRoot=rootOk;
         final String fRes = present?(isRes(curRes)?curRes:"—"):"—";
         final int fLanes=curLanes; final long fRate=curRateKhz;
-        final List<int[]> modes = present?collectModes():new ArrayList<>();
         final int dens = fwId>=0?readDensity(fwId):DPI_MIN;
         final String dscTxt = present?dscStatus(fLanes,fRate,fRes):"—";
         final String hdcpTxt = hdcpStatus(hdcp);
@@ -369,12 +420,19 @@ public class MainActivity extends Activity {
     // ---------- actions ----------
     // LIVE apply: mode_override + hpd 0->1 re-probe (no skip_uevent, no physical replug),
     // then poll the link until it settles and report what actually trained.
-    void applyMode(int w,int h,int hz,boolean fits) {
-        if(!present){toast("No external display");return;}
-        if(!fits) toast("Trying "+w+"×"+h+"@"+hz+" — likely too wide for this link; will restore if it fails.");
+    void applyMode(int w,int h,int hz,boolean fits){ applyMode(w,h,hz,fits,false); }
+
+    // auto=false: user tapped a mode -> remember it for this monitor, mark handled.
+    // auto=true : app picked it on a fresh plug -> don't overwrite the remembered choice.
+    void applyMode(int w,int h,int hz,boolean fits,boolean auto) {
+        if(!present){ if(!auto) toast("No external display"); return; }
+        final String mid=curMonitorId;
+        autoHandledId=mid;   // either path handles this monitor -> stop auto from re-firing
+        final String tag=auto?"Auto · ":"";
+        if(!fits && !auto) toast("Trying "+w+"×"+h+"@"+hz+" — likely too wide for this link; will restore if it fails.");
         submit(() -> {
             applying.set(true);
-            runOnUiThread(()->{ stConn.setText("Applying "+w+"×"+h+"@"+hz+"…"); stConn.setTextColor(WARN); });
+            runOnUiThread(()->{ stConn.setText(tag+"Applying "+w+"×"+h+"@"+hz+"…"); stConn.setTextColor(WARN); });
             try {
                 su("mount -t debugfs none /sys/kernel/debug 2>/dev/null; "
                     + "echo \""+w+" "+h+" "+hz+" 0\" > "+DBG+"edid_modes");
@@ -383,15 +441,17 @@ public class MainActivity extends Activity {
                 boolean back=waitConnected(12000);           // poll instead of a fixed sleep
                 String got=back?curResolution():"—";
                 if(back && sameMode(got,w,h,hz)){
-                    toast("✓ "+w+"×"+h+"@"+hz+" — live, no replug");
+                    if(!auto && mid!=null)                    // remember the user's choice per monitor
+                        prefs.edit().putString("mode_"+mid, w+"x"+h+"@"+hz).apply();
+                    toast(tag+"✓ "+w+"×"+h+"@"+hz+" — live, no replug");
                 } else {
                     // The requested timing didn't train (over-budget mode, or the sink
                     // refused it) — never leave the panel blank. Restore the monitor's
                     // own default so it always comes back to a usable picture.
                     String restored=recoverDefault();
-                    if(!fits)      toast("Wouldn't fit this link (needs a 4-lane USB-C→DP cable). Restored "+restored+".");
-                    else if(!back) toast("Didn't re-train in time. Restored "+restored+".");
-                    else           toast("Rejected (got "+got+"). Restored "+restored+".");
+                    if(!fits)      toast(tag+"Wouldn't fit this link (needs a 4-lane USB-C→DP cable). Restored "+restored+".");
+                    else if(!back) toast(tag+"Didn't re-train in time. Restored "+restored+".");
+                    else           toast(tag+"Rejected (got "+got+"). Restored "+restored+".");
                 }
             } catch(Throwable t){
                 recoverDefault();
@@ -401,6 +461,38 @@ public class MainActivity extends Activity {
             }
         });
     }
+
+    // Identify the connected monitor from its EDID (manufacturer/product/serial + base
+    // timings all live in the 128-byte base block), so we can remember a per-monitor
+    // choice. Stable across replugs; null when no EDID is readable.
+    String readMonitorId(){
+        String conn=connectorDir; if(conn==null) return null;
+        try{
+            String hex=su("cat "+conn+"/edid 2>/dev/null | od -An -tx1 | tr -dc '0-9a-f'").trim();
+            if(hex.length()<32) return null;                          // no / stub EDID
+            String base=hex.substring(0, Math.min(hex.length(),256)); // base block
+            return Integer.toHexString(base.hashCode());
+        }catch(Exception e){ return null; }
+    }
+
+    // Pick the mode to auto-apply: the one remembered for this monitor (if it still
+    // advertises it), else the highest res/refresh that fits the trained link. `modes`
+    // is pre-sorted largest-first, so the first fitting entry is the best available.
+    int[] chooseAuto(List<int[]> modes,long budget,String monId){
+        if(modes==null||modes.isEmpty()) return null;
+        if(monId!=null){
+            int[] r=parseKey(prefs.getString("mode_"+monId,null));
+            if(r!=null) for(int[] m:modes) if(m[0]==r[0]&&m[1]==r[1]&&m[2]==r[2]) return r;
+        }
+        for(int[] m:modes){
+            long need=(long)m[0]*m[1]*m[2]*DSC_FLOOR_BPP;
+            if(budget<=0 || need<=budget) return m;
+        }
+        return modes.get(0);                                          // nothing fits: try the top
+    }
+    // "5120x2160@100" -> {5120,2160,100}
+    int[] parseKey(String k){ if(k==null) return null; try{ String[] a=k.split("[x@]");
+        return new int[]{Integer.parseInt(a[0]),Integer.parseInt(a[1]),Integer.parseInt(a[2])}; }catch(Exception e){ return null; } }
 
     // Clear any mode override and re-probe → the sink comes up at its native default,
     // which is always trainable on the current link. Returns the resolution reached.
@@ -422,9 +514,14 @@ public class MainActivity extends Activity {
         });
     }
     void clearOverride() {
+        final String mid=curMonitorId;
         submit(() -> {
             applying.set(true);
-            try { String r=recoverDefault(); toast("Cleared — monitor default ("+r+")"); }
+            try {
+                if(mid!=null) prefs.edit().remove("mode_"+mid).apply();  // forget the remembered choice
+                autoHandledId=mid;                                       // stay at default until replug
+                String r=recoverDefault(); toast("Cleared — monitor default ("+r+"), forgot remembered mode");
+            }
             finally { applying.set(false); reload(); }
         });
     }
