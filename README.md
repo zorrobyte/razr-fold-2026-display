@@ -1,21 +1,43 @@
-# Razr Fold 2026 — Native 5K2K + DSC External Display
+# Native 5K2K @ 100 Hz + DSC on a Snapdragon 8 Gen 5 Android phone
 
-Drive a **Motorola Razr Fold 2026** at **native 5120×2160 @ 100 Hz, 10-bit, with DSC** (Display
-Stream Compression) over a wired USB-C→DisplayPort ultrawide — resolutions and a compression path
-the phone refuses out of the box. Also unlocks 4K@60 and 3440×1440@100.
+> **Result: 5120×2160 @ 100 Hz · 10-bit (30 bpp) · DSC 1.2 + FEC · HBR3 ×4 · Snapdragon 8 Gen 5 (SM8845)**
+> on a **Motorola Razr Fold 2026**, over a single USB-C→DisplayPort cable, **on the stock kernel**.
+>
+> Stock software refuses anything above ~5.5 MP on the external display and never engages DSC.
+> This repo traces why through the whole pipeline — AOSP framework → Motorola mode filtering →
+> Qualcomm DRM driver → DP link — and fixes each layer. The kernel half is a **single ARM64
+> instruction** in `msm_drm.ko` (`mov w19,w3` → `movz w19,#4`, 4 bytes) that stops the driver
+> reserving zero DSC blocks for the DP path.
+
+Driver proof, straight from `dmesg` after the mode is applied:
+
+```
+dp_panel_resolution_info: 5120(...)x2160(...)@100fps 30bpp 1196340Khz 20LR 4Ln
+dp_display_stream_enable: ... tot_dsc_blks_in_use=2
+```
+
+`4Ln` / `20LR` = four lanes at HBR3 (8.1 Gbps/lane, ≈25.9 Gbps trained). `30bpp` = 10-bit. Two DSC
+engines are live. 1.196 GHz pixel clock — roughly double what the phone ever allowed before.
+
+**What's here:** a signature-anchored patcher for the DRM module (finds a unique 16-byte function
+anchor, refuses to run unless it matches exactly once, prints before/after SHA-256), an on-device
+EROFS rebuild of `vendor_dlkm` with SELinux labels intact, AVB handling, a patched `services.jar`
+Magisk module for the framework caps, and a root control app that discovers the DP connector,
+reads the *live* trained link rate, remembers modes per monitor by EDID, auto-selects the best mode
+on plug, and recovers automatically if a mode fails to train. Also unlocks 4K@60 and 3440×1440@100.
 
 |  |  |
 |---|---|
-| **Device** | Motorola Razr Fold 2026 · codename `blanc` (product `blanc_gu`) · Verizon retail |
+| **Device** | Motorola Razr Fold 2026 · codename `blanc` (product `blanc_gu`) · Verizon retail, bootloader unlocked |
 | **Build**  | Android 16 · **`W3WBS36.36-48-5-1`** (this repo is pinned to this build) |
-| **Kernel** | GKI `6.12.38-android16-5-…-4k` — **works on the stock kernel** |
+| **Kernel** | GKI `6.12.38-android16-5-…-4k` — **works on the stock kernel**, no custom kernel build |
 | **SoC / DPU** | Snapdragon 8 Gen 5 = SM8845 · QTI DPU "Eliza" |
+| **Monitor** | LG 5K2K ultrawide (5120×2160) — sink advertises DSC 1.2 + FEC |
 | **Needs**  | Unlocked bootloader · Magisk root · a **direct 4-lane USB-C→DP cable** · a 5K2K monitor |
 
 > This is the condensed, single-device guide. The full RE journey, dead-ends, alternate paths
 > (LSPosed, dtbo cap-edit), and decompiled Moto APKs were removed — see the `backup/pre-cleanup`
 > branch if you need them.
-
 ---
 
 ## Why it's blocked (3 layers, condensed)
@@ -212,3 +234,9 @@ The DSC patch is **DP-path only** — internal/fold displays are never touched.
 - **HDCP:** the LG fails HDCP 2.2 over DP-alt (retry loop). `settings put global hdcp_checking 0`
   quiets it (the `dsc_5k` module does this); `scripts/apply-hdcp14-patch.py` is the clean kill.
   Disabling HDCP breaks protected video on that display.
+
+---
+
+## License
+MIT — see [LICENSE](LICENSE). The patched `services.jar` and `msm_drm.ko` are derived from
+Motorola/Qualcomm binaries and are provided for interoperability with the specific build above.
